@@ -2,7 +2,7 @@
 title: Mussum Ipsum o melhor ipsum do mundis
 description: Mussum Ipsum, cacilds vidis litro abertis. Não sou faixa preta cumpadi
 date: 2020-05-28 11:59:33
-thumbnail: assets/img/volcano.jpg
+image: assets/img/volcano.jpg
 category: jekyll
 background: "#b31917"
 ---
