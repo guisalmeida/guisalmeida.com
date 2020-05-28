@@ -76,8 +76,8 @@ module.exports = {
         name: `Guilherme Almeida`,
         short_name: `Gui Almeida`,
         start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#fff`,
+        background_color: `#f0f0f3`,
+        theme_color: `#f0f0f3`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
