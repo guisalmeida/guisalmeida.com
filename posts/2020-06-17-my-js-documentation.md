@@ -2,7 +2,7 @@
 title: My JS Documentation
 description: Alguns métodos nativos da linguagem que podem ser usados de acordo
   com o tipo do dado.
-date: 2020-06-17 03:55:48
+date: 2020-06-17T03:55:48.000Z
 image: assets/img/1_hcws3wa6u9iqaez_4x04uw.jpeg
 category: js
 background: "#D6BA32"
@@ -11,7 +11,7 @@ _Este conteúdo foi baseado quase que integralmente no [**Curso Javascript Maste
 Faça inscrição por este [link](https://app.agilecode.com.br/#!/public/programs/c09d58ff-ce6b-491b-b158-9982583dff79/orders/new?coupon=ea3605a2) e ganhe _**15% de desconto**_ no valor integral do curso.
 
 ---
-
+# **TIPOS DE DADOS**
 ### **`typeof`**
 _Retorna o tipo de dado._
 ``` JS
@@ -31,7 +31,7 @@ _Retorna o tipo de dado._
 ```
 ---
 
-## **Type Number**
+# **NUMBER**
 
 ### **`Number`**
 _Converte string passada por parâmetro para número elevado a base decimal._
@@ -88,7 +88,7 @@ _Retorna o numero total de algarismos, que é passado como parâmetro da funçã
 ---
 ### **`parseInt`**
 _Recebe uma string como parâmetro da função e retorna numero decimal, ou de outra base que deve ser passada com segundo parâmetro._
-> As casa após a virgula nesse caso são perdidas.
+> As casas após a virgula nesse caso são perdidas.
 ``` JS
 //exemplo:
 > parseInt("10");
@@ -153,7 +153,7 @@ _Retorna numero convertido para positivo._
 10
 ```
 ---
-### ### **`Math.ceil`**
+### **`Math.ceil`**
 _Retorna numero arredondado para próximo inteiro para cima._
 ``` JS
 //exemplo:
@@ -241,7 +241,7 @@ _Retorna um número randômico entre
 88
 ```
 ---
-## **Type String**
+# **String**
 
 ### **`length`**
 _Retorna o tamanho da String._
@@ -362,7 +362,7 @@ _Retorna número -1, 0 ou 1 de acordo com a String passada por parâmetro for ma
 >```
 > --- 
 ### **`match`**
-_Retorna _`Array`_ _com partes da String com base na RegExp passada por parâmetro._
+_Retorna `Array` com partes da String com base na RegExp passada por parâmetro._
 > **\*** _Só aceita **`regexp`** como parâmetros._
 ``` JS
 //exemplo:
@@ -373,7 +373,7 @@ _Retorna _`Array`_ _com partes da String com base na RegExp passada por parâmet
 
 ---
 ### **`search`**
-_Retorna _`NUmber`_ com valor do indice da primeira posição encontrada com base na RegExp passada por parâmetro._
+_Retorna `Number` com valor do indice da primeira posição encontrada com base na RegExp passada por parâmetro._
 > **\*** _Só aceita **`regexp`** como parâmetros._
 ``` JS
 //exemplo:
@@ -382,7 +382,7 @@ _Retorna _`NUmber`_ com valor do indice da primeira posição encontrada com bas
 ```
 ---
 ### **`replace`**
-_Retorna _`String`_ resultante da substituição da String ou RegExp passada no primeiro parâmetro pelo segundo parâmetro._  
+_Retorna `String` resultante da substituição da String ou RegExp passada no primeiro parâmetro pelo segundo parâmetro._  
 ``` JS
 //exemplo:
 > "JavaScript".replace("Java", "Ecma");
@@ -408,7 +408,7 @@ _Retorna uma parte da String que está invocando a função iniciando na posiç�
 
 ---
 ### **`split`**
-_Retorna um **array** contendo o resultado da divisão da String original de acordo com o critério passado por parâmetro._
+_Retorna um `array` contendo o resultado da divisão da String original de acordo com o critério passado por parâmetro._
 ``` JS
 /**
 * @param {String}
@@ -497,7 +497,7 @@ _Elimina espaços em branco no fim._
 ' Perl'
 ```
 ---
-## **Type Boolean**
+# **BOOLEAN**
 ### **`true ou false`**
 _Apenas esses seis casos retornan false, qualquer outro valor é definido como verdadeiro._
 ``` JS
@@ -516,7 +516,7 @@ false
 false
 ```
 ---
-## **Type Object**
+# **OBJECT**
 
 ### **`delete`**
 _Apaga propriedade do objeto._
@@ -629,7 +629,7 @@ console.log(Object.setPrototypeOf(scheme, functionalLanguage));
 ```
 ---
 ### **`Object.keys`**
-_Retorna as chaves das propriedades do objeto em um **array**._
+_Retorna as chaves das propriedades do objeto em um `array`._
 ```js
 //exemplo:
 const javascript = {
@@ -643,7 +643,7 @@ console.log(Object.keys(javascript));
 
 ---
 ### **`Object.values`**
-_Retorna os valores das propriedades do objeto em um **array**._
+_Retorna os valores das propriedades do objeto em um `array`._
 ```js
 //exemplo:
 const javascript = {
@@ -657,7 +657,7 @@ console.log(Object.values(javascript));
 
 ---
 ### **`Object.entries`**
-_Retorna as propriedades do objeto em pares de chave e valor em um **array** cada par e depois dentro de outro **array** que engloba todos._
+_Retorna as propriedades do objeto em pares de chave e valor em um `array` cada par e depois dentro de outro `array` que engloba todos._
 ```js
 //exemplo:
 const javascript = {
@@ -778,7 +778,7 @@ console.log(Object.isFrozen(javascript));
 // true
 ```
 ---
-## **JSON**
+# **JSON**
 > É um formato de intercâmbio de dados.  
 
 ### **`JSON.stringfy`**
@@ -821,7 +821,7 @@ console.log(JSON.parse('null'));
 // null
 ```
 ---
-## **FUNCTION**
+# **FUNCTION**
 ### **`arguments`**
 _variável implícita para acessar os parâmetros da função invocada._
 ```js
@@ -996,7 +996,7 @@ console.log(date instanceof Array);
 // false
 ```
 ---
-## **Array**
+# **ARRAY**
 ### **`length`**
 _Retorna o tamanho do Array._
 > Elementos vazios não são considerados no length.
@@ -1368,7 +1368,7 @@ console.log(languages.join(" "))
 // Smalltalk C++ Simula Haskell Scheme
 ```
 ---
-## **MAP (ES6)**
+# **MAP**
 _È um objeto que armazena um conjunto de **chaves** e **valores** que podem ser de **qualquer tipo de dado**._
 ``` JS
 //exemplo:
@@ -1489,7 +1489,7 @@ console.log(calculateArea(rectangle2));
 // 15
 ```
 ---
-## **SET (ES6)**
+# **SET**
 
 _É um objeto que armazena elementos únicos, que podem ser de qualquer tipo de dado._
 > Possui os os métodos `size, forEach, has, delete, clear` semelhantes ao **MAP**.
@@ -1614,7 +1614,7 @@ console.log(languages);
 // [ 'Fortran', 'Lisp', 'COBOL', 'Python', 'Ruby', 'JavaScript' ]
 ```
 ---
-## **CLASSES**
+# **CLASSES**
 As classes são um tipo especial de função que atuam como um template para a criação de objetos._  
 > \*Não sofrem **`hoisting`**. 
 ```JS
@@ -1745,7 +1745,7 @@ console.log(square.toString());
 // side: 4 area: 16
 ```
 ---
-## **PROXY**
+# **PROXY**
 Um **proxy** é capaz de interceptar diversos tipos de operações em um objeto alvo. Por meio de métodos, chamados de trap, para diversos tipos de eventos relacionados a um objeto como: 
 - apply
 - construct
@@ -1863,7 +1863,7 @@ console.log(languages[3]);
 // Property 3 not found
 ```
 ---
-## **REFLECT API**
+# **REFLECT API**
 A **Reflect API** tem os mesmos métodos que existem no Proxy, permitindo a execução de diversos tipos de operações no objeto alvo, são eles: 
 - apply
 - construct
@@ -1912,7 +1912,7 @@ console.log(languages[3]);
 // Property 3 not found
 ```
 ---
-## **MODULES**
+# **MODULES**
 No ES6, ou ECMAScript 2015, foi especificado na própria linguagem, baseado no conceito de importação e exportação.  
 > _\*Para utilizar modules no **Node.js** os arquivos devem ter a extensão **`.mjs`** além de executar com a flag **`--experimental-modules`**._  
 ### **`export`**
@@ -1986,7 +1986,7 @@ class Circle {
 const circle = new Circle(10);
 ```
 ---
-## **PROMISES**  
+# **PROMISES**  
 As promises são objetos responsáveis por modelar comportamento assíncrono, permitindo o seu tratamento de uma forma mais fácil e direta.  
 > _\*Para criar uma promise basta instanciá-la, executando a função **`resolve`** em caso de sucesso, sendo tratado por meio de **`then`**._  
 ```js
@@ -2072,7 +2072,7 @@ Promise.race([
 });
 // 16
 ```
-## **GENERATORS**  
+# **GENERATORS**  
 Os generators tornam possível pausar a execução de uma determinada função, permitindo a utilização do _**event loop**_ de forma cooperativa.  
 > _\*Para criar um **`generator`** basta adicionar **`*`** ao lado da função._  
 
@@ -2246,7 +2246,7 @@ console.log(foreverGenerator.next());
 // { value: 3, done: false }
 ```
 
-## **ASYNC/AWAIT (ES8)**  
+# **ASYNC/AWAIT**  
 O **async/await** facilita a interação com chamadas assíncronas, aguardando o retorno de uma determinada promise.  
 ```JS
 // Exemplo:
