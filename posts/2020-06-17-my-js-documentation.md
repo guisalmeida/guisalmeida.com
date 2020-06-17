@@ -951,8 +951,8 @@ console.log(person2.getAge());
 // 65
 ```
 ---
-### **`prototipe`**
-_propriedade que é vinculada ao **\_\_proto\_\_** do objeto criado pelo operador new._
+### **`prototype`**
+*propriedade que é vinculada ao **\_\_proto\_\_** do objeto criado pelo operador new.*
 ```js
 //exemplo:
 const Person = function(name, city, year) {
