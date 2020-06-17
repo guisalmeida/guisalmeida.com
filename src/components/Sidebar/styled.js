@@ -15,8 +15,9 @@ export const SidebarWrapper = Styled.aside`
 
     ${media.lessThan('large')`
         align-items: flex-start;
-        height: auto;
-        padding: 1rem 2rem;
+        justify-content: center;
+        height: 4.125rem;
+        padding: 0 2rem;
         width: 100%;
     `}
 `;

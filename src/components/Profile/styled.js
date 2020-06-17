@@ -7,6 +7,10 @@ export const ProfileWrapper = Styled.section`
     color: var(--texts);
     display: flex;
     flex-direction: column;
+
+    ${media.lessThan('large')`
+        width: 100%;
+    `}
 `;
 
 export const ProfileLink = Styled(AniLink)`
@@ -31,6 +35,10 @@ export const ProfileTitle = Styled.h1`
     ${media.lessThan('large')`
         font-size: 1.2rem;
         margin: 0 0 0 10px;
+        width: calc(100% - 40px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     `}
 `
 
@@ -40,8 +48,10 @@ export const ProfilePosition = Styled.small`
     font-weight: 300;
 
     ${media.lessThan('large')`
-        font-size: 1.2rem;
         margin-top: 0.2rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     `}
 `;
 
