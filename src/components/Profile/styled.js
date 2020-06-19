@@ -3,15 +3,20 @@ import media from 'styled-media-query';
 
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
-export const ProfileWrapper = Styled.section`
-    color: var(--texts);
-    display: flex;
-    flex-direction: column;
+export const ProfileContainer = Styled.section`
+  display: ${props => (props.isMobileHeader ? 'none' : 'flex')};
+  color: var(--texts);
+  flex-direction: column;
 
-    ${media.lessThan('large')`
-        width: 100%;
-    `}
-`;
+  ${media.lessThan('large')`
+    align-items: flex-start;
+    display: ${props => (props.isMobileHeader ? 'flex' : 'none')};
+    background: var(--mediumBackground);
+    border-bottom: 1px solid var(--borders);
+    padding: 1rem;
+    width: 100vw;
+  `}
+`
 
 export const ProfileLink = Styled(AniLink)`
     color: var(--texts);

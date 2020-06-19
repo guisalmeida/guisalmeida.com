@@ -1,33 +1,36 @@
-import styled from 'styled-components';
-import media from 'styled-media-query';
+import styled from 'styled-components'
+import media from 'styled-media-query'
 
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import transitions from '../../styles/transitions'
 
 export const MenuWrapper = styled.nav`
-    ${media.lessThan('large')`
-        display: none;
-    `}
-`;
+  ${media.lessThan('large')`
+    margin: auto;
+  `}
+`
 
 export const MenuList = styled.ul`
-    font-size: 1.2rem;
-    font-weight: 300;
-`;
+  font-size: 1.2rem;
+  font-weight: 300;
+  ${media.lessThan('large')`
+    font-size: 1.8rem;
+  `}
+`
 
 export const MenuItem = styled.li`
-    padding: .5rem 0;
-
-    .active {
-        color: var(--highlight);
-    }
-`;
-
-export const MenuLink = styled(AniLink)`
+  padding: 0.5rem 0;
+  ${media.lessThan('large')`
+    padding: 1rem 0;
+  `}
+  .active {
+    color: var(--highlight);
+  }
+  a {
     color: var(--texts);
     text-decoration: none;
-    transition: color .5s;
-
+    transition: ${transitions.COLOR};
     &:hover {
-        color: var(--highlight);
+      color: var(--highlight);
     }
-`;
+  }
+`

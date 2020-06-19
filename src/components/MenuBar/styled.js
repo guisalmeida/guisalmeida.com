@@ -15,6 +15,7 @@ export const MenuBarWrapper = styled.aside`
   right: 0;
   width: 3.75rem;
   transition: background 0.5s;
+
   ${media.lessThan("large")`
     border-top: 1px solid var(--borders);
     bottom: 0;
@@ -23,6 +24,20 @@ export const MenuBarWrapper = styled.aside`
     padding: 0;
     position: fixed;
     width: 100%;
+  `}
+`
+
+export const MenuBarGroupDesktop = styled.div`
+  display: block;
+  ${media.lessThan('large')`
+    display: none;
+  `}
+`
+
+export const MenuBarGroupMobile = styled.div`
+  display: none;
+  ${media.lessThan('large')`
+    display: block;
   `}
 `
 

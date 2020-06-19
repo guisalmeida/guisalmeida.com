@@ -35,9 +35,10 @@ const BlogList = props => {
                         },
                         timeToRead
                     }
-                }
+                }, index
                 ) => (
                         <PostItem
+                            key={index}
                             slug={slug}
                             background={background}
                             category={category}

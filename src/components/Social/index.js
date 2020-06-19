@@ -12,8 +12,8 @@ const Social = () => (
                 const Icon = Icons[link.label];
 
                 return (
-                    <S.SocialItem key={index}>
-                        <S.SocialLink
+                    <li key={index}>
+                        <a
                             href={link.url}
                             title={link.label}
                             target="_blank"
@@ -22,8 +22,8 @@ const Social = () => (
                             <S.IconWrapper>
                                 <Icon />
                             </S.IconWrapper>
-                        </S.SocialLink>
-                    </S.SocialItem>
+                        </a>
+                    </li>
                 )
             })}
         </S.SocialList>

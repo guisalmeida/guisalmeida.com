@@ -6,12 +6,13 @@ import { UpArrowAlt as Arrow } from "@styled-icons/boxicons-regular/UpArrowAlt"
 import { InvertColors } from "@styled-icons/material/InvertColors"
 import { Grid } from "@styled-icons/boxicons-solid/Grid"
 import { ThList as List } from "@styled-icons/typicons/ThList"
+import { Menu } from '@styled-icons/boxicons-regular/Menu'
 
 import getThemeColor from '../../utils/getThemeColor';
 
 import * as S from './styled';
 
-const MenuBar = () => {
+const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
     const [theme, setTheme] = useState(null);
     const [display, setDisplay] = useState(null);
 
@@ -24,6 +25,10 @@ const MenuBar = () => {
         window.__onThemeChange = () => setTheme(window.__theme);
         window.__onDisplayChange = () => setDisplay(window.__display);
     }, []);
+
+    const openMenu = () => {
+        setIsMenuOpen(!isMenuOpen)
+    }
 
     return (
         <S.MenuBarWrapper>
@@ -55,6 +60,14 @@ const MenuBar = () => {
                 </S.MenuBarLink>
 
             </S.MenuBarGroup>
+
+            <S.MenuBarGroupMobile>
+                <S.MenuBarGroup>
+                    <S.MenuBarItem title="Abrir Menu" onClick={openMenu}>
+                        <Menu />
+                    </S.MenuBarItem>
+                </S.MenuBarGroup>
+            </S.MenuBarGroupMobile>
 
             <S.MenuBarGroup>
                 <S.MenuBarItem
