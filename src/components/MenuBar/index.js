@@ -15,11 +15,18 @@ import * as S from './styled';
 const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
     const [theme, setTheme] = useState(null);
     const [display, setDisplay] = useState(null);
+    const [slug, setSlug] = useState(false);
 
     const isLightMode = theme === 'light';
     const isListMode = display === 'list';
 
     useEffect(() => {
+        if (
+            window.location.pathname === "/blog" ||
+            window.location.pathname === "/projects"
+        ) { 
+            setSlug(true);
+        }
         setTheme(window.__theme);
         setDisplay(window.__display);
         window.__onThemeChange = () => setTheme(window.__theme);
@@ -70,6 +77,18 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
             </S.MenuBarGroupMobile>
 
             <S.MenuBarGroup>
+                {slug &&
+                    <S.MenuBarItem
+                        title='Mudar vizualização'
+                        onClick={() => {
+                            window.__setPreferredDisplay(isListMode ? 'grid' : 'list')
+                        }}
+                        className="display"
+                    >
+                        {isListMode ? <Grid /> : <List />}
+                    </S.MenuBarItem>
+                }
+
                 <S.MenuBarItem
                     title='Mudar o tema'
                     onClick={() => {
@@ -78,16 +97,6 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
                     className={theme}
                 >
                     <InvertColors />
-                </S.MenuBarItem>
-
-                <S.MenuBarItem
-                    title='Mudar vizualização'
-                    onClick={() => {
-                        window.__setPreferredDisplay(isListMode ? 'grid' : 'list')
-                    }}
-                    className="display"
-                >
-                    {isListMode ? <Grid /> : <List />}
                 </S.MenuBarItem>
 
                 <S.MenuBarItem
