@@ -4,7 +4,6 @@ import media from 'styled-media-query'
 export const PostHeader = styled.header`
   color: var(--postColor);
   margin: auto;
-  max-width: 70rem;
   padding: 5rem 5rem 0;
 
   ${media.lessThan('large')`
@@ -50,7 +49,6 @@ export const PostDate = styled.p`
 
 export const MainContent = styled.section`
   margin: auto;
-  max-width: 70rem;
   padding: 2rem 5rem;
   border-bottom: 1px solid var(--borders);
 
