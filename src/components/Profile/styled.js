@@ -26,6 +26,7 @@ export const ProfileLink = Styled(AniLink)`
     ${media.lessThan('large')`
         display: flex;
         text-align: left;
+        width: 100%;
     `}
 
     &:hover {

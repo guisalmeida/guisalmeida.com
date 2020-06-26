@@ -21,7 +21,9 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
     const isListMode = display === 'list';
 
     useEffect(() => {
+        console.log("entrou");
         if (
+            window.location.pathname === "/search/" ||
             window.location.pathname === "/blog" ||
             window.location.pathname === "/projects"
         ) { 

@@ -52,6 +52,7 @@ export const MainContent = styled.section`
   margin: auto;
   max-width: 70rem;
   padding: 2rem 5rem;
+  border-bottom: 1px solid var(--borders);
 
   ${media.lessThan('large')`
     padding: 2rem 0;
@@ -161,6 +162,7 @@ export const MainContent = styled.section`
 
   h1 {
     font-size: 2.8rem;
+    text-align: center;
 
     ${media.lessThan('large')`
       font-size: 1.875rem;

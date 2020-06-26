@@ -1,5 +1,6 @@
 import React from 'react';
 import PostItem from '../PostItem';
+// import ProjectItem from "../ProjectItem"
 
 const Hit = ({ hit }) => (
     <PostItem

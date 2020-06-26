@@ -18,6 +18,7 @@ export const LayoutMain = Styled.main`
 
     body#grid & {
         grid-template-areas:
+            "title"
             "posts"
             "pagination";
     }

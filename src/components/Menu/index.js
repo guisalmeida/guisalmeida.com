@@ -25,7 +25,6 @@ const Menu = ({ setIsMenuOpen, isMenuOpen }) => {
                             to={link.path}
                             activeClassName="active"
                             onClick={() => handleMenuLinks()}
-                            activeClassName="active"
                         >
                             {link.label}
                         </AniLink>

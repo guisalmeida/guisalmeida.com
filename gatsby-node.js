@@ -17,7 +17,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         createNodeField({
             node,
             name: "slug",
-            value: `/blog/${slug.slice(12)}`,
+            value: `/${slug.slice(12)}`,
         })
     }
 }
@@ -62,14 +62,16 @@ exports.createPages = ({ graphql, actions }) => {
             }
         }
     }`).then(result => {
-        const posts = result.data.allMarkdownRemark.edges;
+
+        // CRIA PAGINA BLOG
+        const posts = result.data.allMarkdownRemark.edges.filter(obj => obj.node.frontmatter.category !== 'project');
         const postsPerPage = 6;
-        const numPages = Math.ceil(posts.length / postsPerPage);
+        const postsNumPages = Math.ceil(posts.length / postsPerPage);
 
         posts.forEach(({ node, next, previous }) => {
             createPage({
                 path: node.fields.slug,
-                component: path.resolve(`./src/templates/blog-post.js`),
+                component: path.resolve(`./src/templates/post.js`),
                 context: {
                     slug: node.fields.slug,
                     previousPost: next,
@@ -78,17 +80,32 @@ exports.createPages = ({ graphql, actions }) => {
             })
         });
 
-        Array.from({ length: numPages }).forEach((_, index) => {
+        Array.from({ length: postsNumPages }).forEach((_, index) => {
             createPage({
                 path: index === 0 ? '/blog/' : `/blog/page/${index + 1}`,
-                component: path.resolve(`./src/templates/blog-list.js`),
+                component: path.resolve(`./src/templates/list.js`),
                 context: {
                     limit: postsPerPage,
                     skip: index * postsPerPage,
-                    numPages,
+                    postsNumPages,
                     currentPage: index + 1
                 }
             })
         })
+
+        // CRIA PAGINA PROJETOS
+        const projects = result.data.allMarkdownRemark.edges.filter(obj => obj.node.frontmatter.category === 'project');
+
+        projects.forEach(({ node, next, previous }) => {
+            createPage({
+                path: node.fields.slug,
+                component: path.resolve(`./src/templates/post.js`),
+                context: {
+                    slug: node.fields.slug,
+                    previousPost: next,
+                    nextPost: previous
+                }
+            })
+        });
     })
 };
