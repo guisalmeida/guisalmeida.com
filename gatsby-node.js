@@ -27,7 +27,9 @@ exports.createPages = ({ graphql, actions }) => {
 
     return graphql(`
     {
-        allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+        allMarkdownRemark(
+            sort: {fields: frontmatter___date, order: DESC}
+        ) {
             edges {
                 node {
                     fields {
@@ -62,12 +64,11 @@ exports.createPages = ({ graphql, actions }) => {
             }
         }
     }`).then(result => {
+        if (result.errors) throw result.errors
 
-        // CRIA PAGINA BLOG
+        // Create blog posts pages
         const posts = result.data.allMarkdownRemark.edges.filter(obj => obj.node.frontmatter.category !== 'project');
-        const postsPerPage = 6;
-        const postsNumPages = Math.ceil(posts.length / postsPerPage);
-
+        
         posts.forEach(({ node, next, previous }) => {
             createPage({
                 path: node.fields.slug,
@@ -79,6 +80,10 @@ exports.createPages = ({ graphql, actions }) => {
                 }
             })
         });
+
+        // Create blog post list pages
+        const postsPerPage = 6;
+        const postsNumPages = Math.ceil(posts.length / postsPerPage);
 
         Array.from({ length: postsNumPages }).forEach((_, index) => {
             createPage({
@@ -93,7 +98,7 @@ exports.createPages = ({ graphql, actions }) => {
             })
         })
 
-        // CRIA PAGINA PROJETOS
+        // Create project page
         const projects = result.data.allMarkdownRemark.edges.filter(obj => obj.node.frontmatter.category === 'project');
 
         projects.forEach(({ node, next, previous }) => {

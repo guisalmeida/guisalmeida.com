@@ -19,7 +19,7 @@ export const PostItemWrapper = styled.section`
   align-items: center;
   border-bottom: 1px solid var(--borders);
   display: flex;
-  padding: 2rem 3rem;
+  padding: 2rem 5rem;
   width: 100%;
   
   body#grid & {
@@ -28,12 +28,12 @@ export const PostItemWrapper = styled.section`
     flex-direction: column;
     justify-content: center;
 
-    ${media.lessThan("large")`
+    ${media.lessThan("medium")`
       align-items: center;
     `}
   }
 
-  ${media.lessThan("large")`
+  ${media.lessThan("medium")`
     align-items: flex-start;
     flex-direction: column;
     padding: 2rem 1rem;
@@ -54,7 +54,7 @@ export const PostItemTag = styled.div`
   min-width: 90px;
   text-transform: uppercase;
 
-  ${media.lessThan("large")`
+  ${media.lessThan("medium")`
     border-radius: 0;
     font-size: 1rem;
     min-height: auto;
@@ -78,7 +78,7 @@ export const PostItemInfo = styled.div`
     margin-left: 0;
   }
 
-  ${media.lessThan("large")`
+  ${media.lessThan("medium")`
     margin: 0;
   `}
 `

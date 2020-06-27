@@ -1,12 +1,16 @@
 import React from 'react';
 
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import Author from '../components/Author';
+import Layout from '../components/Layout'
+import HomeList from '../components/HomeList'
+import SEO from '../components/seo'
+
 
 const HomePage = () => (
     <Layout>
-        <SEO title="Projetos" />
-        <h1>Home page</h1>
+        <SEO title='Projetos' />
+        <Author fullText={false} />
+        <HomeList />
     </Layout>
 );
 

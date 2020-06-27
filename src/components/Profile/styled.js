@@ -8,7 +8,7 @@ export const ProfileContainer = Styled.section`
   color: var(--texts);
   flex-direction: column;
 
-  ${media.lessThan('large')`
+  ${media.lessThan('medium')`
     align-items: flex-start;
     display: ${props => (props.isMobileHeader ? 'flex' : 'none')};
     background: var(--mediumBackground);
@@ -23,7 +23,7 @@ export const ProfileLink = Styled(AniLink)`
     text-decoration: none;
     transition: color 0.5s;
 
-    ${media.lessThan('large')`
+    ${media.lessThan('medium')`
         display: flex;
         text-align: left;
         width: 100%;
@@ -38,7 +38,7 @@ export const ProfileTitle = Styled.h1`
     font-size: 1.6rem;
     margin: 0.5rem auto 1.5rem;
 
-    ${media.lessThan('large')`
+    ${media.lessThan('medium')`
         font-size: 1.2rem;
         margin: 0 0 0 10px;
         width: calc(100% - 40px);
@@ -53,7 +53,7 @@ export const ProfilePosition = Styled.small`
     font-size: 0.8rem;
     font-weight: 300;
 
-    ${media.lessThan('large')`
+    ${media.lessThan('medium')`
         margin-top: 0.2rem;
         white-space: nowrap;
         overflow: hidden;
@@ -66,7 +66,7 @@ export const ProfileDescription = Styled.p`
     font-weight: 300;
     line-height: 1.4;
 
-    ${media.lessThan('large')`
+    ${media.lessThan('medium')`
         display: none;
     `}
 `;

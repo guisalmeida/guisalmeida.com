@@ -4,7 +4,7 @@ description: Alguns métodos nativos da linguagem que podem ser usados de acordo
   com o tipo do dado.
 date: 2020-06-17T03:55:48.000Z
 image: assets/img/1_hcws3wa6u9iqaez_4x04uw.jpeg
-category: js
+category: blog
 background: "#D6BA32"
 ---
 _Este conteúdo foi baseado quase que integralmente no [**Curso Javascript Masterclass Online**](https://www.agilecode.com.br/#!/curso-javascript) do **Rodrigo Branas - AgileCode**._  

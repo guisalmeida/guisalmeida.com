@@ -16,7 +16,7 @@ export const MenuBarWrapper = styled.aside`
   width: 3.75rem;
   transition: background 0.5s;
 
-  ${media.lessThan("large")`
+  ${media.lessThan("medium")`
     border-top: 1px solid var(--borders);
     bottom: 0;
     flex-direction: row;
@@ -29,14 +29,14 @@ export const MenuBarWrapper = styled.aside`
 
 export const MenuBarGroupDesktop = styled.div`
   display: block;
-  ${media.lessThan('large')`
+  ${media.lessThan('medium')`
     display: none;
   `}
 `
 
 export const MenuBarGroupMobile = styled.div`
   display: none;
-  ${media.lessThan('large')`
+  ${media.lessThan('medium')`
     display: block;
   `}
 `
@@ -45,7 +45,7 @@ export const MenuBarGroup = styled.div`
   display: flex;
   flex-direction: column;
 
-  ${media.lessThan("large")`
+  ${media.lessThan("medium")`
       flex-direction: row;
   `}
 `
@@ -83,18 +83,18 @@ export const MenuBarItem = styled.span`
   }
 
   &.display {
-      ${media.lessThan("large")`
+      ${media.lessThan("medium")`
           display: none;
       `}
   }
   
-  ${media.greaterThan("large")`
+  ${media.greaterThan("medium")`
       &:hover {
           color: var(--highlight);
       }
   `}
 
-  ${media.lessThan("large")`
+  ${media.lessThan("medium")`
       height: 3.2rem;
       padding: .9rem;
       position: relative;

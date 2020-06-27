@@ -6,7 +6,7 @@ import transitions from '../../styles/transitions'
 export const SocialWrapper = styled.nav`
     margin: 2rem auto;
     width: 100%;
-    ${media.lessThan('large')`
+    ${media.lessThan('medium')`
         order: 2;
         margin: 0 0 1rem;
     `}

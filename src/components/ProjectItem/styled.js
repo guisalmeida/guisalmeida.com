@@ -10,7 +10,7 @@ export const ImageWrapper = styled(Img)`
   width: 120px;
   height: 80px;
   
-  ${media.lessThan('large')`
+  ${media.lessThan('medium')`
     margin-bottom: 5px;
   `}
 `
@@ -40,12 +40,12 @@ export const ProjectItemWrapper = styled.section`
     flex-direction: column;
     justify-content: center;
 
-    ${media.lessThan("large")`
+    ${media.lessThan("medium")`
       align-items: center;
     `}
   }
 
-  ${media.lessThan("large")`
+  ${media.lessThan("medium")`
     align-items: flex-start;
     flex-direction: column;
     padding: 2rem 1rem;
@@ -62,7 +62,7 @@ export const ProjectItemInfo = styled.div`
     margin-left: 0;
   }
 
-  ${media.lessThan("large")`
+  ${media.lessThan("medium")`
     margin: 0;
   `}
 `
