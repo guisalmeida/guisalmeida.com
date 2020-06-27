@@ -14,7 +14,7 @@ const Author = ({ fullText }) => {
             <p>Buscando crescimento profissional e novos desafios, venho me dedicando a programação, desenvolvimento web front-end e ao curso superior de Ciência da Computação, visando me tornar um profissional mais capacitado para trabalhar com as demandas que o mercado de tecnologia oferece.</p>
             {fullText && 
             <>
-            <p>No tempo livre curto praticar espostes ao ar livre, cuidar das minhas plantas, passear com meus dogs, jogar PS4 e eventualmente ler livros.</p>
+            <p>No tempo livre curto praticar esportes ao ar livre, cuidar das minhas plantas, passear com meus dogs, jogar PS4 e eventualmente ler livros.</p>
             <h2>Habilidades</h2>
             <ul>
                 <li>HTML5</li>
