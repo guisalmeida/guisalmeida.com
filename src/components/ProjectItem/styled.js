@@ -1,19 +1,7 @@
 import styled from "styled-components"
 import media from "styled-media-query"
-import Img from 'gatsby-image'
 
-import AniLink from "gatsby-plugin-transition-link/AniLink";
-
-export const ImageWrapper = styled(Img)`
-  border-radius: 6px;
-  display: flex;
-  width: 120px;
-  height: 80px;
-  
-  ${media.lessThan('medium')`
-    margin-bottom: 5px;
-  `}
-`
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export const ProjectItemLink = styled(AniLink)`
   color: var(--texts);
@@ -31,7 +19,7 @@ export const ProjectItemWrapper = styled.section`
   align-items: center;
   border-bottom: 1px solid var(--borders);
   display: flex;
-  padding: 2rem 3rem;
+  padding: 2rem 5rem;
   width: 100%;
   
   body#grid & {

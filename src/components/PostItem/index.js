@@ -1,11 +1,11 @@
 import React from 'react';
 import propTypes from 'prop-types';
-
+import Image from '../Image/Image';
 import getThemeColor from '../../utils/getThemeColor';
 
 import * as S from './styled';
 
-const PostItem = ({ slug, background, category, date, timeToRead, title, description }) => (
+const PostItem = ({ slug, date, timeToRead, title, description, thumbnailImage }) => (
     <S.PostItemLink
         cover
         direction="right"
@@ -14,7 +14,10 @@ const PostItem = ({ slug, background, category, date, timeToRead, title, descrip
         to={slug}
     >
         <S.PostItemWrapper>
-            <S.PostItemTag background={background}>{category}</S.PostItemTag>
+            {thumbnailImage &&
+                <Image filename={thumbnailImage} alt={title} />
+            }
+
             <S.PostItemInfo>
             {date &&
                 <S.PostItemDate>{date} - {timeToRead} min de leitura</S.PostItemDate>}
@@ -27,8 +30,6 @@ const PostItem = ({ slug, background, category, date, timeToRead, title, descrip
 
 PostItem.propTypes = {
     slug: propTypes.string.isRequired,
-    background: propTypes.string,
-    category: propTypes.string.isRequired,
     date: propTypes.string.isRequired,
     timeToRead: propTypes.number.isRequired,
     title: propTypes.string.isRequired,

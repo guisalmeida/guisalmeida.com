@@ -2,11 +2,11 @@ import React from 'react';
 
 import propTypes from 'prop-types';
 import getThemeColor from '../../utils/getThemeColor';
-import Image from './Image';
+import Image from '../Image/Image';
 
 import * as S from './styled';
 
-const ProjectItem = ({ slug, title, description, image }) => (
+const ProjectItem = ({ slug, title, description, thumbnailImage }) => (
     <S.ProjectItemLink
         cover
         direction="right"
@@ -15,7 +15,7 @@ const ProjectItem = ({ slug, title, description, image }) => (
         to={slug}
     >
         <S.ProjectItemWrapper>
-            <Image filename={image} alt={title} />
+            <Image filename={thumbnailImage} alt={title} />
 
             <S.ProjectItemInfo>
                 <S.ProjectItemTitle>{title}</S.ProjectItemTitle>
@@ -28,7 +28,7 @@ const ProjectItem = ({ slug, title, description, image }) => (
 
 ProjectItem.propTypes = {
     slug: propTypes.string.isRequired,
-    image: propTypes.string.isRequired,
+    thumbnailImage: propTypes.string.isRequired,
     title: propTypes.string.isRequired,
     description: propTypes.string.isRequired,
 }

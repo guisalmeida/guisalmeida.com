@@ -20,18 +20,19 @@ const blogListQuery = graphql`
             slug
           }
           frontmatter {
-            background
             category
             date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
             description
             title
+            thumbnailImage {
+              relativePath
+            }
           }
           timeToRead
         }
       }
     }
-  }
-  
+  }  
 `
 
 const HomeList = () => {
@@ -60,11 +61,13 @@ const HomeList = () => {
               slug
             },
             frontmatter: {
-              background,
               category,
               date,
               description,
-              title
+              title,
+              thumbnailImage: {
+                relativePath
+              }
             },
             timeToRead
           }
@@ -73,12 +76,12 @@ const HomeList = () => {
             <PostItem
               key={index}
               slug={slug}
-              background={background}
               category={category}
               date={date}
               timeToRead={timeToRead}
               title={title}
               description={description}
+              thumbnailImage={relativePath}
             />
           )
         )}

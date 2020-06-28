@@ -13,6 +13,8 @@ module.exports = {
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     // need to be the first to work with gatsby-remark-images
     {
       resolve: `gatsby-source-filesystem`,
@@ -31,15 +33,22 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `assets`,
+        path: `${__dirname}/content/assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `posts`,
-        path: `${__dirname}/posts`,
+        path: `${__dirname}/content/posts`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `projects`,
-        path: `${__dirname}/projects`,
+        path: `${__dirname}/content/projects`,
       },
     },
     {
@@ -64,8 +73,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-algolia-search`,
       options: {

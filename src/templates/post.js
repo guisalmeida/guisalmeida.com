@@ -13,6 +13,9 @@ const Post = ({ data }) => {
     return (
         <Layout>
             <SEO title={post.frontmatter.title} description={post.frontmatter.description} image={post.frontmatter.image} />
+            {post.frontmatter.thumbnailImage &&
+                <S.PostImage fluid={post.frontmatter.thumbnailImage.childImageSharp.fluid} />
+            }
             <S.PostHeader>
                 {post.frontmatter.date &&
                 <S.PostDate>{post.frontmatter.date} - {post.timeToRead} min de leitura</S.PostDate>}
@@ -38,11 +41,18 @@ export const query = graphql`
                 title
                 description
                 date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
-                image
+                thumbnailImage {
+                    childImageSharp {
+                        fluid(maxWidth: 1280, quality: 80) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
             }
             html
             timeToRead
         }
+        
     }
 `
 

@@ -1,5 +1,17 @@
 import styled from "styled-components";
 import media from "styled-media-query";
+import Img from 'gatsby-image';
+
+export const PostImage = styled(Img).attrs({
+  alt: 'Imagem de introdução',
+  'aria-hidden': 'true'
+})`
+  display: block;
+  height: 30vh;
+  object-fit: cover;
+  object-position: 50% 0;
+  width: 100%;
+`
 
 export const PostHeader = styled.header`
   color: var(--postColor);

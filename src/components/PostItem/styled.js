@@ -1,7 +1,17 @@
 import styled from "styled-components"
 import media from "styled-media-query"
-
+import Img from 'gatsby-image';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+
+export const PostImage = styled(Img).attrs({
+  alt: 'Thumbnail',
+  'aria-hidden': 'true'
+})`
+  border-radius: 50%;
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+`
 
 export const PostItemLink = styled(AniLink)`
   color: var(--texts);
