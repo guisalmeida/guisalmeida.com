@@ -18,7 +18,7 @@ const Author = ({ fullText }) => {
             <h2>Habilidades</h2>
             <ul>
                 <li>HTML5</li>
-                <li>CSS3 (Sass)</li>
+                <li>CSS3 (Sass, Styled Components)</li>
                 <li>CSS Frameworks (Bootstrap)</li>
                 <li>Design Responsivo (Mobile First)</li>
                 <li>Javascript (ES6/7)</li>

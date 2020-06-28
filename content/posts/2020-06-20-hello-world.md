@@ -1,7 +1,7 @@
 ---
 title: Hello World
-description: Começando meu blog peesoal, aqui pretendo compartilhar o que venho
-  aprendendo sobre desenvolvimento web, ciencia da computação e afins..
+description: Começando meu blog pessoal, aqui pretendo compartilhar o que venho
+  aprendendo sobre desenvolvimento web, ciência da computação e afins..
 date: 2020-06-28 03:19:24
 category: blog
 thumbnailImage: ../../static/assets/img/thumb-hello.png
@@ -14,5 +14,5 @@ Com isso pretendo compartilhar o conhecimento que venho adquirindo como forma de
 
 Pretendo postar dicas de desenvolvimento web principalmente, um pouco de teoria sobre o que venho estudando no curso de ciência da computação, resenhas de livros de tecnologia, eventos, cursos e o que mais me vier na cabeça.
 
-Então é isso fique a vontade, sirva um café e aguarde por novos posts para irmos trocando idéia sobre o mundo `dev`.
+Então é isso fique a vontade, sirva um café e aguarde por novos posts para irmos trocando ideia sobre o mundo `dev`.
 
