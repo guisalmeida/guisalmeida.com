@@ -9,12 +9,24 @@ publish_mode: editorial_workflow
 
 # This line should *not* be indented
 media_folder: "static/assets/img" # Media files will be stored in the repo under images/uploads
-public_folder: "assets/img"
+public_folder: "../../static/assets/img/" # The src attribute for uploaded media will begin with ../../static/assets/img/
 
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Posts" # Used in the UI
     folder: "content/posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string"}
+      - { label: "Description", name: "description", widget: "string"}
+      - { label: "Date", name: "date", widget: "datetime", format: 'YYYY-MM-DD hh:mm:ss'}
+      - { label: "thumbnailImage", name: "thumbnailImage", widget: "image"}
+      - { label: "Category", name: "category", widget: "select", options: ["blog", "project"]}
+      - { label: "Body", name: "body", widget: "markdown"}
+  - name: "Projects" # Used in routes, e.g., /admin/collections/blog
+    label: "Projects" # Used in the UI
+    folder: "content/projects" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter

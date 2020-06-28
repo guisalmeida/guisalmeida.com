@@ -3,7 +3,6 @@ title: Hello World
 description: Começando meu blog peesoal, aqui pretendo compartilhar o que venho
   aprendendo sobre desenvolvimento web, ciencia da computação e afins..
 date: 2020-06-28 03:19:24
-image: assets/img/layout-home.jpg
 category: blog
 thumbnailImage: ../../static/assets/img/thumb-hello.png
 ---
