@@ -6,7 +6,7 @@ import * as S from './styled'
 const Image = ({ filename, alt }) => {
     const data = useStaticQuery(graphql`
         query {
-            images: allFile(filter: { absolutePath: { regex: "/content/assets/" } }) {
+            images: allFile(filter: { absolutePath: { regex: "/static/assets/img/" } }) {
                 edges {
                     node {
                         relativePath
@@ -25,9 +25,11 @@ const Image = ({ filename, alt }) => {
     const image = data.images.edges.find(n => {
         return n.node.relativePath.includes(filename)
     });
-    if (!image) return null;
+    if (!image) {
+        console.log("sem imagem");
+        return null;
+    }    
     const imageSizes = image.node.childImageSharp.sizes;
-
     return (
         <S.ImageWrapper alt={alt} sizes={imageSizes} />
     );

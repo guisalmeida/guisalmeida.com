@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 export const ImageWrapper = styled(Img)`
   border-radius: 6px;
   display: flex;
-  width: 120px;
+  min-width: 120px;
   height: 80px;
 
   body#grid & {
