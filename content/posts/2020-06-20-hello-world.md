@@ -5,10 +5,9 @@ description: Começando meu blog peesoal, aqui pretendo compartilhar o que venho
 date: 2020-06-28 03:19:24
 image: assets/img/layout-home.jpg
 category: blog
-background: "#7AAB13"
-thumbnailImage: assets/img/thumb-hello.png
+thumbnailImage: ../../static/assets/img/thumb-hello.png
 ---
-\> Olá! me chamo Guilherme se quiser saber mais sobre mim pode ver [aqui](https://guisalmeida.com/about), você deve ser novo por aqui, por isso resolvi escrever esse meu primeiro post falando um pouco das minhas motivações de ter um blog.
+Olá! me chamo Guilherme se quiser saber mais sobre mim pode ver [aqui](https://guisalmeida.com/about), você deve ser novo por aqui, por isso resolvi escrever esse meu primeiro post falando um pouco das minhas motivações de ter um blog.
 
 Me considero iniciante ainda como desenvolvedor, até 2018 minha carreira profissional foi sempre como designer trabalhando em projetos como diagramação de livros, comunicação visual, marketing em agência e freelas de criação de papelarias e identidade visual.
 

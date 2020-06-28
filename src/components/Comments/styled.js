@@ -26,6 +26,7 @@ export const CommentsTitle = styled.h2`
   font-size: 2.1rem;
   font-weight: 700;
   padding-bottom: 2rem;
+  text-align: center;
 
   ${media.lessThan("medium")`
     font-size: 1.375rem;
