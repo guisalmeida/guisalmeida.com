@@ -26,7 +26,6 @@ const Image = ({ filename, alt }) => {
         return n.node.relativePath.includes(filename)
     });
     if (!image) {
-        console.log("sem imagem");
         return null;
     }    
     const imageSizes = image.node.childImageSharp.sizes;

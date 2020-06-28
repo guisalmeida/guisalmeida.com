@@ -20,6 +20,7 @@ const postsQuery = `
                         }
                     }
                     excerpt(pruneLength: 5000)
+                    timeToRead
                 }
             }
         }

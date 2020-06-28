@@ -2,7 +2,6 @@ import React from 'react';
 import PostItem from '../PostItem';
 
 const Hit = ({ hit }) => {
-    console.log(hit);
     return (
         <PostItem
             slug={hit.fields.slug}
@@ -11,6 +10,7 @@ const Hit = ({ hit }) => {
             description={hit.description}
             category={hit.category}
             thumbnailImage={hit.thumbnailImage.relativePath}
+            timeToRead={hit.timeToRead}
         />
     )
 }
