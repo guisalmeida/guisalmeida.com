@@ -4,7 +4,7 @@ const queries = require('./src/utils/algolia_queries');
 module.exports = {
   siteMetadata: {
     title: `Guilherme Almeida`,
-    position: `Desenvolvedor Web Front-end | Graduando em Ciência da Computação`,
+    position: `Desenvolvedor Web Front-end`,
     description: `Site e blog pessoal com projetos de portfólio e artigos sobre tecnologia.`,
     author: `@guisalmeida`,
     siteUrl: `https://guisalmeida.com`
@@ -86,7 +86,7 @@ module.exports = {
         background_color: `#f0f0f3`,
         theme_color: `#f0f0f3`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gui-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sitemap`,

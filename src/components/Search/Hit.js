@@ -1,6 +1,6 @@
 import React from 'react';
 import PostItem from '../PostItem';
-// import ProjectItem from "../ProjectItem"
+import ProjectItem from "../ProjectItem"
 
 const Hit = ({ hit }) => {
     console.log(hit);
@@ -11,7 +11,7 @@ const Hit = ({ hit }) => {
             date={hit.date}
             description={hit.description}
             category={hit.category}
-            // thumbnailImage={hit.thumbnailImage.relativePath}
+            thumbnailImage={hit.thumbnailImage.relativePath}
         />
     )
 }

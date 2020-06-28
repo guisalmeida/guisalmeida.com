@@ -1,7 +1,7 @@
 
 <p align="center">
   <a href="https://www.guisalmeida.com">
-    <img alt="Logo" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+    <img alt="Logo" src="src/images/gui-icon.png" width="60" />
   </a>
 </p>
 <h1 align="center">
@@ -10,15 +10,14 @@
 
 
 
-## 🚀 Quick start
-
-
-
-## 🎓 Learning Gatsby
-
+## 🚀 Technologies
+* ReactJS
+* Gatsby
+* Graphql
 
 
 ## ⚙️ TODO
+* [ ] Make page 404
 * [ ] Change color theme
 * [ ] New feature to hide main menu in desktop
 * [ ] Write tests
