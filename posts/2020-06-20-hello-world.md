@@ -6,5 +6,6 @@ date: 2020-06-20T06:10:54.000Z
 image: assets/img/layout-home.jpg
 category: misc
 background: "#7AAB13"
+thumbnailImage: assets/img/thumb-hello.png
 ---
 \# Meu começo
