@@ -3,9 +3,8 @@ title: My JS Documentation
 description: Alguns métodos nativos da linguagem que podem ser usados de acordo
   com o tipo do dado.
 date: 2020-06-17T03:55:48.000Z
-thumbnailImage: ../assets/layout-home.jpg
+thumbnailImage: ../../static/assets/img/thumb-studion.png
 category: blog
-background: "#D6BA32"
 ---
 _Este conteúdo foi baseado quase que integralmente no [**Curso Javascript Masterclass Online**](https://www.agilecode.com.br/#!/curso-javascript) do **Rodrigo Branas - AgileCode**._  
 Faça inscrição por este [link](https://app.agilecode.com.br/#!/public/programs/c09d58ff-ce6b-491b-b158-9982583dff79/orders/new?coupon=ea3605a2) e ganhe _**15% de desconto**_ no valor integral do curso.

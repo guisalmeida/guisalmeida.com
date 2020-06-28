@@ -8,7 +8,7 @@ backend:
 publish_mode: editorial_workflow
 
 # This line should *not* be indented
-media_folder: "content/assets" # Media files will be stored in the repo under images/uploads
+media_folder: "static/assets/img" # Media files will be stored in the repo under images/uploads
 public_folder: "assets/img"
 
 collections:
@@ -21,6 +21,6 @@ collections:
       - { label: "Title", name: "title", widget: "string"}
       - { label: "Description", name: "description", widget: "string"}
       - { label: "Date", name: "date", widget: "datetime", format: 'YYYY-MM-DD hh:mm:ss'}
-      - { label: "thumbnailImage", name: "thumbnailImage", widget: "thumbnailImage"}
+      - { label: "thumbnailImage", name: "thumbnailImage", widget: "image"}
       - { label: "Category", name: "category", widget: "select", options: ["blog", "project"]}
       - { label: "Body", name: "body", widget: "markdown"}
