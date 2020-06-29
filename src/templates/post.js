@@ -17,7 +17,7 @@ const Post = ({ data }) => {
                 <S.PostImage fluid={post.frontmatter.thumbnailImage.childImageSharp.fluid} />
             }
             <S.PostHeader>
-                {post.frontmatter.date &&
+                {post.frontmatter.categoty !== 'project' &&
                 <S.PostDate>{post.frontmatter.date} - {post.timeToRead} min de leitura</S.PostDate>}
                 <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
                 <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
