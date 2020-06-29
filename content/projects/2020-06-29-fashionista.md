@@ -10,17 +10,17 @@ category: project
  
 Acesse a [demo](https://fashionista-shop.netlify.app/) do site ou [Repositório](https://github.com/GuiSAlmeida/aceleradev-fashionista) no Github.
 
-### Layouts: Home (catálogo)
+### 🎨 Layout Home (catálogo)
 
 ![Home](../../static/assets/img/fashionista-layout1.png)
 
-### Layouts: Página do produto
+### 🎨 Layout Página do produto
 ![Produto](../../static/assets/img/fashionista-layout2.png)
 
-### Layouts: Carrinho de compras aberto
+### 🎨 Layout Carrinho de compras aberto
 ![Carrinho](../../static/assets/img/fashionista-layout3.png)
 
-### Layouts: Busca em tempo real
+### 🎨 Layout Busca em tempo real
 ![Busca](../../static/assets/img/fashionista-layout4.png)
 
 
