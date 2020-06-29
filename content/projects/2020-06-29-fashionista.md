@@ -32,5 +32,5 @@ Acesse a [demo](https://fashionista-shop.netlify.app/) do site ou [Repositório]
 -   [NETLIFY](https://www.netlify.com/)
 
 ### ⚙️ **ToDo**
--   [ ] Ajustar bug google map da página contato
+-   [ ] Alterar estilos para styled-components
 
