@@ -7,7 +7,7 @@ category: project
 ---
 <p align="center">
     <a href="https://www.netlify.com">
-        <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg"/>
+        <img src="../../static/assets/img/netlify-color-accent.svg"/>
     </a> 
 </p>
 
