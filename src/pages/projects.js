@@ -11,7 +11,10 @@ import { MainContent } from '../styles/base';
 const ProjectsPage = () => {
     const { allMarkdownRemark: { edges: projects } } = useStaticQuery(graphql`
         query projects {
-            allMarkdownRemark(filter: {frontmatter: {category: {eq: "project"}}}) {
+            allMarkdownRemark(filter: {
+                frontmatter: {category: {eq: "project"}}},
+                sort: {fields: frontmatter___date, order: ASC}
+            ) {
                 edges {
                     node {
                         frontmatter {

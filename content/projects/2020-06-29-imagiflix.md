@@ -5,11 +5,6 @@ date: 2020-06-29 05:16:28
 thumbnailImage: ../../static/assets/img/thumb-imagiflix.png
 category: project
 ---
-<p align="center">
-    <a href="https://www.netlify.com">
-        <img src="../../static/assets/img/netlify-color-accent.svg"/>
-    </a> 
-</p>
 
 > Imagiflix é um site de filmes fictício feito no curso de front-end da [Imagine School](http://imagineschool.com.br/)
 
