@@ -13,7 +13,7 @@ const ProjectsPage = () => {
         query projects {
             allMarkdownRemark(filter: {
                 frontmatter: {category: {eq: "project"}}},
-                sort: {fields: frontmatter___date, order: ASC}
+                sort: {fields: frontmatter___date, order: DESC}
             ) {
                 edges {
                     node {
