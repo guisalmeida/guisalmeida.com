@@ -8,7 +8,7 @@ import SEO from '../components/seo'
 
 const HomePage = () => (
     <Layout>
-        <SEO title='Projetos' />
+        <SEO title='Início' />
         <Author fullText={false} />
         <HomeList />
     </Layout>
