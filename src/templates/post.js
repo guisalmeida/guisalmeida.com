@@ -38,6 +38,7 @@ export const query = graphql`
                 slug
             }
             frontmatter {
+                category
                 title
                 description
                 date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")

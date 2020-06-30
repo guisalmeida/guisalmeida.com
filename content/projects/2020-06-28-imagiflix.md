@@ -10,6 +10,8 @@ category: project
 
 Acesse a [demo](https://imagiflix.netlify.app) do site ou [Repositório](https://github.com/GuiSAlmeida/imagiflix) no Github.
 
+
+### 🎨 Layout
 ![Layout](../../static/assets/img/imagiflix-layout.jpg)
 
 ### 🛠️ **Tecnologias**
