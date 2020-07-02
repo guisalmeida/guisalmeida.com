@@ -4,6 +4,8 @@ import media from 'styled-media-query'
 import transitions from '../../styles/transitions'
 
 export const MenuWrapper = styled.nav`
+  margin-top: 2rem;
+  
   ${media.lessThan('medium')`
     margin: auto;
   `}

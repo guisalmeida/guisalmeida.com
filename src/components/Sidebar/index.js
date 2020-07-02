@@ -21,8 +21,8 @@ const Sidebar = ({
                 isMobileHeader={false}
             />
             <S.SidebarLinksContainer>
-                <Social />
                 <Menu setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
+                <Social />
             </S.SidebarLinksContainer>
         </S.SidebarContainer>
 

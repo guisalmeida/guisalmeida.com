@@ -1,6 +1,6 @@
 ---
 title: Imagiflix
-description: Site de filmes que consome a API do TMDb
+description: Site de filmes que consome a API do TMDb.
 date: 2020-06-28 05:16:28
 thumbnailImage: ../../static/assets/img/thumb-imagiflix.png
 category: project
