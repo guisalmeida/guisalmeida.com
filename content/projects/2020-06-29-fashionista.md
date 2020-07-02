@@ -1,7 +1,6 @@
 ---
 title: Fashionista
-description: Site SPA de uma loja de e-commerce que consome a API de produtos
-  própria e gerencia estados com Redux.
+description: Site SPA de uma loja de e-commerce que consome a API de produtos própria e gerencia estados com Redux.
 date: 2020-06-29T05:14:30.000Z
 thumbnailImage: ../../static/assets/img/thumb-fashionista.png
 category: project
