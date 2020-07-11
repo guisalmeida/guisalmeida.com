@@ -10,6 +10,10 @@ date: 2020-07-11T06:53:24.000Z
 thumbnailImage: ../../static/assets/img/layout.jpg
 category: blog
 ---
+# Web moderna e E-mail Marketing HTML
+
+> “Depois de deixar o float de lado e aprender o maravilhoso flexbox, criar layouts com display grid, as facilidades de um pré processador como Sass pode trazer ao projeto e o uso das tags semânticas, sem falar dos frameworks entre outras tecnologias da web moderna. Eis que nos deparamos com o desafio de criar um “simples” template de e-mail marketing em HTML para as campanhas da nossa empresa.”
+
 ### Motivação
 Atualmente lá na Linx trabalho diariamente com clientes de e-mail automatizado, um dos nossos produtos da solução [reengage](https://www.linx.com.br/transformacao-digital/linx-impulse/re-engage/), o que me motivou a pesquisar mais sobre o assunto e escrever este post para tirar algumas dúvidas a respeito de como criar campanhas de e-mail marketing de forma simples e descomplicada.  
 
@@ -31,7 +35,7 @@ Como citei na descrição do post algumas coisas que funcionam em sites não nec
 Vamos criar nosso template apartir deste layout ao longo do post.  
 Acesse o layout [aqui](https://www.figma.com/file/RYosfog8wshbbndVRoYE14/assets?node-id=5%3A3).  
 
-![Layout](../../static/assets/img/layout.jpg)  
+![Layout](assets/layout.jpg)  
 
 <br>  
 
@@ -89,11 +93,11 @@ Acesse o layout [aqui](https://www.figma.com/file/RYosfog8wshbbndVRoYE14/assets?
 ```
 Com isso já temos algumas coisas renderizando em tela:  
 
-![Layout começo](../../static/assets/img/layout1.png)  
+![Layout começo](assets/layout1.png)  
 
 <br>  
 
-### ⚠️ Cuidados com imagens
+### Cuidados com imagens
 Antes de adicionarmos as imagens vale uma dica.  
 Há uma prática ainda usada por algumas empresas que consiste em transformar todo e-mail em uma imagem, porem os provedores de e-mail possuem um bloqueio padrão de segurança para exibição de qualquer formato de imagem que esteja em um e-mail, sendo necessário o usuário aceitar a visualização das imagens.  
 
@@ -201,7 +205,7 @@ Como o conteúdo é para web tente deixar imagens com tamanho máximo de 100kb.
 
 Com isso já temos nosso layout finalizado com largura fixa:  
 
-![Layout fixo finalizado](../../static/assets/img/layout2.png)  
+![Layout fixo finalizado](assets/layout2.png)  
 
 <br>  
 
@@ -212,7 +216,8 @@ Se você usa o VS code, uma ferramenta que usamos para auxiliar nessa parte é a
 
 ![Demo](https://github.com/enriquein/htmlentity-replacer/raw/master/demo.gif)
 
-- Acentos e caracteres especiais substituidos:
+- Acentos e caracteres especiais substituidos:  
+
 ```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -310,9 +315,9 @@ Se você usa o VS code, uma ferramenta que usamos para auxiliar nessa parte é a
 
 ### Enviando nosso e-mail marketing
 Para testar enviei o email para o gmail e outlook e segue resultado:  
-![gmail](../../static/assets/img/gmail.png)  
+![gmail](assets/gmail.png)  
 
-![outlook](../../static/assets/img/outlook.png)  
+![outlook](assets/outlook.png)  
 
 <br>  
 
