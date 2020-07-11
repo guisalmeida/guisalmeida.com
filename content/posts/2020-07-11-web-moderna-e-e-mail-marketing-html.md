@@ -10,10 +10,6 @@ date: 2020-07-11T06:53:24.000Z
 thumbnailImage: ../../static/assets/img/layout.jpg
 category: blog
 ---
-# Web moderna e E-mail Marketing HTML
-
-> “Depois de deixar o float de lado e aprender o maravilhoso flexbox, criar layouts com display grid, as facilidades de um pré processador como Sass pode trazer ao projeto e o uso das tags semânticas, sem falar dos frameworks entre outras tecnologias da web moderna. Eis que nos deparamos com o desafio de criar um “simples” template de e-mail marketing em HTML para as campanhas da nossa empresa.”
-
 ### Motivação
 Atualmente lá na Linx trabalho diariamente com clientes de e-mail automatizado, um dos nossos produtos da solução [reengage](https://www.linx.com.br/transformacao-digital/linx-impulse/re-engage/), o que me motivou a pesquisar mais sobre o assunto e escrever este post para tirar algumas dúvidas a respeito de como criar campanhas de e-mail marketing de forma simples e descomplicada.  
 
