@@ -35,7 +35,7 @@ Como citei na descrição do post algumas coisas que funcionam em sites não nec
 Vamos criar nosso template apartir deste layout ao longo do post.  
 Acesse o layout [aqui](https://www.figma.com/file/RYosfog8wshbbndVRoYE14/assets?node-id=5%3A3).  
 
-![Layout](assets/layout.jpg)  
+![Layout](../../static/assets/img/layout.jpg)  
 
 <br>  
 
@@ -93,7 +93,7 @@ Acesse o layout [aqui](https://www.figma.com/file/RYosfog8wshbbndVRoYE14/assets?
 ```
 Com isso já temos algumas coisas renderizando em tela:  
 
-![Layout começo](assets/layout1.png)  
+![Layout começo](../../static/assets/img/layout1.png)  
 
 <br>  
 
@@ -101,7 +101,7 @@ Com isso já temos algumas coisas renderizando em tela:
 Antes de adicionarmos as imagens vale uma dica.  
 Há uma prática ainda usada por algumas empresas que consiste em transformar todo e-mail em uma imagem, porem os provedores de e-mail possuem um bloqueio padrão de segurança para exibição de qualquer formato de imagem que esteja em um e-mail, sendo necessário o usuário aceitar a visualização das imagens.  
 
-![Imagem quebrada](assets/template-html-email-2.png)  
+![Imagem quebrada](../../static/assets/img/template-html-email-2.png)  
 Crédito da imagem: https://resultadosdigitais.com.br/blog/template-html-email/
 
 Isso não funciona bem como mostra a imagem acima. É preciso que o email mostre a que veio logo de cara. Ao usar apenas imagem, muitos destinatários irão ignorar o email, deletá-lo ou marcá-lo como spam.
@@ -205,7 +205,7 @@ Como o conteúdo é para web tente deixar imagens com tamanho máximo de 100kb.
 
 Com isso já temos nosso layout finalizado com largura fixa:  
 
-![Layout fixo finalizado](assets/layout2.png)  
+![Layout fixo finalizado](../../static/assets/img/layout2.png)  
 
 <br>  
 
@@ -315,9 +315,9 @@ Se você usa o VS code, uma ferramenta que usamos para auxiliar nessa parte é a
 
 ### Enviando nosso e-mail marketing
 Para testar enviei o email para o gmail e outlook e segue resultado:  
-![gmail](assets/gmail.png)  
+![gmail](../../static/assets/img/gmail.png)  
 
-![outlook](assets/outlook.png)  
+![outlook](../../static/assets/img/outlook.png)  
 
 <br>  
 
