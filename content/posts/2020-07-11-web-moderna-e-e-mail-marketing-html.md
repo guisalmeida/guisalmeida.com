@@ -4,8 +4,8 @@ description: Depois de deixar o float de lado e aprender o maravilhoso flexbox,
   criar layouts com display grid, as facilidades de um pré processador como Sass
   pode trazer ao projeto e o uso das tags semânticas, sem falar dos frameworks
   entre outras tecnologias da web moderna. Eis que nos deparamos com o desafio
-  de criar um “simples” template de e-mail marketing em HTML para as campanhas
-  da nossa empresa.
+  de criar um “simples” template de e-mail marketing em HTML para as
+  campanhas  da nossa empresa.
 date: 2020-07-11T06:53:24.000Z
 thumbnailImage: ../../static/assets/img/thumb-mail.png
 category: blog
