@@ -6,7 +6,7 @@ description: Depois de deixar o float de lado e aprender o maravilhoso flexbox,
   entre outras tecnologias da web moderna. Eis que nos deparamos com o desafio
   de criar um “simples” template de e-mail marketing em HTML para as campanhas
   da nossa empresa.
-date: 2020-07-11 06:53:24
+date: 2020-07-11T06:53:24.000Z
 thumbnailImage: ../../static/assets/img/layout.jpg
 category: blog
 ---
@@ -31,7 +31,7 @@ Como citei na descrição do post algumas coisas que funcionam em sites não nec
 Vamos criar nosso template apartir deste layout ao longo do post.  
 Acesse o layout [aqui](https://www.figma.com/file/RYosfog8wshbbndVRoYE14/assets?node-id=5%3A3).  
 
-![Layout](assets/layout.jpg)  
+![Layout](../../static/assets/img/layout.jpg)  
 
 <br>  
 
@@ -89,7 +89,7 @@ Acesse o layout [aqui](https://www.figma.com/file/RYosfog8wshbbndVRoYE14/assets?
 ```
 Com isso já temos algumas coisas renderizando em tela:  
 
-![Layout começo](assets/layout1.png)  
+![Layout começo](../../static/assets/img/layout1.png)  
 
 <br>  
 
@@ -201,7 +201,7 @@ Como o conteúdo é para web tente deixar imagens com tamanho máximo de 100kb.
 
 Com isso já temos nosso layout finalizado com largura fixa:  
 
-![Layout fixo finalizado](assets/layout2.png)  
+![Layout fixo finalizado](../../static/assets/img/layout2.png)  
 
 <br>  
 
@@ -310,9 +310,9 @@ Se você usa o VS code, uma ferramenta que usamos para auxiliar nessa parte é a
 
 ### Enviando nosso e-mail marketing
 Para testar enviei o email para o gmail e outlook e segue resultado:  
-![gmail](assets/gmail.png)  
+![gmail](../../static/assets/img/gmail.png)  
 
-![outlook](assets/outlook.png)  
+![outlook](../../static/assets/img/outlook.png)  
 
 <br>  
 
