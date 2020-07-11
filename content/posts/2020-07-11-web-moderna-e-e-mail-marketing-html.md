@@ -7,7 +7,7 @@ description: Depois de deixar o float de lado e aprender o maravilhoso flexbox,
   de criar um “simples” template de e-mail marketing em HTML para as campanhas
   da nossa empresa.
 date: 2020-07-11T06:53:24.000Z
-thumbnailImage: ../../static/assets/img/layout.jpg
+thumbnailImage: ../../static/assets/img/thumb-mail.png
 category: blog
 ---
 ### Motivação
