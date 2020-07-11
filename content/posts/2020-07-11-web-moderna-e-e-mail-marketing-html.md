@@ -17,7 +17,7 @@ Atualmente lá na Linx trabalho diariamente com clientes de e-mail automatizado,
 
 ### Tá mas e ai? Muda alguma coisa?
 Bom essa era a pergunta que eu me fazia até pouco tempo atrás e a responta é SIM muda bastante coisa. As técnicas para email marketing em HTML são um pouco diferentes e nem tudo que funciona em sites vai funcionar nas caixas de entrada.  
-Mas a ideia desse post não é nos aprofundarmos tecnicamente em tudo que o e-mail suporta e todas suas especificidades. Pretendo aqui passar uma visão geral de como montar um template simples com dicas importatntes para auxiliar quem está criando seu primeiro template de email em HTML.  
+Mas a ideia desse post não é nos aprofundarmos tecnicamente em tudo que o e-mail suporta e todas suas especificidades. Pretendo aqui passar uma visão geral de como montar um template simples com dicas importantes para auxiliar quem está criando seu primeiro template de email em HTML.  
 
 <br>  
 
@@ -53,9 +53,10 @@ Acesse o layout [aqui](https://www.figma.com/file/RYosfog8wshbbndVRoYE14/assets?
 <br>  
 
 ### Adicionando conteúdo com tabelas
-- Adicionamos a tag `link` importando a fonte que estamos usando no layout, adicionamos o estilo inline com uma lista de fontes. O importante é sempre colocarmos fontes alternativas semelhantes para as situações em que a fonte principal não possa ser exibida.
-- Na tag `Table` é recomendado deixar os valores de `cellpaddding` e `cellspacing` como `0` para evitar espaços indesejados no seu email.
-- Nessa parte criamos três estruturas de uma linha e uma coluna para mostrarmos a logo, a chamada principal e a outra chamada.
+- Adicionamos a tag `link` importando a fonte que estamos usando no layout, adicionamos o estilo inline com uma lista de fontes. O importante é sempre colocarmos fontes alternativas semelhantes para as situações em que a fonte principal não possa ser exibida.  
+- Na tag `Table` é recomendado deixar os valores de `cellpaddding` e `cellspacing` como `0` para evitar espaços indesejados no seu email.  
+- Nessa parte criamos três estruturas de uma linha e uma coluna para mostrarmos a logo, a chamada principal e a outra chamada.  
+
 ```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
