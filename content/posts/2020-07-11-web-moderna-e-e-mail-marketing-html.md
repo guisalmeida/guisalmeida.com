@@ -96,7 +96,7 @@ Com isso já temos algumas coisas renderizando em tela:
 
 ### Cuidados com imagens
 Antes de adicionarmos as imagens vale uma dica.  
-Há uma prática ainda usada por algumas empresas que consiste em transformar todo e-mail em uma imagem, porem os provedores de e-mail possuem um bloqueio padrão de segurança para exibição de qualquer formato de imagem que esteja em um e-mail, sendo necessário o usuário aceitar a visualização das imagens.  
+Há uma prática ainda usada por algumas empresas que consiste em transformar todo e-mail em uma imagem, porém os provedores de e-mail possuem um bloqueio padrão de segurança para exibição de qualquer formato de imagem que esteja em um e-mail, sendo necessário o usuário aceitar a visualização das imagens.  
 
 ![Imagem quebrada](../../static/assets/img/template-html-email-2.png)  
 Crédito da imagem: https://resultadosdigitais.com.br/blog/template-html-email/
@@ -312,6 +312,7 @@ Se você usa o VS code, uma ferramenta que usamos para auxiliar nessa parte é a
 
 ### Enviando nosso e-mail marketing
 Para testar enviei o email para o gmail e outlook e segue resultado:  
+
 ![gmail](../../static/assets/img/gmail.png)  
 
 ![outlook](../../static/assets/img/outlook.png)  
