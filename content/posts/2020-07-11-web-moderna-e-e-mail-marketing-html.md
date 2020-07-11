@@ -326,3 +326,6 @@ Para testar enviei o email para o gmail e outlook e segue resultado:
 - https://ajuda.locaweb.com.br/wiki/boas-praticas-de-html-para-email-marketing-ajuda-locaweb/
 - https://www.felipefialho.com/blog/tutorial-tabela-responsiva/
 - https://www.campaignmonitor.com/blog/email-marketing/2019/05/correct-doctype-to-use-in-html-email/
+
+### Repositório com código:
+https://github.com/GuiSAlmeida/email-mkt
