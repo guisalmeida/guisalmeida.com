@@ -108,8 +108,8 @@ Como o conteúdo é para web tente deixar imagens com tamanho máximo de 100kb.
 <br>  
 
 ### Adicionando imagens
-- Uma boa prática é colocar sempre o caminho abosoluto das imagens, evitando assim erros no carregamento.
-- O atributo `ALT` oferece um texto alternativo quando alguma imagem não carrega ou não pode ser visualizada. Esse atributo é muito usado para melhorar a acessibilidade de uma página na web e principalmente de um E-mail Marketing, já que muitos clientes de e-mail bloqueiam as imagens enviadas por remetentes desconhecidos. Nesta situação, a função do atributo é facilitar a “pré-leitura” para o usuário.
+- Uma boa prática é colocar sempre o caminho absoluto das imagens, evitando assim erros no carregamento.
+- O atributo `ALT` oferece um texto alternativo quando alguma imagem não carrega ou não pode ser visualizada. Esse atributo é muito usado para melhorar a acessibilidade de uma página na web e principalmente de um e-mail marketing, já que muitos clientes de e-mail bloqueiam as imagens enviadas por remetentes desconhecidos. Nesta situação, a função do atributo é facilitar a “pré-leitura” para o usuário.
 - Procure não trabalhar com `.svg` alguns provedores como gmail não renderizam este tipo de arquivo.
 
 ```html
@@ -209,7 +209,7 @@ Com isso já temos nosso layout finalizado com largura fixa:
 ### Ajustando textos
 Acentos e caracteres especiais também podem não renderizar corretamente de acordo com cada provedor e devem ser substituidos por `Unicode`.
 
-Se você usa o VS code, uma ferramenta que usamos para auxiliar nessa parte é a [HTML accented character converter](https://github.com/enriquein/htmlentity-replacer) que pode ser encontrado na aba extenções.  
+Se você usa o VS code, uma ferramenta que uso para me auxiliar é a [HTML accented character converter](https://github.com/enriquein/htmlentity-replacer) que pode ser encontrada na aba extenções da ide.  
 
 ![Demo](https://github.com/enriquein/htmlentity-replacer/raw/master/demo.gif)
 
