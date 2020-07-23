@@ -1,29 +1,29 @@
 ---
-title: Web moderna e E-mail Marketing HTML
+title: Web moderna e Email Marketing HTML
 description: Depois de deixar o float de lado e aprender o maravilhoso flexbox,
   criar layouts com display grid, as facilidades de um pré processador como Sass
   pode trazer ao projeto e o uso das tags semânticas, sem falar dos frameworks
   entre outras tecnologias da web moderna. Eis que nos deparamos com o desafio
-  de criar um “simples” template de e-mail marketing em HTML para as
+  de criar um “simples” template de email marketing em HTML para as
   campanhas  da nossa empresa.
 date: 2020-07-23T06:53:24.000Z
 thumbnailImage: ../../static/assets/img/thumb-mail.png
 category: blog
 ---
 ### Motivação
-Atualmente lá na Linx trabalho diariamente com clientes de e-mail automatizado, um dos nossos produtos da solução [reengage](https://www.linx.com.br/transformacao-digital/linx-impulse/re-engage/), o que me motivou a pesquisar mais sobre o assunto e escrever este post para tirar algumas dúvidas a respeito de como criar campanhas de e-mail marketing de forma simples e descomplicada.  
+Atualmente lá na Linx trabalho diariamente com clientes de email automatizado, um dos nossos produtos da solução [reengage](https://www.linx.com.br/transformacao-digital/linx-impulse/re-engage/), o que me motivou a pesquisar mais sobre o assunto e escrever este post para tirar algumas dúvidas a respeito de como criar campanhas de e-mail marketing de forma simples e descomplicada.  
 
 <br>  
 
 ### Tá mas e ai? Muda alguma coisa?
 Bom essa era a pergunta que eu me fazia até pouco tempo atrás e a responta é SIM muda bastante coisa. As técnicas para email marketing em HTML são um pouco diferentes e nem tudo que funciona em sites vai funcionar nas caixas de entrada.  
-Mas a ideia desse post não é nos aprofundarmos tecnicamente em tudo que o e-mail suporta e todas suas especificidades. Pretendo aqui passar uma visão geral de como montar um template simples com dicas importantes para auxiliar quem está criando seu primeiro template de email em HTML.  
+Mas a ideia desse post não é nos aprofundarmos tecnicamente em tudo que o email suporta e todas suas especificidades. Pretendo aqui passar uma visão geral de como montar um template simples com dicas importantes para auxiliar quem está criando seu primeiro template de email em HTML.  
 
 <br>  
 
 ### Começando pelo básico
 Tenha noção que HTML de emails é diferente de HTML de sites.
-Como citei na descrição do post algumas coisas que funcionam em sites não necessariamente funcionarão em email marketing, principalmente divs, sections, e folhas de estilo CSS externas, entre outras. Isso porque páginas da web sempre são renderizadas nos navegadores, enquanto o e-mail será renderizado de acordo com o provedor de email e cada um tem as suas regras. Portanto o ideal é simplificar e a melhor maneira é usando as tabelas do HTML como veremos a seguir.
+Como citei na descrição do post algumas coisas que funcionam em sites não necessariamente funcionarão em email marketing, principalmente divs, sections, e folhas de estilo CSS externas, entre outras. Isso porque páginas da web sempre são renderizadas nos navegadores, enquanto o email será renderizado de acordo com o provedor de email e cada um tem as suas regras. Portanto o ideal é simplificar e a melhor maneira é usando as tabelas do HTML como veremos a seguir.
 
 <br>  
 
@@ -68,25 +68,31 @@ Acesse o layout [aqui](https://www.figma.com/file/RYosfog8wshbbndVRoYE14/assets?
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body style="font-family: Roboto, Arial, Helvetica, sans-serif;">
-    <table bgcolor="#fff" width="600px" cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto;">
-        <tr height="80">
-            <td align="center">
-                <img src="https://raw.githubusercontent.com/GuiSAlmeida/email-mkt/master/assets/logo.jpg" alt="Logo">
-            </td>
-        </tr>
-        <tr bgcolor="#6F967E">
-            <td style="padding: 20px 80px; color: #fff;" align="center">
-                Uma seleção de produtos
-                <h1 style="margin: 5px 0;">especial para você</h1>
-                <small>Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</small>
-            </td>
-        </tr>
+    <table bgcolor="#fff" width="600px" cellpadding="0" cellspacing="0" border="0">
         <tr>
-            <td style="color: #6F967E">
-                <h2 style="margin: 20px 0 10px;">Olá Guilherme</h2>
-                Fizemos uma lista especial de produtos apenas para você. Isso mesmo: nesta lista temos só produtos que você pode gostar. Seu amigo Ciclano lhe recomendou essa lista especial. Olha só:
-            </td>
-        </tr>
+            <td align="center">
+                <table cellspacing="0" cellpadding="0" width="600">
+                    <tr height="80">
+                        <td align="center">
+                            <img src="https://raw.githubusercontent.com/GuiSAlmeida/email-mkt/master/assets/logo.jpg" alt="Logo">
+                        </td>
+                    </tr>
+                    <tr bgcolor="#6F967E">
+                        <td style="padding: 20px 80px; color: #fff;" align="center">
+                            Uma seleção de produtos
+                            <h1 style="margin: 5px 0;">especial para você</h1>
+                            <small>Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #6F967E; padding: 0 80px 20px; font-size: 12px;">
+                            <h2 style="margin: 20px 0 10px;">Olá Guilherme</h2>
+                            Fizemos uma lista especial de produtos apenas para você. Isso mesmo: nesta lista temos só produtos que você pode gostar. Seu amigo Ciclano lhe recomendou essa lista especial. Olha só:
+                        </td>
+                    </tr>
+                </table>
+              </td>
+          </tr>
     </table>
 </body>
 </html>
@@ -113,7 +119,7 @@ Como o conteúdo é para web tente deixar imagens com tamanho máximo de 100kb.
 ### Adicionando imagens
 - Uma boa prática é colocar sempre o caminho absoluto das imagens, evitando assim erros no carregamento.
 - O atributo `ALT` oferece um texto alternativo quando alguma imagem não carrega ou não pode ser visualizada. Esse atributo é muito usado para melhorar a acessibilidade de uma página na web e principalmente de um e-mail marketing, já que muitos clientes de e-mail bloqueiam as imagens enviadas por remetentes desconhecidos. Nesta situação, a função do atributo é facilitar a “pré-leitura” para o usuário.
-- Procure não trabalhar com `.svg` alguns provedores como gmail não renderizam este tipo de arquivo.
+- Procure não trabalhar com `.svg` alguns provedores como gmail não renderizam este tipo de arquivo.  
 
 ```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -124,28 +130,30 @@ Como o conteúdo é para web tente deixar imagens com tamanho máximo de 100kb.
 </head>
 
 <body style="font-family: Roboto, Arial, Helvetica, sans-serif;">
-    <table bgcolor="#fff" width="600px" cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto;">
-        <tr height="80">
+    <table bgcolor="#fff" width="600px" cellpadding="0" cellspacing="0" border="0">
+        <tr>
             <td align="center">
-                <img src="https://raw.githubusercontent.com/GuiSAlmeida/email-mkt/master/assets/logo.jpg" alt="Logo">
-            </td>
-        </tr>
-        <tr bgcolor="#6F967E">
-            <td style="padding: 20px 80px; color: #fff;" align="center">
-                Uma seleção de produtos
-                <h1 style="margin: 5px 0;">especial para você</h1>
-                <small>Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</small>
-            </td>
-        </tr>
-        <tr>
-            <td style="color: #6F967E; padding: 0 80px 20px; font-size: 12px;">
-                <h2 style="margin: 20px 0 10px;">Olá Guilherme</h2>
-                Fizemos uma lista especial de produtos apenas para você. Isso mesmo: nesta lista temos só produtos que você pode gostar. Seu amigo Ciclano lhe recomendou essa lista especial. Olha só:
-            </td>
-        </tr>
+                <table cellspacing="0" cellpadding="0" width="600">
+                    <tr height="80">
+                        <td align="center">
+                            <img src="https://raw.githubusercontent.com/GuiSAlmeida/email-mkt/master/assets/logo.jpg" alt="Logo">
+                        </td>
+                    </tr>
+                    <tr bgcolor="#6F967E">
+                        <td style="padding: 20px 80px; color: #fff;" align="center">
+                            Uma seleção de produtos
+                            <h1 style="margin: 5px 0;">especial para você</h1>
+                            <small>Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #6F967E; padding: 0 80px 20px; font-size: 12px;">
+                            <h2 style="margin: 20px 0 10px;">Olá Guilherme</h2>
+                            Fizemos uma lista especial de produtos apenas para você. Isso mesmo: nesta lista temos só produtos que você pode gostar. Seu amigo Ciclano lhe recomendou essa lista especial. Olha só:
+                        </td>
+                    </tr>
+                </table>
 
-        <tr>
-            <td>
                 <table cellpadding="0" cellspacing="0" border="0" style="padding: 0 80px;">
                     <tr>
                         <td width="220px" style="padding-right: 20px; color: #333333">
@@ -165,43 +173,46 @@ Como o conteúdo é para web tente deixar imagens com tamanho máximo de 100kb.
                             <p style="font-weight: 700; font-size: 12px; margin: 5px 0;">Por: R$ 169,90</p>
                             <p style="font-weight: 300; font-size: 10px; margin: 0;">ou 10x de R$ 10,19</p>
                             <a title="Comprar" href="https://github.com/GuiSAlmeida/email-mkt" rel="noopener noreferrer" target="_blank" style="padding: 16px 0; display: block; text-align: center; line-height: 100%; width: 100%; background-color: #6F967E; color: #fff; border-radius: 5px; border: none; cursor: pointer; margin: 20px 0; font-weight:700; font-size: 16px; text-decoration: none;">Comprar</a>
+                            
                         </td>
                     </tr>
                 </table>
-            </td>
-        </tr>
 
-        <tr>
-            <td style="padding: 0 80px;">
-                <a title="Tem muito mais aqui, vem ver!" href="https://github.com/GuiSAlmeida/email-mkt" rel="noopener noreferrer" target="_blank" style="display: block; text-align: center; width: 100%; padding: 16px 0; background-color: #fff; color: #6F967E; border-radius: 5px; border: 1px solid #6F967E; cursor: pointer; margin: 0 0 20px; font-weight:700; font-size: 16px;text-decoration: none;">Tem muito mais aqui, vem ver!</a>
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td style="padding: 0 80px;">
+                            <a title="Tem muito mais aqui, vem ver!" href="https://github.com/GuiSAlmeida/email-mkt" rel="noopener noreferrer" target="_blank" style="display: block; text-align: center; width: 100%; padding: 16px 0; background-color: #fff; color: #6F967E; border-radius: 5px; border: 1px solid #6F967E; cursor: pointer; margin: 0 0 20px; font-weight:700; font-size: 16px;text-decoration: none;">Tem muito mais aqui, vem ver!</a>
+                        </td>
+                    </tr>
+            
+                    <tr bgcolor="#6F967E" height="40px" style="vertical-align: middle;">
+                        <td align="right" width="50%" style="display: inline-block; font-size: 16px; font-weight: 700; color: #fff;">
+                            Siga nossas redes sociais:
+                        </td>
+                        <td align="left" width="50%" style="display: inline-block; margin-top: 10px;">
+                            <img src="https://raw.githubusercontent.com/GuiSAlmeida/email-mkt/master/assets/facebook.png" alt="Facebook" style="width: 20px; height: 20px; margin-left: 5px;">
+                            <img src="https://raw.githubusercontent.com/GuiSAlmeida/email-mkt/master/assets/instagram.png" alt="Instagram" style="width: 20px; height: 20px; margin-left: 5px;">
+                            <img src="https://raw.githubusercontent.com/GuiSAlmeida/email-mkt/master/assets/twitter.png" alt="Twitter" style="width: 20px; height: 20px; margin-left: 5px;">
+                            <img src="https://raw.githubusercontent.com/GuiSAlmeida/email-mkt/master/assets/youtube.png" alt="Youtube" style="width: 20px; height: 20px; margin-left: 5px;">
+                        </td>
+                    </tr>
+            
+                    <tr height="60">
+                        <td align="center">
+                            <img src="https://raw.githubusercontent.com/GuiSAlmeida/email-mkt/master/assets/logo.jpg" alt="Logo" style="width: 100px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding: 0 80px; font-size: 10px; font-weight: 300; color: #333333;">Você está recebendo esta comunicação pois se inscreveu em um de nossos sites parceiros. Caso não queira mais ofertas, clique aqui.</td>
+                    </tr>
+                </table>
             </td>
-        </tr>
-
-        <tr bgcolor="#6F967E" height="40px" style="vertical-align: middle;">
-            <td align="right" width="50%" style="display: inline-block; font-size: 16px; font-weight: 700; color: #fff;">
-                Siga nossas redes sociais:
-            </td>
-            <td  align="left" width="50%" style="display: inline-block; margin-top: 10px;">
-                <img src="https://raw.githubusercontent.com/GuiSAlmeida/email-mkt/master/assets/facebook.png" alt="Facebook" style="width: 20px; height: 20px; margin-left: 5px;">
-                <img src="https://raw.githubusercontent.com/GuiSAlmeida/email-mkt/master/assets/instagram.png" alt="Instagram" style="width: 20px; height: 20px; margin-left: 5px;">
-                <img src="https://raw.githubusercontent.com/GuiSAlmeida/email-mkt/master/assets/twitter.png" alt="Twitter" style="width: 20px; height: 20px; margin-left: 5px;">
-                <img src="https://raw.githubusercontent.com/GuiSAlmeida/email-mkt/master/assets/youtube.png" alt="Youtube" style="width: 20px; height: 20px; margin-left: 5px;">
-            </td>
-        </tr>
-
-        <tr height="60">
-            <td align="center">
-                <img src="https://raw.githubusercontent.com/GuiSAlmeida/email-mkt/master/assets/logo.jpg" alt="Logo" style="width: 100px;">
-            </td>
-        </tr>
-        <tr>
-            <td align="center" style="padding: 0 80px; font-size: 10px; font-weight: 300; color: #333333;">Você está recebendo esta comunicação pois se inscreveu em um de nossos sites parceiros. Caso não queira mais ofertas, clique aqui.</td>
         </tr>
     </table>
 </body>
 
 </html>
-```
+``` 
 
 Com isso já temos nosso layout finalizado com largura fixa:  
 
