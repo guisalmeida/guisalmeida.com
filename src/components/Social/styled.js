@@ -18,7 +18,7 @@ export const SocialList = styled.ul`
     justify-content: space-around;
     list-style: none !important;
     a {
-        color: var(--texts);
+        color: var(--postColor);
         text-decoration: none;
         transition: ${transitions.COLOR};
         &:hover {
@@ -29,6 +29,6 @@ export const SocialList = styled.ul`
 
 export const IconWrapper = styled.div`
     fill: #bbb;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 `

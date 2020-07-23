@@ -21,7 +21,7 @@ export const PostItemLink = styled(AniLink)`
     background-color: var(--background);
   }
   &:hover {
-    color: var(--highlight);
+    color: var(--postColor);
   }
 `
 

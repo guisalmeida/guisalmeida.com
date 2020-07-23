@@ -6,7 +6,7 @@ description: Depois de deixar o float de lado e aprender o maravilhoso flexbox,
   entre outras tecnologias da web moderna. Eis que nos deparamos com o desafio
   de criar um “simples” template de e-mail marketing em HTML para as
   campanhas  da nossa empresa.
-date: 2020-07-11T06:53:24.000Z
+date: 2020-07-23T06:53:24.000Z
 thumbnailImage: ../../static/assets/img/thumb-mail.png
 category: blog
 ---
@@ -36,8 +36,11 @@ Acesse o layout [aqui](https://www.figma.com/file/RYosfog8wshbbndVRoYE14/assets?
 <br>  
 
 ### Criando a estrutura básica
-- O `DOCTYPE` declara o tipo de tags de HTML o documento tem e que tipo de regras esperar, em sites normais atualmente é usado HTML5 porém para e-mails o mais indicado é o XHTML 1.0. Para saber mais sobre as diferenças clique [aqui](https://www.campaignmonitor.com/blog/email-marketing/2019/05/correct-doctype-to-use-in-html-email/).
-- Outro parâmetro importante que deve ser passado é o encoding em `UTF-8` que vai garantir que sua mensagem consiga ser lida corretamente em diversos clientes de email.
+- O `DOCTYPE` declara o tipo de tags de HTML o documento tem e que tipo de regras esperar, em sites normais atualmente é usado HTML5 porém para e-mails o mais indicado é o XHTML 1.0. Para saber mais sobre as diferenças clique [aqui](https://www.campaignmonitor.com/blog/email-marketing/2019/05/correct-doctype-to-use-in-html-email/).  
+
+- Outro parâmetro importante que deve ser passado é o encoding em `UTF-8` que vai garantir que sua mensagem consiga ser lida corretamente em diversos clientes de email.  
+
+
 ```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -207,7 +210,7 @@ Com isso já temos nosso layout finalizado com largura fixa:
 <br>  
 
 ### Ajustando textos
-Acentos e caracteres especiais também podem não renderizar corretamente de acordo com cada provedor e devem ser substituidos por `Unicode`.
+Acentos e caracteres especiais também podem não renderizar corretamente de acordo com cada provedor e devem ser substituidos por encoding.
 
 Se você usa o VS code, uma ferramenta que uso para me auxiliar é a [HTML accented character converter](https://github.com/enriquein/htmlentity-replacer) que pode ser encontrada na aba extenções da ide.  
 

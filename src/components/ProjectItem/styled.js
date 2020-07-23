@@ -11,7 +11,7 @@ export const ProjectItemLink = styled(AniLink)`
     background-color: var(--background);
   }
   &:hover {
-    color: var(--highlight);
+    color: var(--postColor);
   }
 `
 

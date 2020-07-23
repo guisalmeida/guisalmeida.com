@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
+import transitions from './transitions'
+
 export const PostHeader = styled.header`
   color: var(--postColor);
   margin: auto;
@@ -67,7 +69,6 @@ export const MainContent = styled.section`
   .tags,
   iframe,
   .button-post {
-    color: var(--postColor);
     font-size: 1.25rem;
     font-weight: 300;
     line-height: 1.7;
@@ -82,6 +83,7 @@ export const MainContent = styled.section`
 
   p {
     margin: 0 auto 1.6rem;
+    color: var(--texts);
   }
 
   h1,
@@ -90,6 +92,7 @@ export const MainContent = styled.section`
   h4,
   h5 {
     margin: 0 auto 1rem;
+    color: var(--postColor);
   }
 
   ul,
@@ -97,6 +100,7 @@ export const MainContent = styled.section`
     list-style: disc;
     padding-left: 2.5rem;
     margin: 0 auto 1.6rem;
+    color: var(--texts);
   }
 
   ul[class] {
@@ -164,7 +168,6 @@ export const MainContent = styled.section`
 
   h1 {
     font-size: 2.8rem;
-    text-align: center;
 
     ${media.lessThan('medium')`
       font-size: 1.875rem;
@@ -231,17 +234,22 @@ export const MainContent = styled.section`
   }
 
   a {
-    border-bottom: 1px dashed var(--highlight);
-    color: var(--highlight);
+    color: var(--postColor);
     text-decoration: none;
     transition: opacity 0.5s;
+    font-weight: 400;
 
     svg {
       color: var(--postColor);
+      transition: ${transitions.ALL};
+
+      &:hover {
+        color: var(--highlight);
+      }
     }
 
     &:hover {
-      opacity: 0.8;
+      text-shadow: 0px 0px 10px var(--shadow);
     }
   }
 `
