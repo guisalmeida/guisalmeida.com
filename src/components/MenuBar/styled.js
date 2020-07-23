@@ -18,6 +18,7 @@ export const MenuBarWrapper = styled.aside`
 
   ${media.lessThan("medium")`
     border-top: 1px solid var(--borders);
+    border-left: none;
     bottom: 0;
     flex-direction: row;
     height: auto;
@@ -61,22 +62,13 @@ export const MenuBarLink = styled(AniLink)`
 `
 
 export const MenuBarItem = styled.span`
-  color: var(--texts);
+  color: var(--postColor);
   cursor: pointer;
   display: block;
   height: 3.75rem;
   padding: 1.1rem;
   position: relative;
   width: 3.75rem;
-
-  &.dark {
-      color: #d4d400;
-
-    &:hover {
-        color: #e2e240;
-    }
-
-  }
 
   &:hover {
       color: var(--highlight);

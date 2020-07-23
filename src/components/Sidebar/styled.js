@@ -15,6 +15,7 @@ export const SidebarContainer = styled.aside`
     text-align: center;
     width: 20rem;
     transition: ${transitions.ALL};
+    position: relative;
 
     ${media.lessThan('medium')`
         align-items: flex-start;
@@ -32,5 +33,5 @@ export const SidebarLinksContainer = styled.section`
     height: calc(100% - 70px);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
 `

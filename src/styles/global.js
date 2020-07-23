@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
+
   /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -52,10 +53,9 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    background: #16202c;
     line-height: 1;
     font-size: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'Chakra Petch', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
   img {
     display: block;
@@ -63,24 +63,28 @@ const GlobalStyles = createGlobalStyle`
   	height: auto;
   }
   body.dark {
-    --borders: #38444d;
-    --texts: #8899a6;
-    --postColor: #fff;
-    --highlight: #1fa1f2;
-    --mediumBackground: #192734;
-    --background: #16202c;
+    --borders: #00BBCB;
+    --texts: #f0f0f3;
+    --postColor: #00BBCB;
+    --highlight: #AB79D6;
+    --mediumBackground: #212125;
+    --background: #27272C;
     --white: #fff;
     --black: #222;
+    --shadow: rgba(0, 187, 203, 0.7);
+    --shadowHighlight: rgba(171, 121, 214, 0.7);
   }
   body.light {
     --borders: #dedede;
     --postColor: #111;
     --texts: #555555;
-    --highlight: #1fa1f2;
+    --highlight: #00BBCB;
     --mediumBackground: #f0f0f3;
     --background: #fff;
     --white: #fff;
     --black: #222;
+    --shadow: rgba(0,0, 0, 0);
+    --shadowHighlight: rgba(0, 0, 0, 0);
   }
 `
 export default GlobalStyles

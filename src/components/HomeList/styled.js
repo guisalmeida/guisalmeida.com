@@ -28,13 +28,13 @@ export const Subtitle = styled.section`
 `
 export const BlogLink = styled(AniLink)`
     display: block;
-    color: var(--postColor);
+    color: var(--texts);
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.7;
     letter-spacing: 0.069rem;
     padding: 0 0 0 5rem;
-    text-decoration: none;
+    text-decoration: underline;
 
     ${media.lessThan('medium')`
         text-align: center;

@@ -2,15 +2,21 @@ import styled from "styled-components";
 import media from "styled-media-query";
 import Img from 'gatsby-image';
 
+import transitions from '../../styles/transitions';
+
 export const PostImage = styled(Img).attrs({
   alt: 'Imagem de introdução',
   'aria-hidden': 'true'
 })`
   display: block;
-  height: 30vh;
+  height: 50vh;
   object-fit: cover;
   object-position: 50% 0;
   width: 100%;
+
+  ${media.lessThan("medium")`
+      height: 30vh;
+  `}
 `
 
 export const PostHeader = styled.header`
@@ -38,9 +44,12 @@ export const PostTitle = styled.h1`
 `
 
 export const PostDescription = styled.h2`
-  font-size: 2rem;
-  font-weight: 200;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 300;
+  font-style: italic;
   padding: 0 1.4rem;
+  color: var(--texts);
 
   ${media.lessThan("medium")`
         font-size: 1.6rem;
@@ -92,6 +101,7 @@ export const MainContent = styled.section`
   }
   p {
     margin: 0 auto 1.6rem;
+    color: var(--texts);
   }
   h1,
   h2,
@@ -108,6 +118,7 @@ export const MainContent = styled.section`
   }
   li {
     padding: 0.625rem 0;
+    color: var(--texts);
     & > ul {
       margin-bottom: 0;
     }
@@ -208,15 +219,21 @@ export const MainContent = styled.section`
     margin: 1rem auto !important;
   }
   a {
-    border-bottom: 1px dashed var(--highlight);
-    color: var(--highlight);
+    color: var(--postColor);
     text-decoration: none;
     transition: opacity 0.5s;
+    font-weight: 400;
     svg {
       color: var(--postColor);
+      transition: ${transitions.ALL};
+
+      &:hover {
+        color: var(--highlight);
+      }
     }
+
     &:hover {
-      opacity: 0.8;
+      text-shadow: 0px 0px 10px var(--shadow);
     }
   }
 `

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Social from "../Social";
 
 import { MainContent } from '../../styles/base';
 
@@ -10,7 +9,7 @@ const Author = ({ fullText }) => {
         <MainContent>
             {fullText && 
             <h1>Sobre mim</h1>}
-            <p>Olá sou Guilherme Almeida, profissional criativo e inovador, atualmente atuo como designer e desenvolvedor web na <a href="https://www.linx.com.br/transformacao-digital/linx-impulse/" target="_blank" rel="noopener noreferrer" title="Ver" itemProp="affiliation">Linx Impulse</a> e procuro estar sempre atualizado na área criativa e tecnológica.</p>
+            <p>Olá sou Guilherme Almeida, profissional criativo e inovador, atuo como designer e desenvolvedor web na <a href="https://www.linx.com.br/transformacao-digital/linx-impulse/" target="_blank" rel="noopener noreferrer" title="Ver" itemProp="affiliation">Linx Impulse</a> e procuro estar sempre atualizado na área criativa e tecnológica.</p>
             <p>Buscando crescimento profissional e novos desafios, venho me dedicando a programação, desenvolvimento web front-end e ao curso superior de Ciência da Computação, visando me tornar um profissional mais capacitado para trabalhar com as demandas que o mercado de tecnologia oferece.</p>
             {fullText && 
             <>
@@ -34,7 +33,6 @@ const Author = ({ fullText }) => {
                 Você pode entrar em contato comigo através de qualquer uma das minhas
                 redes sociais, ou se preferir no e-mail <a href="mailto:guisalmeida.dev@gmail.com" target="_blank" rel="noreferrer">guisalmeida.dev@gmail.com</a>.
             </p>
-            <Social />
             </>}
         </MainContent>
     )
