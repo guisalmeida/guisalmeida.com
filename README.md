@@ -5,7 +5,7 @@
   </a>
 </p>
 <h1 align="center">
-  guisalmeida.com
+  <code>guisalmeida.com</code>
 </h1>
 
 ## Start
@@ -30,7 +30,9 @@
 
 
 ## ⚙️ TODO
+* [x] Change color theme
+* [ ] Change scrollbar color
+* [ ] Add tags in posts
 * [ ] Make page 404
-* [ ] Change color theme
 * [ ] New feature to hide main menu in desktop
 * [ ] Write tests
