@@ -10,6 +10,10 @@ const links = [
     {
         label: 'Linkedin',
         url: 'https://www.linkedin.com/in/guisalmeida/'
+    },
+    {
+        label: 'Behance',
+        url: 'https://www.behance.net/guisalmeida'
     }
 ];
 
