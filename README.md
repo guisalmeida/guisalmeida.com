@@ -10,8 +10,15 @@
 
 ## Start
 ```bash
-    yarn install
-    gatsby develop // http://localhost:8000/
+    git clone git@github.com:GuiSAlmeida/guisalmeida.com.git
+    cd guisalmeida.com
+    yarn install # or npm install
+
+    #install gatsby cli
+    npm install -g gatsby-cli
+
+    # up server at http://localhost:8000/
+    gatsby develop 
 ```
 
 ## 🚀 Technologies
