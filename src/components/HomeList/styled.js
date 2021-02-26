@@ -6,7 +6,7 @@ import transitions from '../../styles/transitions'
 export const Subtitle = styled.section`
     margin: auto;
     padding: 2rem 5rem;
-    border-bottom: 1px solid var(--borders);
+    border-bottom: 1px solid var(--background);
     background: var(--mediumBackground);
     display: flex;
     justify-content: space-between;
