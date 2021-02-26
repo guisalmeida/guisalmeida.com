@@ -21,9 +21,9 @@ const Author = ({ fullText }) => {
                 <li>CSS Frameworks (Bootstrap)</li>
                 <li>Design Responsivo (Mobile First)</li>
                 <li>Javascript (Jquery / ES6/7)</li>
-                <li>ReactJS / Redux / Flux</li>
+                <li>ReactJS / VueJS</li>
                 <li>NodeJS</li>
-                <li>Automatizadores (Gulp / Webpack)</li>
+                <li>Automatizadores (Webpack / Gulp)</li>
                 <li>Git</li>
                 <li>PostgreSQL</li>
                 <li>Scrum e Kanban</li>

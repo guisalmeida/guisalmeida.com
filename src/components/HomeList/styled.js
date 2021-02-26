@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+import transitions from '../../styles/transitions'
 
 export const Subtitle = styled.section`
     margin: auto;
@@ -34,7 +35,8 @@ export const BlogLink = styled(AniLink)`
     line-height: 1.7;
     letter-spacing: 0.069rem;
     padding: 0 0 0 5rem;
-    text-decoration: underline;
+    transition: ${transitions.ALL};
+    text-decoration: none;
 
     ${media.lessThan('medium')`
         text-align: center;
@@ -44,5 +46,6 @@ export const BlogLink = styled(AniLink)`
 
     &:hover {
         color: var(--highlight);
+        text-decoration: underline;
     }
 `

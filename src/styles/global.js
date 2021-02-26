@@ -63,16 +63,16 @@ const GlobalStyles = createGlobalStyle`
   	height: auto;
   }
   body.dark {
-    --borders: #00BBCB;
+    --borders: #30363d;
     --texts: #f0f0f3;
-    --postColor: #00BBCB;
-    --highlight: #AB79D6;
-    --mediumBackground: #212125;
-    --background: #27272C;
+    --postColor: #fff;
+    --highlight: #555555;
+    --mediumBackground: #1c1c1c;
+    --background: #131313;
     --white: #fff;
-    --black: #222;
-    --shadow: rgba(0, 187, 203, 0.7);
-    --shadowHighlight: rgba(171, 121, 214, 0.7);
+    --black: #000;
+    --shadow: #fff;
+    --shadowHighlight: #fff;
   }
   body.light {
     --borders: #dedede;

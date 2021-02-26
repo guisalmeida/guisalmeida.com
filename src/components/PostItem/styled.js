@@ -2,6 +2,7 @@ import styled from "styled-components"
 import media from "styled-media-query"
 import Img from 'gatsby-image';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+import transitions from '../../styles/transitions'
 
 export const PostImage = styled(Img).attrs({
   alt: 'Thumbnail',
@@ -31,6 +32,11 @@ export const PostItemWrapper = styled.section`
   display: flex;
   padding: 2rem 5rem;
   width: 100%;
+  transition: ${transitions.ALL};
+
+  &:hover {
+    background-color: var(--highlight);
+  }
   
   body#grid & {
     border: none;

@@ -31,7 +31,7 @@ export const MenuItem = styled.li`
   `}
   .active {
     color: var(--highlight);
-    text-shadow: 0px 0px 10px var(--shadowHighlight);
+    text-decoration: underline;
   }
   a {
     color: var(--postColor);
@@ -39,7 +39,8 @@ export const MenuItem = styled.li`
     transition: ${transitions.ALL};
     font-weight: 400;
     &:hover {
-      text-shadow: 0px 0px 10px var(--shadow);
+      color: var(--highlight);
+      text-decoration: underline;
     }
   }
 `

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import media from "styled-media-query"
-
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import transitions from '../../styles/transitions'
 
 export const ProjectItemLink = styled(AniLink)`
   color: var(--texts);
@@ -21,6 +21,11 @@ export const ProjectItemWrapper = styled.section`
   display: flex;
   padding: 2rem 5rem;
   width: 100%;
+  transition: ${transitions.ALL};
+
+  &:hover {
+    background-color: var(--highlight);
+  }
   
   body#grid & {
     border: none;
