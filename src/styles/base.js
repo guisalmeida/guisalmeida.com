@@ -52,7 +52,6 @@ export const PostDate = styled.p`
 export const MainContent = styled.section`
   margin: auto;
   padding: 2rem 5rem;
-  border-bottom: 1px solid var(--borders);
 
   ${media.lessThan('medium')`
     padding: 2rem 0;

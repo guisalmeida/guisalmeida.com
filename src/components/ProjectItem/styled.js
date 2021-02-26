@@ -17,11 +17,12 @@ export const ProjectItemLink = styled(AniLink)`
 
 export const ProjectItemWrapper = styled.section`
   align-items: center;
-  border-bottom: 1px solid var(--borders);
+  border-bottom: 1px solid var(--background);
   display: flex;
   padding: 2rem 5rem;
   width: 100%;
   transition: ${transitions.ALL};
+  background: var(--mediumBackground);
 
   &:hover {
     background-color: var(--highlight);
