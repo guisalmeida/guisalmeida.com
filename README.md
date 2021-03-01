@@ -8,6 +8,7 @@
   <code>guisalmeida.com</code>
 </h1>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d5853d6a-fa00-41f5-8bd2-00a57982577e/deploy-status)](https://app.netlify.com/sites/guisalmeida/deploys)
 ## Start
 ```bash
     git clone git@github.com:GuiSAlmeida/guisalmeida.com.git
