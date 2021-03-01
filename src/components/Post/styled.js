@@ -233,7 +233,8 @@ export const MainContent = styled.section`
     }
 
     &:hover {
-      text-shadow: 0px 0px 10px var(--shadow);
+      color: var(--highlight);
+      text-decoration: underline;
     }
   }
 `
