@@ -38,7 +38,7 @@
 
 ## ⚙️ TODO
 * [x] Change color theme
-* [ ] Change scrollbar color
+* [x] Change scrollbar color
 * [ ] Add tags in posts
 * [ ] Make page 404
 * [ ] New feature to hide main menu in desktop

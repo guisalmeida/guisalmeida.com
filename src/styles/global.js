@@ -86,5 +86,19 @@ const GlobalStyles = createGlobalStyle`
     --shadow: rgba(0,0, 0, 0);
     --shadowHighlight: rgba(0, 0, 0, 0);
   }
+
+  ::-webkit-scrollbar-track {
+    border-left: 1px solid var(--borders);
+    background-color: var(--background);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--borders);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--postColor);	
+  }
 `
 export default GlobalStyles
