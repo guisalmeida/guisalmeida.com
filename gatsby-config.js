@@ -4,7 +4,7 @@ const queries = require('./src/utils/algolia_queries');
 module.exports = {
   siteMetadata: {
     title: `Guilherme Almeida`,
-    position: `Desenvolvedor Web Front-end`,
+    position: `Desenvolvedor Front End`,
     description: `Site e blog pessoal com projetos de portfólio e artigos sobre tecnologia.`,
     author: `@guisalmeida`,
     siteUrl: `https://guisalmeida.com`
