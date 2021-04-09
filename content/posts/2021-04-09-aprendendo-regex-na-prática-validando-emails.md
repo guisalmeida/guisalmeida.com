@@ -14,14 +14,14 @@ As **expressões regulares** são estruturas formadas por uma **sequência de ca
 #### Podem ser criadas de 2 formas:   
 **Notação literal** sendo passadas entre duas barras como no exemplo:  
 
-```js
-regexLiteral = /regex/
+```JS
+const regexLiteral = /regex/
 ```
 
 **Instanciando objeto RegExp** passando a regex dentro das chaves, como no exemplo:
 
-```js
-regexObj = new RegExp('regex')
+```JS
+const regexObj = new RegExp('regex')
 ```
 
 ## Metacaracteres
