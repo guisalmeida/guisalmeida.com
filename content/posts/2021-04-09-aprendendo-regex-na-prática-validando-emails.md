@@ -33,4 +33,4 @@ const regexObj = new RegExp('regex')
 ## Funções
 
 ## Conclusão
-E aí, gostou da dica? Se curtiu, deixa um like ou um comentário aqui embaixo. ;)
+E aí, o que achou da dica? deixa uma reação ou um comentário aqui embaixo. ;)
