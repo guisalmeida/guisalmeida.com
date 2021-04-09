@@ -94,6 +94,10 @@ export const MainContent = styled.section`
     color: var(--postColor);
   }
 
+  summary {
+    color: var(--postColor);
+  }
+
   ul,
   ol {
     list-style: disc;
