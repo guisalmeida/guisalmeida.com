@@ -2,7 +2,7 @@
 title: Aprendendo RegEx na prática - Validando emails em JS
 description: Fala pessoal, aproveitando o assunto do último post, que por sinal
   já está quase fazendo aniversário. Hoje trago o conteúdo de uma apresentação
-  que fiz na minha empresa sobre expressções regulares. Uma breve introdução as
+  que fiz na minha empresa sobre expressões regulares. Uma breve introdução as
   regex usando uma validação de email para exemplificar os conceitos passados.
 date: 2021-04-09T12:13:14.000Z
 thumbnailImage: ../../static/assets/img/regex_thumb.png
