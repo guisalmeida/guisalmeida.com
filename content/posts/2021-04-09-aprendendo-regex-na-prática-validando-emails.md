@@ -1,5 +1,5 @@
 ---
-title: Aprendendo RegEx na prática - Validando emails
+title: Aprendendo RegEx na prática - Validando emails em JS
 description: Aproveitando o assunto do último post, que por sinal já está quase
   fazendo aniversário. Hoje trago um conteúdo de uma apresentação que fiz na
   minha empresa sobre expressções regulares. Uma breve introdução as regex
@@ -20,18 +20,19 @@ category: blog
 - Funções
 
 ### Introdução
+As **expressões regulares** são estruturas formadas por uma **sequência de caracteres** que especificam um **padrão** formal que servem para validar, extrair ou mesmo substituir caracteres dentro de uma String.
 
-<details>
-    <summary>Como é a técnica Pomodoro</summary>
+#### Podem ser criadas de 2 formas:   
+**Notação literal** sendo passadas entre duas barras como no exemplo:  
 
+```js
+regexLiteral = /regex/
 ```
-Pomodoro significa tomate em italiano. A fruta faz alusão ao tempo durante o qual você pode fazer determinada tarefa.
-Cada pomodoro é dividido em quatro pomodoris, e cada um destes equivale a 30 minutos.
 
-O método Pomodoro é simples e dura (n) horas. Primeiro, você realiza uma atividade durante 25 minutos.
-Quando acabar o tempo, descansa 5 minutos. Assim sucessivamente até que complete as (n) horas.
+**Instanciando objeto RegExp** passando a regex dentro das chaves, como no exemplo:
 
-O conceito do Pomodoro é que a pessoa que vai estudar ou executar uma tarefa demore, exatamente, 25 minutos.
-Concluindo-a ou não, ele deve parar e descansar 5 minutos.
+```js
+regexObj = new RegExp('regex')
 ```
-</details>
+
+
