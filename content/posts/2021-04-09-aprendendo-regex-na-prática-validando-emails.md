@@ -10,7 +10,7 @@ category: blog
 ---
 ## Sobre o que falaremos
 
-- Introdução
+- [Introdução](#Introdução)
 - Metacaracteres
 - Caracteres de escape
 - Listas de Caracteres
@@ -22,7 +22,7 @@ category: blog
 ### Introdução
 
 <details>
-    <summary>Como é a técnica Pomodoro</summary>
+    <summary style="color=blue">Como é a técnica Pomodoro</summary>
 
 ```
 Pomodoro significa tomate em italiano. A fruta faz alusão ao tempo durante o qual você pode fazer determinada tarefa.
