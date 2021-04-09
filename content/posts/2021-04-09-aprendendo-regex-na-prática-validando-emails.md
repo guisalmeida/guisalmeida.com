@@ -11,7 +11,7 @@ category: blog
 ## Sobre o que falaremos
 
 - [Introdução](#Introdução)
-- Metacaracteres
+- [Metacaracteres](#Metacaracteres)
 - Caracteres de escape
 - Listas de Caracteres
 - Grupos de Captura
@@ -19,7 +19,7 @@ category: blog
 - Modificadores
 - Funções
 
-### Introdução
+## Introdução
 As **expressões regulares** são estruturas formadas por uma **sequência de caracteres** que especificam um **padrão** formal que servem para validar, extrair ou mesmo substituir caracteres dentro de uma String.
 
 #### Podem ser criadas de 2 formas:   
@@ -35,4 +35,18 @@ regexLiteral = /regex/
 regexObj = new RegExp('regex')
 ```
 
+## Metacaracteres
+As **expressões regulares** são estruturas formadas por uma **sequência de caracteres** que especificam um **padrão** formal que servem para validar, extrair ou mesmo substituir caracteres dentro de uma String.
 
+#### Podem ser criadas de 2 formas:   
+**Notação literal** sendo passadas entre duas barras como no exemplo:  
+
+```js
+regexLiteral = /regex/
+```
+
+**Instanciando objeto RegExp** passando a regex dentro das chaves, como no exemplo:
+
+```js
+regexObj = new RegExp('regex')
+```
