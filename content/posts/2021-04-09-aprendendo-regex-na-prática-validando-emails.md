@@ -31,3 +31,6 @@ regexObj = new RegExp('regex')
 ## Quantificadores
 ## Modificadores
 ## Funções
+
+## Conclusão
+E aí, gostou da dica? Se curtiu, deixa um like ou um comentário aqui embaixo. ;)
