@@ -1,10 +1,10 @@
 ---
-title: Aprendendo RegEx na prática - Validando emails em JS
+title: Aprendendo RegEx na prática - Validando e-mails em JS
 description: Fala pessoal, aproveitando o assunto do último post, que por sinal
   já está quase fazendo aniversário. Hoje trago o conteúdo de uma apresentação
   que fiz na minha empresa sobre expressões regulares. Uma breve introdução as
   regex usando uma validação de email para exemplificar os conceitos passados.
-date: 2021-04-09T12:13:14.000Z
+date: 2021-04-10 03:00:14
 thumbnailImage: ../../static/assets/img/regex_thumb.png
 category: blog
 ---
@@ -22,6 +22,17 @@ const regexLiteral = /regex/
 
 ```JS
 const regexObj = new RegExp('regex')
+```
+
+#### Como usar:
+Podem ser passadas dentro de funções que aceitem esse tipo de parâmetro como também possuem 2 métodos que podem ser invocados apartir do objeto regex instanciado, que são `test` e `exec` que falo mais sobre na parte de **funções** deste post.  
+```JS
+const regExp = /guilherme@gmail.com/;
+const result = regExp.test("E-mail: guilherme@gmail.com");
+console.log(result);
+// Irá nos retornar true,
+// pois encontrou o padrão de letras
+// que criamos dentro da string passada por parâmetro.
 ```
 
 ## Metacaracteres
