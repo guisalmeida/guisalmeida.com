@@ -38,30 +38,20 @@ console.log(result);
 ## Metacaracteres
 São caracteres que possuem um função determinada dentro da regex.  
 Seguem alguns mais usados:  
+
 | Simbolo | Nome | Função |
-|---|---|---|
+|:---:|:---:|:---:|
 | . | ponto | representa qualquer caractere |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-
--  () representa qualquer caractere
-- ? (interrogação) representa opcional
-- \ (barra invertida) representa escape
-- ^ (circunflexo)
-- | (pipe) Indica um ou outro
-- \* (asterisco)
-- \+ (mais)
-- $ (cifrão)
-- ( ) (parênteses) representa grupo
-- \[ \]	(colchetes) representa lista
-- { } (chaves) 
-
+| ? | interrogação | opcional |
+| \ | barra invertida | escape |
+| ^ | circunflexo |   |
+| | | pipe | Indica um ou outro |
+| \* | asterisco |   |
+| \+ | mais |   |
+| $ | cifrão |   |
+| ( ) | parênteses | grupo |
+| \[ \] | colchetes | lista |
+| { } | chaves |   |
 
 
 ## Caracteres de escape
