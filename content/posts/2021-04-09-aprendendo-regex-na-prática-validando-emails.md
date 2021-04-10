@@ -36,6 +36,34 @@ console.log(result);
 ```
 
 ## Metacaracteres
+São caracteres que possuem um função determinada dentro da regex.  
+Seguem alguns mais usados:  
+| Simbolo | Nome | Função |
+|---|---|---|
+| . | ponto | representa qualquer caractere |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+
+-  () representa qualquer caractere
+- ? (interrogação) representa opcional
+- \ (barra invertida) representa escape
+- ^ (circunflexo)
+- | (pipe) Indica um ou outro
+- \* (asterisco)
+- \+ (mais)
+- $ (cifrão)
+- ( ) (parênteses) representa grupo
+- \[ \]	(colchetes) representa lista
+- { } (chaves) 
+
+
+
 ## Caracteres de escape
 ## Listas de Caracteres
 ## Grupos de Captura
