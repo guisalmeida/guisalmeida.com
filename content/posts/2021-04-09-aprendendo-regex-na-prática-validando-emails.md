@@ -45,7 +45,7 @@ Seguem alguns mais usados:
 | ? | interrogação | opcional |
 | \ | barra invertida | escape |
 | ^ | circunflexo |   |
-| | | pipe | Indica um ou outro |
+| \| | pipe | Indica um ou outro |
 | \* | asterisco |   |
 | \+ | mais |   |
 | $ | cifrão |   |
