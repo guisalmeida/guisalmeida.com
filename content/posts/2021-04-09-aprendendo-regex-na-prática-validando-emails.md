@@ -128,5 +128,8 @@ validaEmail("E-mail: guilherme@gmailxcom");
 ## Modificadores
 ## Métodos
 
+## Referências
+- https://aurelio.net/regex/guia/
+
 ## Conclusão
 E aí, o que achou da dica? deixa uma reação ou um comentário aqui embaixo. ;)
