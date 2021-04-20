@@ -256,39 +256,4 @@ export const MainContent = styled.section`
       text-decoration: underline;
     }
   }
-
-  table {
-    font: 100% sans-serif;
-    background-color: var(--mediumBackground);
-    border-collapse: collapse;
-    empty-cells: show;
-    border: 1px solid var(--borders);
-  }
-  
-  table th,
-  table td {
-    text-align: center;
-    padding: .5rem;
-    border: 1px solid var(--borders);
-    color: var(--texts);
-  }
-
-  table th {
-    font-weight: bold;
-  }
-  
-  table > thead > tr:first-child > th {
-    text-align: center;
-    color: var(--texts);
-    background-color: var(--borders);
-  }
-
-  /* fix size of superscript */
-  table sup {
-    font-size: 75%;
-  }
-
-  table > tbody > tr > td:first-child {
-    font-weight: bold;
-  }
 `
