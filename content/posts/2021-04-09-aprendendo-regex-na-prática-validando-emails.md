@@ -109,15 +109,12 @@ Eles estão divididos em quatro grupos distintos, de acordo com características
 
 Bom agora que já temos bastante teoria, vamos voltar ao nosso código para refatorar e entender melhor alguns desses metacaracteres apresentados.  
   
-Primeiramente queremos receber apenas o email para validar e nada mais, como espaços ou outros caracteres antes ou depois do e-mail.  
+Primeiramente queremos receber apenas o email para validar, não deve haver mais nada como espaços ou outros caracteres antes ou depois do e-mail.  
 
 ```JS
-// aqui criamos a regex da forma literal
+// aqui adicionamos os metacarecteres
 const regExp = /^guilherme@gmail.com$/;
 
-function validaEmail(texto) {
-    return regExp.test(texto);
-}
 validaEmail("E-mail: guilherme@gmailxcom");
 // Agora isso retorna false,
 // porque o circunflexo exige
