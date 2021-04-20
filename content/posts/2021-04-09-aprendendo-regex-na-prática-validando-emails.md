@@ -1,10 +1,10 @@
 ---
-title: Aprendendo RegEx na prática - Validando e-mails em JS
+title: Aprendendo Regex na prática - Validando e-mails em JS
 description: Fala pessoal, aproveitando o assunto do último post, que por sinal
   já está quase fazendo aniversário. Hoje trago o conteúdo de uma apresentação
   que fiz na minha empresa sobre expressões regulares. Uma breve introdução as
   regex usando uma validação de email para exemplificar os conceitos passados.
-date: 2021-04-16 09:04:54
+date: 2021-04-16T09:04:54.000Z
 thumbnailImage: ../../static/assets/img/regex_thumb.png
 category: blog
 ---
@@ -12,7 +12,7 @@ category: blog
 As **expressões regulares** são estruturas formadas por uma **sequência de caracteres** que especificam um **padrão** formal que servem para validar, extrair ou mesmo substituir caracteres dentro de uma String.
 Como estamos falando de e-mail vamos usar para este exemplo a linguagem `JavaScript`, que é a mais usada para desenvolvimento web.
 
-#### Podem ser criadas de 2 formas:   
+#### Regex podem ser criadas de 2 formas:   
 **Notação literal** sendo passadas entre duas barras como no exemplo:  
 
 ```JS
@@ -32,6 +32,10 @@ Podem ser passadas dentro de métodos que aceitem esse tipo de parâmetro como t
 // aqui criamos a regex da forma literal
 const regExp = /guilherme@gmail.com/;
 
+// aqui criamos uma função que vamos usar por todo o artigo
+// ela recebe o email a ser validado e usa a regex que criamos
+// chamando o método test() que apenas retorna um booleano 
+// dependendo se a regex foi encontrada no texto passado.
 function validaEmail(texto) {
     return regExp.test(texto);
 }
@@ -63,7 +67,7 @@ Eles estão divididos em quatro grupos distintos, de acordo com características
 |:---:|:---:|:---:|
 |.|ponto|um caractere qualquer|
 |[...]|lista|lista de caracteres permitidos|
-|[^...]|lista negada|lista de caracteres proibidos|  
+|[\^...]|lista negada|lista de caracteres proibidos|  
 
 ### Quantificadores
 
@@ -94,15 +98,15 @@ Eles estão divididos em quatro grupos distintos, de acordo com características
 |meta|função|
 |:---:|:---:|
 |\w|Representa o conjunto [a-zA-Z0-9_]|
-|\W|Representa o conjunto [^a-zA-Z0-9_]|
+|\W|Representa o conjunto [\^a-zA-Z0-9_]|
 |\d|Representa o conjunto [0-9]|
-|\D|Representa o conjunto [^0-9]|
+|\D|Representa o conjunto [\^0-9]|
 |\s|Representa um espaço em branco|
 |\S|Representa um não espaço em branco|
 |\n|Representa uma quebra de linha|
-|\t|Representa um tab|
+|\t|Representa um tab|  
 
-</br>
+
 Bom agora que já temos bastante teoria, vamos voltar ao nosso código para refatorar e entender melhor alguns desses metacaracteres apresentados.  
   
 Primeiramente queremos receber apenas o email para validar e nada mais, como espaços ou outros caracteres antes ou depois do e-mail.  
@@ -118,7 +122,7 @@ validaEmail("E-mail: guilherme@gmailxcom");
 // Agora isso retorna false,
 // porque o circunflexo exige
 // que o começo seja logo apartir de "gui..."
-// Como tamem o $ exige que não tenha
+// Como também o $ exige que não tenha
 // nada depois de "...com".
 ```
 
