@@ -12,7 +12,11 @@ const Post = ({ data }) => {
 
     return (
         <Layout>
-            <SEO title={post.frontmatter.title} description={post.frontmatter.description} image={post.frontmatter.image} />
+            <SEO 
+                title={post.frontmatter.title} 
+                description={post.frontmatter.description} 
+                image={`https://guisalmeida.com${post.frontmatter.thumbnailImage.publicURL}`}
+            />
             {post.frontmatter.thumbnailImage &&
                 <S.PostImage fluid={post.frontmatter.thumbnailImage.childImageSharp.fluid} />
             }

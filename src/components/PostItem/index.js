@@ -34,6 +34,7 @@ PostItem.propTypes = {
     timeToRead: propTypes.number,
     title: propTypes.string.isRequired,
     description: propTypes.string.isRequired,
+    thumbnailImage: propTypes.object.isRequired
 }
 
 export default PostItem;
