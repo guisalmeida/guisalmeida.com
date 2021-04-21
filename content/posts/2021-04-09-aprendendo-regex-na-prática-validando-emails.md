@@ -92,11 +92,7 @@ Eles estão divididos em quatro grupos distintos, de acordo com características
 |:---:|:---:|:---:|
 |\c|escape|torna literal o caractere c
 |\||ou|ou um ou outro|
-|(...)|grupo|delimita um grupo|  
-
-### Metacaracteres barra-letra  
-|meta|função|
-|:---:|:---:|
+|(...)|grupo|delimita um grupo|
 |\w|Representa o conjunto [a-zA-Z0-9_]|
 |\W|Representa o conjunto [\^a-zA-Z0-9_]|
 |\d|Representa o conjunto [0-9]|
