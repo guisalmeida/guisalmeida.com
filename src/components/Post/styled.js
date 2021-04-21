@@ -266,7 +266,7 @@ export const MainContent = styled.section`
     border-collapse: collapse;
     empty-cells: show;
     border: 1px solid var(--borders);
-    margin: 2.4rem 0 1rem 1.4rem;
+    margin: 1rem 0 2.4rem 1.4rem;
   }
   
   table th,
