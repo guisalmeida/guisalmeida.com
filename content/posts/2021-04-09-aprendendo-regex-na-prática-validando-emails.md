@@ -8,14 +8,14 @@ date: 2021-04-21 12:47:06
 thumbnailImage: ../../static/assets/img/regex_thumb.png
 category: blog
 ---
-## 1 - Introdução
+# 1 - Introdução
 As **expressões regulares** são estruturas formadas por uma **sequência de caracteres** que especificam um **padrão** formal que servem para validar, extrair ou mesmo substituir caracteres dentro de uma String.  
 
 Como estamos falando de e-mail vamos usar para este exemplo a linguagem `JavaScript`, que é a mais usada para desenvolvimento web.  
 
 Mas as expressões regulares são aceitas por várias linguagens de programação e a maioria desses conceitos apresentados servem para esses outros cenários.
 
-### 1.1 - Regex podem ser criadas de 2 formas:   
+## 1.1 - Regex podem ser criadas de 2 formas:   
 **Notação literal** sendo passadas entre duas barras como no exemplo:  
 
 ```JS
@@ -28,7 +28,7 @@ const regexLiteral = /regex/
 const regexObj = new RegExp('regex')
 ```
 
-### 1.2 - Como usar:
+## 1.2 - Como usar:
 Podem ser passadas dentro de métodos que aceitem esse tipo de parâmetro como também possuem 2 métodos que podem ser invocados apartir do objeto regex instanciado, que são `test` e `exec` que falo mais sobre na parte de **métodos** deste post.  
 
 ```JS
@@ -58,11 +58,11 @@ validaEmail("E-mail: guilherme@gmailxcom");
 
 Você notou também que nesse segundo código temos um 'x' no lugar do ponto, isso foi aceito pela nossa função por conta dos metacaracteres que veremos a seguir.
 
-### 1.3 - Metacaracteres
+## 1.3 - Metacaracteres
 São caracteres que possuem um função determinada dentro da regex.  
 Eles estão divididos em quatro grupos distintos, de acordo com características comuns entre eles.  
 
-#### 1.3.1 Âncoras
+### 1.3.1 Âncoras
 
 |meta|mnemônico|função|
 |:---:|:---:|:---:|
@@ -83,7 +83,7 @@ validaEmail("E-mail: guilherme@gmailxcom");
 // Como também o $ exige que não tenha nada depois de "...com".
 ```
 
-#### 1.3.2 - Representantes  
+### 1.3.2 - Representantes  
 
 |meta|mnemônico|função|
 |:---:|:---:|:---:|
@@ -103,7 +103,7 @@ validaEmail("guilherme@gmail.com");
 // Nesse momento essa é a unica entrada que será satisfeita e retornará true.
 ```
 
-#### 1.3.3 - Quantificadores
+### 1.3.3 - Quantificadores
 
 |meta|mnemônico|função|
 |:---:|:---:|:---:|
@@ -113,7 +113,7 @@ validaEmail("guilherme@gmail.com");
 |{n,m}|chaves|de n até m|  
 
 
-#### 1.3.4 Outros
+### 1.3.4 Outros
 
 |meta|mnemônico|função|
 |:---:|:---:|:---:|
@@ -151,9 +151,10 @@ Como necessitamos ter uma ou mais letras antes do "@gmail.com", usaremos o **\+*
 const regExp = /^\w+@gmail\.com$/;
 // aqui adicionamos o + para aceitar uma ou mais letras.
 
-validaEmail("joao@gmail.com");
+validaEmail("joao_123@gmail.com");
 // Agora isso retorna true.
 ```
+
 
 
 ## Listas de Caracteres
