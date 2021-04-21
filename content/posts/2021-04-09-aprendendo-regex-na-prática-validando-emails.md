@@ -11,9 +11,11 @@ category: blog
 # 1 - Introdução
 As **expressões regulares** são estruturas formadas por uma **sequência de caracteres** que especificam um **padrão** formal que servem para validar, extrair ou mesmo substituir caracteres dentro de uma String.  
 
-Como estamos falando de e-mail vamos usar para este exemplo a linguagem `JavaScript`, que é a mais usada para desenvolvimento web.  
+Como estamos falando de e-mail vamos usar para este exemplo a linguagem `JavaScript`, que é a mais usada para desenvolvimento web. 
 
-Mas as expressões regulares são aceitas por várias linguagens de programação e a maioria desses conceitos apresentados servem para esses outros cenários.
+### disclaimer
+As expressões regulares são aceitas por várias linguagens de programação e a maioria desses conceitos apresentados também servirão para outros cenários.  
+Porém este post se limita a uma breve introdução as regex, para um conhecimento ainda mais técnico e aprofundado indico o site: https://aurelio.net/regex/guia/.
 
 ## 1.1 - Regex podem ser criadas de 2 formas:   
 **Notação literal** sendo passadas entre duas barras como no exemplo:  
@@ -32,19 +34,20 @@ const regexObj = new RegExp('regex')
 Podem ser passadas dentro de métodos que aceitem esse tipo de parâmetro como também possuem 2 métodos que podem ser invocados apartir do objeto regex instanciado, que são `test` e `exec` que falo mais sobre na parte de **métodos** deste post.  
 
 ```JS
-// aqui criamos a regex da forma literal
+// aqui criamos a regex da forma literal, que vamos ir refatorando.
 const regExp = /guilherme@gmail.com/;
 
-// aqui criamos uma função que vamos usar por todo o artigo
+// aqui criamos uma função que vai ser a mesma em todo o post
 // ela recebe o email a ser validado e usa a regex que criamos
-// chamando o método test() que apenas retorna um booleano 
-// dependendo se a regex foi encontrada no texto passado.
+// chamando o método test() que valida o email e retorna um booleano 
+// dependendo se a regex foi satisfeita ou não.
 function validaEmail(texto) {
     return regExp.test(texto);
 }
 
 validaEmail("guilherme@gmail.com");
-// Irá nos retornar true, pois encontrou o padrão de letras
+// Aqui chamamos a função que vai nos ajudar a validar nossa regex,
+// Nesse primeiro caso ela irá nos retornar true, pois encontrou o padrão de letras
 // que criamos dentro da string passada por parâmetro.
 ```
 
@@ -145,19 +148,36 @@ validaEmail("joao@gmail.com");
 ```  
 
 Também vai ser necessário usar os **quantificadores** para deixar a quantidade de caracteres recebidos também dinâmicos.  
-Como necessitamos ter uma ou mais letras antes do "@gmail.com", usaremos o **\+** após o \w.
+Como necessitamos ter uma ou mais letras antes do @, usaremos o **\+** após o \w.
 
 ```JS
-const regExp = /^\w+@gmail\.com$/;
-// aqui adicionamos o + para aceitar uma ou mais letras.
+const regExp = /^\w+@\D+\.\D+$/;
+// aqui adicionamos o \w+ antes do @ para aceitar um ou mais caracteres
+// e também o \D para recebermos caracteres que não sejam números após o @.
 
-validaEmail("joao_123@gmail.com");
+validaEmail("joao_123@outlook.br");
 // Agora isso retorna true.
 ```
 
+## 2 - Avançando nas regex
+Agora vamos nos aprofundar um pouco mais nas expressões regulares, veremos como podemos criar padrões mais específicos para poder criar nossa regex de acordo com a nossa necessidade. 
 
+### 2.1 - Listas de Caracteres
+As listas como apresentadas na seção 1.3.2, são bem mais específicas, ela guarda dentro de si apenas os caracteres que serão permitidos, então algo como `[aeiou]` limita nossa regex a aceitar apenas letras vogais.  
 
-## Listas de Caracteres
+Então continuando no nosso código poderiamos alterar o `\D` por uma lista sem problemas. Por exemplo, onde queremos receber o nome do servidor após o `@` deve ser sem números e simbolos, apenas letras, podemos usar uma lista `[a-z]` que vai aceitar apenas o range de a até z, nada de números, simbolos, etc será aceito.
+
+```JS
+const regExp = /^\w+@[a-z]+\.com$/;
+// Adicionando a lista [a-z]
+
+validaEmail("joao_123@outlook.com");
+// Isso ainda continua retornando true.
+
+validaEmail("joao_123@gm4il.com");
+// Porém isso retornará false.
+```
+
 ## Grupos de Captura
 ## Modificadores
 ## Métodos
@@ -167,4 +187,7 @@ validaEmail("joao_123@gmail.com");
 - [JS Masterclass](https://app.agilecode.com.br/public/products/c09d58ff-ce6b-491b-b158-9982583dff79)
 
 ## 4 - Conclusão
-E aí, o que achou dessa dica? deixa uma reação ou um comentário aqui embaixo. ;)
+E aí, o que achou dessa dica?  
+Tem alguma sugestão ou crítica?  
+Deixa uma reação ou um comentário aqui embaixo.  
+E obrigado pela visita! 😉
