@@ -9,8 +9,11 @@ thumbnailImage: ../../static/assets/img/regex_thumb.png
 category: blog
 ---
 ## 1 - Introdução
-As **expressões regulares** são estruturas formadas por uma **sequência de caracteres** que especificam um **padrão** formal que servem para validar, extrair ou mesmo substituir caracteres dentro de uma String.
-Como estamos falando de e-mail vamos usar para este exemplo a linguagem `JavaScript`, que é a mais usada para desenvolvimento web.
+As **expressões regulares** são estruturas formadas por uma **sequência de caracteres** que especificam um **padrão** formal que servem para validar, extrair ou mesmo substituir caracteres dentro de uma String.  
+
+Como estamos falando de e-mail vamos usar para este exemplo a linguagem `JavaScript`, que é a mais usada para desenvolvimento web.  
+
+Mas as expressões regulares são aceitas por várias linguagens de programação e a maioria desses conceitos apresentados servem para esses outros cenários.
 
 ### 1.1 - Regex podem ser criadas de 2 formas:   
 **Notação literal** sendo passadas entre duas barras como no exemplo:  
@@ -150,7 +153,7 @@ const regExp = /^\w+@gmail\.com$/;
 
 validaEmail("joao@gmail.com");
 // Agora isso retorna true.
-``` 
+```
 
 
 ## Listas de Caracteres
