@@ -4,7 +4,7 @@ description: Fala pessoal, aproveitando o assunto do último post, que por sinal
   já está quase fazendo aniversário. Hoje trago o conteúdo de uma apresentação
   que fiz na minha empresa sobre expressões regulares. Uma breve introdução as
   regex usando uma validação de email para exemplificar os conceitos passados.
-date: 2021-04-21 12:47:06
+date: 2021-04-21 04:24:54
 thumbnailImage: ../../static/assets/img/regex_thumb.png
 category: blog
 ---
