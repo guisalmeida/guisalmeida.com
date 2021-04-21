@@ -9,13 +9,13 @@ thumbnailImage: ../../static/assets/img/regex_thumb.png
 category: blog
 ---
 # 1 - Introdução
-As **expressões regulares** são estruturas formadas por uma **sequência de caracteres** que especificam um **padrão** formal que servem para validar, extrair ou mesmo substituir caracteres dentro de uma String.  
+As **expressões regulares** são estruturas formadas por uma **sequência de caracteres** que especificam um **padrão** formal que serve para validar, extrair ou mesmo substituir caracteres dentro de uma String.  
 
 Como estamos falando de e-mail vamos usar para este exemplo a linguagem `JavaScript`, que é a mais usada para desenvolvimento web. 
 
 ## 1.1 - Disclaimer
 As expressões regulares são aceitas por várias linguagens de programação e a maioria desses conceitos apresentados também servirão para outros cenários.  
-Porém este post se limita a uma breve introdução sobre as regex, para um conhecimento ainda mais técnico e aprofundado indico o site: https://aurelio.net/regex/guia/.
+Porém este post se limita a uma breve introdução sobre as regex, para um conhecimento ainda mais técnico e aprofundado indico os sites que estão nas referências desse post.
 
 ## 1.2 - Regex podem ser criadas de 2 formas:   
 **Notação literal** sendo passadas entre duas barras como no exemplo:  
@@ -31,18 +31,18 @@ const regexObj = new RegExp('regex')
 ```
 
 ## 1.3 - Como testar
-Para acompanhar esse post testando em sua máquina é necessário somente ter o [node JS](https://nodejs.org/pt-br/) instalado e acessar a pasta onde criou seu arquivo onde vai criar os códigos do post e rodar o comando no terminal `node nomeArquivo.js`.
+Para acompanhar esse post testando em sua máquina é necessário somente ter o [node JS](https://nodejs.org/pt-br/) instalado e acessar a pasta onde criou seu arquivo JS e rodar o comando no terminal `node nomeArquivo.js`.
 
 ## 1.4 - Como usar
-Podem ser passadas dentro de métodos que aceitem esse tipo de parâmetro como também possuem 2 métodos que podem ser invocados apartir do objeto regex instanciado, que são `test` e `exec` que falo mais sobre na parte de **métodos** deste post.  
+Podem ser passadas dentro de métodos que aceitem esse tipo de parâmetro como também possuem 2 métodos que podem ser invocados a partir do objeto regex instanciado, que são `test` e `exec` que falo mais sobre na parte de **métodos** deste post.  
 
 ```JS
 // aqui criamos a regex da forma literal, que vamos ir refatorando.
 const regExp = /guilherme@gmail.com/;
 
 // aqui criamos uma função que vai ser a mesma em todo o post
-// ela recebe o email a ser validado e usa a regex que criamos
-// chamando o método test() que valida o email e retorna um booleano 
+// ela recebe o e-mail a ser validado e usa a regex que criamos
+// chamando o método test() que valida o e-mail e retorna um booleano 
 // dependendo se a regex foi satisfeita ou não.
 function validaEmail(texto) {
     return regExp.test(texto);
@@ -50,7 +50,7 @@ function validaEmail(texto) {
 
 validaEmail("guilherme@gmail.com");
 // Aqui chamamos a função que vai nos ajudar a validar nossa regex,
-// Nesse primeiro caso ela irá nos retornar true, pois encontrou o padrão de letras
+// nesse primeiro caso ela irá nos retornar true, pois encontrou o padrão de letras
 // que criamos dentro da string passada por parâmetro.
 
 validaEmail("Guilherme@gmail.com");
@@ -82,14 +82,14 @@ Eles estão divididos em quatro grupos distintos, de acordo com características
 
 </br>
 
-Primeiramente queremos receber apenas o email para validar, não deve haver mais nada como espaços ou outros caracteres antes ou depois do e-mail.  
+Primeiramente queremos receber apenas o e-mail para validar, não deve haver mais nada como espaços ou outros caracteres antes ou depois do e-mail.  
 ```JS
 // aqui adicionamos os metacarecteres ^ e $.
 const regExp = /^guilherme@gmailxcom$/;
 
 validaEmail("E-mail: guilherme@gmailxcom");
 // Agora isso retorna false, porque o circunflexo exige
-// que o começo seja logo apartir de "gui..."
+// que o começo seja logo após de "gui..."
 // Como também o $ exige que não tenha nada depois de "...com".
 ```
 
@@ -110,7 +110,7 @@ Como vimos o **ponto** é um metacaractere e nesse caso para não recebermos out
 const regExp = /^guilherme@gmail\.com$/;
 
 validaEmail("guilherme@gmail.com");
-// Nesse momento essa é a unica entrada que será satisfeita e retornará true.
+// Nesse momento essa é a única entrada que será satisfeita e retornará true.
 ```
 
 ### 1.5.3 - Quantificadores
@@ -145,7 +145,7 @@ validaEmail("guilherme@gmail.com");
 
 Chegou a hora de deixarmos isso mais dinâmico e no lugar de receber apenas o texto estático "guilherme", vamos refatorar para que possamos receber qualquer nome.  
 
-Para isso podemos usar os metacaracteres representados pela barra invertida e uma letra específica como mostrado na tabela **outros**.  
+Para isso podemos usar os metacaracteres representados pela barra invertida e uma letra específica como mostrado na tabela acima.  
 
 ```JS
 const regExp = /^\w@gmail\.com$/;
@@ -169,12 +169,12 @@ validaEmail("joao_123@outlook.br");
 ```
 
 ## 2 - Avançando nas regex
-Agora vamos nos aprofundar um pouco mais nas expressões regulares, veremos como podemos criar padrões mais específicos para poder criar nossa regex de acordo com a nossa necessidade. 
+Agora vamos nos aprofundar um pouco mais nas expressões regulares, veremos como podemos criar padrões mais específicos para poder criar nossa regex de acordo com cada necessidade. 
 
 ### 2.1 - Listas de Caracteres
 As listas como apresentadas na seção 1.5.2, são bem mais específicas, ela guarda dentro de si apenas os caracteres que serão permitidos, então algo como `[aeiou]` limita nossa regex a aceitar apenas letras vogais.  
 
-Então continuando no nosso código poderiamos alterar o `\D` por uma lista sem problemas. Por exemplo, onde queremos receber o nome do servidor após o `@` deve ser sem números e simbolos, apenas letras, podemos usar uma lista `[a-z]` que vai aceitar apenas o range de a até z, nada de números, simbolos, etc será aceito.
+Continuando no nosso código poderiamos alterar o `\D` por uma lista sem problemas. Por exemplo, onde queremos receber o nome do provedor após o `@` deve ser sem números e símbolos, apenas letras, podemos usar uma lista `[a-z]` que vai aceitar apenas o range de a até z, nada de números, símbolos, etc será aceito.
 
 ```JS
 const regExp = /^\w+@[a-z]+\.[a-z]+$/;
@@ -190,7 +190,7 @@ validaEmail("joao_123@gm4il.com");
 ### 2.2 - Grupos de Captura
 Como vimos na seção 1.5.4, um grupo de captura pode realizar a extração de valores de uma determinada String. Como também para quando necessitamos que uma determinada parte da expressão regular se repita usando os quantificadores por exemplo, podemos usar parênteses em torno dela.
 
-Vamos agora refatorar nosso código para poder receber tanto e-mails ".com" mas também ".com.br" e etc. Note que o padrão se repete sempre tem um ponto e uma sequencia de letras, para isso podemos usar um grupos e dizer que esse padrão pode se repetir uma ou mais vezes usando o quantificador `+`.
+Vamos agora refatorar nosso código para poder receber tanto e-mails ".com" mas também ".com.br" e etc. Note que o padrão se repete sempre tem um ponto e uma sequencia de letras, para isso podemos usar um grupo e dizer que esse padrão pode se repetir uma ou mais vezes usando o quantificador `+`.
 
 ```JS
 const regExp = /^\w+@[a-z]+(\.[a-z]+)+$/;
@@ -219,7 +219,8 @@ validaEmail("joao_123@outlook.com.br.br.br");
 
 ### 2.3 - Modificadores
 São semelhantes aos metacaracteres, porém são usados fora da expressão.
-Aqui vou apresentar apenas dois, que são mais usados:
+Aqui vou apresentar apenas dois, que são mais usados:  
+
 |modificador|mnemônico|função|
 |:---:|:---:|:---:|
 |i|case-insensitive|não leva em consideração maiúsculas e minúsculas|
@@ -245,6 +246,7 @@ Viemos usando desde o início dentro da nossa função `validaEmail` o método
 |:---:|:---:|:---:|
 |test|Testa string para ver se o padrão foi satisfeito|boolean|
 |exec|detalha o que foi encontrado de acordo com a expressão|array ou null|  
+
 
 Também podemos usar métodos invocados a partir de uma string
 
@@ -297,9 +299,12 @@ pegaUsername("JoAo_123@outlook.com.br")
 ```
 
 ## 3 - Referências
-- [EXPRESSÕES REGULARES - Livro Online, por Aurelio Jargas](https://aurelio.net/regex/guia/)
-- [JS Masterclass](https://app.agilecode.com.br/public/products/c09d58ff-ce6b-491b-b158-9982583dff79)
-- [DevMedia](https://www.devmedia.com.br/expressoes-regulares-em-javascript/37015)
+- https://regexr.com/
+- https://aurelio.net/regex/guia/
+- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions
+- https://www.devmedia.com.br/expressoes-regulares-em-javascript/37015
+- https://medium.com/@alexandreservian/regex-um-guia-pratico-para-express%C3%B5es-regulares-1ac5fa4dd39f
+
 
 ## 4 - Conclusão  
 As regex são muitos úteis no dia a dia de um desenvolvedor, uma ferramenta incrível que auxilia na hora de fazer validações, buscas e etc.  
