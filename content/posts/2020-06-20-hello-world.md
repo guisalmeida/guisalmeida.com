@@ -3,8 +3,8 @@ title: Hello World
 description: Começando meu blog pessoal, aqui pretendo compartilhar o que venho
   aprendendo sobre desenvolvimento web, ciência da computação e afins..
 date: 2020-06-28 03:19:24
-category: blog
 thumbnailImage: ../../static/assets/img/thumb-hello.png
+category: blog
 ---
 Olá! me chamo Guilherme se quiser saber mais sobre mim pode ver [aqui](https://guisalmeida.com/about), você deve ser novo por aqui, por isso resolvi escrever esse meu primeiro post falando um pouco das minhas motivações de ter um blog.
 

@@ -15,7 +15,7 @@ const Post = ({ data }) => {
             <SEO 
                 title={post.frontmatter.title} 
                 description={post.frontmatter.description} 
-                image={`https://guisalmeida.com${post.frontmatter.thumbnailImage.publicURL}`}
+                image={`https://guisalmeida.com${post.frontmatter.thumbnailImage.childImageSharp.fluid.src}`}
             />
             {post.frontmatter.thumbnailImage &&
                 <S.PostImage fluid={post.frontmatter.thumbnailImage.childImageSharp.fluid} />
