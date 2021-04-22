@@ -35,9 +35,7 @@ export const SearchWrapper = styled.section`
 
   body#grid & {
     .ais-Hits-list {
-      background-color: var(--borders);
-      border-bottom: 1px solid var(--borders);
-      border-top: 1px solid var(--borders);
+      background-color: var(--background);
       display: grid;
       grid-area: card;
       grid-gap: 1px;

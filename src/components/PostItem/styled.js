@@ -20,6 +20,7 @@ export const PostItemLink = styled(AniLink)`
   text-decoration: none;
   body#grid & {
     background-color: var(--background);
+    height: 100%;
   }
   &:hover {
     color: var(--postColor);
@@ -43,7 +44,7 @@ export const PostItemWrapper = styled.section`
     border: none;
     padding: 2rem 1rem;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
 
     ${media.lessThan("medium")`
       align-items: center;
