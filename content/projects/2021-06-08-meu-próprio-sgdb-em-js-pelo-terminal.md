@@ -12,5 +12,6 @@ Este projeto é um estudo de caso feito aproveitando aprendizado adquirido no [C
 ## 1.1 O que é um SGDB
 É um sistema responsável pelo gerenciamento de um ou mais bancos de dados. Seu principal objetivo é retirar da aplicação cliente a responsabilidade de gerenciar o acesso, a persistência, a manipulação e a organização dos dados. O SGBD disponibiliza uma interface para que seus clientes possam incluir, alterar ou consultar dados previamente armazenados.
 
+## 2.1 Funcionando
 <p align="center"><img src="https://user-images.githubusercontent.com/45276342/121274178-57e6d400-c8a0-11eb-86d3-4078e50aaa35.gif" alt="dbgen" width="960" height="auto" /></p>
 
