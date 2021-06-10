@@ -2349,4 +2349,8 @@ function sum(a, b) {
     }
 })();
  // 12
-```
+```  
+---
+
+## 10 - Conclusão  
+E aí, o que achou desse post? Tem alguma sugestão ou crítica? Deixa uma reação ou um comentário aqui embaixo. E obrigado pela visita! 😉
