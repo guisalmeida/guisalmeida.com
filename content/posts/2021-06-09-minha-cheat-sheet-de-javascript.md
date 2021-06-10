@@ -1591,7 +1591,9 @@ for (let language in languages) {
 // Fortran:1957
 // Lisp:1958
 // COBOL:1959
-```
+```  
+
+---  
 **`spread operator (...)`**  
 _Expandi os elementos de um **iterable** em um array._
 ``` JS
@@ -1748,6 +1750,7 @@ Um **proxy** é capaz de interceptar diversos tipos de operações em um objeto 
 - preventExtensions
 - set
 - setPrototypeOf
+
 ---
 
 **`set`**  
