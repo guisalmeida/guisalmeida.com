@@ -50,8 +50,8 @@ NaN
 ```
 ---
 **`isNaN`**  
-_Retorna booleano que verifica se o parâmetro passado é **NaN**._
-> Se usarmos operadores booleanos para comparar, mesmo sendo igual retorna false. Por isso usar a função isNaN().
+_Retorna booleano que verifica se o parâmetro passado é **NaN**._  
+⚠️ Se usarmos operadores booleanos para comparar, mesmo sendo igual retorna false. Por isso usar a função isNaN().
 ``` JS
 //exemplo:
 > NaN === NaN
@@ -85,8 +85,8 @@ _Retorna o numero total de algarismos, que é passado como parâmetro da funçã
 ```
 ---
 **`parseInt`**  
-_Recebe uma string como parâmetro da função e retorna numero decimal, ou de outra base que deve ser passada com segundo parâmetro._
-> As casas após a virgula nesse caso são perdidas.
+_Recebe uma string como parâmetro da função e retorna numero decimal, ou de outra base que deve ser passada com segundo parâmetro._  
+⚠️ As casas após a virgula nesse caso são perdidas.
 ``` JS
 //exemplo:
 > parseInt("10");
@@ -116,8 +116,8 @@ NaN
 ```
 ---
 **`toString`**  
-_Retorna uma string do numero convertido na base passada como parâmetro da função._
-> O Javascript aceita 4 tipos de base numérica: **decimal(10), hexadecimal(16), binario(2) e octal(8)**.
+_Retorna uma string do numero convertido na base passada como parâmetro da função._  
+⚠️ O Javascript aceita 4 tipos de base numérica: **decimal(10), hexadecimal(16), binario(2) e octal(8)**.
 ``` JS
 //exemplo:
 > (10).toString(10) // convertendo para string em decimal
@@ -176,8 +176,8 @@ _Retorna numero arredondado para próximo inteiro para baixo._
 **`Math.round`**  
 _Arredonda o número para cima se a
 parte decimal for de 5 a 9 e para baixo se for
-de 0 a 4._
-> Para números negativos inverte a orderm.
+de 0 a 4._  
+⚠️ Para números negativos inverte a orderm.
 ``` JS
 //exemplo:
 > Math.round(4.4);
@@ -229,8 +229,8 @@ parâmetro._
 
 **`Math.random`**  
 _Retorna um número randômico entre
-0 e 1, não incluindo o 1._
-> Para resultado maior que 1 casa decimal basta multiplica-lo.
+0 e 1, não incluindo o 1._  
+⚠️ Para resultado maior que 1 casa decimal basta multiplica-lo.
 ``` JS
 //exemplo:
 > Math.random();
@@ -349,19 +349,18 @@ _Retorna número -1, 0 ou 1 de acordo com a String passada por parâmetro for ma
 0  // a == a
 > "b".localeCompare("a");
 1  // b > a
+```  
+⚠️ Caracteres com acento que são posição maiores, também são recolocados conforme a letra, tornando essa função muito prática e importante.  
+```js
+"á" < "b"
+false // o "à" é maior que "b" por causa do charCode
+"á".localeCompare("b")
+-1 // a função traz o "à" como se fosse o "a" normal para comparação
 ```
->---
-> _**\*** Caracteres com acento que são posição maiores, também são recolocados conforme a letra, tornando essa função muito prática e importante._
-> ```js
-> "á" < "b"
-> false // o "à" é maior que "b" por causa do charCode
-> "á".localeCompare("b")
-> -1 // a função traz o "à" como se fosse o "a" normal para comparação
->```
-> --- 
+--- 
 **`match`**  
-_Retorna `Array` com partes da String com base na RegExp passada por parâmetro._
-> **\*** _Só aceita **`regexp`** como parâmetros._
+_Retorna `Array` com partes da String com base na RegExp passada por parâmetro._  
+⚠️ _Só aceita **`regexp`** como parâmetros._
 ``` JS
 //exemplo:
 //neste caso foi usado regexp onde a barra \ serva para escapar o +, o G serve para localizar todos as ocorrências.
@@ -371,8 +370,8 @@ _Retorna `Array` com partes da String com base na RegExp passada por parâmetro.
 
 ---
 **`search`**  
-_Retorna `Number` com valor do indice da primeira posição encontrada com base na RegExp passada por parâmetro._
-> **\*** _Só aceita **`regexp`** como parâmetros._
+_Retorna `Number` com valor do indice da primeira posição encontrada com base na RegExp passada por parâmetro._  
+⚠️  _Só aceita **`regexp`** como parâmetros._
 ``` JS
 //exemplo:
 > "Java".search(/a/); 
@@ -687,7 +686,7 @@ console.log(Object.entries(javascript));
 ---
 **`Object.preventExtensions`**  
 _Impede que o objeto tenha novas propriedades, mas permite modificar ou remover as propriedades existentes._  
-> sempre que são aplicadas essas alterações no OBJ ele se torna **imutável**.
+⚠️ Sempre que são aplicadas essas alterações no OBJ ele se torna **imutável**.
 ```js
 //exemplo:
 const javascript = {
@@ -707,7 +706,7 @@ console.log(Object.isExtensible(javascript));
 ---
 **`Object.seal`**  
 _Impede que o objeto tenha novas propriedades ou apague propriedades existentes, mas permite modificar propriedades existentes._  
-> sempre que são aplicadas essas alterações no OBJ ele se torna **imutável**.
+⚠️ Sempre que são aplicadas essas alterações no OBJ ele se torna **imutável**.
 ```js
 //exemplo:
 const javascript = {
@@ -728,8 +727,8 @@ console.log(Object.isSealed(javascript));
 ```
 ---
 **`Object.freeze`**  
-_Impede que o objeto tenha novas propriedades, apague ou modifique propriedades existentes._
-> sempre que são aplicadas essas alterações no OBJ ele se torna **imutável**.
+_Impede que o objeto tenha novas propriedades, apague ou modifique propriedades existentes._  
+⚠️ Sempre que são aplicadas essas alterações no OBJ ele se torna **imutável**.
 ```js
 //exemplo:
 const javascript = {
@@ -812,8 +811,8 @@ sum(1,2,3,4,5);
 ```
 ---
 **`rest parameter (...)`**  
-_parâmetro da função que retorna um **array** com os parâmetros passados agrupados._
-> Deve ser sempre o último da lista parâmetros.
+_parâmetro da função que retorna um **array** com os parâmetros passados agrupados._  
+⚠️ Deve ser sempre o último da lista parâmetros.
 ```js
 //exemplo:
 let sum = function(a, b, c, ...numbers) {
@@ -843,8 +842,8 @@ console.log(rectangle.calculateArea());
 ```
 ---
 **`call`**  
-_operação onde é possível invocar uma função passando o **this** por parâmetro._
-> O primeiro parâmetro deve ser sempre o this.
+_operação onde é possível invocar uma função passando o **this** por parâmetro._  
+⚠️ O primeiro parâmetro deve ser sempre o this.
 ```js
 //exemplo:
 const calculateArea = function(fn) {
@@ -859,8 +858,8 @@ console.log(calculateArea.call(circle, Math.round));
 ```
 ---
 **`apply`**  
-_operação onde é possível invocar uma função passando o **this** por parâmetro._
-> O primeiro parâmetro deve ser sempre o this. A partir do segundo, os parâmetros devem ser passados dentro de um array.
+_operação onde é possível invocar uma função passando o **this** por parâmetro._  
+⚠️ O primeiro parâmetro deve ser sempre o this. A partir do segundo, os parâmetros devem ser passados dentro de um array.
 ```js
 //exemplo:
 const calculateArea = function(fn) {
@@ -971,8 +970,8 @@ console.log(date instanceof Array);
 ---
 ### 1.7 Array
 **`length`**  
-_Retorna o tamanho do Array._
-> Elementos vazios não são considerados no length.
+_Retorna o tamanho do Array._  
+⚠️ Elementos vazios não são considerados no length.
 ``` JS
 //exemplo:
 const timeUnits = [];
@@ -982,9 +981,9 @@ timeUnits[2] = "day";
 console.log(timeUnits.length);
 // 3
 ```
-#### 1.7.1 Mutator methods API    
-Quando invocados modificam o array.
----
+#### 1.7.1 Mutator methods API  
+Quando invocados modificam o array.  
+
 **`push`**  
 _Adiciona um elemento no final do Array._
 ``` JS
@@ -1027,8 +1026,8 @@ console.log(languages);
 ```
 ---
 **`splice`**  
-_Remove, substitui ou adiciona um ou mais elementos em uma determinada posição do Array._
-> Retorna um array com os elementos removidos
+_Remove, substitui ou adiciona um ou mais elementos em uma determinada posição do Array._  
+⚠️ Retorna um array com os elementos removidos
 ``` JS
 //exemplo:
 const languages = ["Python", "C", "Java"];
@@ -1049,8 +1048,8 @@ console.log(languages);
 ```
 ---
 **`sort`**  
-_Ordena os elementos de acordo com a função de ordenação._
-> O retorno com os valores -1 e 0 permanece como está e 1 inverte.
+_Ordena os elementos de acordo com a função de ordenação._  
+⚠️ O retorno com os valores -1 e 0 permanece como está e 1 inverte.
 ``` JS
 //exemplo:
 const languages = [
@@ -1100,9 +1099,8 @@ console.log(languages);
 ```
 ---
 #### 1.7.2 Mutator methods API   
-
 Quando invocados iteram sobre os elementos do array.
----
+
 **`forEach`**  
 _Executa a função passada por parâmetro para cada elemento._
 ``` JS
@@ -1408,8 +1406,8 @@ console.log(timeUnits.get("hour"));
 ```
 ---
 **`delete`**  
-_Remove um par de chave e valor._
-> retorna um bollean caso a chave exista `true`, caso não exista `false`.
+_Remove um par de chave e valor._  
+⚠️ retorna um bollean caso a chave exista `true`, caso não exista `false`.
 ``` JS
 //exemplo:
 const timeUnits = new Map([['second', 1], ['minute', 60], ['hour', 3600]]);
@@ -1432,8 +1430,8 @@ console.log(timeUnits);
 ---
 #### 1.8.1 WeakMap
 
-É um objeto, similar ao Map, que permite apenas chaves do tipo Object e mantém as referências de forma fraca, sendo volátil e não iterável.
-> Possui apenas os métodos: `set, has, get, delete`.
+É um objeto, similar ao Map, que permite apenas chaves do tipo Object e mantém as referências de forma fraca, sendo volátil e não iterável.  
+⚠️ Possui apenas os métodos: `set, has, get, delete`.
 ```JS
 // Exemplo:
 const areas = new WeakMap();
@@ -1465,9 +1463,9 @@ console.log(calculateArea(rectangle2));
 ---
 ### 1.9 Set
 
-_É um objeto que armazena elementos únicos, que podem ser de qualquer tipo de dado._
-> Possui os os métodos `size, forEach, has, delete, clear` semelhantes ao **MAP**.
-> Não deixa os elementos se repetirem dentro de sua estrutura, caso repitam não são adicionados.
+_É um objeto que armazena elementos únicos, que podem ser de qualquer tipo de dado._  
+Possui os os métodos `size, forEach, has, delete, clear` semelhantes ao **MAP**.  
+⚠️ Não deixa os elementos se repetirem dentro de sua estrutura, caso repitam não são adicionados.
 ```JS
 // Exemplo:
 const set = new Set();
@@ -1479,7 +1477,7 @@ console.log(set);
 console.log(set.size);
 // 1
 ```
-> Também é possível converter um array em set tirando seus valores repetidos.
+Também é possível converter um array em set tirando seus valores repetidos.
 ```JS
 // Exemplo:
 const set = new Set();
@@ -1515,8 +1513,8 @@ console.log(charsets);
 // Set { 'ASCII', 'ISO-8859-1', 'UTF-8' }
 ```
 #### 1.9.1 WeakSet
-É um objeto, similar ao Set, que permite apenas valores do tipo Object e mantém as referências de forma fraca, sendo volátil e não iterável.
-> Possui apenas os métodos: `add, has, delete` semelhantes ao Set.  
+É um objeto, similar ao Set, que permite apenas valores do tipo Object e mantém as referências de forma fraca, sendo volátil e não iterável.  
+⚠️ Possui apenas os métodos: `add, has, delete` semelhantes ao Set.  
 ```JS
 // Exemplo:
 const circles = new WeakSet();
@@ -1544,8 +1542,8 @@ console.log(circle1.calculateArea.call(circle2));
 
 ## 2. Iterables e Iterators
 
-_São convenções implementadas por Arrays, Maps, Sets e Strings que os tornam iteráveis por meio de um protocolo de iteração._
-> _Todo **Iterable** tem um propriedade de chave **`Symbol.iterator`** que define o protocolo de iteração para o objeto._
+_São convenções implementadas por Arrays, Maps, Sets e Strings que os tornam iteráveis por meio de um protocolo de iteração._  
+⚠️ _Todo **Iterable** tem um propriedade de chave **`Symbol.iterator`** que define o protocolo de iteração para o objeto._
 ```JS
 //Exemplo:
  const languages = ["Fortran", "Lisp", "COBOL"];
@@ -1607,11 +1605,10 @@ console.log(languages);
 ---
 ## 3. Classes
 As classes são um tipo especial de função que atuam como um template para a criação de objetos._  
-> \*Não sofrem **`hoisting`**. 
+⚠️ Não sofrem **`hoisting`**. 
 ```JS
 //Exemplo:
-const Square = class {
-}
+const Square = class {}
 const square = new Square();
 console.log(square);
 // Square {}
@@ -1905,9 +1902,9 @@ console.log(languages[3]);
 ---
 ## 6. Modules
 No ES6, ou ECMAScript 2015, foi especificado na própria linguagem, baseado no conceito de importação e exportação.  
-> _\*Para utilizar modules no **Node.js** os arquivos devem ter a extensão **`.mjs`** além de executar com a flag **`--experimental-modules`**._  
-**`export`**  
-> Por meio da palavra-chave export é possível exportar qualquer tipo de dado existente dentro de um módulo._
+⚠️ Para utilizar modules no **Node.js** os arquivos devem ter a extensão **`.mjs`** além de executar com a flag **`--experimental-modules`**._  
+**`export`**.  
+Por meio da palavra-chave export é possível exportar qualquer tipo de dado existente dentro de um módulo._
 
 ```js
 //exemplo:
@@ -1917,7 +1914,7 @@ export function pow(base, exponential) {
     return base * pow(base, exponential - 1);
 }
 ```
-> Também podemos importar e exportar de forma padrão utilizando a palavra-chave **`default`**.
+Também podemos importar e exportar de forma padrão utilizando a palavra-chave **`default`**.
 ```js
 //exemplo:
 export default class Circle {
@@ -1930,8 +1927,8 @@ import Circle from './Circle';
 ```
 ---
 **`import`**  
-A palavra-chave import faz a importação de qualquer tipo de dado exportado para dentro do módulo.
-> _Não é permitido realizar a importação e exportação dentro de **blocos**._
+A palavra-chave import faz a importação de qualquer tipo de dado exportado para dentro do módulo.  
+⚠️ _Não é permitido realizar a importação e exportação dentro de **blocos**._
 ```js
 //exemplo:
 import {PI, pow} from './math';
@@ -1946,7 +1943,7 @@ class Circle {
 }
 const circle = new Circle(10);
 ```
-> É possível utilizar um **alias** na importação, renomeando o que estiver sendo importado seguido do **`as`** e o alias.
+É possível utilizar um **alias** na importação, renomeando o que estiver sendo importado seguido do **`as`** e o alias.
 ```js
 //exemplo:
 import {PI as pi, pow} from './math';
@@ -1961,7 +1958,7 @@ class Circle {
 }
 const circle = new Circle(10);
 ```
-> Por meio do **`*`** é possível importar tudo que estiver sendo exportado em um único objeto.
+Por meio do **`*`** é possível importar tudo que estiver sendo exportado em um único objeto.
 ```js
 //exemplo:
 import * as math from './math';
@@ -1979,7 +1976,7 @@ const circle = new Circle(10);
 ---
 ## 7. Promisses  
 As promises são objetos responsáveis por modelar comportamento assíncrono, permitindo o seu tratamento de uma forma mais fácil e direta.  
-> _\*Para criar uma promise basta instanciá-la, executando a função **`resolve`** em caso de sucesso, sendo tratado por meio de **`then`**._  
+⚠️ Para criar uma promise basta instanciá-la, executando a função **`resolve`** em caso de sucesso, sendo tratado por meio de **`then`**._  
 ```js
 //exemplo:
 function delayedSum(a, b) {
@@ -1994,7 +1991,7 @@ delayedSum(2, 2).then(function(result) {
 });
 // 4
 ```
-> Em caso de fracasso, a função **`reject`** deve ser executada, sendo tratada por meio de **`catch`**.
+Em caso de fracasso, a função **`reject`** deve ser executada, sendo tratada por meio de **`catch`**.
 ```js
 //exemplo:
 function delayedSum(a, b) {
@@ -2013,8 +2010,8 @@ delayedSum(2, ) // simulando um erro
 // NaN
 ```
 **`Promise.all`**  
-_Podemos executar várias promises ao mesmo tempo, retornando após todas terem sucesso usando **`Promise.all`**_.
-> _Retorna um **array** com os valaores de cada função executada._
+_Podemos executar várias promises ao mesmo tempo, retornando após todas terem sucesso usando **`Promise.all`**_.  
+⚠️ _Retorna um **array** com os valaores de cada função executada._
 ```JS
 // Exemplo:
 function delayedSum(a, b) {
@@ -2039,8 +2036,8 @@ Promise.all([
 // 12
 ```
 **`Promise.race`**  
-_Também podemos executar várias promises ao mesmo tempo, retornando após a primeira ter sucesso usando **`Promise.race`**_.
-> _Retorna **somente** resultado da primeira função retornada._
+_Também podemos executar várias promises ao mesmo tempo, retornando após a primeira ter sucesso usando **`Promise.race`**_.  
+⚠️ _Retorna **somente** resultado da primeira função retornada._
 ```JS
 // Exemplo:
 function delayedSum(a, b) {
@@ -2065,7 +2062,7 @@ Promise.race([
 ```
 ## 8. Generators  
 Os generators tornam possível pausar a execução de uma determinada função, permitindo a utilização do _**event loop**_ de forma cooperativa.  
-> _\*Para criar um **`generator`** basta adicionar **`*`** ao lado da função._  
+⚠️ Para criar um **`generator`** basta adicionar **`*`** ao lado da função._  
 
 **`yield`**  
 Ao encontrar um _**yield**_, a execução da função é pausada até o método **`next()`** ser invocado novamente.
@@ -2089,54 +2086,54 @@ today();
 // 1
 // Passou para today
 ```
-> Por meio do **`yield`** é possível retornar valores de forma similar ao return no atribudo **`value`** do obj que é retornado.
->```JS
->// Exemplo:
->function* forever() {
->	let value = 1;
->	while (true) {
->		yield value++;
->	}
->}
->
->function today() {
->	console.log("Passou para today");
->}
->
->const foreverGenerator = forever();
->console.log(foreverGenerator.next());
->// { value: 1, done: false }
->console.log(foreverGenerator.next());
->// { value: 2, done: false }
->console.log(foreverGenerator.next());
->// { value: 3, done: false }
->today();
->// Passou para today
->console.log(foreverGenerator.next());
->// { value: 4, done: false }
->console.log(foreverGenerator.next());
->// { value: 5, done: false }
->```
-> Além disso, também é possível enviar um valor para dentro do generator por meio do método next.
->```JS
->// Exemplo:
->function* forever() {
->	let value = 1;
->	while (true) {
->        let reset = yield value++;  // YIELD recebe valor passado por parametro na invocação no next
->        if (reset) value = 1; // quando o valor do yield passado para a variavel RESET retornar true vai atribuir valor 1
->	}
->}
->const foreverGenerator = forever();
->console.log(foreverGenerator.next());
-> // { value: 1, done: false }
->console.log(foreverGenerator.next());
-> // { value: 2, done: false }
->console.log(foreverGenerator.next(true)); // recebe parãmetro por meio do next
-> // { value: 1, done: false }
->console.log(foreverGenerator.next());
-> // { value: 2, done: false }  
->``` 
+Por meio do **`yield`** é possível retornar valores de forma similar ao return no atribudo **`value`** do obj que é retornado.
+```JS
+// Exemplo:
+function* forever() {
+	let value = 1;
+while (true) {
+		yield value++;
+	}
+}
+
+function today() {
+	console.log("Passou para today");
+}
+
+const foreverGenerator = forever();
+console.log(foreverGenerator.next());
+// { value: 1, done: false }
+console.log(foreverGenerator.next());
+// { value: 2, done: false }
+console.log(foreverGenerator.next());
+// { value: 3, done: false }
+today();
+// Passou para today
+console.log(foreverGenerator.next());
+// { value: 4, done: false }
+console.log(foreverGenerator.next());
+// { value: 5, done: false }
+```
+Além disso, também é possível enviar um valor para dentro do generator por meio do método next.
+```JS
+// Exemplo:
+function* forever() {
+	let value = 1;
+	while (true) {
+        let reset = yield value++;  // YIELD recebe valor passado por parametro na invocação no next
+        if (reset) value = 1; // quando o valor do yield passado para a variavel RESET retornar true vai atribuir valor 1
+	}
+}
+const foreverGenerator = forever();
+console.log(foreverGenerator.next());
+ // { value: 1, done: false }
+console.log(foreverGenerator.next());
+ // { value: 2, done: false }
+console.log(foreverGenerator.next(true)); // recebe parãmetro por meio do next
+ // { value: 1, done: false }
+console.log(foreverGenerator.next());
+ // { value: 2, done: false }  
+``` 
 
 **`next`**  
 Os generators utilizam o método **`next()`** para iterar sobre os valores disponíveis durante a execução da função.
@@ -2161,20 +2158,20 @@ today();
 // dessa forma vai executar infinitamente...
 // e não vai passar para próxima função.
 ```
-> O retorno do método next é um **objeto** contendo **`value`** e **`done`**, seguindo o protocolo de iteração.
->```JS
->// Exemplo:
->function* forever() {
->	let value = 1;
->	while (true) {
->		console.log(value++);
->		yield;
->	}
->}
->const foreverGenerator = forever();
->console.log(foreverGenerator.next());
->// { value: undefined, done: false }
->```
+O retorno do método next é um **objeto** contendo **`value`** e **`done`**, seguindo o protocolo de iteração.
+```JS
+// Exemplo:
+function* forever() {
+	let value = 1;
+	while (true) {
+		console.log(value++);
+		yield;
+	}
+}
+const foreverGenerator = forever();
+console.log(foreverGenerator.next());
+// { value: undefined, done: false }
+```
 
 **`return`**  
 O método return encerra o generator podendo retornar um valor específico.
@@ -2194,23 +2191,23 @@ foreverGenerator.return();
 console.log(foreverGenerator.next());
 // { value: undefined, done: true } não executa o segundo next pois já ouve um return antes
 ```
-> O return também pode receber um valor especifico por parâmetro.
->```JS
->// Exemplo:
->function* forever() {
->	let value = 1;
->	while (true) {
->        let reset = yield value++;
->        if (reset) value = 1;
->	}
->}
->
->const foreverGenerator = forever();
->console.log(foreverGenerator.next());
->// { value: 1, done: false }
->console.log(foreverGenerator.return("end"));
->// { value: 'end', done: true } 
->```
+O return também pode receber um valor especifico por parâmetro.
+```JS
+// Exemplo:
+function* forever() {
+	let value = 1;
+	while (true) {
+        let reset = yield value++;
+        if (reset) value = 1;
+	}
+}
+
+const foreverGenerator = forever();
+console.log(foreverGenerator.next());
+// { value: 1, done: false }
+console.log(foreverGenerator.return("end"));
+// { value: 'end', done: true } 
+```
 
 **`throw`**  
 O método throw lança uma exceção dentro do generator interrompendo o fluxo de execução caso a exceção não tenha sido tratada adequadamente.
@@ -2259,91 +2256,91 @@ function sum(a, b) {
 // Invalid input
 // Unhandled promise rejection. aviso de erro não tratado
 ```
-> Para tratar possíveis exceções associadas a chamadas assíncronas é possível utilizar um bloco **`try/catch`**.
->```JS
->// Exemplo:
->function sum(a, b) {
->    return new Promise(function(resolve, reject) {
->        if (!a || !b) return reject("Invalid input");
->        setTimeout(function() {
->            resolve(a + b);
->        }, 1000);
->    });
->}
->
->(async function () {
->    try {
->        const a = await sum(2);
->        const b = await sum(4, 4);
->        const result = await sum(a, b);
->        console.log(result);
->    } catch (e) {
->        console.log(e);
->    }
->})();
->// Invalid input
->```
-> É possivel iterar utilizando async/await por meio do **`for-of`**, _evitar uso do **`forEach`** por ele não conseguir trabalhar de modo assincrono._
->```JS
->// Exemplo:
->function sum(a, b) {
->    return new Promise(function(resolve, reject) {
->        if (!a || !b) return reject("Invalid input");
->        setTimeout(function() {
->            resolve(a + b);
->        }, 1000);
->    });
->}
->
->(async function () {
->    try {
->        const functions = [
->            sum(2, 2),
->            sum(4, 4)
->        ];
->        const results = [];
->        for (let fn of functions) {
->            const result = await fn;
->            results.push(result);
->        }
->        const [a,b] = results;
->        const result = await sum(a, b);
->        console.log(result);
->    } catch (e) {
->        console.log(e);
->    }
->})();
-> // 12
->```
-> É possível utilizar o bloco **`for-await-of`** para iterar sobre um iterator de promises.  
-> _** Para utilizar é necessário usar a flag **`--harmony-async-iteration`**._**
->```JS
->// Exemplo:
->function sum(a, b) {
->    return new Promise(function(resolve, reject) {
->        if (!a || !b) return reject("Invalid input");
->        setTimeout(function() {
->            resolve(a + b);
->        }, 1000);
->    });
->}
->
->(async function () {
->    try {
->        const functions = [
->            sum(2, 2),
->            sum(4, 4)
->        ];
->        const results = [];
->        for await (let result of functions) {
->            results.push(result);
->        }
->        const [a,b] = results;
->        const result = await sum(a, b);
->        console.log(result);
->    } catch (e) {
->        console.log(e);
->    }
->})();
-> // 12
->```
+Para tratar possíveis exceções associadas a chamadas assíncronas é possível utilizar um bloco **`try/catch`**.
+```JS
+// Exemplo:
+function sum(a, b) {
+    return new Promise(function(resolve, reject) {
+        if (!a || !b) return reject("Invalid input");
+        setTimeout(function() {
+            resolve(a + b);
+        }, 1000);
+    });
+}
+
+(async function () {
+    try {
+        const a = await sum(2);
+        const b = await sum(4, 4);
+        const result = await sum(a, b);
+        console.log(result);
+    } catch (e) {
+        console.log(e);
+    }
+})();
+// Invalid input
+```
+É possivel iterar utilizando async/await por meio do **`for-of`**, _evitar uso do **`forEach`** por ele não conseguir trabalhar de modo assincrono._
+```JS
+// Exemplo:
+function sum(a, b) {
+    return new Promise(function(resolve, reject) {
+        if (!a || !b) return reject("Invalid input");
+        setTimeout(function() {
+            resolve(a + b);
+        }, 1000);
+    });
+}
+
+(async function () {
+    try {
+        const functions = [
+            sum(2, 2),
+            sum(4, 4)
+        ];
+        const results = [];
+        for (let fn of functions) {
+            const result = await fn;
+            results.push(result);
+        }
+        const [a,b] = results;
+        const result = await sum(a, b);
+        console.log(result);
+    } catch (e) {
+        console.log(e);
+    }
+})();
+ // 12
+```
+É possível utilizar o bloco **`for-await-of`** para iterar sobre um iterator de promises.  
+_** Para utilizar é necessário usar a flag **`--harmony-async-iteration`**._**
+```JS
+// Exemplo:
+function sum(a, b) {
+    return new Promise(function(resolve, reject) {
+        if (!a || !b) return reject("Invalid input");
+        setTimeout(function() {
+            resolve(a + b);
+        }, 1000);
+    });
+}
+
+(async function () {
+    try {
+        const functions = [
+            sum(2, 2),
+            sum(4, 4)
+        ];
+        const results = [];
+        for await (let result of functions) {
+            results.push(result);
+        }
+        const [a,b] = results;
+        const result = await sum(a, b);
+        console.log(result);
+    } catch (e) {
+        console.log(e);
+    }
+})();
+ // 12
+```
