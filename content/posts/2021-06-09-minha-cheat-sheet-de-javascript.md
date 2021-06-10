@@ -11,9 +11,11 @@ category: blog
 ---
 ## Índice
 
-- [1. Tipos de dados](#1.-tipos-de-dados)
-  - [1.1 Number](#1.1-number)
-- [10. Conclusão](#10.-Conclusão)
+```toc
+exclude: Índice
+from-heading: 2
+to-heading: 6
+```
 
 ## 1. Tipos de dados
 **`typeof`**  
