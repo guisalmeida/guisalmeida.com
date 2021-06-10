@@ -408,11 +408,7 @@ _Retorna uma parte da String que está invocando a função iniciando na posiç�
 **`split`**  
 _Retorna um `array` contendo o resultado da divisão da String original de acordo com o critério passado por parâmetro._
 ``` JS
-/**
-* @param {String}
-* @returns {Array}
-*/
-//example
+//exemplo:
 > "C;Java;JavaScript;Ruby".split(";");
 [ 'C', 'Java', 'JavaScript', 'Ruby' ]
 
