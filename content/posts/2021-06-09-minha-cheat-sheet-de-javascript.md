@@ -9,10 +9,8 @@ date: 2021-06-09 08:02:55
 thumbnailImage: ../../static/assets/img/jsssss.jpg
 category: blog
 ---
-# JS Cheat Sheet
-
 ## 1. Tipos de dados
-##### **`typeof`**
+**`typeof`**  
 _Retorna o tipo de dado._
 ``` JS
 //exemplo:
@@ -33,7 +31,7 @@ _Retorna o tipo de dado._
 
 ### 1.1 Number
 
-##### **`Number`**
+**`Number`**  
 _Converte string passada por parâmetro para número elevado a base decimal._
 ``` JS
 //exemplo:
@@ -51,7 +49,7 @@ _Converte string passada por parâmetro para número elevado a base decimal._
 NaN
 ```
 ---
-##### **`isNaN`**
+**`isNaN`**  
 _Retorna booleano que verifica se o parâmetro passado é **NaN**._
 > Se usarmos operadores booleanos para comparar, mesmo sendo igual retorna false. Por isso usar a função isNaN().
 ``` JS
@@ -62,7 +60,7 @@ false
 true
 ```
 ---
-##### **`toExponential`**
+**`toExponential`**  
 _Retorna o numero elevado a notação cientifica, especificando o número de casas após a virgula como parâmetro da função._
 ``` JS
 //exemplo:
@@ -70,7 +68,7 @@ _Retorna o numero elevado a notação cientifica, especificando o número de cas
 '1.2340000000e+2'
 ```
 ---
-##### **`toFixed`**
+**`toFixed`**  
 _Retorna o numero com uma quantidade de casas após a virgula passado como parâmetro da função._
 ``` JS
 //exemplo:
@@ -78,7 +76,7 @@ _Retorna o numero com uma quantidade de casas após a virgula passado como parâ
 '123.4000000000'
 ```
 ---
-##### **`toPrecision`**
+**`toPrecision`**  
 _Retorna o numero total de algarismos, que é passado como parâmetro da função._
 ``` JS
 //exemplo:
@@ -86,7 +84,7 @@ _Retorna o numero total de algarismos, que é passado como parâmetro da funçã
 '123.4000000'
 ```
 ---
-##### **`parseInt`**
+**`parseInt`**  
 _Recebe uma string como parâmetro da função e retorna numero decimal, ou de outra base que deve ser passada com segundo parâmetro._
 > As casas após a virgula nesse caso são perdidas.
 ``` JS
@@ -103,7 +101,7 @@ _Recebe uma string como parâmetro da função e retorna numero decimal, ou de o
 8
 ```
 ---
-##### **`parseFloat`**
+**`parseFloat`**  
 _Recebe uma string como parâmetro da função e retorna numero decimal com casas após a virgula, ao contrário do parseInt não recebe outra base que deve ser passada como segundo parâmetro._
 ``` JS
 //exemplo:
@@ -117,7 +115,7 @@ _Recebe uma string como parâmetro da função e retorna numero decimal com casa
 NaN
 ```
 ---
-##### **`toString`**
+**`toString`**  
 _Retorna uma string do numero convertido na base passada como parâmetro da função._
 > O Javascript aceita 4 tipos de base numérica: **decimal(10), hexadecimal(16), binario(2) e octal(8)**.
 ``` JS
@@ -135,7 +133,7 @@ _Retorna uma string do numero convertido na base passada como parâmetro da fun�
 #### 1.1.1 Math Api
 Math é um objeto que possui varias funções matemáticas na linguagem.
 
-##### **`Math.sign`**
+**`Math.sign`**  
 _Retorna numero 1 se o parâmetro for positivo e -1 se o parâmetro for negativo._
 ``` JS
 //exemplo:
@@ -145,7 +143,7 @@ _Retorna numero 1 se o parâmetro for positivo e -1 se o parâmetro for negativo
 -1
 ```
 ---
-##### **`Math.abs`**
+**`Math.abs`**  
 _Retorna numero convertido para positivo._
 ``` JS
 //exemplo:
@@ -153,7 +151,7 @@ _Retorna numero convertido para positivo._
 10
 ```
 ---
-##### **`Math.ceil`**
+**`Math.ceil`**  
 _Retorna numero arredondado para próximo inteiro para cima._
 ``` JS
 //exemplo:
@@ -164,7 +162,7 @@ _Retorna numero arredondado para próximo inteiro para cima._
 ```
 ---
 
-##### **`Math.floor`**
+**`Math.floor`**  
 _Retorna numero arredondado para próximo inteiro para baixo._
 ``` JS
 //exemplo:
@@ -175,7 +173,7 @@ _Retorna numero arredondado para próximo inteiro para baixo._
 ```
 ---
 
-##### **`Math.round`**
+**`Math.round`**  
 _Arredonda o número para cima se a
 parte decimal for de 5 a 9 e para baixo se for
 de 0 a 4._
@@ -197,7 +195,7 @@ de 0 a 4._
 ```
 ---
 
-##### **`Math.trunc`**
+**`Math.trunc`**  
 _Elimina a parte decimal do número,
 tornando-o um inteiro._
 ``` JS
@@ -209,7 +207,7 @@ tornando-o um inteiro._
 ```
 ---
 
-##### **`Math.min`**
+**`Math.min`**  
 _Retorna o menor número passado por
 parâmetro._
 ``` JS
@@ -219,7 +217,7 @@ parâmetro._
 ```
 ---
 
-##### **`Math.max`**
+**`Math.max`**  
 _Retorna o maior número passado por
 parâmetro._
 ``` JS
@@ -229,7 +227,7 @@ parâmetro._
 ```
 ---
 
-##### **`Math.random`**
+**`Math.random`**  
 _Retorna um número randômico entre
 0 e 1, não incluindo o 1._
 > Para resultado maior que 1 casa decimal basta multiplica-lo.
@@ -243,7 +241,7 @@ _Retorna um número randômico entre
 ---
 ### 1.2 String
 
-##### **`length`**
+**`length`**  
 _Retorna o tamanho da String._
 ``` JS
 //exemplo:
@@ -251,7 +249,7 @@ _Retorna o tamanho da String._
 10
 ```
 ---
-##### **`indexOf`**
+**`indexOf`**  
 _Retorna a primeira posição encontrada do caractere passado por parâmetro._
 ``` JS
 //exemplo:
@@ -260,7 +258,7 @@ _Retorna a primeira posição encontrada do caractere passado por parâmetro._
 ```
 
 ---
-##### **`lastIndexOf`**
+**`lastIndexOf`**  
 _Retorna a última posição encontrada do caractere passado por parâmetro._
 ``` JS
 //exemplo:
@@ -269,7 +267,7 @@ _Retorna a última posição encontrada do caractere passado por parâmetro._
 ```
 
 ---
-##### **`toUpperCase`**
+**`toUpperCase`**  
 _Retorna uma nova String convertendo as letras para maiúsculas._
 ``` JS
 //exemplo:
@@ -278,7 +276,7 @@ _Retorna uma nova String convertendo as letras para maiúsculas._
 ```
 
 ---
-##### **`toLowerCase`**
+**`toLowerCase`**  
 _Retorna uma nova String convertendo as letras para minúscula._
 ``` JS
 //exemplo:
@@ -287,7 +285,7 @@ _Retorna uma nova String convertendo as letras para minúscula._
 ```
 
 ---
-##### **`charAt`**
+**`charAt`**  
 _Retorna o caractere na posição passada por parâmetro ._
 ``` JS
 //exemplo:
@@ -296,7 +294,7 @@ _Retorna o caractere na posição passada por parâmetro ._
 ```
 
 ---
-##### **`charCodeAt`**
+**`charCodeAt`**  
 _Retorna o código com base na posição passada por parâmetro._
 ``` JS
 //exemplo:
@@ -305,7 +303,7 @@ _Retorna o código com base na posição passada por parâmetro._
 ```
 
 ---
-##### **`String.fromCharCode`**
+**`String.fromCharCode`**  
 _Retorna um caractere com base no código passado por parâmetro._
 ``` JS
 //exemplo:
@@ -314,7 +312,7 @@ _Retorna um caractere com base no código passado por parâmetro._
 ```
 
 ---
-##### **`includes`**
+**`includes`**  
 _Retorna boolenao verificando se a String contém a String passada por parâmetro._
 ``` JS
 //exemplo:
@@ -323,7 +321,7 @@ true
 ```
 
 ---
-##### **`startsWith`**
+**`startsWith`**  
 _Retorna booleano verificando se a String inicia com a String passada por parâmetro._
 ``` JS
 //exemplo:
@@ -332,7 +330,7 @@ true
 ```
 
 ---
-##### **`endsWith`**
+**`endsWith`**  
 _Retorna booleano verificando se a String termina com a String passada por parâmetro._
 ``` JS
 //exemplo:
@@ -341,7 +339,7 @@ true
 ```
 
 ---
-##### **`localeCompare`**
+**`localeCompare`**  
 _Retorna número -1, 0 ou 1 de acordo com a String passada por parâmetro for maior, igual ou menor que a que está sendo verificada._
 ``` JS
 //exemplo:
@@ -361,7 +359,7 @@ _Retorna número -1, 0 ou 1 de acordo com a String passada por parâmetro for ma
 > -1 // a função traz o "à" como se fosse o "a" normal para comparação
 >```
 > --- 
-##### **`match`**
+**`match`**  
 _Retorna `Array` com partes da String com base na RegExp passada por parâmetro._
 > **\*** _Só aceita **`regexp`** como parâmetros._
 ``` JS
@@ -372,7 +370,7 @@ _Retorna `Array` com partes da String com base na RegExp passada por parâmetro.
 ```
 
 ---
-##### **`search`**
+**`search`**  
 _Retorna `Number` com valor do indice da primeira posição encontrada com base na RegExp passada por parâmetro._
 > **\*** _Só aceita **`regexp`** como parâmetros._
 ``` JS
@@ -381,7 +379,7 @@ _Retorna `Number` com valor do indice da primeira posição encontrada com base 
 1
 ```
 ---
-##### **`replace`**
+**`replace`**  
 _Retorna `String` resultante da substituição da String ou RegExp passada no primeiro parâmetro pelo segundo parâmetro._  
 ``` JS
 //exemplo:
@@ -392,7 +390,7 @@ _Retorna `String` resultante da substituição da String ou RegExp passada no pr
 ```
 
 ---
-##### **`slice`**
+**`slice`**  
 _Retorna uma parte da String que está invocando a função iniciando na posição passada no primeiro parâmetro até a posição final passada no segundo parâmetro, ou da posição passada no primeiro parâmetro até o fim caso o segundo parâmetro não seja informado._
 ``` JS
 //exemplo:
@@ -407,7 +405,7 @@ _Retorna uma parte da String que está invocando a função iniciando na posiç�
 ```
 
 ---
-##### **`split`**
+**`split`**  
 _Retorna um `array` contendo o resultado da divisão da String original de acordo com o critério passado por parâmetro._
 ``` JS
 /**
@@ -420,7 +418,7 @@ _Retorna um `array` contendo o resultado da divisão da String original de acord
 
 ```
 ---
-##### **`substring`**
+**`substring`**  
 _Similar ao slice, **não aceita valores negativos como parâmetro e permite a inversão dos parâmetros**._
 ``` JS
 //exemplo:
@@ -433,7 +431,7 @@ _Similar ao slice, **não aceita valores negativos como parâmetro e permite a i
 ```
 ---
 
-##### **`concat`**
+**`concat`**  
 _Retorna uma nova String resultante da concatenação da que está invocando a função e da outra, passada por parâmetro._
 ``` JS
 //exemplo:
@@ -444,7 +442,7 @@ _Retorna uma nova String resultante da concatenação da que está invocando a f
 ```
 
 ---
-##### **`padStart`**
+**`padStart`**  
 _Completa a String com caracteres no início._
 ``` JS
 //exemplo:
@@ -453,7 +451,7 @@ _Completa a String com caracteres no início._
 ```
 
 ---
-##### **`padEnd`**
+**`padEnd`**  
 _Completa a String com caracteres no fim._
 ``` JS
 //exemplo:
@@ -462,7 +460,7 @@ _Completa a String com caracteres no fim._
 ```
 ---
 
-##### **`repeat`**
+**`repeat`**  
 _Repete um caractere._
 ``` JS
 //exemplo:
@@ -471,7 +469,7 @@ _Repete um caractere._
 ```
 
 ---
-##### **`trim`**
+**`trim`**  
 _Elimina espaços em branco no início e no fim._
 ``` JS
 //exemplo:
@@ -480,7 +478,7 @@ _Elimina espaços em branco no início e no fim._
 ```
 
 ---
-##### **`trimLeft`**
+**`trimLeft`**  
 _Elimina espaços em branco no início._
 ``` JS
 //exemplo:
@@ -489,7 +487,7 @@ _Elimina espaços em branco no início._
 ```
 
 ---
-##### **`trimRight`**
+**`trimRight`**  
 _Elimina espaços em branco no fim._
 ``` JS
 //exemplo:
@@ -498,7 +496,7 @@ _Elimina espaços em branco no fim._
 ```
 ---
 ### 1.3 Boolean
-##### **`true ou false`**
+**`true ou false`**  
 _Apenas esses seis casos retornan false, qualquer outro valor é definido como verdadeiro._
 ``` JS
 //exemplo:
@@ -518,14 +516,14 @@ false
 ---
 ### 1.4 Object
 
-##### **`delete`**
+**`delete`**  
 _Apaga propriedade do objeto._
 ``` JS
 //exemplo:
 > delete book.available;
 ```
 ---
-##### **`hasOwnProperty`**
+**`hasOwnProperty`**  
 _utilizado para determinar se uma propriedade pertence ao objeto._
 ``` JS
 //exemplo:
@@ -542,7 +540,7 @@ console.log(javascript.hasOwnProperty(paradigm));
 ---
 
 #### 1.4.1 Object Api
-##### **`Object.create`**
+**`Object.create`**  
 _permite a interação com o protótipo do objeto._
 ```js
 //exemplo:
@@ -554,7 +552,7 @@ scheme.name = "Scheme";
 scheme.year = 1975;
 ```
 ---
-##### **`Object.assign`**
+**`Object.assign`**  
 _faz a cópia das propriedades dos objetos passados por parâmetro para o objeto alvo, que é retornado._
 ```js
 //exemplo:
@@ -573,7 +571,7 @@ console.log(javascript);
 
 ```
 ---
-##### **`Object.getPrototypeOf`**
+**`Object.getPrototypeOf`**  
 _permite a interação com o protótipo do objeto._
 ```js
 //exemplo:
@@ -587,7 +585,7 @@ console.log(Object.getPrototypeOf(javascript).paradigm);
 //"Functional"
 ```
 ---
-##### **`Object.setPrototypeOf`**
+**`Object.setPrototypeOf`**  
 _permite a interação com o protótipo do objeto._
 ``` JS
 //exemplo:
@@ -607,7 +605,7 @@ console.log(Object.setPrototypeOf(scheme, functionalLanguage));
 //
 ```
 ---
-##### **`Object.keys`**
+**`Object.keys`**  
 _Retorna as chaves das propriedades do objeto em um `array`._
 ```js
 //exemplo:
@@ -621,7 +619,7 @@ console.log(Object.keys(javascript));
 ```
 
 ---
-##### **`Object.values`**
+**`Object.values`**  
 _Retorna os valores das propriedades do objeto em um `array`._
 ```js
 //exemplo:
@@ -635,7 +633,7 @@ console.log(Object.values(javascript));
 ```
 
 ---
-##### **`Object.entries`**
+**`Object.entries`**  
 _Retorna as propriedades do objeto em pares de chave e valor em um `array` cada par e depois dentro de outro `array` que engloba todos._
 ```js
 //exemplo:
@@ -651,7 +649,7 @@ console.log(Object.entries(javascript));
 ```
 
 ---
-##### **`Object.is`**
+**`Object.is`**  
 _Compara dois objetos, considerando os tipos de dados, de forma similar ao operador === retornando um booleano._
 ```js
 //exemplo:
@@ -664,7 +662,7 @@ console.log(Object.is(javascript, javascript));
 //true
 ```
 ---
-##### **`Object.defineProperty`**
+**`Object.defineProperty`**  
 _Operação que permite configurar varios aspectos de uma determinada propriedade, recebe como parâmetros **(object, keys, {properties}**)._
 > **Properties**  
 > `value` – _Define o valor de uma determinada propriedade._  
@@ -691,7 +689,7 @@ console.log(Object.entries(javascript));
 //[ [ 'name', 'ECMAScript' ] ]
 ```
 ---
-##### **`Object.preventExtensions`**
+**`Object.preventExtensions`**  
 _Impede que o objeto tenha novas propriedades, mas permite modificar ou remover as propriedades existentes._  
 > sempre que são aplicadas essas alterações no OBJ ele se torna **imutável**.
 ```js
@@ -711,7 +709,7 @@ console.log(Object.isExtensible(javascript));
 //false
 ```
 ---
-##### **`Object.seal`**
+**`Object.seal`**  
 _Impede que o objeto tenha novas propriedades ou apague propriedades existentes, mas permite modificar propriedades existentes._  
 > sempre que são aplicadas essas alterações no OBJ ele se torna **imutável**.
 ```js
@@ -733,7 +731,7 @@ console.log(Object.isSealed(javascript));
 //true
 ```
 ---
-##### **`Object.freeze`**
+**`Object.freeze`**  
 _Impede que o objeto tenha novas propriedades, apague ou modifique propriedades existentes._
 > sempre que são aplicadas essas alterações no OBJ ele se torna **imutável**.
 ```js
@@ -760,7 +758,7 @@ console.log(Object.isFrozen(javascript));
 ## 1.5 Json
 É um formato de intercâmbio de dados.  
 
-##### **`JSON.stringfy`**
+**`JSON.stringfy`**  
 _converte um determinado tipo de dado para JSON._
 ```js
 //exemplo:
@@ -780,7 +778,7 @@ console.log(JSON.stringify(null));
 // 'null'
 ```
 ---
-##### **`JSON.parse`**
+**`JSON.parse`**  
 _converte um JSON para um determinado tipo de dado._
 ```js
 //exemplo:
@@ -801,7 +799,7 @@ console.log(JSON.parse('null'));
 ```
 ---
 ### 1.6 Function
-##### **`arguments`**
+**`arguments`**  
 _variável implícita para acessar os parâmetros da função invocada._
 ```js
 //exemplo:
@@ -817,7 +815,7 @@ sum(1,2,3,4,5);
 // }
 ```
 ---
-##### **`rest parameter (...)`**
+**`rest parameter (...)`**  
 _parâmetro da função que retorna um **array** com os parâmetros passados agrupados._
 > Deve ser sempre o último da lista parâmetros.
 ```js
@@ -833,7 +831,7 @@ console.log(sum(1,2,3,4,5,6,7,8,9));
 // 45
 ```
 ---
-##### **`this`**
+**`this`**  
 _variável implícita que faz referência para o objeto responsável pela sua invocação._
 ```js
 //exemplo:
@@ -848,7 +846,7 @@ console.log(rectangle.calculateArea());
 // 20
 ```
 ---
-##### **`call`**
+**`call`**  
 _operação onde é possível invocar uma função passando o **this** por parâmetro._
 > O primeiro parâmetro deve ser sempre o this.
 ```js
@@ -864,7 +862,7 @@ console.log(calculateArea.call(circle, Math.round));
 // 314
 ```
 ---
-##### **`apply`**
+**`apply`**  
 _operação onde é possível invocar uma função passando o **this** por parâmetro._
 > O primeiro parâmetro deve ser sempre o this. A partir do segundo, os parâmetros devem ser passados dentro de um array.
 ```js
@@ -880,7 +878,7 @@ console.log(calculateArea.apply(circle, [Math.ceil]));
 // 315
 ```
 ---
-##### **`bind`**
+**`bind`**  
 _operação que permite encapsular o **this** dentro da função, retornando-a._
 ```js
 //exemplo:
@@ -898,7 +896,7 @@ console.log(calculateAreaForCircle(Math.ceil));
 // 315
 ```
 ---
-##### **`new`**
+**`new`**  
 _operador que permite criar uma função construtora que retorna um novo objeto ao ser invocada._
 ```js
 //exemplo:
@@ -930,7 +928,7 @@ console.log(person2.getAge());
 // 65
 ```
 ---
-##### **`prototype`**
+**`prototype`**  
 *propriedade que é vinculada ao **\_\_proto\_\_** do objeto criado pelo operador new.*
 ```js
 //exemplo:
@@ -962,7 +960,7 @@ console.log(person2.getAge());
 // 65
 ```
 ---
-##### **`instanceof`**
+**`instanceof`**  
 _propriedade que é possível verificar se um objeto foi criado por meio de uma determinada função construtora analisando a sua cadeia de protótipos._
 ```js
 //exemplo:
@@ -976,7 +974,7 @@ console.log(date instanceof Array);
 ```
 ---
 ### 1.7 Array
-##### **`length`**
+**`length`**  
 _Retorna o tamanho do Array._
 > Elementos vazios não são considerados no length.
 ``` JS
@@ -991,7 +989,7 @@ console.log(timeUnits.length);
 #### 1.7.1 Mutator methods API    
 Quando invocados modificam o array.
 ---
-##### **`push`**
+**`push`**  
 _Adiciona um elemento no final do Array._
 ``` JS
 //exemplo:
@@ -1002,7 +1000,7 @@ console.log(languages);
 // [ 'Python', 'C', 'Java', 'Ruby', 'Go' ]
 ```
 ---
-##### **`pop`**
+**`pop`**  
 _Remove um elemento no final do Array._
 ``` JS
 //exemplo:
@@ -1012,7 +1010,7 @@ console.log(languages);
 // [ 'Python', 'C', 'Java', 'Ruby' ]
 ```
 ---
-##### **`unshift`**
+**`unshift`**  
 _Adiciona um elemento no inicio do Array._
 ``` JS
 //exemplo:
@@ -1022,7 +1020,7 @@ console.log(languages);
 // [ 'Ruby', 'Python', 'C', 'Java' ]
 ```
 ---
-##### **`shift`**
+**`shift`**  
 _Remove um elemento no inicio do Array._
 ``` JS
 //exemplo:
@@ -1032,7 +1030,7 @@ console.log(languages);
 // [ 'Python', 'C', 'Java' ]
 ```
 ---
-##### **`splice`**
+**`splice`**  
 _Remove, substitui ou adiciona um ou mais elementos em uma determinada posição do Array._
 > Retorna um array com os elementos removidos
 ``` JS
@@ -1054,7 +1052,7 @@ console.log(languages);
 // [ 'Python', 'C', 'Java' ]
 ```
 ---
-##### **`sort`**
+**`sort`**  
 _Ordena os elementos de acordo com a função de ordenação._
 > O retorno com os valores -1 e 0 permanece como está e 1 inverte.
 ``` JS
@@ -1082,7 +1080,7 @@ console.log(languages);
 //   { name: 'Python', year: 1991 } ]
 ```
 ---
-##### **`reverse`**
+**`reverse`**  
 _Inverte a ordem dos elementos._
 ``` JS
 //exemplo:
@@ -1095,7 +1093,7 @@ console.log(languages);
 // [ 'Python', 'C', 'Java' ]
 ```
 ---
-##### **`fill`**
+**`fill`**  
 _Preenche os elementos de acordo com a posição de início e fim._
 ``` JS
 //exemplo:
@@ -1109,7 +1107,7 @@ console.log(languages);
 
 Quando invocados iteram sobre os elementos do array.
 ---
-##### **`forEach`**
+**`forEach`**  
 _Executa a função passada por parâmetro para cada elemento._
 ``` JS
 //exemplo:
@@ -1120,7 +1118,7 @@ frameworks.forEach(framework => console.log(framework));
 // Vue.js
 ```
 ---
-##### **`filter`**
+**`filter`**  
 _Retorna um novo array contendo somente os elementos que retornaram **true** na função passada por parâmetro._
 ``` JS
 //exemplo:
@@ -1148,7 +1146,7 @@ console.log(result);
 // ]
 ```
 ---
-##### **`find`**
+**`find`**  
 _Retorna o primeiro elemento que retornou **true** na função passada por parâmetro._
 ``` JS
 //exemplo:
@@ -1173,7 +1171,7 @@ console.log(result);
 // { name: 'Angular.js', contributors: 1598 }
 ```
 ---
-##### **`some`**
+**`some`**  
 _Retorna true se **um ou mais** elementos retornaram true na função passada por parâmetro._
 ``` JS
 //exemplo:
@@ -1198,7 +1196,7 @@ console.log(result);
 // true
 ```
 ---
-##### **`every`**
+**`every`**  
 _Retorna true se **todos os elementos** retornaram true na função passada por parâmetro._
 ``` JS
 //exemplo:
@@ -1223,7 +1221,7 @@ console.log(result);
 // true
 ```
 ---
-##### **`map`**
+**`map`**  
 _Retorna um **novo array** com base no retorno da função passada por parâmetro._
 ``` JS
 //exemplo:
@@ -1246,7 +1244,7 @@ console.log(result);
 // [ 'Angular.js', 'Ember.js', 'Vue.js' ]
 ```
 ---
-##### **`reduce`**
+**`reduce`**  
 _Retorna um valor com base no retorno da função passada por parâmetro._
 ``` JS
 //exemplo:
@@ -1274,7 +1272,7 @@ console.log(result);
 #### 1.7.3 Accessor methods API
 Quando invocados retornam informações específicas sobre o array.
 
-##### **`indexOf`**
+**`indexOf`**  
 _Retorna a posição do primeiro elemento encontrado._
 > Se o elemento não for encontrado, retorna -1.
 ``` JS
@@ -1286,7 +1284,7 @@ console.log(languages.indexOf("JavaScript"));
 // -1
 ```
 ---
-##### **`lastIndexOf`**
+**`lastIndexOf`**  
 _Retorna a posição do último elemento encontrado._
 > Se o elemento não for encontrado, retorna -1.
 ``` JS
@@ -1298,7 +1296,7 @@ console.log(languages.lastIndexOf("JavaScript"));
 // -1
 ```
 ---
-##### **`includes`**
+**`includes`**  
 _Retorna **true** se o elemento existir._
 ``` JS
 //exemplo:
@@ -1311,7 +1309,7 @@ console.log(languages.includes("JavaScript"));
 // false
 ```
 ---
-##### **`concat`**
+**`concat`**  
 _Retorna um novo array resultante da concatenação de um ou mais arrays._
 ``` JS
 //exemplo:
@@ -1322,7 +1320,7 @@ console.log(languages);
 // [ 'Smalltalk', 'C++', 'Simula', 'Haskell', 'Scheme' ]
 ```
 ---
-##### **`slice`**
+**`slice`**  
 _Retorna partes de um determinado array de acordo com a posição de início e fim._
 ``` JS
 //exemplo:
@@ -1335,7 +1333,7 @@ console.log(languages.slice(1));
 // [ 'C++', 'Simula', 'Haskell', 'Scheme' ]
 ```
 ---
-##### **`join`**
+**`join`**  
 _Converte o array para uma String, juntando os elementos com base em um separador._
 ``` JS
 //exemplo:
@@ -1357,7 +1355,7 @@ console.log(timeUnits);
 // Map { 'second' => 1, 'minute' => 60, 'hour' => 3600 }
 ```
 ---
-##### **`Array.from`**
+**`Array.from`**  
 _converte um objeto map de volta em um array de pares._
 ``` JS
 //exemplo:
@@ -1366,7 +1364,7 @@ console.log(Array.from(timeUnits));
 // [ [ 'second', 1 ], [ 'minute', 60 ], [ 'hour', 3600 ] ]
 ```
 ---
-##### **`size`**
+**`size`**  
 _Retorna a quantidade de elementos._
 ``` JS
 //exemplo:
@@ -1375,7 +1373,7 @@ console.log(timeUnits.size);
 // 3
 ```
 ---
-##### **`set`**
+**`set`**  
 _Adiciona um par de chave e valor._
 ``` JS
 //exemplo:
@@ -1389,7 +1387,7 @@ console.log(timeUnits);
 // Map { 'second' => 1, 'minute' => 60, 'hour' => 3600 }
 ```
 ---
-##### **`has`**
+**`has`** 
 _Returna true se a **chave** existir._
 ``` JS
 //exemplo:
@@ -1400,7 +1398,7 @@ console.log(timeUnits.has("day"));
 // false
 ```
 ---
-##### **`get`**
+**`get`**  
 _Retorna o **valor** de uma determinada chave._
 ``` JS
 //exemplo:
@@ -1413,7 +1411,7 @@ console.log(timeUnits.get("hour"));
 // 3600
 ```
 ---
-##### **`delete`**
+**`delete`**  
 _Remove um par de chave e valor._
 > retorna um bollean caso a chave exista `true`, caso não exista `false`.
 ``` JS
@@ -1424,7 +1422,7 @@ console.log(timeUnits);
 // Map { 'second' => 1, 'minute' => 60 }
 ```
 ---
-##### **`clear`**
+**`clear`**  
 _Remove todos os elementos._
 ``` JS
 //exemplo:
@@ -1498,7 +1496,7 @@ console.log(set.size);
 // 1
 ```
 ---
-##### **`Array.from`**
+**`Array.from`**  
 _converte um objeto set de volta em um array._
 ``` JS
 //exemplo:
@@ -1509,7 +1507,7 @@ console.log(Array.from(charsets));
 // [ 'ASCII', 'ISO-8599-1', 'UTF-8' ]
 ```
 ---
-##### **`add`**
+**`add`**  
 _Adiciona um elemento ao Set, semelhante ao push do Array e set do Map._
 ``` JS
 //exemplo:
@@ -1567,7 +1565,7 @@ _São convenções implementadas por Arrays, Maps, Sets e Strings que os tornam 
 // { value: undefined, done: true }
 ```
 ---
-##### **`for of`**
+**`for of`**  
 _Percorre as chaves de um **array***._
 ``` JS
 //exemplo:
@@ -1584,7 +1582,7 @@ for ( letter of txt ) {
 //a
 ```
 ---
-##### **`for in`**
+**`for in`**  
 _Percorre as chaves de um **objeto***._
 ``` JS
 //exemplo:
@@ -1600,7 +1598,7 @@ for (let language in languages) {
 // Lisp:1958
 // COBOL:1959
 ```
-##### **`spread operator (...)`**
+**`spread operator (...)`**  
 _Expandi os elementos de um **iterable** em um array._
 ``` JS
 //exemplo:
@@ -1623,7 +1621,7 @@ console.log(square);
 // Square {}
 ```
 ---
-##### **`constructor`**
+**`constructor`**  
 _é invocado no momento da instanciação de uma classe e serve para inicializar um determinado objeto._
 ```js
 //exemplo:
@@ -1637,7 +1635,7 @@ console.log(square);
 // Square { side: 4 }
 ```
 ---
-##### **`prototype methods`**
+**`prototype methods`**  
 _dependem de uma instância para serem invocados._
 ```js
 //exemplo:
@@ -1655,7 +1653,7 @@ console.log(square.toString());
 // side: 4
 ```
 ---
-##### **`static methods`**
+**`static methods`**  
 _não dependem de uma instância para serem invocados._
 ```js
 //exemplo:
@@ -1681,7 +1679,7 @@ console.log(square.toString());
 // side: 4 area: 16
 ```
 ---
-##### **`extends`**
+**`extends`**  
 _É possível criar uma hierarquia de classes por meio da palavra-chave extends._
 ```js
 //exemplo:
@@ -1709,7 +1707,7 @@ console.log(square.toString());
 // side: 4 area: 16
 ```
 ---
-##### **`super`**
+**`super`**  
 _Ao declarar um construtor na subclass é necessário invocar o construtor da superclass por meio **`super()`** antes de utilizar a referência this._
 ```js
 //exemplo:
@@ -1759,7 +1757,7 @@ Um **proxy** é capaz de interceptar diversos tipos de operações em um objeto 
 - setPrototypeOf
 ---
 
-##### **`set`**
+**`set`**  
 _O método set é invocado quando uma propriedade é definida no objeto._
 > recebe como parãmetro (alvo, chave, valor).
 ```js
@@ -1786,7 +1784,7 @@ console.log(languages.length);
 // 2
 ```
 ---
-##### **`deleteProperty`**
+**`deleteProperty`**  
 _O método deleteProperty é invocado quando uma propriedade é deletada._
 > recebe como parãmetro (alvo, chave, valor).
 ```js
@@ -1823,7 +1821,7 @@ console.log(languages.length);
 // 1
 ```
 ---
-##### **`get`**
+**`get`**  
 _O método get é invocado quando uma propriedade é acessada._
 > recebe como parãmetro (alvo, chave, valor).
 ```js
@@ -1912,7 +1910,7 @@ console.log(languages[3]);
 ## 6. Modules
 No ES6, ou ECMAScript 2015, foi especificado na própria linguagem, baseado no conceito de importação e exportação.  
 > _\*Para utilizar modules no **Node.js** os arquivos devem ter a extensão **`.mjs`** além de executar com a flag **`--experimental-modules`**._  
-##### **`export`**
+**`export`**  
 > Por meio da palavra-chave export é possível exportar qualquer tipo de dado existente dentro de um módulo._
 
 ```js
@@ -1935,7 +1933,7 @@ export default class Circle {
 import Circle from './Circle';
 ```
 ---
-##### **`import`**  
+**`import`**  
 A palavra-chave import faz a importação de qualquer tipo de dado exportado para dentro do módulo.
 > _Não é permitido realizar a importação e exportação dentro de **blocos**._
 ```js
@@ -2018,7 +2016,7 @@ delayedSum(2, ) // simulando um erro
     });
 // NaN
 ```
-##### **`Promise.all`**  
+**`Promise.all`**  
 _Podemos executar várias promises ao mesmo tempo, retornando após todas terem sucesso usando **`Promise.all`**_.
 > _Retorna um **array** com os valaores de cada função executada._
 ```JS
@@ -2044,7 +2042,7 @@ Promise.all([
 });
 // 12
 ```
-##### **`Promise.race`**  
+**`Promise.race`**  
 _Também podemos executar várias promises ao mesmo tempo, retornando após a primeira ter sucesso usando **`Promise.race`**_.
 > _Retorna **somente** resultado da primeira função retornada._
 ```JS
@@ -2073,7 +2071,7 @@ Promise.race([
 Os generators tornam possível pausar a execução de uma determinada função, permitindo a utilização do _**event loop**_ de forma cooperativa.  
 > _\*Para criar um **`generator`** basta adicionar **`*`** ao lado da função._  
 
-##### **`yield`**
+**`yield`**  
 Ao encontrar um _**yield**_, a execução da função é pausada até o método **`next()`** ser invocado novamente.
 ```js
 //exemplo:
@@ -2144,7 +2142,7 @@ today();
 > // { value: 2, done: false }  
 >``` 
 
-##### **`next`**
+**`next`**  
 Os generators utilizam o método **`next()`** para iterar sobre os valores disponíveis durante a execução da função.
 ```js
 //exemplo:
@@ -2182,7 +2180,7 @@ today();
 >// { value: undefined, done: false }
 >```
 
-##### **`return`**
+**`return`**  
 O método return encerra o generator podendo retornar um valor específico.
 ```js
 //exemplo:
@@ -2218,7 +2216,7 @@ console.log(foreverGenerator.next());
 >// { value: 'end', done: true } 
 >```
 
-##### **`throw`**
+**`throw`**  
 O método throw lança uma exceção dentro do generator interrompendo o fluxo de execução caso a exceção não tenha sido tratada adequadamente.
 ```JS
 // Exemplo:
