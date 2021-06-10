@@ -17,6 +17,7 @@ from-heading: 2
 to-heading: 6
 ```
 
+
 ## 1. Tipos de dados
 **`typeof`**  
 _Retorna o tipo de dado._
