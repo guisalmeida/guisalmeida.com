@@ -230,7 +230,7 @@ parâmetro._
 **`Math.random`**  
 _Retorna um número randômico entre
 0 e 1, não incluindo o 1._  
-⚠️ Para resultado maior que 1 casa decimal basta multiplica-lo.
+⚠️ Para resultado maior que 1 casa decimal basta multiplicá-lo.
 ``` JS
 //exemplo:
 > Math.random();
@@ -686,7 +686,7 @@ console.log(Object.entries(javascript));
 ---
 **`Object.preventExtensions`**  
 _Impede que o objeto tenha novas propriedades, mas permite modificar ou remover as propriedades existentes._  
-⚠️ Sempre que são aplicadas essas alterações no OBJ ele se torna **imutável**.
+⚠️ Sempre que são aplicadas essas alterações no objeto ele se torna **imutável**.
 ```js
 //exemplo:
 const javascript = {
@@ -706,7 +706,7 @@ console.log(Object.isExtensible(javascript));
 ---
 **`Object.seal`**  
 _Impede que o objeto tenha novas propriedades ou apague propriedades existentes, mas permite modificar propriedades existentes._  
-⚠️ Sempre que são aplicadas essas alterações no OBJ ele se torna **imutável**.
+⚠️ Sempre que são aplicadas essas alterações no objeto ele se torna **imutável**.
 ```js
 //exemplo:
 const javascript = {
@@ -728,7 +728,7 @@ console.log(Object.isSealed(javascript));
 ---
 **`Object.freeze`**  
 _Impede que o objeto tenha novas propriedades, apague ou modifique propriedades existentes._  
-⚠️ Sempre que são aplicadas essas alterações no OBJ ele se torna **imutável**.
+⚠️ Sempre que são aplicadas essas alterações no objeto ele se torna **imutável**.
 ```js
 //exemplo:
 const javascript = {
@@ -1267,8 +1267,8 @@ console.log(result);
 Quando invocados retornam informações específicas sobre o array.
 
 **`indexOf`**  
-_Retorna a posição do primeiro elemento encontrado._
-> Se o elemento não for encontrado, retorna -1.
+_Retorna a posição do primeiro elemento encontrado._  
+⚠️ Se o elemento não for encontrado, retorna -1.
 ``` JS
 //exemplo:
 const languages = ["Python", "C", "Java"];
@@ -1279,8 +1279,8 @@ console.log(languages.indexOf("JavaScript"));
 ```
 ---
 **`lastIndexOf`**  
-_Retorna a posição do último elemento encontrado._
-> Se o elemento não for encontrado, retorna -1.
+_Retorna a posição do último elemento encontrado._  
+⚠️ Se o elemento não for encontrado, retorna -1.
 ``` JS
 //exemplo:
 const languages = ["Python", "C", "C", "Java"];
@@ -1751,8 +1751,8 @@ Um **proxy** é capaz de interceptar diversos tipos de operações em um objeto 
 ---
 
 **`set`**  
-_O método set é invocado quando uma propriedade é definida no objeto._
-> recebe como parãmetro (alvo, chave, valor).
+_O método set é invocado quando uma propriedade é definida no objeto._  
+Recebe como parâmetro (alvo, chave, valor).
 ```js
 //exemplo:
 function createArray() {
@@ -1778,8 +1778,8 @@ console.log(languages.length);
 ```
 ---
 **`deleteProperty`**  
-_O método deleteProperty é invocado quando uma propriedade é deletada._
-> recebe como parãmetro (alvo, chave, valor).
+_O método deleteProperty é invocado quando uma propriedade é deletada._  
+Recebe como parâmetro (alvo, chave, valor).
 ```js
 //exemplo:
 function createArray() {
@@ -1815,8 +1815,8 @@ console.log(languages.length);
 ```
 ---
 **`get`**  
-_O método get é invocado quando uma propriedade é acessada._
-> recebe como parãmetro (alvo, chave, valor).
+_O método get é invocado quando uma propriedade é acessada._  
+Recebe como parâmetro (alvo, chave, valor).
 ```js
 //exemplo:
 function createArray() {
@@ -1865,7 +1865,8 @@ A **Reflect API** tem os mesmos métodos que existem no Proxy, permitindo a exec
 - ownKeys
 - preventExtensions
 - set
-- setPrototypeOf
+- setPrototypeOf  
+
 ```js
 //exemplo:
 function createArray() {
@@ -1902,7 +1903,8 @@ console.log(languages[3]);
 ---
 ## 6. Modules
 No ES6, ou ECMAScript 2015, foi especificado na própria linguagem, baseado no conceito de importação e exportação.  
-⚠️ Para utilizar modules no **Node.js** os arquivos devem ter a extensão **`.mjs`** além de executar com a flag **`--experimental-modules`**._  
+⚠️ Para utilizar modules no **Node.js** os arquivos devem ter a extensão **`.mjs`** além de executar com a flag **`--experimental-modules`**.  
+
 **`export`**.  
 Por meio da palavra-chave export é possível exportar qualquer tipo de dado existente dentro de um módulo._
 
@@ -1976,7 +1978,7 @@ const circle = new Circle(10);
 ---
 ## 7. Promisses  
 As promises são objetos responsáveis por modelar comportamento assíncrono, permitindo o seu tratamento de uma forma mais fácil e direta.  
-⚠️ Para criar uma promise basta instanciá-la, executando a função **`resolve`** em caso de sucesso, sendo tratado por meio de **`then`**._  
+⚠️ Para criar uma promise basta instanciá-la, executando a função **`resolve`** em caso de sucesso, sendo tratado por meio de **`then`**.  
 ```js
 //exemplo:
 function delayedSum(a, b) {
@@ -2062,7 +2064,7 @@ Promise.race([
 ```
 ## 8. Generators  
 Os generators tornam possível pausar a execução de uma determinada função, permitindo a utilização do _**event loop**_ de forma cooperativa.  
-⚠️ Para criar um **`generator`** basta adicionar **`*`** ao lado da função._  
+⚠️ Para criar um **`generator`** basta adicionar **`*`** ao lado da função.  
 
 **`yield`**  
 Ao encontrar um _**yield**_, a execução da função é pausada até o método **`next()`** ser invocado novamente.
@@ -2313,7 +2315,8 @@ function sum(a, b) {
  // 12
 ```
 É possível utilizar o bloco **`for-await-of`** para iterar sobre um iterator de promises.  
-_** Para utilizar é necessário usar a flag **`--harmony-async-iteration`**._**
+⚠️ Para utilizar é necessário usar a flag **`--harmony-async-iteration`**.  
+
 ```JS
 // Exemplo:
 function sum(a, b) {
