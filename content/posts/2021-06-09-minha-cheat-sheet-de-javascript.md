@@ -1,10 +1,10 @@
 ---
 title: 'Minha "Cheat Sheet" de Javascript '
-description: Este post resume em métodos e exemplos o que pude aprender ao longo
-  de um curso de javascript completo, onde tive ideia de criar essa "Cheat
-  Sheet" para me auxiliar futuras dúvidas. Acredito que auxilie também aos
-  iniciantes nessa linguagem a acelerar sua curva de aprendizado e aos mais
-  experientes a relembrarem alguns conceitos.
+description: Este post resume em métodos e exemplos o que pude aprender
+  estudando javascript, onde tive ideia de criar essa "cola" para me auxiliar em
+  futuras dúvidas. Espero que auxilie também os iniciantes na linguagem a
+  acelerar sua curva de aprendizado e aos mais experientes a relembrarem alguns
+  conceitos esquecidos.
 date: 2021-06-09 08:02:55
 thumbnailImage: ../../static/assets/img/jsssss.jpg
 category: blog
@@ -12,7 +12,7 @@ category: blog
 # JS Cheat Sheet
 
 ## 1. Tipos de dados
-#### **`typeof`**
+##### **`typeof`**
 _Retorna o tipo de dado._
 ``` JS
 //exemplo:
