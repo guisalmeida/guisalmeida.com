@@ -5,7 +5,7 @@ description: Este post resume em métodos e exemplos o que pude aprender
   futuras dúvidas. Espero que auxilie também os iniciantes na linguagem a
   acelerar sua curva de aprendizado e aos mais experientes a relembrarem alguns
   conceitos esquecidos.
-date: 2021-06-09 08:02:55
+date: 2021-06-09 10:34:29
 thumbnailImage: ../../static/assets/img/jsssss.jpg
 category: blog
 ---
@@ -2349,4 +2349,8 @@ function sum(a, b) {
     }
 })();
  // 12
-```
+```  
+---
+
+## 10 - Conclusão  
+E aí, o que achou desse post? Tem alguma sugestão ou crítica? Deixa uma reação ou um comentário aqui embaixo. E obrigado pela visita! 😉
