@@ -295,4 +295,11 @@ export const MainContent = styled.section`
   table > tbody > tr > td:first-child {
     font-weight: bold;
   }
+
+  .table-of-contents {
+    p, li {
+      margin: 0;
+      padding: 0;
+    }
+  }
 `

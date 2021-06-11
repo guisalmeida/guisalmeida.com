@@ -9,6 +9,12 @@ date: 2021-06-09 10:34:29
 thumbnailImage: ../../static/assets/img/jsssss.jpg
 category: blog
 ---
+
+## Índice
+
+```toc
+exclude: Índice
+```
 ## 1. Tipos de dados
 **`typeof`**  
 _Retorna o tipo de dado._
@@ -750,7 +756,7 @@ console.log(Object.isFrozen(javascript));
 // true
 ```
 ---
-## 1.5 Json
+### 1.5 Json
 É um formato de intercâmbio de dados.  
 
 **`JSON.stringfy`**  
@@ -2352,5 +2358,5 @@ function sum(a, b) {
 ```  
 ---
 
-## 10 - Conclusão  
+## 10. Conclusão  
 E aí, o que achou desse post? Tem alguma sugestão ou crítica? Deixa uma reação ou um comentário aqui embaixo. E obrigado pela visita! 😉

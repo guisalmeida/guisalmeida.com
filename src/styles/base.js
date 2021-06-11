@@ -256,4 +256,11 @@ export const MainContent = styled.section`
       text-decoration: underline;
     }
   }
+
+  .table-of-contents {
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
 `

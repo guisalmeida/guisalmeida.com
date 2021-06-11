@@ -62,7 +62,25 @@ module.exports = {
             }
           },
           "gatsby-remark-lazy-load",
-          "gatsby-remark-prismjs"
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              icon: false,
+              removeAccents: true
+            }
+          },
+          {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: "Table of Contents",
+              tight: true,
+              ordered: false,
+              fromHeading: 1,
+              toHeading: 6,
+              className: "table-of-contents"
+            }
+          },
+          "gatsby-remark-prismjs",
         ],
       },
     },
