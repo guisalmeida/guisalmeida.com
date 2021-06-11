@@ -14,7 +14,6 @@ category: blog
 ```toc
 exclude: Índice
 from-heading: 2
-to-heading: 6
 ```
 
 
