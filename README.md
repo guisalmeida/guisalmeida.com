@@ -6,9 +6,19 @@
 </p>
 <h1 align="center">
   <code>guisalmeida.com</code>
+  <p align="center">
+    <a href="https://app.netlify.com/sites/guisalmeida/deploys">
+      <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/d5853d6a-fa00-41f5-8bd2-00a57982577e/deploy-status" />
+    </a>
+  </p>
 </h1>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d5853d6a-fa00-41f5-8bd2-00a57982577e/deploy-status)](https://app.netlify.com/sites/guisalmeida/deploys)
+<p align="center">
+  <a href="https://www.guisalmeida.com">
+    <img alt="Logo" src="static/assets/img/thumb-guisa.png" width="960" style="box-shadow: 0 2px 5px rgba(0,0,0,0.5); border-radius: 5px;" />
+  </a>
+</p>
+
 ## Start
 ```bash
     git clone git@github.com:GuiSAlmeida/guisalmeida.com.git

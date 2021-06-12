@@ -8,9 +8,9 @@ const Author = ({ fullText }) => {
     return (
         <MainContent>
             {fullText && 
-            <h1>Sobre mim</h1>}
-            <p>Olá sou Guilherme Almeida, profissional criativo e inovador, atuo como desenvolvedor na <a href="https://www.linx.com.br/transformacao-digital/linx-impulse/" target="_blank" rel="noopener noreferrer" title="Ver" itemProp="affiliation">Linx Impulse</a> e procuro estar sempre atualizado na área criativa e tecnológica.</p>
-            <p>Buscando crescimento profissional e novos desafios, venho me dedicando a programação, desenvolvimento web front-end e ao curso superior de Ciência da Computação, visando me tornar um profissional mais capacitado para trabalhar com as demandas que o mercado de tecnologia oferece.</p>
+            <h1>Sobre mim</h1> || <h1>Olá</h1>}
+            <p>Sou Guilherme Almeida atuo como desenvolvedor fullstack, me considero um profissional criativo e inovador onde procuro estar sempre atualizado na área de tecnológica.</p>
+            <p>Buscando crescimento profissional e novos desafios, venho me dedicando a programação, desenvolvimento web e ao curso superior de Ciência da Computação, visando me tornar um profissional mais capacitado para trabalhar com as demandas que o mercado de tecnologia oferece.</p>
             {fullText && 
             <>
             <p>No tempo livre curto praticar esportes ao ar livre, cuidar das minhas plantas, passear com meus dogs, jogar PS4 e ler livros.</p>
