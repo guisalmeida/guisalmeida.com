@@ -8,16 +8,23 @@ date: 2021-04-21 04:24:54
 thumbnailImage: ../../static/assets/img/regex_thumb.png
 category: blog
 ---
-# 1 - Introdução
+
+## Índice
+
+```toc
+exclude: Índice
+```
+
+## 1 - Introdução
 As **expressões regulares** são estruturas formadas por uma **sequência de caracteres** que especificam um **padrão** formal que serve para validar, extrair ou mesmo substituir caracteres dentro de uma String.  
 
 Como estamos falando de e-mail vamos usar para este exemplo a linguagem `JavaScript`, que é a mais usada para desenvolvimento web. 
 
-## 1.1 - Disclaimer
+### 1.1 - Disclaimer
 As expressões regulares são aceitas por várias linguagens de programação e a maioria desses conceitos apresentados também servirão para outros cenários.  
 Porém este post se limita a uma breve introdução sobre as regex, para um conhecimento ainda mais técnico e aprofundado indico os sites que estão nas referências desse post.
 
-## 1.2 - Regex podem ser criadas de 2 formas:   
+### 1.2 - Regex podem ser criadas de 2 formas:   
 **Notação literal** sendo passadas entre duas barras como no exemplo:  
 
 ```JS
@@ -30,10 +37,10 @@ const regexLiteral = /regex/
 const regexObj = new RegExp('regex')
 ```
 
-## 1.3 - Como testar
+### 1.3 - Como testar
 Para acompanhar esse post testando em sua máquina é necessário somente ter o [node JS](https://nodejs.org/pt-br/) instalado e acessar a pasta onde criou seu arquivo JS e rodar o comando no terminal `node nomeArquivo.js`.
 
-## 1.4 - Como usar
+### 1.4 - Como usar
 Podem ser passadas dentro de métodos que aceitem esse tipo de parâmetro como também possuem 2 métodos que podem ser invocados a partir do objeto regex instanciado, que são `test` e `exec` que falo mais sobre na parte de **métodos** deste post.  
 
 ```JS
@@ -68,11 +75,11 @@ validaEmail("E-mail: guilherme@gmailxcom");
 
 Você notou também que nesse segundo código temos um 'x' no lugar do ponto, isso foi aceito pela nossa função por conta dos metacaracteres que veremos a seguir.
 
-## 1.5 - Metacaracteres
+### 1.5 - Metacaracteres
 São caracteres que possuem um função determinada dentro da regex.  
 Eles estão divididos em quatro grupos distintos, de acordo com características comuns entre eles.  
 
-### 1.5.1 Âncoras
+#### 1.5.1 Âncoras
 
 |meta|mnemônico|função|
 |:---:|:---:|:---:|
@@ -93,7 +100,7 @@ validaEmail("E-mail: guilherme@gmailxcom");
 // Como também o $ exige que não tenha nada depois de "...com".
 ```
 
-### 1.5.2 - Representantes  
+#### 1.5.2 - Representantes  
 
 |meta|mnemônico|função|
 |:---:|:---:|:---:|
@@ -113,7 +120,7 @@ validaEmail("guilherme@gmail.com");
 // Nesse momento essa é a única entrada que será satisfeita e retornará true.
 ```
 
-### 1.5.3 - Quantificadores
+#### 1.5.3 - Quantificadores
 
 |meta|mnemônico|função|
 |:---:|:---:|:---:|
@@ -125,7 +132,7 @@ validaEmail("guilherme@gmail.com");
 |{n,m}|chaves|quantifica de n até m|  
 
 
-### 1.5.4 Outros
+#### 1.5.4 Outros
 
 |meta|mnemônico|função|
 |:---:|:---:|:---:|
