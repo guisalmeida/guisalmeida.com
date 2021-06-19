@@ -12,7 +12,7 @@ const Image = ({ filename, alt }) => {
                         relativePath
                         name
                         childImageSharp {
-                            gatsbyImageData(layout: CONSTRAINED)
+                            gatsbyImageData(layout: CONSTRAINED, quality: 100)
                         }
                     }
                 }

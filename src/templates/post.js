@@ -9,7 +9,7 @@ import * as S from '../components/Post/styled'
 
 const Post = ({ data }) => {
     const post = data.markdownRemark;
-    
+
     return (
         <Layout>
             <SEO 
@@ -48,7 +48,7 @@ export const query = graphql`
                 date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
                 thumbnailImage {
                     childImageSharp {
-                        gatsbyImageData(layout: CONSTRAINED)
+                        gatsbyImageData(layout: CONSTRAINED, quality: 100)
                         original {
                             src
                         }
