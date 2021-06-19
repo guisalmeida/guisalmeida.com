@@ -15,10 +15,10 @@ const Post = ({ data }) => {
             <SEO 
                 title={post.frontmatter.title} 
                 description={post.frontmatter.description} 
-                image={`https://guisalmeida.com${post.frontmatter.thumbnailImage.childImageSharp.fluid.src}`}
+                image={`https://guisalmeida.com${post.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData}`}
             />
             {post.frontmatter.thumbnailImage &&
-                <S.PostImage fluid={post.frontmatter.thumbnailImage.childImageSharp.fluid} />
+                <S.PostImage image={post.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} />
             }
             <S.PostHeader>
                 {post.frontmatter.category !== 'project' &&
@@ -48,9 +48,7 @@ export const query = graphql`
                 date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
                 thumbnailImage {
                     childImageSharp {
-                        fluid(maxWidth: 1280, quality: 80) {
-                            ...GatsbyImageSharpFluid
-                        }
+                        gatsbyImageData(layout: CONSTRAINED)
                     }
                 }
             }
