@@ -32,7 +32,7 @@ const blogListQuery = graphql`
         }
       }
     }
-  }  
+  }
 `
 
 const HomeList = () => {
