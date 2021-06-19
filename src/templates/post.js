@@ -9,13 +9,13 @@ import * as S from '../components/Post/styled'
 
 const Post = ({ data }) => {
     const post = data.markdownRemark;
-
+    
     return (
         <Layout>
             <SEO 
                 title={post.frontmatter.title} 
                 description={post.frontmatter.description} 
-                image={`https://guisalmeida.com${post.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData}`}
+                image={`https://guisalmeida.com${post.frontmatter.thumbnailImage.childImageSharp.original.src}`}
             />
             {post.frontmatter.thumbnailImage &&
                 <S.PostImage image={post.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} />
@@ -49,13 +49,15 @@ export const query = graphql`
                 thumbnailImage {
                     childImageSharp {
                         gatsbyImageData(layout: CONSTRAINED)
+                        original {
+                            src
+                        }
                     }
                 }
             }
             html
             timeToRead
         }
-        
     }
 `
 
