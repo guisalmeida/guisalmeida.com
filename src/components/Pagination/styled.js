@@ -6,7 +6,7 @@ export const PaginationWrapper = styled.section`
     color: var(--texts);
     display: flex;
     padding: 1.5rem 5rem;
-    justify-content: space-between;
+    justify-content: center;
 
     ${media.lessThan("medium")`
         font-size: .8rem;
@@ -20,5 +20,9 @@ export const PaginationWrapper = styled.section`
         &:hover {
             color: var(--highlight);
         }
+    }
+
+    p {
+        margin: 0 30px;
     }
 `
