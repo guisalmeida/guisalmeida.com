@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "algoliasearch": "^4.9.3",
+    "babel-preset-gatsby": "^1.7.1",
     "dotenv": "^10.0.0",
     "gatsby": "^3.7.2",
     "gatsby-background-image": "^1.5.3",
