@@ -10,6 +10,12 @@ date: 2020-07-23 06:49:07
 thumbnailImage: ../../static/assets/img/thumb-mail.png
 category: blog
 ---
+
+## Índice
+
+```toc
+exclude: Índice
+```
 ### Motivação
 
 Atualmente lá na Linx trabalho diariamente com clientes de email automatizado, um dos nossos produtos da solução [reengage](https://www.linx.com.br/transformacao-digital/linx-impulse/re-engage/), o que me motivou a pesquisar mais sobre o assunto e escrever este post para tirar algumas dúvidas a respeito de como criar campanhas de e-mail marketing de forma simples e descomplicada.  

@@ -34,7 +34,7 @@
 
 ## 🚀 Technologies
 - [ReactJS](https://pt-br.reactjs.org/);
-- [Gatsby](https://www.gatsbyjs.org/);
+- [Gatsby V3](https://www.gatsbyjs.org/);
 - [GraphQL](https://graphql.org/);
 - [Styled Components](https://styled-components.com/);
 - [Styled Icons](https://styled-icons.js.org/);
@@ -50,7 +50,7 @@
 ## ⚙️ TODO
 * [x] Change color theme
 * [x] Change scrollbar color
+* [x] Make page 404
 * [ ] Add tags in posts
-* [ ] Make page 404
 * [ ] New feature to hide main menu in desktop
 * [ ] Write tests

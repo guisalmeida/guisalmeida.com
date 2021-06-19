@@ -11,12 +11,11 @@ import { MainContent } from '../styles/base';
 
 const BlogList = props => {
     const postList = props.data.allMarkdownRemark.edges;
-
-    const { currentPage, numPages } = props.pageContext;
+    const { currentPage, postsNumPages } = props.pageContext;
     const isFirst = currentPage === 1
-    const isLast = currentPage === numPages
+    const isLast = currentPage === postsNumPages
     const prevPage = currentPage - 1 === 1 ? '/blog/' : `/blog/page/${currentPage - 1}`
-    const nextPage = `/page/${currentPage + 1}`
+    const nextPage = `/blog/page/${currentPage + 1}`
 
     return (
         <Layout>
@@ -66,7 +65,7 @@ const BlogList = props => {
                 isFirst={isFirst}
                 isLast={isLast}
                 currentPage={currentPage}
-                numPages={numPages}
+                numPages={postsNumPages}
                 prevPage={prevPage}
                 nextPage={nextPage}
             />
@@ -77,6 +76,7 @@ const BlogList = props => {
 export const query = graphql`
     query PostList($skip: Int!, $limit: Int!) {
         allMarkdownRemark(
+            filter: {frontmatter: {category: {eq: "blog"}}}
             sort: {fields: frontmatter___date, order: DESC}
             limit: $limit
             skip: $skip

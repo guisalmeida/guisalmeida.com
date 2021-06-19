@@ -20,7 +20,7 @@ const Pagination = ({ isFirst, isLast, currentPage, numPages, prevPage, nextPage
             </AniLink>
         }
 
-        <p>{currentPage} de {numPages || 1}</p>
+        <p>Página {currentPage} de {numPages || 1}</p>
 
         {(!isLast && numPages > 1) &&
             <AniLink

@@ -1,8 +1,8 @@
 import styled from "styled-components"
 import media from "styled-media-query"
-import Img from 'gatsby-image';
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import transitions from '../../styles/transitions'
+import { GatsbyImage as Img } from 'gatsby-plugin-image'
 
 export const PostImage = styled(Img).attrs({
   alt: 'Thumbnail',

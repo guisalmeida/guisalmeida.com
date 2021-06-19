@@ -1,7 +1,7 @@
 
 import styled from 'styled-components'
-import Img from 'gatsby-image'
-import media from "styled-media-query";
+import media from 'styled-media-query'
+import { GatsbyImage as Img } from 'gatsby-plugin-image'
 
 export const PostHeader = styled.header`
   color: var(--postColor);
