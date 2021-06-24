@@ -127,8 +127,8 @@ export const MainContent = styled.section`
 
   img {
     display: block;
-    width: auto;
-    max-width: 100%;
+    width: 100%;
+    max-width: 960px;
     margin: 1.875rem auto;
   }
 
@@ -144,8 +144,10 @@ export const MainContent = styled.section`
   blockquote {
     color: var(--postColor);
     border-left: 0.3rem solid var(--highlight);
-    padding: 0 1.875rem;
-    margin: 3.125rem auto;
+    padding: 0;
+    margin: 1.4rem;
+    background: var(--borders);
+    font-style: italic;
   }
 
   hr {

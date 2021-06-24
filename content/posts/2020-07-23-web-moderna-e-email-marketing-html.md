@@ -11,10 +11,11 @@ thumbnailImage: ../../static/assets/img/thumb-mail.png
 category: blog
 ---
 
-## Índice
+___
+## Conteúdo
 
 ```toc
-exclude: Índice
+exclude: Conteúdo
 ```
 ### Motivação
 
