@@ -1,14 +1,15 @@
 ---
-title: Meu próprio SGDB em JS pelo terminal
-description: O "DBGen" é um SGDB bem simples que roda por CLI, criado para
+title: Meu SGDB em nodeJS pelo terminal
+description: O "DBGen" é um SGDB bem simples que roda por CLI, feito em nodejs para
   estudar as práticas de comandos SQL, funcionamento de um banco de dados e
-  conceitos  do javascript ES6.
+  conceitos do javascript ES6.
 date: 2021-06-12 11:40:16
 thumbnailImage: ../../static/assets/img/dbgen_2.png
 category: project
 ---
 ![dbgen](https://user-images.githubusercontent.com/45276342/121779626-03c74280-cb73-11eb-9aa7-6f7caa20c1e0.gif)
 
+___
 ## Índice
 
 ```toc
