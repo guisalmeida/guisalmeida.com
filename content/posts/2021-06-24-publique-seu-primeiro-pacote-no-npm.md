@@ -25,7 +25,9 @@ Com um pouco mais de experiência e conhecimento pude compreender algumas coisas
 Este é um caminho simples, mas acredito que necessário para entender questões como **versionamento**, **compatibilidade** e o **gerenciamento de dependências** do seu projeto.
 
 ### 1.1. O que é o NPM
-Sigla para **Node Package Manager**, foi criado em 2009 como um projeto open-source para ajudar os desenvolvedores de JavaScript a compartilhar facilmente módulos de código empacotados. Em 2014 virou empresa e foi adquirida pelo **GitHub** em 2020. Como vamos ver mais à frente é usado via linha de comando(CLI) que permite aos desenvolvedores instalar e publicar esses pacotes de código aberto para Node.js, aplicativos da web front-end, aplicativos móveis, robôs, roteadores e inúmeras outras necessidades.  
+Sigla para **Node Package Manager**, foi criado como um projeto open-source para ajudar os desenvolvedores de JavaScript a compartilhar facilmente módulos de código empacotados e atualmente pertence ao **Github**.
+
+O NPM possui uma **Interface via linha de comando (CLI)** que permite aos desenvolvedores instalar e publicar seus pacotes. E também um **banco de dados online de pacotes** públicos e privados pagos, chamado de **NPM Registry**.  
 
 ---
 
@@ -108,11 +110,11 @@ Ferramenta para testar a sintaxe: <a target="_blank" href="https://semver.npmjs.
 Primeiramente será necessário configurarmos nosso ambiente de desenvolvimento para seguirmos.
 
 ### 4.1. Instalando
-Para uso do NPM em sua máquina também é necessário a instalação do nodejs. Ao instalar o node o npm também é instalado.
-Você pode fazer instalação de várias maneiras de acordo com seu sistema operacional, por isso deixo essa <a target="_blank" href="https://www.npmjs.com/get-npm">**DOC**</a> do npm como referência.
+Para uso do NPM em sua máquina também é necessário a instalação do nodejs. Ao instalar o node o NPM também é instalado.
+Você pode fazer instalação de várias maneiras de acordo com seu sistema operacional, por isso deixo essa <a target="_blank" href="https://www.npmjs.com/get-npm">**DOC**</a> do NPM como referência.
 
-### 4.2. Criando usuario no npm
-Para utilizarmos pacotes públicos disponiveis disponíveis no npm não necessitamos de usuário, porém como queremos publicar nossos pacotes devemos ter um usuario cadastrado. Acesse a parte de <a target="_blank" href="https://www.npmjs.com/signup">**cadastro**</a> para criar.
+### 4.2. Criando usuario no NPM
+Para utilizarmos pacotes públicos disponiveis disponíveis no NPM não necessitamos de usuário, porém como queremos publicar nossos pacotes devemos ter um usuario cadastrado. Acesse a parte de <a target="_blank" href="https://www.npmjs.com/signup">**cadastro**</a> para criar.
 
 [![signup](https://user-images.githubusercontent.com/45276342/122768638-2d225580-d27a-11eb-8a17-ae28c4e8eed1.png)](https://www.npmjs.com/signup) 
 
@@ -140,7 +142,7 @@ npm set init-author-url "https://guisalmeida.com"
 npm set init-license "MIT"
 ```
 
-### 4.5. Criar projeto npm
+### 4.5. Criar projeto NPM
 Na pasta do projeto passe o seguinte comando, `-y` para usar a configuração default que setamos antes:
 ```sh
 npm init -y
