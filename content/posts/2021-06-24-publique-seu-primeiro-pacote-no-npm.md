@@ -109,12 +109,12 @@ Ferramenta para testar a sintaxe: <a target="_blank" href="https://semver.npmjs.
 ## 4. Ambiente
 Primeiramente será necessário configurarmos nosso ambiente de desenvolvimento para seguirmos.
 
-### 4.1. Instalando
+### 4.1. Instalando NPM
 Para uso do NPM em sua máquina também é necessário a instalação do nodejs. Ao instalar o node o NPM também é instalado.
 Você pode fazer instalação de várias maneiras de acordo com seu sistema operacional, por isso deixo essa <a target="_blank" href="https://www.npmjs.com/get-npm">**DOC**</a> do NPM como referência.
 
 ### 4.2. Criando usuario no NPM
-Para utilizarmos pacotes públicos disponiveis disponíveis no NPM não necessitamos de usuário, porém como queremos publicar nossos pacotes devemos ter um usuario cadastrado. Acesse a parte de <a target="_blank" href="https://www.npmjs.com/signup">**cadastro**</a> para criar.
+Para utilizarmos pacotes públicos disponíveis no NPM não necessitamos de usuário, porém como queremos publicar nossos pacotes devemos ter um usuário cadastrado. Acesse a parte de <a target="_blank" href="https://www.npmjs.com/signup">**cadastro**</a> para criar.
 
 [![signup](https://user-images.githubusercontent.com/45276342/122768638-2d225580-d27a-11eb-8a17-ae28c4e8eed1.png)](https://www.npmjs.com/signup) 
 
