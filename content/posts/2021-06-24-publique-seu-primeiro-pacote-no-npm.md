@@ -3,7 +3,7 @@ title: Publique seu primeiro pacote no NPM
 description: Este post além de mostar como publicar um pacote, também apresenta
   conceitos importantes como versionamento, compatibilidade e o gerenciamento de
   dependências.
-date: 2021-06-24 04:06:13
+date: 2021-06-28 03:59:47
 thumbnailImage: ../../static/assets/img/npmjs-private-package.png
 category: blog
 ---
