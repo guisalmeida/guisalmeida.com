@@ -68,7 +68,7 @@ A linha que utiliza `--save-dev` salvará o pacote em devDependencies. Já a lin
 ---
 
 ## 3. Versionamento Semântico (semver)
-É a sacada por trás do NPM, e o que o tornou um sucesso. Quando estamos criando uma aplicação com a qual outras irão integrar, devemos comunicar como as alterações feitas afetarão a capacidade de integração desses terceiros com sua aplicação. Isso é feito através do **versionamento semântico**. Uma versão é dividida em 3 partes:  
+É a sacada por trás do NPM, e o que o tornou um sucesso. Quando estamos criando uma aplicação com a qual outras irão integrar, devemos comunicar como as alterações feitas afetarão a capacidade de integração desses terceiros com sua aplicação. Isso é feito através do **versionamento semântico**, uma versão é dividida em 3 partes:  
 
 | Major | Minor | Patch |  
 | :---: | :---: | :---: |  
