@@ -6,7 +6,7 @@ export const CommentsWrapper = styled.section`
   padding: 3rem 6.4rem 3rem;
 
   ${media.lessThan("medium")`
-    padding: 3rem 1.4rem 0;
+    padding: 3rem 1.6rem 0;
     max-width: 100%;
   `}
 

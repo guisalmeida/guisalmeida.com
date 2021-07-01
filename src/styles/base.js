@@ -17,7 +17,7 @@ export const PostHeader = styled.header`
 export const PostTitle = styled.h1`
   font-size: 4rem;
   font-weight: 700;
-  padding: 0 1.4rem;
+  padding: 0 1.6rem;
   margin: 1rem auto;
 
   ${media.lessThan('medium')`
@@ -30,7 +30,7 @@ export const PostTitle = styled.h1`
 export const PostDescription = styled.h2`
   font-size: 2rem;
   font-weight: 200;
-  padding: 0 1.4rem;
+  padding: 0 1.6rem;
 
   ${media.lessThan('medium')`
     font-size: 1.6rem;
@@ -42,7 +42,7 @@ export const PostDescription = styled.h2`
 export const PostDate = styled.p`
   font-size: 1.1rem;
   font-weight: 100;
-  padding: 0 1.4rem;
+  padding: 0 1.6rem;
 
   ${media.lessThan('medium')`
     padding: 0 1rem;
@@ -145,7 +145,7 @@ export const MainContent = styled.section`
     color: var(--postColor);
     border-left: 0.3rem solid var(--highlight);
     padding: 0;
-    margin: 1.4rem;
+    margin: 1.6rem;
     background: var(--borders);
     font-style: italic;
   }
@@ -196,7 +196,7 @@ export const MainContent = styled.section`
   }
 
   h4 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   h5 {

@@ -15,7 +15,7 @@ ___
 ```toc
 exclude: Índice
 ```
-
+---
 ## 1. Introdução
 As **expressões regulares** são estruturas formadas por uma **sequência de caracteres** que especificam um **padrão** formal que serve para validar, extrair ou mesmo substituir caracteres dentro de uma String.  
 
@@ -175,7 +175,7 @@ const regExp = /^\w+@\D+\.\D+$/;
 validaEmail("joao_123@outlook.br");
 // Agora isso retorna true.
 ```
-
+---
 ## 2. Avançando nas regex
 Agora vamos nos aprofundar um pouco mais nas expressões regulares, veremos como podemos criar padrões mais específicos para poder criar nossa regex de acordo com cada necessidade. 
 
@@ -305,7 +305,7 @@ function pegaUsername(texto) {
 pegaUsername("JoAo_123@outlook.com.br")
 // Retornará "JoAo_123"
 ```
-
+---
 ## 3. Referências
 - https://regexr.com/
 - https://aurelio.net/regex/guia/
@@ -313,7 +313,7 @@ pegaUsername("JoAo_123@outlook.com.br")
 - https://www.devmedia.com.br/expressoes-regulares-em-javascript/37015
 - https://medium.com/@alexandreservian/regex-um-guia-pratico-para-express%C3%B5es-regulares-1ac5fa4dd39f
 
-
+---
 ## 4. Conclusão  
 As regex são muitos úteis no dia a dia de um desenvolvedor, uma ferramenta incrível que auxilia na hora de fazer validações, buscas e etc.  
 

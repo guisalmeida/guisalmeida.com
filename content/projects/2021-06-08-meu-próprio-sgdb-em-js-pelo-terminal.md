@@ -15,15 +15,16 @@ ___
 ```toc
 exclude: Índice
 ```
-
+---
 ## 1. Introdução
 Este é um projeto estudo de caso feito para praticar conceitos do javascript ES6+. Como: `classes`, `arrow function`, `destructuring`, `template strings`, `iterators for in & for of`, `map & set`, `promises`, `rest & spread operator`, entre outros.  
 Também pude entender melhor o funcionamento de um SGDB e banco de dados. Criando tabelas e lógicas para consulta e alteração dos dados no banco.  
 
 ### 1.1 O que é um SGDB
 É um sistema responsável pelo gerenciamento de um ou mais bancos de dados. Seu principal objetivo é retirar da aplicação cliente a responsabilidade de gerenciar o acesso, a persistência, a manipulação e a organização dos dados. O SGBD disponibiliza uma interface para que seus clientes possam incluir, alterar ou consultar dados previamente armazenados.
-Exemplos de SGDBs: `PostgreSQL`, `MongoDB`, `MySQL`, `MariaDB` e `Oracle`.
+Exemplos de SGDBs: `PostgreSQL`, `MongoDB`, `MySQL`, `MariaDB` e `Oracle`.  
 
+---
 ## 2. Classe Database
 A lógica principal do código fica organizada na classe database, onde são definidos os métodos como o `createTable` que ao ser chamado cria uma nova tabela no banco de acordo com os dados passados no terminal. Quem define o comando que será chamado é o método `execute` que retorna uma promise invocando o comando.
 ```js
@@ -71,6 +72,7 @@ class Database {
 }
 ...
 ```
+---
 
 ## 3. Parse dos comandos com Map
 Aqui são definidas as queries para manipulação de dados no banco, usando `Map` para setar os comandos por pares, onde a chave possui os nomes dos métodos da nossa classe Database e os valores são `regex` que por meio de grupos de captura auxiliam no processo de separar cada campo(coluna) do registro(linha) na tabela.
@@ -98,7 +100,7 @@ class Parser {
     }
 }
 ```
-
+---
 
 ## 4. Utils
 Aqui ficam separadas algumas funções utilitárias.
@@ -176,7 +178,7 @@ module.exports = function showTable(header, data) {
 };
 ```
 
-
+---
 ## 5. Instanciando a classe Databasse (index)
 Aqui é instanciado um novo objeto `database`, onde os argumentos(`args`) recebidos pelo terminal são passados para o método `execute` que como já vimos vai fazer a lógica e rodar o comando para manipular o banco.
 ```js
@@ -196,7 +198,7 @@ let args = process.argv.splice(2, process.argv.length - 1).join(' ');
 
 newDatabase(args);
 ```
-
+---
 ## 6. Executando a CLI
 Usando os comandos a seguir, vamos criar uma tabela no nosso banco que no fim será salvo em arquivo json.  
 
@@ -271,7 +273,7 @@ dbgen "select * from authors"
 ╚══════════╧═══════════════════╧═════╧══════════╧═══════════╧═════════╝
 
 ```
-
+---
 ## 7. Json com banco de dados
 Formato da tabela e campos gravados no arquivo `db.json` que funciona como nosso banco.
 
@@ -307,12 +309,12 @@ Formato da tabela e campos gravados no arquivo `db.json` que funciona como nosso
     }
 }
 ```
-
+---
 ## 8. Contribua
 Fique a vontade para fazer fork e testar, ajustar bugs, implementar mais features como uma query de update #ficaadica.  
 https://github.com/GuiSAlmeida/dbgen-cli
 
-
+---
 ## 9. Conclusão
 Este projeto me ajudou muito a por em prática novos conceitos do javascript ES6, como também exercitar lógica de como funciona um banco de dados.  
 E aí, o que achou desse projeto? Tem alguma sugestão ou crítica? Deixa uma reação ou um comentário aqui embaixo. E obrigado pela visita! 😉

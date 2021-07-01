@@ -26,10 +26,10 @@
     yarn install # or npm install
 
     #install gatsby cli
-    npm install -g gatsby-cli
+    yarn global add gatsby-cli # or npm install -g gatsby-cli
 
     # up server at http://localhost:8000/
-    gatsby develop 
+    gatsby develop
 ```
 
 ## 🚀 Technologies

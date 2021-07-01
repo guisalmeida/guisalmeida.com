@@ -17,25 +17,23 @@ ___
 ```toc
 exclude: Conteúdo
 ```
+---
 ### Motivação
 
 Atualmente lá na Linx trabalho diariamente com clientes de email automatizado, um dos nossos produtos da solução [reengage](https://www.linx.com.br/transformacao-digital/linx-impulse/re-engage/), o que me motivou a pesquisar mais sobre o assunto e escrever este post para tirar algumas dúvidas a respeito de como criar campanhas de e-mail marketing de forma simples e descomplicada.  
 
-<br>  
-
+---
 ### Tá mas e ai? Muda alguma coisa?
 
 Bom essa era a pergunta que eu me fazia até pouco tempo atrás e a responta é SIM muda bastante coisa. As técnicas para email marketing em HTML são um pouco diferentes e nem tudo que funciona em sites vai funcionar nas caixas de entrada.\
 Mas a ideia desse post não é nos aprofundarmos tecnicamente em tudo que o email suporta e todas suas especificidades. Pretendo aqui passar uma visão geral de como montar um template simples com dicas importantes para auxiliar quem está criando seu primeiro template de email em HTML.  
 
-<br>  
-
+---
 ### Começando pelo básico
 
 Tenha noção que HTML de emails é diferente de HTML de sites. Como citei na descrição do post algumas coisas que funcionam em sites não necessariamente funcionarão em email marketing, principalmente divs, sections, e folhas de estilo CSS externas, entre outras. Isso porque páginas da web sempre são renderizadas nos navegadores, enquanto o email será renderizado de acordo com o provedor de email e cada um tem as suas regras. Portanto o ideal é simplificar e a melhor maneira é usando as tabelas do HTML como veremos a seguir.
 
-<br>  
-
+---
 ### Layout
 
 Vamos criar nosso template apartir deste layout ao longo do post.\
@@ -43,8 +41,7 @@ Acesse o layout [aqui](https://www.figma.com/file/RYosfog8wshbbndVRoYE14/assets?
 
 ![Layout](../../static/assets/img/layout.jpg)
 
-<br>  
-
+---
 ### Criando a estrutura básica
 
 * O `DOCTYPE` declara o tipo de tags de HTML o documento tem e que tipo de regras esperar, em sites normais atualmente é usado HTML5 porém para e-mails o mais indicado é o XHTML 1.0. Para saber mais sobre as diferenças clique [aqui](https://www.campaignmonitor.com/blog/email-marketing/2019/05/correct-doctype-to-use-in-html-email/).  
@@ -62,7 +59,7 @@ Acesse o layout [aqui](https://www.figma.com/file/RYosfog8wshbbndVRoYE14/assets?
 </html>
 ```
 
-<br>  
+---
 
 ### Adicionando conteúdo com tabelas
 
@@ -112,7 +109,7 @@ Com isso já temos algumas coisas renderizando em tela:
 
 ![Layout começo](../../static/assets/img/layout1.png)
 
-<br>  
+---
 
 ### Cuidados com imagens
 
@@ -125,7 +122,7 @@ Crédito da imagem: https://resultadosdigitais.com.br/blog/template-html-email/
 Isso não funciona bem como mostra a imagem acima. É preciso que o email mostre a que veio logo de cara. Ao usar apenas imagem, muitos destinatários irão ignorar o email, deletá-lo ou marcá-lo como spam. Uma boa prática é usarmos uma proporção de 40% de imagens e 60% texto. Dessa forma, seu email fica mais leve e bem estruturado.
 Como o conteúdo é para web tente deixar imagens com tamanho máximo de 100kb.  
 
-<br>  
+---
 
 ### Adicionando imagens
 
@@ -230,7 +227,7 @@ Com isso já temos nosso layout finalizado com largura fixa:
 
 ![Layout fixo finalizado](../../static/assets/img/layout2.png)
 
-<br>  
+---
 
 ### Ajustando textos
 
@@ -335,7 +332,7 @@ Se você usa o VS code, uma ferramenta que uso para me auxiliar é a [HTML accen
 </html>
 ```
 
-<br>  
+---
 
 ### Enviando nosso e-mail marketing
 
@@ -345,7 +342,7 @@ Para testar enviei o email para o gmail e outlook e segue resultado:
 
 ![outlook](../../static/assets/img/outlook.png)
 
-<br>  
+---
 
 ### Fontes para saber mais:
 
@@ -356,6 +353,11 @@ Para testar enviei o email para o gmail e outlook e segue resultado:
 * https://www.felipefialho.com/blog/tutorial-tabela-responsiva/
 * https://www.campaignmonitor.com/blog/email-marketing/2019/05/correct-doctype-to-use-in-html-email/
 
-### Repositório com código:
-
+---
+### Contribua
+Fique a vontade para fazer fork e testar, ajustar bugs, implementar mais features, etc.
 https://github.com/GuiSAlmeida/email-mkt
+
+---
+### Conclusão  
+E aí, o que achou desse post? Tem alguma sugestão ou crítica? Deixa uma reação ou um comentário aqui embaixo. E obrigado pela visita! 😉
