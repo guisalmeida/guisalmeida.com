@@ -186,10 +186,13 @@ Depois dessas configurações publicar é bem fácil e rápido, necessitamos ape
 ```sh
 npm publish
 ```
+Se estiver tudo certo, ele compactará os arquivos e enviará para o registry:
+![publish](https://user-images.githubusercontent.com/45276342/124196251-6771cb00-daa2-11eb-9310-7739c36feeb8.png)
 
 ### 5.5. Vizualizando seu pacote
 Após a publicação você pode conferir algumas métricas e configurações do pacote no site do NPM. E faça um README bem completo, pois ele também ficará visivel para outros usuários interessados no seu pacote.  
-![pacote](https://user-images.githubusercontent.com/45276342/123151585-fdba4700-d439-11eb-80ee-d6c967fc63e8.png)
+![dbgen-cli](https://user-images.githubusercontent.com/45276342/124196151-31344b80-daa2-11eb-9a86-11e905c87b1f.png)
+
 
 ### 5.6. Importando seu pacote
 Por fim para importar seu pacote em outros projetos, como já vimos, apenas passe o seguinte comando:
