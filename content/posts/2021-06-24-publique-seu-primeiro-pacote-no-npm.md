@@ -68,7 +68,11 @@ A linha que utiliza `--save-dev` salvará o pacote em devDependencies. Já a lin
 ---
 
 ## 3. Versionamento Semântico (semver)
-É a sacada por trás do NPM, e o que o tornou um sucesso. Quando estamos criando uma aplicação com a qual outras irão integrar, devemos comunicar como as alterações feitas afetarão a capacidade de integração desses terceiros com sua aplicação. Isso é feito através do **versionamento semântico**. Uma versão é dividida em 3 partes: X, Y e Z.  
+É a sacada por trás do NPM, e o que o tornou um sucesso. Quando estamos criando uma aplicação com a qual outras irão integrar, devemos comunicar como as alterações feitas afetarão a capacidade de integração desses terceiros com sua aplicação. Isso é feito através do **versionamento semântico**. Uma versão é dividida em 3 partes:  
+
+| Major | Minor | Patch |  
+| :---: | :---: | :---: |  
+| **X** | **Y** | **Z** |
 
 ### 3.1. Major (principal)
 É o 1° número. Qualquer atualização que quebre a retrocompatibilidade deve incrementar esse dígito. 
@@ -216,5 +220,7 @@ npm install nome-do-pacote
 ---
 
 ## 7. Conclusão
+Realmente NPM é uma ferramenta incrível que nos auxilia muito a gerenciar e escalar nossos projetos de maneira organizada, com isso ficamos mais capacitados a manter o projeto atualizado com mudanças sejam elas correções ou melhorias.  
+
 E aí, o que achou desse post? Tem alguma sugestão ou crítica? Deixa uma reação ou um comentário aqui embaixo.  
 E obrigado pela visita! 😉
