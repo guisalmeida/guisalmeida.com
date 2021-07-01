@@ -63,7 +63,7 @@ A linha que utiliza `--save-dev` salvará o pacote em devDependencies. Já a lin
 }
 ```
 
-Por padrão o NPM instalará a versão mais nova do pacote, inserindo um caractere `^` (circunflexo) na frente da versão `^2.12.0`. Isso significa que o pacote será instalado com uma versão que seja igual ou superior a 2.12.0. Isso é baseado no **Versionamento Semântico** como veremos a seguir.
+> Por padrão o NPM instalará a versão mais nova do pacote, inserindo um caractere `^` (circunflexo) na frente da versão `^2.12.0`. Isso significa que o pacote será instalado com uma versão que seja igual ou superior a 2.12.0. Isso é baseado no **Versionamento Semântico** como veremos a seguir.
 
 ---
 
