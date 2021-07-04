@@ -144,7 +144,7 @@ Após a instalação do Node.js, você pode verificar tanto a versão do Node.js
 ![versions](https://user-images.githubusercontent.com/45276342/124369558-354b9f00-dc43-11eb-927a-363a605559e0.png)
 
 ### 4.3. Logando local
-Com as ferramentas instaladas podemos seguir para o terminal e rodar o comando que vai logar nosso NPM que está instalado na máquina, para poder ter acesso ao registry onde ficam salvos os pacotes, para podermos publicar o nosso.
+Com as ferramentas instaladas podemos rodar o comando que vai logar nosso NPM que está instalado na máquina, para poder ter acesso ao registry onde ficam salvos os pacotes, para podermos publicar o nosso.
 ```sh
 npm adduser
 ```
@@ -240,6 +240,7 @@ npm install nome-do-pacote
 - https://www.treinaweb.com.br/blog/o-que-e-npm-e-como-usar-uma-biblioteca-instalada-por-ele
 - https://www.treinaweb.com.br/blog/criando-modulos-globais-do-npm
 - https://www.treinaweb.com.br/blog/o-que-e-gerenciador-de-dependencias
+- https://www.youtube.com/watch?v=mVgUs7VHqBg
 ---
 
 ## 7. Conclusão
