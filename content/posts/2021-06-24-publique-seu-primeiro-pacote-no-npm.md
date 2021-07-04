@@ -134,9 +134,9 @@ Você pode fazer instalação de várias maneiras de acordo com seu sistema oper
 ![node](https://user-images.githubusercontent.com/45276342/124369464-768f7f00-dc42-11eb-9d13-334f944fe276.png)
 No **linux**, você pode instalar pelo gerenciador de pacotes wget, basta abrir o terminal e executar:
 ```sh
-wget -qO- https://deb.nodesource.com/setup_4.x | sudo bash -
+wget -qO- https://deb.nodesource.com/setup_14.x | sudo bash -
 
-sudo apt-get install --yes nodejs
+sudo apt-get install -y nodejs
 ```
 
 Após a instalação do Node.js, você pode verificar tanto a versão do Node.js quanto a versão do NPM que foram instaladas executando os seguintes comandos: `node -v` e `npm -v`.
