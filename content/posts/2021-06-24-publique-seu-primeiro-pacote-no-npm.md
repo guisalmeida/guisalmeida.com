@@ -29,14 +29,24 @@ Sigla para **Node Package Manager**, foi criado como um projeto open-source para
 
 O NPM possui uma **Interface via linha de comando (CLI)** que permite aos desenvolvedores instalar e publicar seus pacotes. E também um **banco de dados online de pacotes** públicos e privados pagos, chamado de **NPM Registry**.  
 
+### 1.2. NPM CLI
+A sintaxe do cli segue sempre do nome "npm" seguido do comando.
+![npm-cli](https://user-images.githubusercontent.com/45276342/124369115-bf453900-dc3e-11eb-85d9-bfc769d181e4.png)
+
+### 1.3. NPM Registry
+Possui essa interface onde podemos consultar informações sobre pacotes e outras métricas.  
+
+![registry](https://user-images.githubusercontent.com/45276342/124369151-1cd98580-dc3f-11eb-92c1-60a9ad08bb5b.png)
+
+
 ---
 
 ## 2. Gerenciando pacotes
-O NPM existe para facilitar o gerenciamento de dependências. Seu projeto pode ter centenas de dependências, cada uma com suas próprias dependências. E isso pode começar a se tornar muito complexo de manter a organização para isso o **NPM** foi criado com um conjunto de comandos que permitem você instalar e gerenciar tudo isso e, dificilmente, precisar se preocupar com elas.
+O NPM existe para facilitar o gerenciamento de dependências. Seu projeto pode ter centenas de dependências, cada uma com suas próprias dependências. E isso pode começar a se tornar muito complexo de manter a organização, para isso o **NPM** foi criado com um conjunto de comandos que permitem você instalar e gerenciar tudo isso e, dificilmente, você vai precisar se preocupar com elas.
 
 Quando você instala um pacote com o NPM, uma nova informação é adicionada ao arquivo `package.json` contendo o nome do pacote e a versão que será usada. Como veremos mais à frente, existem algumas configurações para definir melhor essas versões.
 
-### 2.1. Dependências
+### 2.1. Contexto das dependências
 Ao instalar pacotes no nosso projeto podemos ter dois cenários, onde usamos pacotes apenas para desenvolvimento e outros que também vão ser usados em produção. 
 Para isso temos as informações de `dependencies` e `devDependencies` no `package.json` e elas se diferem da seguinte maneira:
 
@@ -68,7 +78,7 @@ A linha que utiliza `--save-dev` salvará o pacote em devDependencies. Já a lin
 ---
 
 ## 3. Versionamento Semântico (semver)
-É a sacada por trás do NPM, e o que o tornou um sucesso. Quando estamos criando uma aplicação com a qual outras irão integrar, devemos comunicar como as alterações feitas afetarão a capacidade de integração desses terceiros com sua aplicação. Isso é feito através do **versionamento semântico**, uma versão é dividida em 3 partes:  
+É o conceito usado por trás do NPM e o que o tornou um sucesso. Quando estamos criando uma aplicação com a qual outras irão integrar, devemos comunicar como as alterações feitas afetarão a capacidade de integração desses terceiros com sua aplicação. Isso é feito através do **versionamento semântico**, uma versão é dividida em 3 partes e segue a seguinte convenção:  
 
 | Major | Minor | Patch |  
 | :---: | :---: | :---: |  
@@ -111,18 +121,30 @@ Ferramenta para testar a sintaxe: <a target="_blank" href="https://semver.npmjs.
 ---
 
 ## 4. Ambiente
-Primeiramente será necessário configurarmos nosso ambiente de desenvolvimento para seguirmos.
+Primeiramente será necessário configurarmos nosso ambiente de desenvolvimento para seguirmos.  
 
-### 4.1. Instalando NPM
-Para uso do NPM em sua máquina também é necessário a instalação do nodejs. Ao instalar o node o NPM também é instalado.
-Você pode fazer instalação de várias maneiras de acordo com seu sistema operacional, por isso deixo essa <a target="_blank" href="https://www.npmjs.com/get-npm">**DOC**</a> do NPM como referência.
+### 4.1. Criando usuario no NPM
+Para utilizarmos pacotes públicos disponíveis no NPM não necessitamos de usuário, porém como queremos publicar nossos pacotes devemos ter um usuário cadastrado. Acesse a parte de <a target="_blank" href="https://www.npmjs.com/signup">**cadastro**</a> para criar.  
 
-### 4.2. Criando usuario no NPM
-Para utilizarmos pacotes públicos disponíveis no NPM não necessitamos de usuário, porém como queremos publicar nossos pacotes devemos ter um usuário cadastrado. Acesse a parte de <a target="_blank" href="https://www.npmjs.com/signup">**cadastro**</a> para criar.
+![signup](https://user-images.githubusercontent.com/45276342/122768638-2d225580-d27a-11eb-8a17-ae28c4e8eed1.png)
 
-[![signup](https://user-images.githubusercontent.com/45276342/122768638-2d225580-d27a-11eb-8a17-ae28c4e8eed1.png)](https://www.npmjs.com/signup) 
+### 4.2. Instalando NPM
+Para uso do NPM via linha de comando (CLI) em sua máquina também é necessário a instalação do nodejs. Ao instalar o node o NPM também é instalado.
+Você pode fazer instalação de várias maneiras de acordo com seu sistema operacional, para isso é necessário acessar a página de downloads do <a target="_blank" href="https://nodejs.org/pt-br/download/">**node**</a>.   
+![node](https://user-images.githubusercontent.com/45276342/124369464-768f7f00-dc42-11eb-9d13-334f944fe276.png)
+No **linux**, você pode instalar pelo gerenciador de pacotes wget, basta abrir o terminal e executar:
+```sh
+wget -qO- https://deb.nodesource.com/setup_4.x | sudo bash -
+
+sudo apt-get install --yes nodejs
+```
+
+Após a instalação do Node.js, você pode verificar tanto a versão do Node.js quanto a versão do NPM que foram instaladas executando os seguintes comandos: `node -v` e `npm -v`.
+
+![versions](https://user-images.githubusercontent.com/45276342/124369558-354b9f00-dc43-11eb-927a-363a605559e0.png)
 
 ### 4.3. Logando local
+Com as ferramentas instaladas podemos seguir para o terminal e rodar o comando que vai logar nosso NPM que está instalado na máquina, para poder ter acesso ao registry onde ficam salvos os pacotes, para podermos publicar o nosso.
 ```sh
 npm adduser
 ```
@@ -159,9 +181,16 @@ npm init -y
 
 ## 5. Publicação
 
-### 5.1. Exportando arquivos expecificos
-Uma boa prática **antes da publicação**, quando o projeto tem muitos arquivos e usa muitos outros pacotes de terceiros é especificarmos por exemplo apenas a pasta onde estão os códigos gerados para produção no arquivo `package.json` a fim de evitar muita "sujeira" nos pacotes.
-Isso é feito passando o atributo `files`:
+### 5.1. Nome do pacote
+É importante é verificar no **NPM registry** se já há algum pacote com mesmo nome que você pretende por no seu, pois ele não será aceito se houver. Configure no `package.json` o nome.  
+```json
+{
+  "name": "nome-do-pacote",
+}
+```
+
+### 5.2. Exportando apenas arquivos de produção
+Uma boa prática **antes da publicação**, quando o projeto tem muitos arquivos e usa muitos outros pacotes de terceiros é especificarmos apenas a pasta onde estão os códigos gerados para produção, por exemplo a pasta `build` ou `dist`. No arquivo `package.json` pode ser passado o atributo `files` com nome da pasta:
 ```json
 {
   "files": [
@@ -170,23 +199,15 @@ Isso é feito passando o atributo `files`:
 }
 ```
 
-### 5.2. Pacote a ser exportado
+### 5.3. Pacote a ser exportado
 Dependendo das configurações que você passar no `package.json` o pacote que vai ser exportado não vai ser igual a pasta do seu projeto, isso tem suas vantagens como vimos acima. Para ver como vai ser criado o pacote podemos passar o seguinte comando:
 ```sh
 npm pack
 ```
-Será criado uma pasta compactada na raíz do projeto com o pacote.
-
-### 5.3. Nome do pacote
-Outra dica importante é verificar no NPM se já há algum pacote com mesmo nome que o seu, pois ele não será aceito se houver.
-```json
-{
-  "name": "nome-do-pacote",
-}
-```
+> Será criado um arquivo na raíz do projeto com o pacote compactado.
 
 ### 5.4. Publicando via CLI
-Depois dessas configurações publicar é bem fácil e rápido, necessitamos apenas passar o comando na pasta do projeto:
+Após configurado o `package.json`, necessitamos apenas passar o comando na pasta do projeto:
 ```sh
 npm publish
 ```
@@ -194,12 +215,12 @@ Se estiver tudo certo, ele compactará os arquivos e enviará para o registry:
 ![publish](https://user-images.githubusercontent.com/45276342/124196251-6771cb00-daa2-11eb-9310-7739c36feeb8.png)
 
 ### 5.5. Vizualizando seu pacote
-Após a publicação você pode conferir algumas métricas e configurações do pacote no site do NPM. E faça um README bem completo, pois ele também ficará visivel para outros usuários interessados no seu pacote.  
+Após a publicação você pode conferir algumas métricas e configurações do pacote no registry, acessando o seu perfil lá estarão todos seus pacotes publicados. Faça um README bem completo, pois ele também ficará visivel para outros usuários interessados no seu pacote.  
 ![dbgen-cli](https://user-images.githubusercontent.com/45276342/124196151-31344b80-daa2-11eb-9a86-11e905c87b1f.png)
 
 
 ### 5.6. Importando seu pacote
-Por fim para importar seu pacote em outros projetos, como já vimos, apenas passe o seguinte comando:
+Por fim seu pacote já pode ser importado em outros projetos, como já vimos, apenas passe o seguinte comando:
 
 ```sh
 npm install nome-do-pacote
@@ -216,7 +237,9 @@ npm install nome-do-pacote
 - https://dev.to/allangrds/tudo-que-voce-queria-saber-sobre-o-package-lock-json-mas-estava-com-vergonha-de-perguntar-4689
 - https://gabrieluizramos.com.br/entendendo-o-package-json
 - https://moisesbm.wordpress.com/2018/09/28/how-to-create-publish-and-use-private-npm-packages/
-
+- https://www.treinaweb.com.br/blog/o-que-e-npm-e-como-usar-uma-biblioteca-instalada-por-ele
+- https://www.treinaweb.com.br/blog/criando-modulos-globais-do-npm
+- https://www.treinaweb.com.br/blog/o-que-e-gerenciador-de-dependencias
 ---
 
 ## 7. Conclusão
