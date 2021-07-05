@@ -3,7 +3,7 @@ title: Publique seu primeiro pacote no NPM
 description: Este post além de mostar como publicar um pacote, também apresenta
   conceitos importantes como versionamento, compatibilidade e o gerenciamento de
   dependências.
-date: 2021-07-04 07:35:29
+date: 2021-07-05 12:16:14
 thumbnailImage: ../../static/assets/img/npmjs-private-package.png
 category: blog
 ---
@@ -87,21 +87,36 @@ A linha que utiliza `--save-dev` salvará o pacote em devDependencies. Já a lin
 ### 3.1. Major (principal)
 É o 1° número. Qualquer atualização que quebre a retrocompatibilidade deve incrementar esse dígito. 
 Alterar algo na versão major significa que houve uma quebra de compatibilidade. Se o usuário não fizer a alteração necessária, ele não conseguirá mais integrar com sua aplicação.  
-Ex.: Remoção de uma função ou a remoção/renomeação de um método de classe.
+Ex.: Remoção de uma função ou a remoção/renomeação de um método de classe.  
+
+> Assim que fizer esse tipo de alteração rode o seguinte comando antes da publicação:
+> ```sh
+> npm version major
+> ```
 
 ### 3.2. Minor (menor)
 É o 2° número. Qualquer atualização que adicione funcionalidades sem quebrar o código que usa versões anteriores deve incrementar esse dígito. Uma alteração na versão minor trará uma nova funcionalidade, mas sem quebrar o que existe atualmente.  
 Ex.: adição de métodos em uma classe. 
 
+> Assim que fizer esse tipo de alteração rode o seguinte comando antes da publicação:
+> ```sh
+> npm version minor
+> ```
+
 ### 3.3. Patch (correção)
 É o 3° número. Qualquer atualização que não adicione, remova, ou modifique alguma funcionalidade deve incrementar esse dígito. Uma modificação no patch não quebrará nada. Muito pelo contrário, corrigirá algo.  
 Ex.: correções de bugs. 
 
+> Assim que fizer esse tipo de alteração rode o seguinte comando antes da publicação:
+> ```sh
+> npm version patch
+> ```
 
-Então você abre o `package.json` e rapidamente entende que as `dependencies` são os pacotes que sua aplicação usa, mas onde deveriam estar listadas as versões dos pacotes tem um monte de símbolos como o **til (˜)** e o **circunflexo (^)**.
 
 ### 3.4. Ranges (intervalos)
-Os intervalos basicamente permitem que versões mais recentes de pacotes sejam instaladas automaticamente. Correções de bugs, patches importantes podem ser recebidos ou distribuídos automaticamente, mas alterações importantes são proibidas de serem instaladas.
+Então você abre o `package.json` e rapidamente entende que as `dependencies` são os pacotes que sua aplicação usa, mas onde deveriam estar listadas as versões dos pacotes tem um monte de símbolos como o **til (˜)** e o **circunflexo (^)**.  
+
+Os **ranges** basicamente permitem que versões mais recentes de pacotes sejam instaladas automaticamente. Correções de bugs, patches importantes podem ser recebidos ou distribuídos automaticamente, mas alterações importantes são proibidas de serem instaladas.
 
 | Range | Descrição |
 | ------------- |-------------|
