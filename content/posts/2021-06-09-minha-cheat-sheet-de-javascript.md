@@ -1,5 +1,5 @@
 ---
-title: 'Minha "Cheat Sheet" de Javascript '
+title: 'Minha "Cheat Sheet" de Javascript'
 description: Este post resume em métodos e exemplos o que pude aprender
   estudando javascript, onde tive ideia de criar essa "cola" para me auxiliar em
   futuras dúvidas. Espero que auxilie também os iniciantes na linguagem a
