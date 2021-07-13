@@ -13,7 +13,7 @@ const Author = ({ fullText }) => {
             <p>Buscando evolução na minha carreira e novos desafios, venho me dedicando a programação, desenvolvimento web e ao curso superior de Ciência da Computação, visando me tornar um profissional mais capacitado para trabalhar com as demandas que o mercado de tecnologia oferece.</p>
             {fullText && 
             <>
-            <p>No tempo livre gosto de andar de skate, passeio com meus cochorros, cultivo plantas, jogo PS4 e leio livros.</p>
+            <p>No tempo livre gosto de andar de skate, passeio com meus dogs, cultivo plantas, jogo PS4, ler livros e curtir com minha familia.</p>
             <h2><span role="img" aria-label="Habilidades">🛠️</span> Habilidades</h2>
             <ul>
                 <li>Javascript (ES6+ / NodeJS / Jquery)</li>
