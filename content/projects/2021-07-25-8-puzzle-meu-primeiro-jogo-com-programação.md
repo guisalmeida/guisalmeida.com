@@ -4,7 +4,7 @@ description: 'O "8 Puzzle" é um jogo de tabuleiro criado com Java para prática
   dos conceitos de Orientação a Objetos e alguns Padrões de Projetos. #POO
   #designpatterns #java #junit5 #TDD'
 date: 2021-07-24 09:18:24
-thumbnailImage: ../../static/assets/img/8puzzle.png
+thumbnailImage: ../../static/assets/img/thumb-puzzle.png
 category: project
 ---
 ___
