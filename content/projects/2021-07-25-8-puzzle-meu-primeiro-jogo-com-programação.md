@@ -1,9 +1,8 @@
 ---
 title: '"8 Puzzle" meu primeiro jogo com programação'
-description: 'O "8 Puzzle" é um jogo de tabuleiro criado com Java para prática
-  dos conceitos de Orientação a Objetos e alguns Padrões de Projetos. #POO
-  #designpatterns #java #junit5 #TDD'
-date: 2021-07-24 09:18:24
+description: O "8 Puzzle" é um jogo de tabuleiro criado com Java para prática
+  dos conceitos de Orientação a Objetos e alguns Padrões de Projetos.
+date: 2021-07-25 10:36:00
 thumbnailImage: ../../static/assets/img/thumb-puzzle.png
 category: project
 ---
