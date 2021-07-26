@@ -1,9 +1,9 @@
-import styled from "styled-components"
-import media from "styled-media-query"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import transitions from '../../styles/transitions'
+import styled from "styled-components";
+import media from "styled-media-query";
+import { Link } from "gatsby";
+import transitions from '../../styles/transitions';
 
-export const ProjectItemLink = styled(AniLink)`
+export const ProjectItemLink = styled(Link)`
   color: var(--texts);
   display: flex;
   text-decoration: none;

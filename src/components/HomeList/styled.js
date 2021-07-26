@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import { Link } from "gatsby";
 import transitions from '../../styles/transitions'
 
 export const Subtitle = styled.section`
@@ -27,7 +27,7 @@ export const Subtitle = styled.section`
         padding: 0;
     }
 `
-export const BlogLink = styled(AniLink)`
+export const BlogLink = styled(Link)`
     display: block;
     color: var(--texts);
     font-size: 1rem;

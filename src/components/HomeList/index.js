@@ -1,11 +1,9 @@
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import PostItem from '../PostItem';
 
-import PostItem from '../PostItem'
-import getThemeColor from '../../utils/getThemeColor';
-
-import * as S from '../ListWrapper/styled'
-import { Subtitle, BlogLink } from './styled'
+import * as S from '../ListWrapper/styled';
+import { Subtitle, BlogLink } from './styled';
 
 const blogListQuery = graphql`
   query {
@@ -43,13 +41,7 @@ const HomeList = () => {
     <>
       <Subtitle>
         <h3>Últimas do blog</h3>
-        <BlogLink
-          cover
-          direction="left"
-          bg={getThemeColor()}
-          duration={0.6}
-          to="/blog/"
-        >
+        <BlogLink to="/blog/">
           Ver todos os posts
         </BlogLink>
       </Subtitle>

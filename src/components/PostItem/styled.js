@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import media from "styled-media-query"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 import transitions from '../../styles/transitions'
 import { GatsbyImage as Img } from 'gatsby-plugin-image'
 
@@ -14,7 +14,7 @@ export const PostImage = styled(Img).attrs({
   object-fit: cover;
 `
 
-export const PostItemLink = styled(AniLink)`
+export const PostItemLink = styled(Link)`
   color: var(--texts);
   display: flex;
   text-decoration: none;

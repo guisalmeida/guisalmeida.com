@@ -1,18 +1,11 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import Image from '../Image/Image';
-import getThemeColor from '../../utils/getThemeColor';
 
 import * as S from './styled';
 
 const PostItem = ({ slug, date, timeToRead, title, description, thumbnailImage }) => (
-    <S.PostItemLink
-        cover
-        direction="right"
-        bg={getThemeColor()}
-        duration={0.6}
-        to={slug}
-    >
+    <S.PostItemLink to={slug}>
         <S.PostItemWrapper>
             {thumbnailImage &&
                 <Image filename={thumbnailImage} alt={title} />

@@ -1,7 +1,6 @@
 import Styled from 'styled-components';
 import media from 'styled-media-query';
-
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import { Link } from "gatsby";
 
 export const ProfileContainer = Styled.section`
   display: ${props => (props.isMobileHeader ? 'none' : 'flex')};
@@ -18,7 +17,7 @@ export const ProfileContainer = Styled.section`
   `}
 `
 
-export const ProfileLink = Styled(AniLink)`
+export const ProfileLink = Styled(Link)`
     color: var(--texts);
     text-decoration: none;
     transition: color 0.5s;

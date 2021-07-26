@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-import { Home } from "@styled-icons/boxicons-solid/Home"
-import { SearchAlt2 as Search } from "@styled-icons/boxicons-regular/SearchAlt2"
-import { UpArrowAlt as Arrow } from "@styled-icons/boxicons-regular/UpArrowAlt"
-import { InvertColors } from "@styled-icons/material/InvertColors"
-import { Grid } from "@styled-icons/boxicons-solid/Grid"
-import { ThList as List } from "@styled-icons/typicons/ThList"
-import { Menu } from '@styled-icons/boxicons-regular/Menu'
-
-import getThemeColor from '../../utils/getThemeColor';
+import { Home } from "@styled-icons/boxicons-solid/Home";
+import { SearchAlt2 as Search } from "@styled-icons/boxicons-regular/SearchAlt2";
+import { UpArrowAlt as Arrow } from "@styled-icons/boxicons-regular/UpArrowAlt";
+import { InvertColors } from "@styled-icons/material/InvertColors";
+import { Grid } from "@styled-icons/boxicons-solid/Grid";
+import { ThList as List } from "@styled-icons/typicons/ThList";
+import { Menu } from '@styled-icons/boxicons-regular/Menu';
 
 import * as S from './styled';
 
@@ -45,10 +43,6 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
                 <S.MenuBarLink
                     to='/'
                     title='Voltar para home'
-                    cover
-                    direction="right"
-                    bg={getThemeColor()}
-                    duration={0.6}
                 >
                     <S.MenuBarItem>
                         <Home />
@@ -58,10 +52,6 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
                 <S.MenuBarLink
                     to='/search/'
                     title='Pesquisar'
-                    cover
-                    direction="right"
-                    bg={getThemeColor()}
-                    duration={0.6}
                 >
                     <S.MenuBarItem>
                         <Search />
