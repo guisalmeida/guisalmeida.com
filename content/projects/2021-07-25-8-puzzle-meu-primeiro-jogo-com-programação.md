@@ -17,6 +17,8 @@ exclude: Índice
 Este é um projeto feito para um trabalho da faculdade na disciplina de **Orientação a Objetos**. 
 O desafio proposto foi criar o **8Puzzle** (Jogo do Oito) na linguagem **Java**, aplicando as metodologias que a orientação à objetos suporta para arquitetar o software de maneira organizada e reutilizável. Usando também tecnologias e bibliotecas como Junit, JDBC e Swing. Para criar testes, serialização do estado do jogo em um banco de dados e a inteface gráfica.  
 
+**Link do projeto:** https://github.com/GuiSAlmeida/8puzzle-java  
+
 ### 1.1. Objetivos
 - Aplicar os conceitos de Orientação a Objetos passados em aula para construir software, como:
   - Abstração
@@ -858,13 +860,21 @@ O polimorfismo **Dinâmico ou Sobreposição**, que é o princípio que permite 
 > ```
 
 ---
-## 7. Referências
+## 7. Jogando
+Você pode baixar o arquivo [8puzzle.jar](https://github.com/GuiSAlmeida/8puzzle-java/raw/master/8puzzle.jar) e rodá-lo passando o seguinte comando.  
+
+```sh
+java -jar 8puzzle.jar
+```
+
+---
+## 8. Referências
 https://refactoring.guru/pt-br/design-patterns/factory-method  
 https://refactoring.guru/pt-br/design-patterns/observer  
 http://www.gqferreira.com.br/artigos/ver/mvc-com-java-desktop-parte1  
 http://www.dsc.ufcg.edu.br/~jacques/cursos/map/html/arqu/mvc/mvc.htm  
 
 ---
-## 8. Conclusão
+## 9. Conclusão
 Este projeto me ajudou muito a por em prática conceitos de **Orientação a Objetos**, como também exercitar lógica de como funciona **arquitetura de software** em um projeto usando MVC e alguns **Padrôes de Projeto**.  
 E aí, o que achou desse projeto? Tem alguma sugestão ou crítica? Deixa uma reação ou um comentário aqui embaixo. E obrigado pela visita! 😉
