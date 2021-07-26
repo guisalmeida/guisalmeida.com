@@ -15,13 +15,13 @@ export const SidebarContainer = styled.aside`
     text-align: center;
     width: 20rem;
     transition: ${transitions.ALL};
+    z-index: 1;
 
     ${media.lessThan('medium')`
         align-items: flex-start;
         border: 0;
         height: calc(100% - 50px);
         padding: 0;
-        position: inherit;
         width: 100%;
         transform: ${props => props.isMenuOpen ? 'translateX(0)' : 'translateX(-100vw)'};
     `}
