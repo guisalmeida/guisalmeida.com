@@ -14,21 +14,21 @@ const Sidebar = ({
     isMenuOpen,
     setIsMenuOpen
 }) => (
-        <S.SidebarContainer isMenuOpen={isMenuOpen}>
-            <Profile
-                title={title}
-                position={position}
-                description={description}
-                isMobileHeader={false}
-            />
-            <S.SidebarLinksContainer>
-                <Menu setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
-                <Social />
-                <TextCredit />
-            </S.SidebarLinksContainer>
-        </S.SidebarContainer>
+    <S.SidebarContainer isMenuOpen={isMenuOpen}>
+        <Profile
+            title={title}
+            position={position}
+            description={description}
+            isMobileHeader={false}
+        />
+        <S.SidebarLinksContainer>
+            <Menu setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
+            <Social />
+            <TextCredit />
+        </S.SidebarLinksContainer>
+    </S.SidebarContainer>
 
-    );
+);
 
 Sidebar.propTypes = {
     site: propTypes.shape({

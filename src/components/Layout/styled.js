@@ -15,7 +15,6 @@ export const LayoutMain = Styled.main`
     padding: 0 3.75rem 0 20rem;
     transition: background, color 0.5s;
     width: 100%;
-    z-index: 0;
 
     body#grid & {
         grid-template-areas:

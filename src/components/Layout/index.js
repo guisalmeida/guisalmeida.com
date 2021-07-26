@@ -1,11 +1,10 @@
 
-import React, { useState } from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from 'gatsby'
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from 'gatsby';
 
-import { TransitionPortal } from "gatsby-plugin-transition-link";
-import Profile from '../Profile'
-import Sidebar from '../Sidebar'
+import Profile from '../Profile';
+import Sidebar from '../Sidebar';
 import MenuBar from '../MenuBar';
 
 import * as S from './styled';
@@ -31,23 +30,19 @@ const Layout = ({ children }) => {
     return (
         <S.LayoutWrapper>
             <GlobalStyles />
-            <TransitionPortal level="top">
-                <Profile
-                    title={site.siteMetadata.title}
-                    position={site.siteMetadata.position}
-                    description={site.siteMetadata.description}
-                    isMobileHeader={true}
-                />
-                <Sidebar
-                    site={site.siteMetadata}
-                    setIsMenuOpen={setIsMenuOpen}
-                    isMenuOpen={isMenuOpen}
-                />
-            </TransitionPortal>
+            <Sidebar
+                site={site.siteMetadata}
+                setIsMenuOpen={setIsMenuOpen}
+                isMenuOpen={isMenuOpen}
+            />
+            <Profile
+                title={site.siteMetadata.title}
+                position={site.siteMetadata.position}
+                description={site.siteMetadata.description}
+                isMobileHeader={true}
+            />
             <S.LayoutMain>{children}</S.LayoutMain>
-            <TransitionPortal level="top">
-                <MenuBar setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
-            </TransitionPortal>
+            <MenuBar setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
         </S.LayoutWrapper>
     )
 }
