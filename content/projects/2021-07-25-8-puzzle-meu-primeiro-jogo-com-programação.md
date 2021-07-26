@@ -6,6 +6,7 @@ date: 2021-07-25 10:36:00
 thumbnailImage: ../../static/assets/img/thumb-puzzle.png
 category: project
 ---
+![8puzzle](https://user-images.githubusercontent.com/45276342/126923893-9c8ff9f9-c9b3-47ff-94d4-157a79362c04.gif)
 ___
 ## Índice
 
