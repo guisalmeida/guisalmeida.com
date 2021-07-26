@@ -206,11 +206,11 @@ Usando os comandos a seguir, vamos criar uma tabela no nosso banco que no fim se
 Vamos criar uma tabela chamada **"authors"** com os campos **"name, age, city, state e country"**.  
 Também será adicionada automaticamente um campo **"Id"** com valor numérico unico para ser nossa chave primária de cada registro.
 No terminal passamos a query:
-```sh
+```
 dbgen "create table authors (name varchar(50), age int, city varchar(50), state varchar(50), country varchar(50))"
 ```
 Fazendo uma consulta já podemos ver a tabela criada, porém sem nenhum registro ainda:
-```sh
+```
 dbgen "select * from authors"
 
 ╔════╤══════╤═════╤══════╤═══════╤═════════╗
@@ -221,13 +221,13 @@ dbgen "select * from authors"
 
 ### 6.2 Inserindo registros
 Vamos inserir alguns registros na tabela com os comandos abaixo:
-```sh
+```
 dbgen "insert into authors (name, age, city, country) values (Martin Fowler, 57, Walsall, England)"
 dbgen "insert into authors (name, age, city, country) values (Linus Torvalds, 51, Helsinki, Finland)"
 dbgen "insert into authors (name, age, state, country) values (Douglas Crockford, 66, Minnesota, EUA)"
 ```
 Fazendo uma nova consulta já podemos ver a tabela com os registros inseridos:
-```sh
+```
 dbgen "select * from authors"
 
 ╔══════════╤═══════════════════╤═════╤══════════╤═══════════╤═════════╗
@@ -244,7 +244,7 @@ dbgen "select * from authors"
 
 ### 6.3 Fazendo uma consulta especifica
 Podemos também fazer uma query de consulta passando um campo especifico:
-```sh
+```
 dbgen "select id, name, age from authors where name = Linus Torvalds"
 
 ╔══════════╤════════════════╤═════╗
@@ -257,11 +257,11 @@ dbgen "select id, name, age from authors where name = Linus Torvalds"
 
 ### 6.4 Deletando registro
 Por fim podemos deletar um registro da tabela com o comando:
-```sh
+```
 dbgen "delete from authors where name = Martin Fowler"
 ```
 Vamos consultar agora a tabela e ver o resultado:
-```sh
+```
 dbgen "select * from authors"
 
 ╔══════════╤═══════════════════╤═════╤══════════╤═══════════╤═════════╗

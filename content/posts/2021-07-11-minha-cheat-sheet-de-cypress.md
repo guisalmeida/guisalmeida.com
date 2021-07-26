@@ -52,7 +52,7 @@ No terminal passamos os comandos:
 - **Run** vai rodar os testes via terminal.
 - **Open** vai abrir a interface gráfica onde são exibidos testes com interação com a aplicação.  
 
-```sh
+```
 npm run cypress:run
 npm run cypress:open
 ```
@@ -66,7 +66,7 @@ No modo run via terminal o cypress gera uma pasta de screenshots para os erros e
 > ```
 
 Na interface é possivel escolhar os arquivos para serem executados, na linha de comando **para executar um arquivo específico** deve-se passar o comando:
-```sh
+```
 npm run cypress:run -- --spec caminho/arquivo.spec.js
 ```
 
@@ -519,7 +519,7 @@ Substitui uma função, armazena iterações e controla comportamento de retorno
 
 Sintaxe:  
 
-```JS  
+```js  
 cy.stub()
 cy.stub(object, method)
 cy.stub(object, method, replacerFn)
@@ -612,7 +612,7 @@ Cypress dá suporte a vários plugins, os oficiais podem ser consultados no site
 
 ### 9.1. Usando plugins
 Instalar pacote:
-```sh
+```
 npm install -D nome-plugin
 ```
 
@@ -624,7 +624,7 @@ require('nome plugin')
 ### 9.2. Plugin Xpath
 Adiciona comandos de busca por [XPath](https://github.com/cypress-io/cypress-xpath).  
 Exemplo:
-```JS  
+```js  
 it('finds list items', () => {
     cy.xpath('//ul[@class="todo-list"]//li')
     .should('have.length', 3)

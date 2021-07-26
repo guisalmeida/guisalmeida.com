@@ -1500,7 +1500,7 @@ console.log(timeUnits);
 É um objeto, similar ao Map, que permite apenas chaves do tipo Object e mantém as referências de forma fraca, sendo volátil e não iterável.  
 > ⚠️ Possui apenas os métodos: `set, has, get, delete`.
 
-```JS
+```js
 // Exemplo:
 const areas = new WeakMap();
 const rectangle1 = {
@@ -1536,7 +1536,7 @@ _É um objeto que armazena elementos únicos, que podem ser de qualquer tipo de 
 Possui os os métodos `size, forEach, has, delete, clear` semelhantes ao **MAP**.  
 > ⚠️ Não deixa os elementos se repetirem dentro de sua estrutura, caso repitam não são adicionados.
 
-```JS
+```js
 // Exemplo:
 const set = new Set();
 set.add("10");
@@ -1548,7 +1548,7 @@ console.log(set.size);
 // 1
 ```
 Também é possível converter um array em set tirando seus valores repetidos.
-```JS
+```js
 // Exemplo:
 const set = new Set();
 set.add("10");
@@ -1588,7 +1588,7 @@ console.log(charsets);
 É um objeto, similar ao Set, que permite apenas valores do tipo Object e mantém as referências de forma fraca, sendo volátil e não iterável.  
 > ⚠️ Possui apenas os métodos: `add, has, delete` semelhantes ao Set.  
 
-```JS
+```js
 // Exemplo:
 const circles = new WeakSet();
 function Circle(radius) {
@@ -1618,7 +1618,7 @@ console.log(circle1.calculateArea.call(circle2));
 _São convenções implementadas por Arrays, Maps, Sets e Strings que os tornam iteráveis por meio de um protocolo de iteração._  
 > ⚠️ Todo **Iterable** tem um propriedade de chave **`Symbol.iterator`** que define o protocolo de iteração para o objeto.
 
-```JS
+```js
 //Exemplo:
  const languages = ["Fortran", "Lisp", "COBOL"];
  const iterator = languages[Symbol.iterator]();
@@ -1685,7 +1685,7 @@ console.log(languages);
 As classes são um tipo especial de função que atuam como um template para a criação de objetos._  
 > ⚠️ Não sofrem **`hoisting`**. 
 
-```JS
+```js
 //Exemplo:
 const Square = class {}
 const square = new Square();
@@ -2097,7 +2097,7 @@ delayedSum(2, ) // simulando um erro
 _Podemos executar várias promises ao mesmo tempo, retornando após todas terem sucesso usando **`Promise.all`**_.  
 > ⚠️ Retorna um **array** com os valaores de cada função executada.
 
-```JS
+```js
 // Exemplo:
 function delayedSum(a, b) {
     return new Promise(function (resolve, reject) {
@@ -2125,7 +2125,7 @@ Promise.all([
 _Também podemos executar várias promises ao mesmo tempo, retornando após a primeira ter sucesso usando **`Promise.race`**_.  
 > ⚠️ Retorna **somente** resultado da primeira função retornada.
 
-```JS
+```js
 // Exemplo:
 function delayedSum(a, b) {
     return new Promise(function (resolve, reject) {
@@ -2176,7 +2176,7 @@ today();
 // Passou para today
 ```
 Por meio do **`yield`** é possível retornar valores de forma similar ao return no atribudo **`value`** do obj que é retornado.
-```JS
+```js
 // Exemplo:
 function* forever() {
 	let value = 1;
@@ -2204,7 +2204,7 @@ console.log(foreverGenerator.next());
 // { value: 5, done: false }
 ```
 Além disso, também é possível enviar um valor para dentro do generator por meio do método next.
-```JS
+```js
 // Exemplo:
 function* forever() {
 	let value = 1;
@@ -2248,7 +2248,7 @@ today();
 // e não vai passar para próxima função.
 ```
 O retorno do método next é um **objeto** contendo **`value`** e **`done`**, seguindo o protocolo de iteração.
-```JS
+```js
 // Exemplo:
 function* forever() {
 	let value = 1;
@@ -2281,7 +2281,7 @@ console.log(foreverGenerator.next());
 // { value: undefined, done: true } não executa o segundo next pois já ouve um return antes
 ```
 O return também pode receber um valor especifico por parâmetro.
-```JS
+```js
 // Exemplo:
 function* forever() {
 	let value = 1;
@@ -2300,7 +2300,7 @@ console.log(foreverGenerator.return("end"));
 
 **`throw`**  
 O método throw lança uma exceção dentro do generator interrompendo o fluxo de execução caso a exceção não tenha sido tratada adequadamente.
-```JS
+```js
 // Exemplo:
 function* forever() {
 	let value = 1;
@@ -2325,7 +2325,7 @@ console.log(foreverGenerator.next());
 ---
 ## 9. Async/Await  
 O **async/await** facilita a interação com chamadas assíncronas, aguardando o retorno de uma determinada promise.  
-```JS
+```js
 // Exemplo:
 function sum(a, b) {
     return new Promise(function(resolve, reject) {
@@ -2346,7 +2346,7 @@ function sum(a, b) {
 // Unhandled promise rejection. aviso de erro não tratado
 ```
 Para tratar possíveis exceções associadas a chamadas assíncronas é possível utilizar um bloco **`try/catch`**.
-```JS
+```js
 // Exemplo:
 function sum(a, b) {
     return new Promise(function(resolve, reject) {
@@ -2370,7 +2370,7 @@ function sum(a, b) {
 // Invalid input
 ```
 É possivel iterar utilizando async/await por meio do **`for-of`**, _evitar uso do **`forEach`** por ele não conseguir trabalhar de modo assincrono._
-```JS
+```js
 // Exemplo:
 function sum(a, b) {
     return new Promise(function(resolve, reject) {
@@ -2405,7 +2405,7 @@ function sum(a, b) {
 > ⚠️ Para utilizar é necessário usar a flag **`--harmony-async-iteration`**.  
 
 
-```JS
+```js
 // Exemplo:
 function sum(a, b) {
     return new Promise(function(resolve, reject) {

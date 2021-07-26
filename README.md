@@ -20,7 +20,7 @@
 </p>
 
 ## Start
-```bash
+```
     git clone git@github.com:GuiSAlmeida/guisalmeida.com.git
     cd guisalmeida.com
     yarn install # or npm install

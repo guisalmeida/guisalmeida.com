@@ -28,13 +28,13 @@ Porém este post se limita a uma breve introdução sobre as regex, para um conh
 ### 1.2. Regex podem ser criadas de 2 formas:   
 **Notação literal** sendo passadas entre duas barras como no exemplo:  
 
-```JS
+```js
 const regexLiteral = /regex/
 ```
 
 **Instanciando objeto RegExp** passando a regex dentro das chaves, como no exemplo:
 
-```JS
+```js
 const regexObj = new RegExp('regex')
 ```
 
@@ -44,7 +44,7 @@ Para acompanhar esse post testando em sua máquina é necessário somente ter o 
 ### 1.4. Como usar
 Podem ser passadas dentro de métodos que aceitem esse tipo de parâmetro como também possuem 2 métodos que podem ser invocados a partir do objeto regex instanciado, que são `test` e `exec` que falo mais sobre na parte de **métodos** deste post.  
 
-```JS
+```js
 // aqui criamos a regex da forma literal, que vamos ir refatorando.
 const regExp = /guilherme@gmail.com/;
 
@@ -67,7 +67,7 @@ validaEmail("Guilherme@gmail.com");
 ```
 
 Agora note outro caso de teste:  
-```JS
+```js
 validaEmail("E-mail: guilherme@gmailxcom");
 // Também irá nos retornar true, pois encontrou o padrão de letras
 // que criamos dentro da string passada por parâmetro,
@@ -91,7 +91,7 @@ Eles estão divididos em quatro grupos distintos, de acordo com características
 </br>
 
 Primeiramente queremos receber apenas o e-mail para validar, não deve haver mais nada como espaços ou outros caracteres antes ou depois do e-mail.  
-```JS
+```js
 // aqui adicionamos os metacarecteres ^ e $.
 const regExp = /^guilherme@gmailxcom$/;
 
@@ -113,7 +113,7 @@ validaEmail("E-mail: guilherme@gmailxcom");
 
 Como vimos o **ponto** é um metacaractere e nesse caso para não recebermos outros carecteres aleatórios no seu lugar podemos usar a barra invertida (escape) para torná-lo literal.
 
-```JS
+```js
 // aqui adicionamos o escape para o ponto
 const regExp = /^guilherme@gmail\.com$/;
 
@@ -155,7 +155,7 @@ Chegou a hora de deixarmos isso mais dinâmico e no lugar de receber apenas o te
 
 Para isso podemos usar os metacaracteres representados pela barra invertida e uma letra específica como mostrado na tabela acima.  
 
-```JS
+```js
 const regExp = /^\w@gmail\.com$/;
 // aqui adicionamos o \w que aceita qualquer letra, número e _.
 
@@ -167,7 +167,7 @@ validaEmail("joao@gmail.com");
 Também vai ser necessário usar os **quantificadores** para deixar a quantidade de caracteres recebidos também dinâmicos.  
 Como necessitamos ter uma ou mais letras antes do @, usaremos o **\+** após o \w.
 
-```JS
+```js
 const regExp = /^\w+@\D+\.\D+$/;
 // aqui adicionamos o \w+ antes do @ para aceitar um ou mais caracteres
 // e também o \D para recebermos caracteres que não sejam números após o @.
@@ -184,7 +184,7 @@ As listas como apresentadas na seção 1.5.2, são bem mais específicas, ela gu
 
 Continuando no nosso código poderiamos alterar o `\D` por uma lista sem problemas. Por exemplo, onde queremos receber o nome do provedor após o `@` deve ser sem números e símbolos, apenas letras, podemos usar uma lista `[a-z]` que vai aceitar apenas o range de a até z, nada de números, símbolos, etc será aceito.
 
-```JS
+```js
 const regExp = /^\w+@[a-z]+\.[a-z]+$/;
 // Adicionando a lista [a-z] no lugar dos \D
 
@@ -200,7 +200,7 @@ Como vimos na seção 1.5.4, um grupo de captura pode realizar a extração de v
 
 Vamos agora refatorar nosso código para poder receber tanto e-mails ".com" mas também ".com.br" e etc. Note que o padrão se repete sempre tem um ponto e uma sequencia de letras, para isso podemos usar um grupo e dizer que esse padrão pode se repetir uma ou mais vezes usando o quantificador `+`.
 
-```JS
+```js
 const regExp = /^\w+@[a-z]+(\.[a-z]+)+$/;
 // Adicionando a parte da regex responsável por validar o ponto
 // e a sequência de letras em um grupo dentro de parênteses.
@@ -215,7 +215,7 @@ validaEmail("joao_123@outlook.com.br.br.br");
 
 Para ter mais controle de quantos grupos podemos receber, vamos usar um quantificador mais especifico nesse caso.
 
-```JS
+```js
 const regExp = /^\w+@[a-z]+(\.[a-z]+){1,2}$/;
 // Adicionando um quantificador fora que define que o grupo pode se repetir,
 // no mínimo uma vez até no máximo duas vezes.
@@ -236,7 +236,7 @@ Aqui vou apresentar apenas dois, que são mais usados:
 
 Para o nosso exemplo vamos passr o modificador de case-insensitive (i), para podermos receber também e-mails que tenham sido digitados em letras maiúsculas, pois sabemos que os provedores de e-mail não fazem essa distinção entre maiúsculas e minúsculas.
 
-```JS
+```js
 const regExp = /^\w+@[a-z]+(\.[a-z]+){1,2}$/i;
 // Adicionando o modificador i depois da barra que indica o fim da expressão.
 
@@ -268,7 +268,7 @@ Para finalizar vamos supor que queremos usar parte do e-mail antes do `@` para s
 
 Para isso vamos criar outra função no nosso código e também adicionar a parte da regex responsável por validar o e-mail antes do `@` em um grupo () para podermos capturá-lo com exec.
 
-```JS
+```js
 const regExp = /^(\w+)@[a-z]+(\.[a-z]+){1,2}$/i;
 // Adicionando um grupo antes do @.
 
@@ -292,7 +292,7 @@ pegaUsername("JoAo_123@outlook.com.br")
 Ok podemos ver melhor como o exec funciona, mas ainda não é o que queremos.  
 Sabendo agora que o array retornado sempre vai conter na primeira posição a parte do texto que deu match, em seguida os grupos de captura encontrados e no final o `index` e `input`. Podemos pegar apenas o grupo que queremos que seja o username.
 
-```JS
+```js
 const regExp = /^(\w+)@[a-z]+(\.[a-z]+){1,2}$/i;
 
 // Criando a função que vai usar o exec para pegar nome

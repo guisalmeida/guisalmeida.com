@@ -55,7 +55,7 @@ Para isso temos as informações de `dependencies` e `devDependencies` no `packa
 - **devDependencies** são utilizadas para indicar pacotes necessários para executar seu projeto em um cenário de desenvolvimento e testes (como pacotes relacionados a teste e formatação geral do código-fonte do seu projeto).  
 
 Para realizar uma instalação, basta rodar no terminal:
-```sh
+```
 npm install prod-package
 npm install --save-dev test-package
 ```
@@ -90,7 +90,7 @@ Alterar algo na versão major significa que houve uma quebra de compatibilidade.
 Ex.: Remoção de uma função ou a remoção/renomeação de um método de classe.  
 
 > Assim que fizer esse tipo de alteração rode o seguinte comando antes da publicação:
-> ```sh
+> ```
 > npm version major
 > ```
 
@@ -99,7 +99,7 @@ Ex.: Remoção de uma função ou a remoção/renomeação de um método de clas
 Ex.: adição de métodos em uma classe. 
 
 > Assim que fizer esse tipo de alteração rode o seguinte comando antes da publicação:
-> ```sh
+> ```
 > npm version minor
 > ```
 
@@ -108,7 +108,7 @@ Ex.: adição de métodos em uma classe.
 Ex.: correções de bugs. 
 
 > Assim que fizer esse tipo de alteração rode o seguinte comando antes da publicação:
-> ```sh
+> ```
 > npm version patch
 > ```
 
@@ -148,7 +148,7 @@ Para uso do NPM via linha de comando (CLI) em sua máquina também é necessári
 Você pode fazer instalação de várias maneiras de acordo com seu sistema operacional, para isso é necessário acessar a página de downloads do <a target="_blank" href="https://nodejs.org/pt-br/download/">**node**</a>.   
 ![node](https://user-images.githubusercontent.com/45276342/124369464-768f7f00-dc42-11eb-9d13-334f944fe276.png)
 No **linux**, você pode instalar pelo gerenciador de pacotes wget, basta abrir o terminal e executar:
-```sh
+```
 wget -qO- https://deb.nodesource.com/setup_14.x | sudo bash -
 
 sudo apt-get install -y nodejs
@@ -160,12 +160,12 @@ Após a instalação do Node.js, você pode verificar tanto a versão do Node.js
 
 ### 4.3. Logando local
 Com as ferramentas instaladas podemos rodar o comando que vai logar nosso NPM que está instalado na máquina, para poder ter acesso ao registry onde ficam salvos os pacotes, para podermos publicar o nosso.
-```sh
+```
 npm adduser
 ```
 Preencher infos de login:
 
-```sh
+```
 Username: guisalmeida
 Password: *****
 Email: (this IS public) guisalmeida.dev@gmail.com
@@ -176,7 +176,7 @@ logged...
 ### 4.4. Configurações iniciais
 É uma boa prática setarmos alguns dados de usuário para que nossos pacotes já tenham essa configuração ao ser iniciados.  
 
-```sh
+```
 npm set init-author-name "Guilherme Almeida"
 npm set init-author-email "guisalmeida.dev@gmail.com"
 npm set init-author-url "https://guisalmeida.com"
@@ -185,7 +185,7 @@ npm set init-license "MIT"
 
 ### 4.5. Criar projeto NPM
 Na pasta do projeto passe o seguinte comando, `-y` para usar a configuração default que setamos antes:
-```sh
+```
 npm init -y
 ```
 
@@ -216,14 +216,14 @@ Uma boa prática **antes da publicação**, quando o projeto tem muitos arquivos
 
 ### 5.3. Pacote a ser exportado
 Dependendo das configurações que você passar no `package.json` o pacote que vai ser exportado não vai ser igual a pasta do seu projeto, isso tem suas vantagens como vimos acima. Para ver como vai ser criado o pacote podemos passar o seguinte comando:
-```sh
+```
 npm pack
 ```
 > Será criado um arquivo na raíz do projeto com o pacote compactado.
 
 ### 5.4. Publicando via CLI
 Após configurado o `package.json`, necessitamos apenas passar o comando na pasta do projeto:
-```sh
+```
 npm publish
 ```
 Se estiver tudo certo, ele compactará os arquivos e enviará para o registry:
@@ -237,7 +237,7 @@ Após a publicação você pode conferir algumas métricas e configurações do 
 ### 5.6. Importando seu pacote
 Por fim seu pacote já pode ser importado em outros projetos, como já vimos, apenas passe o seguinte comando:
 
-```sh
+```
 npm install nome-do-pacote
 ```
 
