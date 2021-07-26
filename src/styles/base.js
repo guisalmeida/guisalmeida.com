@@ -148,6 +148,10 @@ export const MainContent = styled.section`
     margin: 1.6rem;
     background: var(--borders);
     font-style: italic;
+
+    & pre {
+      font-style: initial;
+    }
   }
 
   hr {
