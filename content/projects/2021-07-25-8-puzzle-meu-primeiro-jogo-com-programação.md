@@ -862,7 +862,8 @@ O polimorfismo **Dinâmico ou Sobreposição**, que é o princípio que permite 
 
 ---
 ## 7. Jogando
-Você pode baixar o arquivo [8puzzle.jar](https://github.com/GuiSAlmeida/8puzzle-java/raw/master/8puzzle.jar) e rodá-lo passando o seguinte comando.  
+Você precisa ter Java 8 ou outra versão acima.  
+Baixe o arquivo [8puzzle.jar](https://github.com/GuiSAlmeida/8puzzle-java/raw/master/8puzzle.jar), abra o terminal e passe o seguinte comando.  
 
 ```
 java -jar 8puzzle.jar
