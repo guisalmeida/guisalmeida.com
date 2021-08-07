@@ -6,7 +6,9 @@ description: Uma breve introdução ao paradigma de Orientação a Objetos com
 date: 2021-07-15 09:04:28
 thumbnailImage: ../../static/assets/img/heranca-python.png
 category: blog
-tags: []
+tags:
+  - "[ python"
+  - poo ]
 ---
 ___
 
