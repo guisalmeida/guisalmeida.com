@@ -3,12 +3,10 @@ title: Uma Introdução à Programação Orientada a Objetos com Python
 description: Uma breve introdução ao paradigma de Orientação a Objetos com
   Python, onde veremos como a linguagem pode ser usada nesse contexto e como ela
   diverge de outras linguagens voltadas ao uso desse paradigma.
-date: 2021-07-15 09:04:28
+date: 2021-08-07 06:48:04
 thumbnailImage: ../../static/assets/img/heranca-python.png
 category: blog
-tags:
-  - python
-  - poo
+tags: []
 ---
 ___
 
