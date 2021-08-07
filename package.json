@@ -2,7 +2,7 @@
   "name": "guisalmeida-portofolio-blog",
   "private": true,
   "description": "My personal portfolio/blog on guisalmeida.com",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Guilherme Almeida <guisalmeida.dev@gmail.com>",
   "dependencies": {
     "algoliasearch": "^4.9.3",
