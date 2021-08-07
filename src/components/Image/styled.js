@@ -2,6 +2,10 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 export const ImageWrapper = styled.div`
+  ${media.lessThan('medium')`
+    width: 100%;
+  `}
+
   .gatsby-image-wrapper {
     border-radius: 6px;
     display: flex;
