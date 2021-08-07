@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 import transitions from '../../styles/transitions'
 
 export const Tags = styled.div`
@@ -10,6 +11,11 @@ export const Tags = styled.div`
   &:not(:last-child) {
     margin-bottom: .8rem;
   }
+
+  ${media.lessThan("medium")`
+    padding: 0 1rem;
+    justify-content: center;
+  `}
 `
 
 export const TagHolder = styled.span.attrs(props => ({
@@ -21,6 +27,7 @@ export const TagHolder = styled.span.attrs(props => ({
   color: var(--texts);
   padding: .4rem;
   border-radius: 4px;
+  margin: 0 0 0.75rem;
 
   &:hover,
   &:focus {

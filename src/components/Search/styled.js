@@ -41,11 +41,16 @@ export const SearchWrapper = styled.section`
       grid-gap: 1px;
       grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
       margin-top: 2rem;
+      
+      ${media.lessThan("medium")`
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      `}
     }
     .ais-Hits-item {
       background-color: var(--background);
     }
   }
+
   .ais-SearchBox-input {
     background: none;
     border: none;

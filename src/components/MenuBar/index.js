@@ -34,6 +34,12 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
     }, []);
 
     const openMenu = () => {
+        const body = window.document.body
+        if (body.style.overflow === 'hidden') {
+            body.style.overflow = 'auto'
+        } else {
+            body.style.overflow = 'hidden'
+        }
         setIsMenuOpen(!isMenuOpen)
     }
 
