@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import Comments from '../components/Comments'
+import Tags from '../components/Tags'
 
 import * as S from '../components/Post/styled'
 
@@ -12,7 +13,7 @@ const Post = ({ data }) => {
 
     return (
         <Layout>
-            <SEO 
+            <SEO
                 title={post.frontmatter.title} 
                 description={post.frontmatter.description} 
                 image={`https://guisalmeida.com${post.frontmatter.thumbnailImage.childImageSharp.original.src}`}
@@ -25,6 +26,7 @@ const Post = ({ data }) => {
                 <S.PostDate>{post.frontmatter.date} - {post.timeToRead} min de leitura</S.PostDate>}
                 <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
                 <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
+                <Tags tags={post.frontmatter.tags} isLink={false} />
             </S.PostHeader>
 
             <S.MainContent>
@@ -45,6 +47,7 @@ export const query = graphql`
                 category
                 title
                 description
+                tags
                 date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
                 thumbnailImage {
                     childImageSharp {

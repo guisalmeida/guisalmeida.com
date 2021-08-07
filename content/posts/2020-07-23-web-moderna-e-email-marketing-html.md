@@ -9,6 +9,7 @@ description: Depois de deixar o float de lado e aprender o maravilhoso flexbox,
 date: 2020-07-23 06:49:07
 thumbnailImage: ../../static/assets/img/thumb-mail.png
 category: blog
+tags: ['html', 'email']
 ---
 
 ___
@@ -25,7 +26,7 @@ Atualmente lá na Linx trabalho diariamente com clientes de email automatizado, 
 ---
 ### Tá mas e ai? Muda alguma coisa?
 
-Bom essa era a pergunta que eu me fazia até pouco tempo atrás e a responta é SIM muda bastante coisa. As técnicas para email marketing em HTML são um pouco diferentes e nem tudo que funciona em sites vai funcionar nas caixas de entrada.\
+Bom essa era a pergunta que eu me fazia até pouco tempo atrás e a responta é SIM muda bastante coisa. As técnicas para email marketing em HTML são um pouco diferentes e nem tudo que funciona em sites vai funcionar nas caixas de entrada.  
 Mas a ideia desse post não é nos aprofundarmos tecnicamente em tudo que o email suporta e todas suas especificidades. Pretendo aqui passar uma visão geral de como montar um template simples com dicas importantes para auxiliar quem está criando seu primeiro template de email em HTML.  
 
 ---

@@ -15,6 +15,7 @@ const postsQuery = `
                         date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
                         description
                         title
+                        tags
                         thumbnailImage {
                             relativePath
                         }

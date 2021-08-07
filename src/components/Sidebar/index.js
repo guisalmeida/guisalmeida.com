@@ -1,6 +1,6 @@
 
 import React from 'react'
-import propTypes from 'prop-types'
+import PropTypes from 'prop-types'
 
 import Profile from '../Profile'
 import Social from '../Social'
@@ -31,10 +31,10 @@ const Sidebar = ({
 );
 
 Sidebar.propTypes = {
-    site: propTypes.shape({
-        title: propTypes.string.isRequired,
-        position: propTypes.string.isRequired,
-        description: propTypes.string.isRequired
+    site: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        position: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired
     })
 }
 

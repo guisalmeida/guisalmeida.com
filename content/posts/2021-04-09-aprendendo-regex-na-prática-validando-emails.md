@@ -7,6 +7,7 @@ description: Fala pessoal, aproveitando o assunto do último post, que por sinal
 date: 2021-04-21 04:24:54
 thumbnailImage: ../../static/assets/img/regex_thumb.png
 category: blog
+tags: ['regex', 'javascript', 'email']
 ---
 
 ___

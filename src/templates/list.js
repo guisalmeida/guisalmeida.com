@@ -36,6 +36,7 @@ const BlogList = props => {
                             date,
                             description,
                             title,
+                            tags,
                             thumbnailImage: {
                                 relativePath
                             }
@@ -52,6 +53,7 @@ const BlogList = props => {
                                 date={date}
                                 timeToRead={timeToRead}
                                 title={title}
+                                tags={tags}
                                 description={description}
                                 thumbnailImage={relativePath}
                             />
@@ -91,6 +93,7 @@ export const query = graphql`
                         date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
                         description
                         title
+                        tags
                         thumbnailImage {
                             relativePath
                         }

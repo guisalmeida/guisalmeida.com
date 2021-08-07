@@ -8,6 +8,7 @@ description: Este post resume em métodos e exemplos o que pude aprender
 date: 2021-06-09 10:34:29
 thumbnailImage: ../../static/assets/img/jsssss.jpg
 category: blog
+tags: ['javascript', 'cheat-sheet']
 ---
 
 ___

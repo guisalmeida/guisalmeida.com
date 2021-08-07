@@ -8,6 +8,7 @@ description: Este post resume com alguns exemplos o que pude aprender estudando
 date: 2021-07-11 08:13:50
 thumbnailImage: ../../static/assets/img/cypress-cover.png
 category: blog
+tags: ['cypress', 'javascript', 'cheat-sheet']
 ---
 ___
 

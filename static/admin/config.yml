@@ -23,6 +23,7 @@ collections:
       - { label: "Date", name: "date", widget: "datetime", format: 'YYYY-MM-DD hh:mm:ss'}
       - { label: "thumbnailImage", name: "thumbnailImage", widget: "image"}
       - { label: "Category", name: "category", widget: "select", options: ["blog", "project"]}
+      - { label: Tags, name: tags, widget: list, default: [''] }
       - { label: "Body", name: "body", widget: "markdown"}
   - name: "Projects" # Used in routes, e.g., /admin/collections/blog
     label: "Projects" # Used in the UI
@@ -35,4 +36,5 @@ collections:
       - { label: "Date", name: "date", widget: "datetime", format: 'YYYY-MM-DD hh:mm:ss'}
       - { label: "thumbnailImage", name: "thumbnailImage", widget: "image"}
       - { label: "Category", name: "category", widget: "select", options: ["blog", "project"]}
+      - { label: Tags, name: tags, widget: list, default: [''] }
       - { label: "Body", name: "body", widget: "markdown"}

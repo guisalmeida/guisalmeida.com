@@ -21,6 +21,7 @@ const ProjectsPage = () => {
                             title
                             description
                             category
+                            tags
                             thumbnailImage {
                                 relativePath
                             }
@@ -45,12 +46,13 @@ const ProjectsPage = () => {
             </MainContent>
 
             <S.ListWrapper>
-                {projects.map(({ node: { fields: { slug }, frontmatter: { title, description, thumbnailImage: {relativePath} } } }, index) => (
+                {projects.map(({ node: { fields: { slug }, frontmatter: { title, description, tags, thumbnailImage: {relativePath} } } }, index) => (
                     <ProjectItem
                         key={index}
                         title={title}
                         description={description}
                         slug={slug}
+                        tags={tags}
                         thumbnailImage={relativePath}
                     />
                 ))}

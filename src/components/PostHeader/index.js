@@ -1,13 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Tags from '../Tags'
 
 import * as S from './styled'
 
 const PostHeader = ({
-    thumbnailImage,
     date,
     timeToRead,
     title,
+    tags,
     description
 }) => (
     <S.PostHeader>
@@ -16,6 +17,7 @@ const PostHeader = ({
         }
         <S.PostTitle>{title}</S.PostTitle>
         <S.PostDescription>{description}</S.PostDescription>
+        <Tags tags={tags} isLink={false} />
     </S.PostHeader>
 )
 
@@ -23,6 +25,7 @@ PostHeader.propTypes = {
     date: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    tags: PropTypes.array,
     timeToRead: PropTypes.number
 }
 

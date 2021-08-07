@@ -32,7 +32,6 @@ export const PostHeader = styled.header`
 export const PostTitle = styled.h1`
   font-size: 2.8rem;
   font-weight: 400;
-  padding: 0 1.6rem;
   margin: 1rem auto;
 
   ${media.lessThan("medium")`
@@ -47,7 +46,6 @@ export const PostDescription = styled.h2`
   line-height: 1.25;
   font-weight: 300;
   font-style: italic;
-  padding: 0 1.6rem;
   color: var(--texts);
 
   ${media.lessThan("medium")`
@@ -60,7 +58,6 @@ export const PostDescription = styled.h2`
 export const PostDate = styled.p`
   font-size: 1.1rem;
   font-weight: 100;
-  padding: 0 1.6rem;
 
   ${media.lessThan("medium")`
         padding: 0 1rem;

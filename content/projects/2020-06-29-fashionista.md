@@ -4,6 +4,7 @@ description: Site SPA de uma loja de e-commerce que consome a API de produtos pr
 date: 2020-06-29T05:14:30.000Z
 thumbnailImage: ../../static/assets/img/thumb-fashionista.png
 category: project
+tags: ['javascript', 'react', 'redux', 'sass', 'atomic-design']
 ---
 > Fashionista é um e-commerce de moda feminina fictício feito como desafio final do curso Aceleradev React da [Codenation](https://www.codenation.dev/).
  

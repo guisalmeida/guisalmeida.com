@@ -22,6 +22,7 @@ const blogListQuery = graphql`
             date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
             description
             title
+            tags
             thumbnailImage {
               relativePath
             }
@@ -57,6 +58,7 @@ const HomeList = () => {
               date,
               description,
               title,
+              tags,
               thumbnailImage: {
                 relativePath
               }
@@ -72,6 +74,7 @@ const HomeList = () => {
               date={date}
               timeToRead={timeToRead}
               title={title}
+              tags={tags}
               description={description}
               thumbnailImage={relativePath}
             />

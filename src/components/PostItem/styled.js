@@ -65,6 +65,7 @@ export const PostItemInfo = styled.div`
 
   body#grid & {
     text-align: center;
+    align-items: center;
     margin-left: 0;
   }
 

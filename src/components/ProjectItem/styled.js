@@ -54,6 +54,7 @@ export const ProjectItemInfo = styled.div`
 
   body#grid & {
     text-align: center;
+    align-items: center;
     margin-left: 0;
   }
 
