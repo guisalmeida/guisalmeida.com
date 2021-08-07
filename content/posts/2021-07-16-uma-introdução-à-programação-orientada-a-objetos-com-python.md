@@ -7,8 +7,8 @@ date: 2021-07-15 09:04:28
 thumbnailImage: ../../static/assets/img/heranca-python.png
 category: blog
 tags:
-  - "['python'"
-  - "'poo']"
+  - "'python'"
+  - "'poo'"
 ---
 ___
 
