@@ -51,6 +51,6 @@
 * [x] Change color theme
 * [x] Change scrollbar color
 * [x] Make page 404
-* [ ] Add tags in posts
+* [x] Add tags in posts
 * [ ] New feature to hide main menu in desktop
 * [ ] Write tests
