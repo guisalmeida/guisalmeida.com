@@ -89,7 +89,7 @@ export const TagHolder = styled.span.attrs(props => ({
   }
 
   &[color="python"] {
-    background: #75a8d3;
+    background: #143653;
     > a,
     > span {
       color: yellow;
@@ -157,6 +157,14 @@ export const TagHolder = styled.span.attrs(props => ({
     > a,
     > span {
       color: #fff;
+    }
+  }
+
+  &[color="php"] {
+    background: #8993C1;
+    > a,
+    > span {
+      color: #222;
     }
   }
 `

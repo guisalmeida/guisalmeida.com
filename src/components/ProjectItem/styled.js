@@ -56,10 +56,12 @@ export const ProjectItemInfo = styled.div`
     text-align: center;
     align-items: center;
     margin-left: 0;
+    width: 100%;
   }
 
   ${media.lessThan("medium")`
     margin: 0;
+    width: 100%;
   `}
 `
 
@@ -72,10 +74,18 @@ export const ProjectItemTitle = styled.h1`
     line-height: 1.1;
     margin: 0.8rem 0;
   }
+
+  ${media.lessThan("medium")`
+    text-align: center;
+  `}
 `
 
 export const ProjectItemDescription = styled.p`
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.2;
+
+  ${media.lessThan("medium")`
+    text-align: center;
+  `}
 `

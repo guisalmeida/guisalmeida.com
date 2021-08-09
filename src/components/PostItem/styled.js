@@ -67,10 +67,12 @@ export const PostItemInfo = styled.div`
     text-align: center;
     align-items: center;
     margin-left: 0;
+    width: 100%;
   }
 
   ${media.lessThan("medium")`
     margin: 0;
+    width: 100%;
   `}
 `
 
@@ -87,6 +89,10 @@ export const PostItemTitle = styled.h1`
     line-height: 1.1;
     margin: 0.8rem 0;
   }
+
+  ${media.lessThan("medium")`
+    text-align: center;
+  `}
 `
 
 export const PostItemDescription = styled.p`
@@ -97,4 +103,8 @@ export const PostItemDescription = styled.p`
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;  
   overflow: hidden;
+
+  ${media.lessThan("medium")`
+    text-align: center;
+  `}
 `
