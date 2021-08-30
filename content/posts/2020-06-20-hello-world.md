@@ -5,7 +5,7 @@ description: Começando meu blog pessoal, aqui pretendo compartilhar o que venho
 date: 2020-06-28 03:19:24
 thumbnailImage: ../../static/assets/img/thumb-hello.png
 category: blog
-tags: ['carreira', 'estudos']
+tags: ['#carreira', '#estudos']
 ---
 ___
 

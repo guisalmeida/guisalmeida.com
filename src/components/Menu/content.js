@@ -4,12 +4,12 @@ const links = [
         path: '/',
     },
     {
-        label: 'Projetos',
-        path: '/projects',
-    },
-    {
         label: 'Blog',
         path: '/blog',
+    },
+    {
+        label: 'Projetos',
+        path: '/projects',
     },
     {
         label: 'Sobre',

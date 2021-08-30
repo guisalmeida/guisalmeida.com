@@ -5,7 +5,7 @@ description: O "8 Puzzle" é um jogo de tabuleiro criado com Java para prática
 date: 2021-07-25 10:36:00
 thumbnailImage: ../../static/assets/img/8puzzle.png
 category: project
-tags: ['java', 'POO', 'design-patterns', 'tdd', 'mvc', 'jogo']
+tags: ['#java', '#POO', '#design-patterns', '#TDD', '#MVC', '#game']
 ---
 ___
 ## Índice

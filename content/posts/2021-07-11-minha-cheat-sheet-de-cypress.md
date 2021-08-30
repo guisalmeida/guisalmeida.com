@@ -1,5 +1,5 @@
 ---
-title: Minha "cheat sheet" de Cypress
+title: Minha "Cheat Sheet" de Cypress
 description: Este post resume com alguns exemplos o que pude aprender estudando
   Cypress. Gosto de fazer esse tipo de "cola" porque acredito que pode me
   auxiliar a reforçar meu aprendizado e em futuras dúvidas. Espero que auxilie
@@ -8,7 +8,7 @@ description: Este post resume com alguns exemplos o que pude aprender estudando
 date: 2021-07-11 08:13:50
 thumbnailImage: ../../static/assets/img/cypress-cover.png
 category: blog
-tags: ['cypress', 'javascript', 'cheat-sheet']
+tags: ['#cypress', '#javascript', '#cheat-sheet']
 ---
 ___
 

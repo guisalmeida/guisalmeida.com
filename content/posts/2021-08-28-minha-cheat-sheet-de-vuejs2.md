@@ -8,8 +8,7 @@ description: Este post resume um pouco dos meus estudos sobre o framework VueJS
 date: 2021-08-30 08:35:05
 thumbnailImage: ../../static/assets/img/vue-js-programming-1589827.jpg
 category: blog
-tags:
-  - ""
+tags: ['#vue', '#vue-router', '#vuex', '#cheat-sheet']
 ---
 ___
 ## Índice

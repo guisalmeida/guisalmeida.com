@@ -4,7 +4,7 @@ description: Site de filmes que consome a API do TMDb.
 date: 2020-06-28 05:16:28
 thumbnailImage: ../../static/assets/img/thumb-imagiflix.png
 category: project
-tags: ['html', 'sass', 'javascript', 'jquery']
+tags: ['#html', '#sass', '#javascript', '#jquery']
 ---
 
 > Imagiflix é um site de filmes fictício feito no curso de front-end da [Imagine School](http://imagineschool.com.br/).

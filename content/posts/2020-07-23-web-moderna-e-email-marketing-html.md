@@ -9,7 +9,7 @@ description: Depois de deixar o float de lado e aprender o maravilhoso flexbox,
 date: 2020-07-23 06:49:07
 thumbnailImage: ../../static/assets/img/thumb-mail.png
 category: blog
-tags: ['html', 'email']
+tags: ['#html', '#email']
 ---
 
 ___
