@@ -1,11 +1,11 @@
 ---
 title: Minha "Cheat Sheet" de VueJS2
-description: Este post resume em métodos e exemplos o que pude aprender ao longo
-  de um curso de vue completo, onde tive ideia de criar essa "Cheat Sheet" para
-  me auxiliar futuras dúvidas. Acredito que auxilie também aos iniciantes nesse
-  framework a acelerar sua curva de aprendizado e aos mais experientes a
-  relembrarem alguns conceitos.
-date: 2021-08-28 08:28:36
+description: Este post resume um pouco dos meus estudos sobre o framework VueJS
+  2, onde tive ideia de criar essa "Cheat Sheet" para me auxiliar futuras
+  dúvidas. Acredito que auxilie também aos iniciantes nesse framework a acelerar
+  sua curva de aprendizado e aos mais experientes a relembrarem alguns
+  conceitos.
+date: 2021-08-30 08:35:05
 thumbnailImage: ../../static/assets/img/vue-js-programming-1589827.jpg
 category: blog
 tags:
@@ -162,7 +162,7 @@ Cria um laço de repetição for no elemento.
 Vue permite registrar suas próprias diretivas personalizadas. Note que no Vue 2.0, a forma primária de abstração e reuso de código são componentes - no entanto, pode haver casos em que você só precisa de um acesso de baixo nível ao DOM em elementos simples, e aí diretivas personalizadas seriam úteis.
 Para isso podem ser usados alguns hooks com argumentos:  
 
-![hooks](modulo12_diretivas/diretivas-exercicios/src/assets/images/hooks-diretivas.png)
+![hooks](https://raw.githubusercontent.com/GuiSAlmeida/curso_vuejs2/master/modulo12_diretivas/diretivas-exercicios/src/assets/images/hooks-diretivas.png)
 
 #### 1.4.1. Diretiva global
 **Exemplo**  
@@ -309,8 +309,6 @@ Chamado uma única vez antes da instância ser destruida.
 **destroyed**  
 Chamado uma única vez depois da instância ser destruida. 
 
-<details>
-<summary>Exemplos</summary>  
 
 ```js
 new Vue({
@@ -344,7 +342,7 @@ new Vue({
     }
 })
 ```
-</details>
+
 
 ### 5.2. Métodos do Ciclo de Vida Adicionais para Componente Vivo
 **activated**  
