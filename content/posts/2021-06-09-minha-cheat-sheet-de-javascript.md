@@ -1143,7 +1143,7 @@ console.log(languages);
 ```
 
 
-#### 1.7.2 Mutator methods API   
+#### 1.7.2 Iteration methods API   
 Quando invocados iteram sobre os elementos do array.
 
 **`forEach`**  
