@@ -52,7 +52,7 @@ Podemos criar uma imagem ou usar uma imagem já criada, que podem ser encontrada
 
 #### 2.1.1 Comandos úteis para imagens
 ```sh
-# Criar imagem apartir do projeto local:
+# Criar imagem a partir do projeto local:
 docker build -t <name>[:tag] . # O ponto seria o path para o projeto onde o build vai buscar o Dockerfile para buildar a imagem
 
 # Baixar imagem (docker hub):
@@ -114,7 +114,7 @@ docker container run -v $(pwd):/workspace ...
 ---
 
 ## 3. Dockerizando uma Aplicação
-Esse termo refere-se a convertermos uma aplicação com seu funcionamento normal, onde instalamos todas dependencias e executamos algums comandos para rodar local e etc. Para passarmos toda essa responsabilidade para o Docker. Assim após configurarmos ele em nossa aplicação, vai ser gerado uma imagem que vai contar tudo que ela precisa e basta rodarmos um comando para ter tudo rodando.
+Esse termo refere-se a convertermos uma aplicação com seu funcionamento normal, onde instalamos todas dependências e executamos alguns comandos para rodar local e etc. Para passarmos toda essa responsabilidade para o Docker. Assim, após configurarmos ele em nossa aplicação, vai ser gerado uma imagem que vai contar tudo que ela precisa e basta rodarmos um comando para ter tudo rodando.
 
 ### 3.1. Requisitos
 Para dockerizarmos uma aplicação necessitamos apenas ter o Docker instalado e criar dentro do projeto um arquivo chamado `Dockerfile`, onde ficarão as configurações que farão nossa aplicação rodar dentro do container.
@@ -138,7 +138,7 @@ COPY . /app
 WORKDIR /app
 
 # O comando RUN roda comandos na criação da imagem e cada RUN gera uma layer na imagem.
-# Como exemplo estamos instalando as dependências que precisamos para o projeto em python
+# Como exemplo, estamos instalando as dependências que precisamos para o projeto em python
 # dentro do nosso container, assim que ele está sendo criado.
 RUN pip install -r requirements.txt
 
@@ -147,11 +147,11 @@ RUN pip install -r requirements.txt
 EXPOSE 5000
 
 # O VOLUME mapeia um diretório dentro do container para ser persistido fora.
-# Como exemplo estamos persistindo a pasta de estáticos do projeto.
+# Como exemplo, estamos persistindo a pasta de estáticos do projeto.
 VOLUME /static
 
 # O CMD diferente do RUN, roda um comando na instanciação da imagem ou seja quando subimos o container.
-# Como exemplo estamos rodando o comando principal com python para nosso aplicação rodar.
+# Como exemplo, estamos rodando o comando principal com python para nosso aplicação rodar.
 CMD python main.py
 ```
 
@@ -191,7 +191,7 @@ docker run -v $(pwd)/static:/static -p 5000:5000 -d app-python:latest
 ```
 
 
-Pronto! Com tudo funcionando, você já podemos testar nosso APP Python no http://localhost:5000 da mesma forma como faria se ele estivesse rodando local fora de um container. 
+Pronto! Com tudo funcionando, já podemos testar nosso APP Python no http://localhost:5000 da mesma forma como faria se ele estivesse rodando local fora de um container. 
 
 Após configurado container, para subir novamente outras vezes apenas rodamos o comando start.
 ```sh
