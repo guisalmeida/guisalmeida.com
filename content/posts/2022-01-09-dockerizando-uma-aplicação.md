@@ -6,8 +6,7 @@ description: Nesse post passo uma breve introdução ao Docker, alguns conceitos
 date: 2022-01-08 10:04:43
 thumbnailImage: ../../static/assets/img/docker.png
 category: blog
-tags:
-  - ""
+tags: ['#docker', '#python']
 ---
 ___
 
