@@ -7,7 +7,7 @@ const Author = ({ fullText }) => {
     return (
         <Base.MainContent>
             {fullText && 
-            <h1>About</h1> || <h1>Hello</h1>}
+            <h1>About</h1> || <h1>Hello!</h1>}
             <p>I'm a Full Stack developer, graduated in Computer Science (2022), and +4 years of experience in software development. I worked on several projects, primarily in web development and mainly using Javascript, and Python. Responsible for creating very understandable and functional code.</p>
             <p>I am passionate about learning new technologies and challenging jobs, sharing knowledge, and teamwork.</p>
             {fullText && 
