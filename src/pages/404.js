@@ -2,15 +2,15 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
-import { MainContent } from '../styles/base';
+import * as Base from '../styles/base';
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="Página não encontrada" />
+    <SEO title="Page not found" />
 
-    <MainContent>
-      <h1>Página não encontrada</h1>
-    </MainContent>
+    <Base.MainContent>
+      <h1>Page not found</h1>
+    </Base.MainContent>
   </Layout>
 )
 

@@ -8,8 +8,8 @@ import Avatar from "../components/Avatar";
 const AboutPage = () => (
     <Layout>
         <SEO
-            title="Sobre mim"
-            description="Saiba um pouco mais sobre o desenvolvedor por trás deste site."
+            title="About"
+            description="Learn a little more about the developer behind this site."
         />
         <Avatar />
         <Author fullText={true} />

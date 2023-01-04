@@ -43,15 +43,24 @@ export const PostDate = styled.p`
   font-size: 1.1rem;
   font-weight: 100;
   padding: 0 1.6rem;
+  color: var(--highlight);
+  margin-bottom: 1rem;
 
   ${media.lessThan('medium')`
     padding: 0 1rem;
   `}
 `
 
+export const PostItemDate = styled.time`
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: var(--highlight);
+`
+
 export const MainContent = styled.section`
   margin: auto;
   padding: 2rem 5rem;
+  border-bottom: 1px solid var(--mediumBackground);
 
   ${media.lessThan('medium')`
     padding: 2rem 0;
@@ -68,11 +77,12 @@ export const MainContent = styled.section`
   .tags,
   iframe,
   .button-post {
+    color: var(--postColor);
     font-size: 1.25rem;
     font-weight: 300;
     line-height: 1.7;
     letter-spacing: 0.069rem;
-    padding: 0;
+    padding: 0 1.6rem;
 
     ${media.lessThan('medium')`
       padding: 0 1rem;
@@ -112,7 +122,7 @@ export const MainContent = styled.section`
 
   li {
     padding: 0.625rem 0;
-
+    color: var(--texts);
     & > ul {
       margin-bottom: 0;
     }
@@ -156,7 +166,7 @@ export const MainContent = styled.section`
 
   hr {
     border: 1px solid var(--borders);
-    margin: 3rem auto;
+    margin: 2rem auto;
   }
 
   #twitter-widget-0,
@@ -247,7 +257,6 @@ export const MainContent = styled.section`
     text-decoration: none;
     transition: opacity 0.5s;
     font-weight: 400;
-
     svg {
       color: var(--postColor);
       transition: ${transitions.ALL};
@@ -263,8 +272,44 @@ export const MainContent = styled.section`
     }
   }
 
+  table {
+    font: 100% sans-serif;
+    background-color: var(--mediumBackground);
+    border-collapse: collapse;
+    empty-cells: show;
+    border: 1px solid var(--borders);
+    margin: 1rem 0 2.4rem 1.6rem;
+  }
+  
+  table th,
+  table td {
+    text-align: center;
+    padding: .5rem;
+    border: 1px solid var(--borders);
+    color: var(--texts);
+  }
+
+  table th {
+    font-weight: bold;
+  }
+  
+  table > thead > tr:first-child > th {
+    text-align: center;
+    color: var(--texts);
+    background-color: var(--borders);
+  }
+
+  /* fix size of superscript */
+  table sup {
+    font-size: 75%;
+  }
+
+  table > tbody > tr > td:first-child {
+    font-weight: bold;
+  }
+
   .table-of-contents {
-    p {
+    p, li {
       margin: 0;
       padding: 0;
     }

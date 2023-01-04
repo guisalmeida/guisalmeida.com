@@ -18,15 +18,15 @@ export const ProjectItemLink = styled(Link)`
 
 export const ProjectItemWrapper = styled.section`
   align-items: center;
-  border-bottom: 1px solid var(--background);
+  border-bottom: 1px solid var(--mediumBackground);
   display: flex;
   padding: 2rem 5rem;
   width: 100%;
   transition: ${transitions.ALL};
-  background: var(--mediumBackground);
+  // background: var(--mediumBackground);
 
   &:hover {
-    background-color: var(--highlight);
+    background-color: var(--mediumBackground);
   }
   
   body#grid & {

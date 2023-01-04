@@ -40,13 +40,13 @@ export const ProfileTitle = Styled.h1`
     margin: 0 auto 0.5rem;
     color: var(--postColor);
 
-    &:before {
+    /* &:before {
         content: "{"
     }
 
     &:after {
         content: "}"
-    }
+    } */
 
     ${media.lessThan('medium')`
         font-size: 1.2rem;

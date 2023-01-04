@@ -1,6 +1,6 @@
 const links = [
     {
-        label: 'Início',
+        label: 'Home',
         path: '/',
     },
     {
@@ -8,11 +8,11 @@ const links = [
         path: '/blog',
     },
     {
-        label: 'Projetos',
+        label: 'Projects',
         path: '/projects',
     },
     {
-        label: 'Sobre',
+        label: 'About',
         path: '/about',
     }
 ];

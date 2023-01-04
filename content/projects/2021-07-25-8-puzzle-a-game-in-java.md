@@ -1,48 +1,47 @@
 ---
-title: '"8 Puzzle" meu game em Java'
-description: O "8 Puzzle" é um jogo de tabuleiro criado com Java para prática
-  dos conceitos de Orientação a Objetos e alguns Padrões de Projetos.
+title: '"8 Puzzle" a game in Java'
+description: This is a sliding tile game created with Java to practice Object-Oriented Programming concepts and Design Patterns.
 date: 2021-07-25 10:36:00
 thumbnailImage: ../../static/assets/img/8puzzle.png
 category: project
-tags: ['#java', '#POO', '#design-patterns', '#TDD', '#MVC', '#game']
+tags: ['#java', '#OOP', '#design-patterns', '#TDD', '#MVC', '#game']
 ---
 ___
-## Índice
+## Index
 
 ```toc
-exclude: Índice
+exclude: Index
 ```
 ---
-## 1. Introdução
-Este é um projeto feito para um trabalho da faculdade na disciplina de **Orientação a Objetos**. 
-O desafio proposto foi criar o **8Puzzle** (Jogo do Oito) na linguagem **Java**, aplicando as metodologias que a orientação à objetos suporta para arquitetar o software de maneira organizada e reutilizável. Usando também tecnologias e bibliotecas como Junit, JDBC e Swing. Para criar testes, serialização do estado do jogo em um banco de dados e a inteface gráfica.  
+## 1 Intro
+This is a project made for a college assignment in the subject of **Object-Oriented Programming**.
+The proposed challenge was to create the 8Puzzle (sliding tile game with eight pieces) in the **Java** language, applying the object-oriented methodologies to architect the software in an organized and reusable way. Also using technologies and libraries like **Junit**, **JDBC** and **Swing**. To create tests, serialization of the game state in a database and the graphical interface.
 
-**Link do projeto:** https://github.com/GuiSAlmeida/8puzzle-java  
+**Source code:** https://github.com/GuiSAlmeida/8puzzle-java  
 
-### 1.1. Objetivos
-- Aplicar os conceitos de Orientação a Objetos passados em aula para construir software, como:
-  - Abstração
-  - Encapsulamento
-  - Composição
-  - Herança
-  - Polimorfismo
-- Criar projeto orientado a testes **TDD**.
-- Manter o código limpo sem **bad smells**, com nomenclatura de classes, métodos e atributos **semânticos**.
-- Implementar camadas independentes **MVC**.
-- Utilizar **Padrões de Projeto**.
-- Salvar estado do jogo no banco de dados **Postgres**.  
+### 1.1 Goals
+- Apply Object-Oriented concepts taught in class to build software, such as:
+  - Abstraction
+  - Encapsulation
+  - Composition
+  - Inheritance
+  - Polymorphism
+- Create test-oriented project **TDD**.
+- Keep the code clean without **bad smells**, with **semantic** naming of classes, methods and attributes.
+- Implement independent **MVC** layers.
+- Use **Design Patterns**.
+- Serialize game state in **Postgres** database.
 
-### 1.2. Como o jogo funciona
-O **8Puzzle** é um jogo simples que consiste em um tabuleiro 3 x 3 (contendo 9 quadrados). Um dos quadrados está vazio (no meu caso use o 0). O objetivo é mover-se para quadrados em diferentes posições e ter os números exibidos na sequência correta.  
+### 1.2 How the game works  
+**8Puzzle** is a simple game consisting of a 3 x 3 board (containing 9 squares). One of the squares is empty (in my case use 0). The objective is to move to squares in different positions and have the numbers displayed in the correct sequence.  
 ![Move-in-a-game-of-8-puzzle](https://user-images.githubusercontent.com/45276342/126852220-ac4b0cf7-42fd-4fd3-b248-c26391f93890.png)
 
 ---
-## 2. Testes (TDD)
-Começando pelos testes, usando o framework [**Junit 5**](https://junit.org/junit5/). Ajudaram não só a manter a qualidade e funcionamento do código, como também a formular como os movimentos do tabuleiro deveriam acontecer.  
+## 2 Tests (TDD)
+Starting with the tests, using the framework [**Junit 5**](https://junit.org/junit5/). They helped not only to maintain the quality and functionality of the code, but also to formulate how the board moves should happen.  
 
 > **Show me the code:**  
-> Teste na classe **TesteControleTabuleiro** para simular movimento do tabuleiro.
+> Test in the **TesteControleTabuleiro** class to simulate movement of the board.
 > 
 > ```java
 > package br.ies.aps.jogooito.controle;
@@ -60,9 +59,9 @@ Começando pelos testes, usando o framework [**Junit 5**](https://junit.org/juni
 > 	}
 > 
 > 	/**
-> 	* O teste pega a posição do campo de cima a parti da posição do ponteiro (campo vazio ou 0)
-> 	* e armazena em uma variável para comparar se ao movimentar o ponteiro para cima
-> 	* vai estar na mesma posição que foi armazenada na variável.
+> 	* The test takes the position of the top field from the position of the pointer (empty field or 0)
+> 	* and stores it in a variable to compare if when moving the pointer up
+> 	* will be in the same position that was stored in the variable.
 > 	* @link https://github.com/GuiSAlmeida/8puzzle-java/blob/master/test/br/ies/aps/jogooito/controle/TesteControleTabuleiro.java
 > 	*/
 > 	@Test
@@ -77,13 +76,13 @@ Começando pelos testes, usando o framework [**Junit 5**](https://junit.org/juni
 > ```
 
 ---
-## 3. Camadas Independentes (MVC)
-Definida a arquitetura de como os elementos do software vão interagir entre si.  
+## 3 Independent Layers (MVC)
+Defined the architecture of how the software elements will interact with each other.
 
-### 3.1. Model
-Aqui ficam as classes que representam o modelo do sistema. A camada **Model** fica isolada contendo as regras de negócio e as classes que a compõem não podem conhecer NADA do ambiente externo, ou seja, não devem haver referências para classes de outras camadas.  
+### 3.1 Model
+Here are the classes that represent the model of the system. The **Model** layer is isolated, containing the business rules and the classes that compose it cannot know ANYTHING about the external environment, that is, there must be no references to classes from other layers.  
 > **Show me the code:**  
-> Classe **Jogador** possui seus dados privados e não tem acesso a dados de outras camadas:
+> **Jogador** class owns its private data and does not have access to data from other layers:
 > ```java
 > package br.ies.aps.jogooito.modelo;
 > 
@@ -131,10 +130,10 @@ Aqui ficam as classes que representam o modelo do sistema. A camada **Model** fi
 > }
 > ```
 
-### 3.2. Controller
-No controle fica a classe responsável por transformar eventos gerados pela interface alterando o modelo.  
+### 3.2 Controller
+In the controller is the class responsible for transforming events generated by the interface, changing the model.  
 > **Show me the code:**  
-> Classe **TabuleiroControle** conecta a interface ao estado do tabuleiro:
+> **TabuleiroControle** class connects interface to board state:
 > ```java
 > package br.ies.aps.jogooito.controle;
 > 
@@ -177,10 +176,10 @@ No controle fica a classe responsável por transformar eventos gerados pela inte
 > }
 > ```
 
-### 3.3. View
-Camada de interface com o usuário, onde o usuário vê o estado do modelo e pode manipular a interface, para ativar a lógica do negócio.
+### 3.3 View
+User interface layer, where the user sees the state of the model and can manipulate the interface to activate business logic.
 > **Show me the code:**  
-> Classe **TelaControle** responsável pela interface da parte dos controles e recebe os inputs do usuario:  
+> **TelaControle** class responsible for the interface of the controls part and receives user inputs:  
 > ```java
 > package br.ies.aps.jogooito.view.swing.tela;
 > 
@@ -302,19 +301,18 @@ Camada de interface com o usuário, onde o usuário vê o estado do modelo e pod
 > 			}
 > 		});
 > 		
-> 		// TODO verificar se há tecla pressionada no hashmap
 > 		mapa.get(event.getKeyCode()).run();
 > 	}
 > }
 > ```
 ---
-## 4. Salvando estado no banco (Postgres)
-Para serialização dos dados dos jogadores e estado do tabuleiro foi criado banco de dados Postres, que por meio de classes seguindo padrões de projeto DAO e Factory fazem conexão da aplicação com banco.  
+## 4 Saving state in the database (Postgres)
+For the serialization of the players' data and the state of the board, a Postres database was created, which, through classes following DAO and Factory design patterns, connect the application to the database.  
 
-### 4.1. Modelagem Conceitual
+### 4.1 Conceptual Modeling
 ![image](https://user-images.githubusercontent.com/45276342/126873915-c0cf01be-6137-44e1-a350-2ed59dc7f035.png)
 
-### 4.2. Modelagem física
+### 4.2 Physical modeling
 
 ```sql
 CREATE DATABASE IF NOT EXISTS jogo_oito;
@@ -349,14 +347,14 @@ ALTER TABLE jogador
 ```
 
 ---
-## 5. Padrões de Projeto
-**Padrões de projeto** são soluções típicas para problemas comuns em projeto de software. 
-Eles são como plantas de obra pré fabricadas que você pode customizar para resolver um problema de projeto recorrente em seu código.  
+## 5 Design Patterns
+**Design Patterns** are typical solutions to common problems in software design.
+They are like prefabricated blueprints that you can customize to solve a recurring design problem in your code.  
 
-### 5.1. Factory
-A classe **FabricaConexao** implementa o design pattern **Factory**, que prega o encapsulamento da construção (fabricação) de objetos complicados.  
+### 5.1 Factory
+The **FabricaConexao** class implements the **Factory** design pattern, which preaches the encapsulation of the construction (manufacturing) of complicated objects.  
 > **Show me the code:**  
-> A classe **FabricaConexao** possui os dados necessários para criar conexão com banco ao ser instanciada:
+> The **FabricaConexao** class has the necessary data to create a database connection when instantiated:
 > ```java
 > package br.ies.aps.jogooito.modelo.DAO;
 > 
@@ -379,11 +377,11 @@ A classe **FabricaConexao** implementa o design pattern **Factory**, que prega o
 > }
 > ```
 
-### 5.2. DAO (Data Access Object)
-O padrão **DAO** é um **padrão de projeto** que abstrai e encapsula os mecanismos de acesso a dados escondendo os detalhes da execução da origem dos dados.  
+### 5.2 DAO (Data Access Object)
+The **DAO** pattern is a **design pattern** that abstracts and encapsulates the data access mechanisms by hiding the execution details of the data source.  
 
 > **Show me the code:**  
-> Classe **JogadorDAO** responsável por inserir dados do jogador no banco:
+> **JogadorDAO** class responsible for inserting player data into the database:
 > ```java
 > package br.ies.aps.jogooito.modelo.DAO;
 > 
@@ -460,11 +458,11 @@ O padrão **DAO** é um **padrão de projeto** que abstrai e encapsula os mecani
 > }
 > ```
 
-### 5.3. Observer
-O **Observer** é um padrão de projeto comportamental que permite que você defina um mecanismo de **assinatura** para notificar múltiplos objetos sobre quaisquer eventos que aconteçam com o objeto que eles estão observando.  
+### 5.3 Observer
+**Observer** is a behavioral design pattern that allows you to define a **subscription** mechanism to notify multiple objects of any events that happen to the object they are observing.  
 
 > **Show me the code:**  
-> A classe **Tabuleiro** que possui os métodos e valores principais do jogo, é a **publicadora**. É criado uma lista para registrar os observadores e métodos para adicionar e notificá-los assim que o estado da **publicadora** mudar.  
+> The **Tabuleiro** class which owns the methods and core values of the game, is the **publisher**. A list is created to register the observers and methods to add and notify them as soon as the state of the **publisher** changes.  
 > 
 > ```java
 > package br.ies.aps.jogooito.modelo;
@@ -491,8 +489,8 @@ O **Observer** é um padrão de projeto comportamental que permite que você def
 > }
 > ```
 >
-> A interface do **TabuleiroObservador** declara a interface de notificação. 
-> Ela consiste em um único método de atualizar (**alterouEstadoTabuleiro()**) onde a publicadora (**Tabuleiro**) passa seu estado a cada atualização.  
+> The **TabuleiroObservador** interface declares the notification interface.
+> It consists of a single update method (**alterouEstadoTabuleiro()**) where the publisher (**Tabuleiro**) passes its state at each update.  
 > ```java
 > package br.ies.aps.jogooito.modelo;
 > 
@@ -501,9 +499,9 @@ O **Observer** é um padrão de projeto comportamental que permite que você def
 > }
 > ```
 > 
-> Os **assinantes** se registram como observadores e realizam algumas ações em resposta às notificações enviadas pela publicadora. 
-> Todas essas classes devem implementar a mesma interface (**TabuleiroObservador**) para que a publicadora não fique acoplada à classes concretas.  
-> A classe **TelaControle** implementa e sobrescreve o método de **TabuleiroObservador** e se registra como observador.
+> **Subscribers** register as watchers and perform certain actions in response to notifications sent by the publisher.
+> All these classes must implement the same interface (**TabuleiroObservador**) so that the publisher is not attached to concrete classes.
+> The class **TelaControle** implements and overrides the method of **TabuleiroObservador** and registers itself as an observer.
 > ```java
 > package br.ies.aps.jogooito.view.swing.tela;
 > 
@@ -551,15 +549,15 @@ O **Observer** é um padrão de projeto comportamental que permite que você def
 > ```
 
 ---
-## 6. Orientação a Objetos
-O paradigma da **POO (Programação Orientada a Objetos)** é um modelo de análise, projeto e programação baseado na aproximação entre o mundo real e o mundo virtual, através da criação e interação entre objetos, atributos, códigos, métodos, entre outros.  
+## 6 Object Orientation
+The paradigm of **OOP (Object-Oriented Programming)** is an analysis, design and programming model based on the approximation between the real world and the virtual world, through the creation and interaction between objects, attributes, codes, methods, among others. others.  
 
-### 6.1 Abstração
-Em **orientação a objetos**, uma classe é uma abstração de entidades existentes no domínio do sistema de software.
-Uma **classe abstrata** é desenvolvida para representar entidades e conceitos abstratos. Essa classe é sempre uma superclasse que não possui instâncias. Ela define um modelo (template) para uma funcionalidade e fornece uma implementação incompleta (a parte genérica dessa funcionalidade) que é compartilhada por um grupo de **classes derivadas** (subclasses). Cada uma das classes derivadas, completa a funcionalidade da classe abstrata adicionando um comportamento específico.  
+### 6.1 Abstraction
+In **object orientation**, a class is an abstraction of existing entities in the domain of the software system.
+An **abstract class** is designed to represent abstract entities and concepts. This class is always a superclass that has no instances. It defines a template for functionality and provides an incomplete implementation (the generic part of that functionality) that is shared by a group of **derived classes** (subclasses). Each of the derived classes completes the functionality of the abstract class by adding specific behavior.  
 
 > **Show me the code:**  
-> A classe **BotaoMovimento** que é derivada para as subclasses **BotaoMovimentoCima**, **BotaoMovimentoBaixo**, **BotaoMovimentoEsquerda** e **BotaoMovimentoDireita**.
+> The **BotaoMovimento** class which is derived to the subclasses **BotaoMovimentoCima**, **BotaoMovimentoBaixo**, **BotaoMovimentoEsquerda** and **BotaoMovimentoDireita**.
 > ```java
 > package br.ies.aps.jogooito.view.swing.botao;
 > 
@@ -636,13 +634,13 @@ Uma **classe abstrata** é desenvolvida para representar entidades e conceitos a
 > }
 > ```
 
-### 6.2. Encapsulamento
-O **encapsulamento** é um dos pilares da orientação a objetos, serve para **proteger** os dados da classe. 
-Encapsular os dados de uma aplicação significa evitar que estes sofram acessos indevidos.
-Para isso, é criada uma estrutura onde são usados modificadores como `public`, `protected`, `private` para restringir a acesso a esses dados.
-E métodos que podem ser utilizados por qualquer outra classe, sem causar inconsistências no desenvolvimento comumente chamados **getters** e **setters**.  
+### 6.2 Encapsulation  
+**Encapsulation** is one of the pillars of object orientation, it serves to **protect** class data.
+Encapsulating an application's data means preventing them from being accessed improperly.
+For this, a structure is created where modifiers such as `public`, `protected`, `private` are used to restrict access to this data.
+And methods that can be used by any other class, without causing inconsistencies in the development commonly called **getters** and **setters**.
 > **Show me the code:**  
-> A classe **Campo** que possui atributos encapsulados e métodos (getters e setters) para os dados serem consultados.
+> The **Campo** class which has encapsulated attributes and methods (getters and setters) for the data to be consulted.
 > ```java
 > package br.ies.aps.jogooito.modelo;
 > 
@@ -731,11 +729,11 @@ E métodos que podem ser utilizados por qualquer outra classe, sem causar incons
 > }
 > ```
 
-### 6.3. Composição
-Uma **composição** tenta representar também uma relação todo/parte. No entanto, na composição o **objeto-todo** é responsável por criar e destruir suas partes. Em uma composição um mesmo objeto-parte não pode se associar a mais de um objeto-todo.
+### 6.3 Composition
+The main reason to use composition is that it allows you to reuse code without modeling an *is-a* association as you do by using inheritance. That allows stronger encapsulation and makes your code easier to maintain.
 
 > **Show me the code:**  
-> O objeto criado a partir da instância da classe Tabuleiro vai possuir objetos da classe Campo, nesse caso quando o objeto Tabuleiro que é o **objeto-todo** for excluido, os objetos Campo também serão.
+> The object created from the Tabuleiro class instance will have objects of the Campo class, in this case when the Tabuleiro object is deleted, the Campo objects will also be deleted.
 > 
 > ```java
 > package br.ies.aps.jogooito.modelo;
@@ -784,12 +782,12 @@ Uma **composição** tenta representar também uma relação todo/parte. No enta
 > }
 > ```
 
-### 6.4. Herança
-Um objeto pode ter métodos e atributos de outra classe por **herança**, isso significa que a classe tem todas características da classe herdada, além de poder ter as suas próprias também.  
-Uma das grandes vantagens de usar o recurso da herança é na **reutilização do código**. Esse reaproveitamento pode ser acionado quando se identifica que o atributo ou método de uma classe será igual para as outras.  
+### 6.4 Inheritance
+An object can have methods and attributes from another class by **inheritance**, this means that the class has all the characteristics of the inherited class, in addition to being able to have its own as well.
+One of the great advantages of using inheritance is **code reuse**. This reuse can be triggered when it is identified that the attribute or method of a class will be the same for the others.  
 
 > **Show me the code:**  
-> Há herança na classe **BotaoMovimentoBaixo** que herda as funcionalidades da classe abstrata **BotaoMovimento** e sobrescreve o método **alteraEstadoTabuleiro()**.
+> There is inheritance in the class **BotaoMovimentoBaixo** which inherits the functionalities of the abstract class **BotaoMovimento** and overrides the method **alteraEstadoTabuleiro()**.
 > ```java
 > package br.ies.aps.jogooito.view.swing.botao;
 > 
@@ -821,14 +819,15 @@ Uma das grandes vantagens de usar o recurso da herança é na **reutilização d
 > }
 > ```
 
-### 6.5. Polimorfismo
-Termo usado para descrever situações nais quais algo pode ocorrer de diferentes formas. No Polimorfismo podemos ter dois tipos:  
+### 6.5 Polymorphism
+Term used to describe specific situations in which something can occur in different ways. There are two types of polymorphism:
 
-O polimorfismo **Estático ou Sobrecarga**, se dá quando temos a mesma operação implementada várias vezes na mesma classe. A escolha de qual operação será chamada depende da assinatura dos métodos sobrecarregados.  
+The **Static or Overload** polymorphism occurs when we have the same operation implemented several times in the same class. The choice of which operation to call depends on the signature of the overloaded methods.
 
-O polimorfismo **Dinâmico ou Sobreposição**, que é o princípio que permite que classes derivadas de uma mesma superclasse tenham métodos iguais (de mesma assinatura) mas comportamentos diferentes. Mesma assinatura = Mesma quantidade e tipo de parâmetros.  
-> **Show me the code:**  
-> A classe **BotaoMovimentoEsquerda** sobrescreve o método `alteraEstadoTabuleiro()` herdado da superclasse **BotaoMovimento** de acordo com sua especificidade, outras classes que herdam dessa mesma superclasse também terão que implementar o mesmo método, mas cada uma de uma forma diferente. Simbolizando o uso do **polimorfismo** de **sobrecarga**. 
+The **Dynamic or Overlapping** polymorphism, which is the principle that allows classes derived from the same superclass to have the same methods (with the same signature) but different behaviors. Same signature = same amount and type of parameters.  
+
+> **Show me the code:**
+> The class **BotaoMovimentoEsquerda** overwrites the method `alteraEstadoTabuleiro()` inherited from the superclass **BotaoMovimento** according to its specificity, other classes that inherit from the same superclass will also have to implement the same method, but each one of a different way. Symbolizing the use of the **polymorphism** of **overload**. 
 > ```java
 > package br.ies.aps.jogooito.view.swing.botao;
 > 
@@ -861,22 +860,22 @@ O polimorfismo **Dinâmico ou Sobreposição**, que é o princípio que permite 
 > ```
 
 ---
-## 7. Jogando
-Você precisa ter Java 8 ou outra versão acima.  
-Baixe o arquivo [8puzzle.jar](https://github.com/GuiSAlmeida/8puzzle-java/raw/master/8puzzle.jar), abra o terminal e passe o seguinte comando.  
+## 7 Playing
+You need to have Java 8 or above version.
+Download the file [8puzzle.jar](https://github.com/GuiSAlmeida/8puzzle-java/raw/master/8puzzle.jar), open the terminal and issue the following command. 
 
 ```
 java -jar 8puzzle.jar
 ```
 
 ---
-## 8. Referências
+## 8 References
 https://refactoring.guru/pt-br/design-patterns/factory-method  
 https://refactoring.guru/pt-br/design-patterns/observer  
 http://www.gqferreira.com.br/artigos/ver/mvc-com-java-desktop-parte1  
 http://www.dsc.ufcg.edu.br/~jacques/cursos/map/html/arqu/mvc/mvc.htm  
 
 ---
-## 9. Conclusão
-Este projeto me ajudou muito a por em prática conceitos de **Orientação a Objetos**, como também exercitar lógica de como funciona **arquitetura de software** em um projeto usando MVC e alguns **Padrôes de Projeto**.  
-E aí, o que achou desse projeto? Tem alguma sugestão ou crítica? Deixa uma reação ou um comentário aqui embaixo. E obrigado pela visita! 😉
+## 9 Conclusion
+This project helped me a lot to put into practice concepts of **Object Orientation**, as well as to exercise the logic of how **software architecture** works in a project using MVC and some **Design Patterns**.
+So, what did you think of this project? Do you have any suggestions or criticism? Leave a reaction or a comment below. And thanks for visiting! 😉

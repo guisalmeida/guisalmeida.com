@@ -7,7 +7,7 @@ import PostItem from '../components/PostItem'
 import Pagination from '../components/Pagination'
 
 import * as S from '../components/ListWrapper/styled'
-import { MainContent } from '../styles/base';
+import * as Base from '../styles/base';
 
 const BlogList = props => {
     const postList = props.data.allMarkdownRemark.edges;
@@ -21,9 +21,9 @@ const BlogList = props => {
         <Layout>
             <SEO title="Blog" />
 
-            <MainContent>
+            <Base.MainContent>
                 <h1>Blog</h1>
-            </MainContent>
+            </Base.MainContent>
 
             <S.ListWrapper>
                 {postList.map(({
@@ -90,7 +90,7 @@ export const query = graphql`
                     }
                     frontmatter {
                         category
-                        date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+                        date(locale: "en-us", formatString: "MMMM DD[,] YYYY")
                         description
                         title
                         tags
