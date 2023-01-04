@@ -55,6 +55,10 @@ export const PostItemDate = styled.time`
   font-size: 0.9rem;
   margin-bottom: 1rem;
   color: var(--highlight);
+
+  ${media.lessThan("medium")`
+    text-align: center;
+  `}
 `
 
 export const MainContent = styled.section`
