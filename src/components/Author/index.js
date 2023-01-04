@@ -34,7 +34,7 @@ const Author = ({ fullText }) => {
 
                 <h2>Keep in touch</h2>
                 <p>
-                    You con contact me through my social media (icons on the left) or by e-mail <a href="mailto:guisalmeida.dev@gmail.com" target="_blank" rel="noreferrer">guisalmeida.dev@gmail.com</a>.
+                    You can contact me through my social media (icons on the left) or by e-mail <a href="mailto:guisalmeida.dev@gmail.com" target="_blank" rel="noreferrer">guisalmeida.dev@gmail.com</a>.
                 </p>
             </>}
         </Base.MainContent>
