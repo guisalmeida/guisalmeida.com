@@ -33,7 +33,7 @@
 ```
 
 ## 🚀 Technologies
-- [ReactJS](https://pt-br.reactjs.org/);
+- [ReactJS](https://reactjs.org/);
 - [Gatsby V3](https://www.gatsbyjs.org/);
 - [GraphQL](https://graphql.org/);
 - [Styled Components](https://styled-components.com/);

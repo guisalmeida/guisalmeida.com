@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 export const ListWrapper = styled.section`
     body#grid & {
-    background-color: var(--background);
+    background-color: var(--mediumBackground);
     display: grid;
     grid-area: posts;
     grid-gap: 1px;

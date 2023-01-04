@@ -1,11 +1,6 @@
 ---
-title: Web moderna e Email Marketing HTML
-description: Depois de deixar o float de lado e aprender o maravilhoso flexbox,
-  criar layouts com display grid, as facilidades de um pré processador como Sass
-  pode trazer ao projeto e o uso das tags semânticas, sem falar dos frameworks
-  entre outras tecnologias da web moderna. Eis que nos deparamos com o desafio
-  de criar um “simples” template de email marketing em HTML para as
-  campanhas  da nossa empresa.
+title: Modern web and Email Marketing
+description: After leaving float aside and learning the wonderful flexbox, creating layouts with display grid, the facilities of a preprocessor like Sass can bring to the project and the use of semantic tags, not to mention frameworks among other modern web technologies. Here we are faced with the challenge of creating a HTML email marketing template for our company's campaigns.
 date: 2020-07-23 06:49:07
 thumbnailImage: ../../static/assets/img/thumb-mail.png
 category: blog
@@ -13,40 +8,40 @@ tags: ['#html', '#email']
 ---
 
 ___
-## Conteúdo
+## Index
 
 ```toc
-exclude: Conteúdo
+exclude: Index
 ```
 ---
-### Motivação
+## 1 Intro
 
-Atualmente lá na Linx trabalho diariamente com clientes de email automatizado, um dos nossos produtos da solução [reengage](https://www.linx.com.br/transformacao-digital/linx-impulse/re-engage/), o que me motivou a pesquisar mais sobre o assunto e escrever este post para tirar algumas dúvidas a respeito de como criar campanhas de e-mail marketing de forma simples e descomplicada.  
-
----
-### Tá mas e ai? Muda alguma coisa?
-
-Bom essa era a pergunta que eu me fazia até pouco tempo atrás e a responta é SIM muda bastante coisa. As técnicas para email marketing em HTML são um pouco diferentes e nem tudo que funciona em sites vai funcionar nas caixas de entrada.  
-Mas a ideia desse post não é nos aprofundarmos tecnicamente em tudo que o email suporta e todas suas especificidades. Pretendo aqui passar uma visão geral de como montar um template simples com dicas importantes para auxiliar quem está criando seu primeiro template de email em HTML.  
+Daily in my current job, I work with automated email clients, one of our solution products, which motivated me to research more on the subject and write this post to clarify some doubts about how to create email marketing campaigns in a simple and uncomplicated way.  
 
 ---
-### Começando pelo básico
+### 1.1 What changes?
 
-Tenha noção que HTML de emails é diferente de HTML de sites. Como citei na descrição do post algumas coisas que funcionam em sites não necessariamente funcionarão em email marketing, principalmente divs, sections, e folhas de estilo CSS externas, entre outras. Isso porque páginas da web sempre são renderizadas nos navegadores, enquanto o email será renderizado de acordo com o provedor de email e cada um tem as suas regras. Portanto o ideal é simplificar e a melhor maneira é usando as tabelas do HTML como veremos a seguir.
+Well, that was the question I asked myself until recently and the answer is YES, it changes a lot. HTML email marketing techniques are a little different, and not everything that works on websites will work in email providers.
+But the idea of this post is not to technically delve into everything that email supports and all its specificities. I intend here to give an overview of how to assemble a simple template with important tips to help those who are creating their first email template in HTML.  
 
 ---
-### Layout
+## 2 Structure
 
-Vamos criar nosso template apartir deste layout ao longo do post.\
-Acesse o layout [aqui](https://www.figma.com/file/RYosfog8wshbbndVRoYE14/assets?node-id=5%3A3).  
+Be aware that email HTML is different from website HTML. As I mentioned in the post description, some things that work on websites won't necessarily work on email marketing, mainly `divs`, `sections`, and external CSS stylesheets, among others. This is because web pages are always rendered in browsers, while email will be rendered according to the email provider and each one has its own rules. Therefore, the ideal is to simplify and the best way is to use HTML tables as we will see below.
+
+---
+### 2.1 Layout
+
+We will create our template from this layout throughout the post.  
+<!-- Access the layout [here](https://www.figma.com/file/RYosfog8wshbbndVRoYE14/assets?node-id=5%3A3).   -->
 
 ![Layout](../../static/assets/img/layout.jpg)
 
 ---
-### Criando a estrutura básica
+### 2.2 Basic structure
 
-* O `DOCTYPE` declara o tipo de tags de HTML o documento tem e que tipo de regras esperar, em sites normais atualmente é usado HTML5 porém para e-mails o mais indicado é o XHTML 1.0. Para saber mais sobre as diferenças clique [aqui](https://www.campaignmonitor.com/blog/email-marketing/2019/05/correct-doctype-to-use-in-html-email/).  
-* Outro parâmetro importante que deve ser passado é o encoding em `UTF-8` que vai garantir que sua mensagem consiga ser lida corretamente em diversos clientes de email.  
+* The `DOCTYPE` declares the type of HTML tags the document has and what kind of rules to expect, in normal sites HTML5 is currently used, but for emails the most recommended is XHTML 1.0. To learn more about the differences click [here](https://www.campaignmonitor.com/blog/email-marketing/2019/05/correct-doctype-to-use-in-html-email/).  
+* Another important parameter that must be passed is the encoding in `UTF-8` that will guarantee that your message can be read correctly in several email clients.  
 
 ```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -55,18 +50,17 @@ Acesse o layout [aqui](https://www.figma.com/file/RYosfog8wshbbndVRoYE14/assets?
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
-    <!--Conteudo mostrado em tela-->
+    <!--Here goes the content that should be shown on the screen-->
 </body>
 </html>
 ```
-
 ---
 
-### Adicionando conteúdo com tabelas
+### 2.3 Adding Content with Tables
 
-* Adicionamos a tag `link` importando a fonte que estamos usando no layout, adicionamos o estilo inline com uma lista de fontes. O importante é sempre colocarmos fontes alternativas semelhantes para as situações em que a fonte principal não possa ser exibida.  
-* Na tag `Table` é recomendado deixar os valores de `cellpaddding` e `cellspacing` como `0` para evitar espaços indesejados no seu email.  
-* Nessa parte criamos três estruturas de uma linha e uma coluna para mostrarmos a logo, a chamada principal e a outra chamada.  
+* Added the `link` tag importing the font we are using in the layout, added the inline style with a list of fonts. The important thing is that we always put similar alternative fonts for situations where the main font cannot be displayed.
+* In the `Table` tag it is recommended to leave the `cellpaddding` and `cellspacing` values as `0` to avoid unwanted spaces in your email.
+* In this part we created three structures of one line and one column to show the logo, the main call and the other call.  
 
 ```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -106,30 +100,30 @@ Acesse o layout [aqui](https://www.figma.com/file/RYosfog8wshbbndVRoYE14/assets?
 </html>
 ```
 
-Com isso já temos algumas coisas renderizando em tela:  
+With that we already have some things rendering on screen:  
 
 ![Layout começo](../../static/assets/img/layout1.png)
 
 ---
 
-### Cuidados com imagens
+## 3 Good practices
 
-Antes de adicionarmos as imagens vale uma dica.\
-Há uma prática ainda usada por algumas empresas que consiste em transformar todo e-mail em uma imagem, porém os provedores de e-mail possuem um bloqueio padrão de segurança para exibição de qualquer formato de imagem que esteja em um e-mail, sendo necessário o usuário aceitar a visualização das imagens.  
+Before we add the images, it's worth a tip.  
+There is a practice still used by some companies that consists of transforming every email into an image, but email providers have a standard security block for displaying any image format that is in an email, being necessary the user to accept the visualization of the images.  
 
-![Imagem quebrada](../../static/assets/img/template-html-email-2.png)\
-Crédito da imagem: https://resultadosdigitais.com.br/blog/template-html-email/
+![Broken image](../../static/assets/img/template-html-email-2.png)  
+Source: https://resultadosdigitais.com.br/blog/template-html-email/
 
-Isso não funciona bem como mostra a imagem acima. É preciso que o email mostre a que veio logo de cara. Ao usar apenas imagem, muitos destinatários irão ignorar o email, deletá-lo ou marcá-lo como spam. Uma boa prática é usarmos uma proporção de 40% de imagens e 60% texto. Dessa forma, seu email fica mais leve e bem estruturado.
-Como o conteúdo é para web tente deixar imagens com tamanho máximo de 100kb.  
+This doesn't work as well as the image above shows. The email needs to show what it came from right away. By using image only, many recipients will ignore the email, delete it or mark it as spam. A good practice is to use a ratio of 40% images and 60% text. This way, your email is lighter and better structured.
+As the content is for the web try to leave images with a maximum size of 100kb.  
 
 ---
 
-### Adicionando imagens
+### 3.1 Adding images
 
-* Uma boa prática é colocar sempre o caminho absoluto das imagens, evitando assim erros no carregamento.
-* O atributo `ALT` oferece um texto alternativo quando alguma imagem não carrega ou não pode ser visualizada. Esse atributo é muito usado para melhorar a acessibilidade de uma página na web e principalmente de um e-mail marketing, já que muitos clientes de e-mail bloqueiam as imagens enviadas por remetentes desconhecidos. Nesta situação, a função do atributo é facilitar a “pré-leitura” para o usuário.
-* Procure não trabalhar com `.svg` alguns provedores como gmail não renderizam este tipo de arquivo.  
+* A good practice is to always put the absolute path of the images, thus avoiding loading errors.
+* The `alt` attribute provides an alternative text when an image does not load or cannot be displayed. This attribute is often used to improve the accessibility of a web page and especially of email marketing, as many email clients block images sent by unknown senders. In this situation, the function of the attribute is to facilitate the “pre-reading” for the user.
+* Try not to work with `.svg` some providers like **gmail** do not render this type of file.  
 
 ```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -224,21 +218,21 @@ Como o conteúdo é para web tente deixar imagens com tamanho máximo de 100kb.
 </html>
 ```
 
-Com isso já temos nosso layout finalizado com largura fixa:  
+With that we already have our layout finished with fixed width:  
 
 ![Layout fixo finalizado](../../static/assets/img/layout2.png)
 
 ---
 
-### Ajustando textos
+### 3.2 Adjusting texts
 
-Acentos e caracteres especiais também podem não renderizar corretamente de acordo com cada provedor e devem ser substituidos por encoding.
+Accents and special characters may also not render correctly according to each provider and must be replaced by encoding.
 
-Se você usa o VS code, uma ferramenta que uso para me auxiliar é a [HTML accented character converter](https://github.com/enriquein/htmlentity-replacer) que pode ser encontrada na aba extenções da ide.  
+If you use VS code, a tool I use to help me is [HTML accented character converter](https://github.com/enriquein/htmlentity-replacer) which can be found in the extensions tab of the ide.  
 
 ![Demo](https://github.com/enriquein/htmlentity-replacer/raw/master/demo.gif)
 
-* Acentos e caracteres especiais substituidos:  
+* Accents and special characters replaced:  
 
 ```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -335,9 +329,9 @@ Se você usa o VS code, uma ferramenta que uso para me auxiliar é a [HTML accen
 
 ---
 
-### Enviando nosso e-mail marketing
+## 4 Sending the email marketing
 
-Para testar enviei o email para o gmail e outlook e segue resultado:  
+To test I sent the email to gmail and outlook and the result follows:  
 
 ![gmail](../../static/assets/img/gmail.png)
 
@@ -345,7 +339,7 @@ Para testar enviei o email para o gmail e outlook e segue resultado:
 
 ---
 
-### Fontes para saber mais:
+## 5 References:
 
 * https://blog.mailee.me/email-marketing-html/
 * https://resultadosdigitais.com.br/blog/template-html-email/
@@ -355,10 +349,11 @@ Para testar enviei o email para o gmail e outlook e segue resultado:
 * https://www.campaignmonitor.com/blog/email-marketing/2019/05/correct-doctype-to-use-in-html-email/
 
 ---
-### Contribua
-Fique a vontade para fazer fork e testar, ajustar bugs, implementar mais features, etc.
-https://github.com/GuiSAlmeida/email-mkt
+## 6 Contribute
+Feel free to fork and test, fix bugs, implement more features, etc.  
+**Source code**: https://github.com/GuiSAlmeida/email-mkt
 
 ---
-### Conclusão  
-E aí, o que achou desse post? Tem alguma sugestão ou crítica? Deixa uma reação ou um comentário aqui embaixo. E obrigado pela visita! 😉
+## 7 Conclusion
+Many things change from the normal way we are used to developing for the web when it comes to emails, I hope I have helped you to understand these differences.  
+What did you think of this post? Do you have any suggestions or criticism? Leave a reaction or a comment below. And thanks for visiting! 😉

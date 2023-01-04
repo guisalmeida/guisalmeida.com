@@ -69,20 +69,18 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
             </S.MenuBarGroupMobile>
 
             <S.MenuBarGroup>
-                {slug &&
-                    <S.MenuBarItem
-                        title='Mudar vizualização'
-                        onClick={() => {
-                            window.__setPreferredDisplay(isListMode ? 'grid' : 'list')
-                        }}
-                        className="display"
-                    >
-                        {isListMode ? <Grid /> : <List />}
-                    </S.MenuBarItem>
-                }
+                <S.MenuBarItem
+                    title='Change visualizaation grid'
+                    onClick={() => {
+                        window.__setPreferredDisplay(isListMode ? 'grid' : 'list')
+                    }}
+                    className="display"
+                >
+                    {isListMode ? <Grid /> : <List />}
+                </S.MenuBarItem>
 
                 <S.MenuBarItem
-                    title='Mudar o tema'
+                    title='Change color theme'
                     onClick={() => {
                         window.__setPreferredTheme(isLightMode ? 'dark' : 'light')
                     }}

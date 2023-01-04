@@ -4,9 +4,12 @@ import Image from '../Image/Image';
 import Tags from '../Tags'
 
 import * as S from './styled';
+import * as Base from '../../styles/base'
 
 const ProjectItem = ({ 
     slug,
+    date,
+    timeToRead,
     title,
     description,
     tags,
@@ -18,6 +21,10 @@ const ProjectItem = ({
 
             <S.ProjectItemInfo>
                 <S.ProjectItemTitle>{title}</S.ProjectItemTitle>
+                {date &&
+                    <Base.PostItemDate>
+                        Posted on {date} - {timeToRead} minutes of reading
+                    </Base.PostItemDate>}
                 <S.ProjectItemDescription>{description}</S.ProjectItemDescription>
                 {tags && (
                     <Tags tags={tags} isLink={false} />
@@ -30,6 +37,8 @@ const ProjectItem = ({
 
 ProjectItem.propTypes = {
     slug: PropTypes.string.isRequired,
+    date: PropTypes.string,
+    timeToRead: PropTypes.number,
     thumbnailImage: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     tags: PropTypes.array,

@@ -4,7 +4,7 @@ import * as S from './styled';
 
 const TextCredit = () => (
     <S.TextCredit>
-        Desenvolvido com <span>&hearts;</span> em Floripa por<br/>Guilherme Almeida.
+        Developed with <span>&hearts;</span> by Guilherme Almeida.
     </S.TextCredit> 
         
 )

@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import Comments from '../components/Comments'
 import Tags from '../components/Tags'
 
+import * as Base from '../styles/base';
 import * as S from '../components/Post/styled'
 
 const Post = ({ data }) => {
@@ -22,16 +23,17 @@ const Post = ({ data }) => {
                 <S.PostImage image={post.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} />
             }
             <S.PostHeader>
-                {post.frontmatter.category !== 'project' &&
-                <S.PostDate>{post.frontmatter.date} - {post.timeToRead} min de leitura</S.PostDate>}
                 <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
+                <S.PostDate>
+                    Posted on {post.frontmatter.date} - {post.timeToRead} minutes of reading
+                </S.PostDate>
                 <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
                 <Tags tags={post.frontmatter.tags} isLink={false} />
             </S.PostHeader>
 
-            <S.MainContent>
+            <Base.MainContent>
                 <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
-            </S.MainContent>
+            </Base.MainContent>
             <Comments url={post.fields.slug} title={post.frontmatter.title} />
         </Layout>
     )
@@ -48,7 +50,7 @@ export const query = graphql`
                 title
                 description
                 tags
-                date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+                date(locale: "en-us", formatString: "MMMM DD[,] YYYY")
                 thumbnailImage {
                     childImageSharp {
                         gatsbyImageData(layout: CONSTRAINED, quality: 100)

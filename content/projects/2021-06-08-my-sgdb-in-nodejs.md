@@ -1,31 +1,29 @@
 ---
-title: Meu SGDB em nodeJS pelo terminal
-description: O "DBGen" é um SGDB bem simples que roda por CLI, feito em nodejs para
-  estudar as práticas de comandos SQL, funcionamento de um banco de dados e
-  conceitos do javascript ES6.
+title: My SGDB in nodeJS
+description: DBGen is a simple DBMS (Data Base Management System), that runs through a terminal, made in nodeJS to study the practices of SQL commands, database operation and ES6 javascript concepts.
 date: 2021-06-12 11:40:16
 thumbnailImage: ../../static/assets/img/dbgen_2.png
 category: project
 tags: ['#javascript', '#node', '#terminal', '#cli', '#sgdb']
 ---
 ___
-## Índice
+## Index
 
 ```toc
-exclude: Índice
+exclude: Index
 ```
 ---
-## 1. Introdução
-Este é um projeto estudo de caso feito para praticar conceitos do javascript ES6+. Como: `classes`, `arrow function`, `destructuring`, `template strings`, `iterators for in & for of`, `map & set`, `promises`, `rest & spread operator`, entre outros.  
-Também pude entender melhor o funcionamento de um SGDB e banco de dados. Criando tabelas e lógicas para consulta e alteração dos dados no banco.  
+## 1 Intro
+This is a case study project made to practice ES6+ javascript concepts. Like: `classes`, `arrow function`, `destructuring`, `template strings`, `iterators for in & for of`, `map & set`, `promises`, `rest & spread operator`, among others.  
+I could also better understand how a DBMS and database work. Creating tables and logic for querying and changing data in the database.  
 
-### 1.1 O que é um SGDB
-É um sistema responsável pelo gerenciamento de um ou mais bancos de dados. Seu principal objetivo é retirar da aplicação cliente a responsabilidade de gerenciar o acesso, a persistência, a manipulação e a organização dos dados. O SGBD disponibiliza uma interface para que seus clientes possam incluir, alterar ou consultar dados previamente armazenados.
-Exemplos de SGDBs: `PostgreSQL`, `MongoDB`, `MySQL`, `MariaDB` e `Oracle`.  
+### 1.1 What is a DBMS
+It is a system responsible for managing one or more databases. Its main objective is to remove the responsibility of managing access, persistence, manipulation and organization of data from the client application. The DBMS provides an interface so that its customers can add, change or query previously stored data.
+Examples of DBMSs: `PostgreSQL`, `MongoDB`, `MySQL`, `MariaDB` and `Oracle`.  
 
 ---
-## 2. Classe Database
-A lógica principal do código fica organizada na classe database, onde são definidos os métodos como o `createTable` que ao ser chamado cria uma nova tabela no banco de acordo com os dados passados no terminal. Quem define o comando que será chamado é o método `execute` que retorna uma promise invocando o comando.
+## 2 Database Class
+The main logic of the code is organized in the Database class, where methods such as `createTable` are defined which, when called, creates a new table in the database according to the data passed in the terminal. Who defines the command that will be called is the `execute` method that returns a promise invoking the command.  
 ```js
 ...
 
@@ -73,8 +71,8 @@ class Database {
 ```
 ---
 
-## 3. Parse dos comandos com Map
-Aqui são definidas as queries para manipulação de dados no banco, usando `Map` para setar os comandos por pares, onde a chave possui os nomes dos métodos da nossa classe Database e os valores são `regex` que por meio de grupos de captura auxiliam no processo de separar cada campo(coluna) do registro(linha) na tabela.
+## 3 Parsing commands with Map
+Here the queries for manipulating data in the database are defined, using `Map` to set the commands by pairs, where the key has the names of the methods of our Database class and the values are `regex` which, through capture groups, help in the process of separating each field (column) from the record (row) in the table.
 ```js
 class Parser {
     constructor(){
@@ -101,11 +99,11 @@ class Parser {
 ```
 ---
 
-## 4. Utils
-Aqui ficam separadas algumas funções utilitárias.
+## 4 Utils
+Here are some utility functions.
 
 ### 4.1 GenerateId
-Função que cria um número randômico para **Chave primária**(Id) para cada campo criado na tabela.
+Function that creates a random number for **Primary key**(Id) for each field created in the table.
 ```js
 const crypto = require('crypto');
 
@@ -114,7 +112,7 @@ module.exports = function generateId(){
 }
 ```
 ### 4.2 SaveJson  
-Função que salvo os dados da tabela em arquivo no formato `Json`.
+Function that saves the table data in a file in `Json` format.
 ```js
 const fs = require('fs');
 
@@ -126,7 +124,7 @@ module.exports = function saveJSON(file, data) {
 ```
 
 ### 4.3 LoadJson  
-Função que lê os dados da tabela no arquivo `Json` se existir.
+Function that reads the data from the table in the `Json` file if it exists.
 ```js
 const fs = require('fs');
 
@@ -138,7 +136,7 @@ module.exports = function loadJSON (filename = ''){
 ```
 
 ### 4.4 ShowTable
-Com auxílio da lib [cli-table](https://github.com/Automattic/cli-table), a função renderiza a tabela no terminal assim que algum comando de consulta é passado.
+With the help of lib [cli-table](https://github.com/Automattic/cli-table), the function renders the table in the terminal as soon as a query command is passed.
 
 ```js
 
@@ -178,8 +176,8 @@ module.exports = function showTable(header, data) {
 ```
 
 ---
-## 5. Instanciando a classe Databasse (index)
-Aqui é instanciado um novo objeto `database`, onde os argumentos(`args`) recebidos pelo terminal são passados para o método `execute` que como já vimos vai fazer a lógica e rodar o comando para manipular o banco.
+## 5 Instantiating the Database class
+Here, a new `database` object is instantiated, where the arguments (`args`) received by the terminal are passed to the `execute` method which, as we have seen, will carry out the logic and run the command to manipulate the database.
 ```js
 const Database = require('./src/database');
 const database = new Database();
@@ -198,17 +196,17 @@ let args = process.argv.splice(2, process.argv.length - 1).join(' ');
 newDatabase(args);
 ```
 ---
-## 6. Executando a CLI
-Usando os comandos a seguir, vamos criar uma tabela no nosso banco que no fim será salvo em arquivo json.  
+## 6 Running the CLI
+Using the following commands, we are going to create a table in our database that in the end will be saved in a json file.
 
-### 6.1 Criando tabela
-Vamos criar uma tabela chamada **"authors"** com os campos **"name, age, city, state e country"**.  
-Também será adicionada automaticamente um campo **"Id"** com valor numérico unico para ser nossa chave primária de cada registro.
-No terminal passamos a query:
+### 6.1 Creating a table
+Let's create a table called **"authors"** with the fields **"name, age, city, state and country"**.
+An **"Id"** field with a unique numeric value will also be automatically added to be our primary key for each record.
+In the terminal we pass the query:
 ```
 dbgen "create table authors (name varchar(50), age int, city varchar(50), state varchar(50), country varchar(50))"
 ```
-Fazendo uma consulta já podemos ver a tabela criada, porém sem nenhum registro ainda:
+Doing a query we can see the table created, but without any records yet:
 ```
 dbgen "select * from authors"
 
@@ -218,14 +216,14 @@ dbgen "select * from authors"
 
 ```
 
-### 6.2 Inserindo registros
-Vamos inserir alguns registros na tabela com os comandos abaixo:
+### 6.2 Inserting records
+Let's insert some records into the table with the commands below:
 ```
 dbgen "insert into authors (name, age, city, country) values (Martin Fowler, 57, Walsall, England)"
 dbgen "insert into authors (name, age, city, country) values (Linus Torvalds, 51, Helsinki, Finland)"
 dbgen "insert into authors (name, age, state, country) values (Douglas Crockford, 66, Minnesota, EUA)"
 ```
-Fazendo uma nova consulta já podemos ver a tabela com os registros inseridos:
+Making a new query we can see the table with the inserted records:
 ```
 dbgen "select * from authors"
 
@@ -241,8 +239,8 @@ dbgen "select * from authors"
 
 ```
 
-### 6.3 Fazendo uma consulta especifica
-Podemos também fazer uma query de consulta passando um campo especifico:
+### 6.3 Making a specific query
+We can also make a query by passing a specific field:
 ```
 dbgen "select id, name, age from authors where name = Linus Torvalds"
 
@@ -254,12 +252,12 @@ dbgen "select id, name, age from authors where name = Linus Torvalds"
 
 ```
 
-### 6.4 Deletando registro
-Por fim podemos deletar um registro da tabela com o comando:
+### 6.4 Deleting record
+Finally, we can delete a record from the table with the command:
 ```
 dbgen "delete from authors where name = Martin Fowler"
 ```
-Vamos consultar agora a tabela e ver o resultado:
+Let's now query the table and see the result:  
 ```
 dbgen "select * from authors"
 
@@ -273,8 +271,8 @@ dbgen "select * from authors"
 
 ```
 ---
-## 7. Json com banco de dados
-Formato da tabela e campos gravados no arquivo `db.json` que funciona como nosso banco.
+## 7 Json with database
+Table format and fields recorded in the `db.json` file that works as our database.
 
 ```json
 {
@@ -309,11 +307,11 @@ Formato da tabela e campos gravados no arquivo `db.json` que funciona como nosso
 }
 ```
 ---
-## 8. Contribua
-Fique a vontade para fazer fork e testar, ajustar bugs, implementar mais features como uma query de update #ficaadica.  
-https://github.com/GuiSAlmeida/dbgen-cli
+## 8 Contribute
+Feel free to fork and test, fix bugs, implement more features like an update query.  
+**Source Code:** https://github.com/GuiSAlmeida/dbgen-cli
 
 ---
-## 9. Conclusão
-Este projeto me ajudou muito a por em prática novos conceitos do javascript ES6, como também exercitar lógica de como funciona um banco de dados.  
-E aí, o que achou desse projeto? Tem alguma sugestão ou crítica? Deixa uma reação ou um comentário aqui embaixo. E obrigado pela visita! 😉
+## 9 Conclusion
+This project helped me a lot to put into practice new ES6+ javascript concepts, as well as to exercise the logic of how a database works.
+So, what did you think of this project? Do you have any suggestions or criticism? Leave a reaction or a comment below. And thanks for visiting! 😉

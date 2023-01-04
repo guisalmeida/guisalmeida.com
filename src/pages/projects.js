@@ -5,7 +5,7 @@ import ProjectItem from "../components/ProjectItem"
 import SEO from "../components/seo"
 
 import * as S from '../components/ListWrapper/styled'
-import { MainContent } from '../styles/base';
+import * as Base from '../styles/base';
 
 
 const ProjectsPage = () => {
@@ -19,6 +19,7 @@ const ProjectsPage = () => {
                     node {
                         frontmatter {
                             title
+                            date(locale: "en-us", formatString: "MMMM DD[,] YYYY")
                             description
                             category
                             tags
@@ -29,6 +30,7 @@ const ProjectsPage = () => {
                         fields {
                             slug
                         }
+                        timeToRead
                     }
                 }
             }
@@ -38,18 +40,36 @@ const ProjectsPage = () => {
     return (
         <Layout>
             <SEO
-                title="Projetos"
-                description="Alguns projetos de portfólio."
+                title="Projects"
+                description="Some projects that I made."
             />
-            <MainContent>
-                <h1>Projetos</h1>
-            </MainContent>
+            <Base.MainContent>
+                <h1>Projects</h1>
+            </Base.MainContent>
 
             <S.ListWrapper>
-                {projects.map(({ node: { fields: { slug }, frontmatter: { title, description, tags, thumbnailImage: {relativePath} } } }, index) => (
+                {projects.map(({ 
+                    node: { 
+                        fields: { 
+                            slug 
+                        }, 
+                        frontmatter: { 
+                            title,
+                            date,
+                            description, 
+                            tags, 
+                            thumbnailImage: {
+                                relativePath
+                            } 
+                        },
+                        timeToRead
+                    } 
+                }, index) => (
                     <ProjectItem
                         key={index}
                         title={title}
+                        date={date}
+                        timeToRead={timeToRead}
                         description={description}
                         slug={slug}
                         tags={tags}

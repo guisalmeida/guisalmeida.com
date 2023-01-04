@@ -1,21 +1,19 @@
 ---
 title: Hello World
-description: Começando meu blog pessoal, aqui pretendo compartilhar o que venho
-  aprendendo sobre desenvolvimento web, ciência da computação e afins..
+description: Starting my personal blog, here I intend to share what I've been learning about web development, computer science and others technology stuff.
 date: 2020-06-28 03:19:24
 thumbnailImage: ../../static/assets/img/thumb-hello.png
 category: blog
-tags: ['#carreira', '#estudos']
+tags: ['#carrer', '#study']
 ---
 ___
 
-Olá! me chamo Guilherme se quiser saber mais sobre mim pode ver [aqui](https://guisalmeida.com/about), você deve ser novo por aqui, por isso resolvi escrever esse meu primeiro post falando um pouco das minhas motivações de ter um blog.
+Hi! I'm Guilherme, if you want to know more about me you can see [here](https://guisalmeida.com/about), you must be new here, so I decided to write my first post talking a little about my motivations for having a blog.
 
-Me considero iniciante ainda como desenvolvedor, até 2018 minha carreira profissional foi sempre como designer trabalhando em projetos como diagramação de livros, comunicação visual, marketing em agência e freelas de criação de papelarias e identidade visual.
+I still consider myself a beginner as a developer, until 2018 my professional career was always as a designer working on projects such as book layout, visual communication, agency marketing and freelance creation of stationery and visual identity.
 
-Com isso pretendo compartilhar o conhecimento que venho adquirindo como forma de validar, memorizar e ajudar outros iniciantes que estejam passando pelos mesmos problemas e dúvidas.
+With this I intend to share the knowledge that I have been acquiring as a way to validate, memorize and help other beginners who are going through the same problems and doubts.
 
-Pretendo postar dicas de desenvolvimento web principalmente, um pouco de teoria sobre o que venho estudando no curso de ciência da computação, resenhas de livros de tecnologia, eventos, cursos e o que mais me vier na cabeça.
+I intend to post web development tips mainly, a little theory about what I've been studying in the computer science course, technology book reviews, events, courses and whatever else comes to mind.
 
-Então é isso fique a vontade, sirva um café e aguarde por novos posts para irmos trocando ideia sobre o mundo `dev`.
-
+So that's it, feel free, get a cup of coffee and wait for new posts so we can exchange ideas about the technology world.

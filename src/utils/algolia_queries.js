@@ -12,7 +12,7 @@ const postsQuery = `
                     frontmatter {
                         category
                         date_timestamp: date
-                        date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+                        date(locale: "en-us", formatString: "MMMM DD[,] YYYY")
                         description
                         title
                         tags

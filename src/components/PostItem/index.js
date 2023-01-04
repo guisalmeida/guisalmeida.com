@@ -4,6 +4,7 @@ import Image from '../Image/Image';
 import Tags from '../Tags';
 
 import * as S from './styled';
+import * as Base from '../../styles/base'
 
 const PostItem = ({
     slug,
@@ -21,9 +22,11 @@ const PostItem = ({
             }
 
             <S.PostItemInfo>
-                {date &&
-                    <S.PostItemDate>{date} - {timeToRead} min de leitura</S.PostItemDate>}
                 <S.PostItemTitle>{title}</S.PostItemTitle>
+                {date &&
+                    <Base.PostItemDate>
+                        {date} - {timeToRead} minutes of reading
+                    </Base.PostItemDate>}
                 <S.PostItemDescription>{description}</S.PostItemDescription>
                 {tags && (
                     <Tags tags={tags} isLink={false} />

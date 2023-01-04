@@ -7,6 +7,7 @@ export const PaginationWrapper = styled.section`
     display: flex;
     padding: 1.5rem 5rem;
     justify-content: center;
+    border-top: 1px solid var(--mediumBackground);
 
     ${media.lessThan("medium")`
         font-size: .8rem;

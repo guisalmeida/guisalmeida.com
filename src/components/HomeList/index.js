@@ -19,7 +19,7 @@ const blogListQuery = graphql`
           }
           frontmatter {
             category
-            date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+            date(locale: "en-us", formatString: "MMMM DD[,] YYYY")
             description
             title
             tags
@@ -41,9 +41,9 @@ const HomeList = () => {
   return (
     <>
       <Subtitle>
-        <h3>Últimas do blog</h3>
+        <h3>Last posts</h3>
         <BlogLink to="/blog/">
-          Ver todos os posts
+          See all posts
         </BlogLink>
       </Subtitle>
 

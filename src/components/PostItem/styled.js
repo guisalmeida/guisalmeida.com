@@ -29,15 +29,15 @@ export const PostItemLink = styled(Link)`
 
 export const PostItemWrapper = styled.section`
   align-items: center;
-  border-bottom: 1px solid var(--background);
+  border-bottom: 1px solid var(--mediumBackground);
   display: flex;
   padding: 2rem 5rem;
   width: 100%;
   transition: ${transitions.ALL};
-  background: var(--mediumBackground);
+  background: var(--background);
 
   &:hover {
-    background-color: var(--highlight);
+    background-color: var(--mediumBackground);
   }
   
   body#grid & {
@@ -74,10 +74,6 @@ export const PostItemInfo = styled.div`
     margin: 0;
     width: 100%;
   `}
-`
-
-export const PostItemDate = styled.time`
-  font-size: 0.9rem;
 `
 
 export const PostItemTitle = styled.h1`
