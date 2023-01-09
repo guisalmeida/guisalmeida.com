@@ -17,13 +17,13 @@ Fashionista is a fictional women's fashion e-commerce made as the final challeng
 ![Home](../../static/assets/img/fashionista-layout1.png)
 
 ### **Product Page Layout**
-![Produto](../../static/assets/img/fashionista-layout2.png)
+![Product](../../static/assets/img/fashionista-layout2.png)
 
 ### **Open Cart Layout**
-![Carrinho](../../static/assets/img/fashionista-layout3.png)
+![Cart](../../static/assets/img/fashionista-layout3.png)
 
 ### **Search Page Layout**
-![Busca](../../static/assets/img/fashionista-layout4.png)
+![Search](../../static/assets/img/fashionista-layout4.png)
 
 ### 🛠️ **Technologies**
 -   HTML5
