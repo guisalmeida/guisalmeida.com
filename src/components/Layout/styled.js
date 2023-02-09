@@ -12,7 +12,7 @@ export const LayoutWrapper = Styled.section`
 export const LayoutMain = Styled.main`
     background: var(--background);
     min-height: 100vh;
-    padding: 0 3.75rem 0 20rem;
+    padding: 0 3rem 0 20rem;
     transition: background, color 0.5s;
     width: 100%;
 
