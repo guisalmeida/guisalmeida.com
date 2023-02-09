@@ -21,7 +21,7 @@ Daily in my current job, I work with automated email clients, one of our solutio
 ---
 ### 1.1 What changes?
 
-Well, that was the question I asked myself until recently and the answer is YES, it changes a lot. HTML email marketing techniques are a little different, and not everything that works on websites will work in email providers.
+Well, that was the question I asked myself until recently and the answer is YES, it changes a lot. HTML email marketing techniques are a little different, and not everything that works on websites will work in email providers.  
 But the idea of this post is not to technically delve into everything that email supports and all its specificities. I intend here to give an overview of how to assemble a simple template with important tips to help those who are creating their first email template in HTML.  
 
 ---

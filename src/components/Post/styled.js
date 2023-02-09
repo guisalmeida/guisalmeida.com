@@ -47,6 +47,7 @@ export const PostDescription = styled.h2`
   font-weight: 300;
   font-style: italic;
   color: var(--texts);
+  text-align: justify;
 
   ${media.lessThan("medium")`
     font-size: 1.6rem;

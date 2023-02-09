@@ -31,6 +31,7 @@ export const PostDescription = styled.h2`
   font-size: 2rem;
   font-weight: 200;
   padding: 0 1.6rem;
+  text-align: justify;
 
   ${media.lessThan('medium')`
     font-size: 1.6rem;
@@ -87,6 +88,7 @@ export const MainContent = styled.section`
     line-height: 1.7;
     letter-spacing: 0.069rem;
     padding: 0 1.6rem;
+    text-align: justify;
 
     ${media.lessThan('medium')`
       padding: 0 1rem;

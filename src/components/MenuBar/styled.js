@@ -14,7 +14,7 @@ export const MenuBarWrapper = styled.aside`
   padding: 0.8rem 0;
   position: fixed;
   right: 0;
-  width: 3.75rem;
+  width: 3rem;
   transition: background 0.5s;
 
   ${media.lessThan("medium")`

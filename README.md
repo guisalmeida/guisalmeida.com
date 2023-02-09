@@ -21,15 +21,15 @@
 
 ## Start
 ```
-    git clone git@github.com:GuiSAlmeida/guisalmeida.com.git
-    cd guisalmeida.com
-    yarn install # or npm install
+git clone git@github.com:GuiSAlmeida/guisalmeida.com.git
+cd guisalmeida.com
+yarn install # or npm install
 
-    #install gatsby cli
-    yarn global add gatsby-cli # or npm install -g gatsby-cli
+#install gatsby cli
+yarn global add gatsby-cli # or npm install -g gatsby-cli
 
-    # up server at http://localhost:8000/
-    yarn start # or npm run start
+# up server at http://localhost:8000/
+yarn start # or npm run start
 ```
 
 ## 🚀 Technologies
@@ -52,5 +52,7 @@
 * [x] Change scrollbar color
 * [x] Make page 404
 * [x] Add tags in posts
+* [x] Update to Gatsby 3
 * [ ] New feature to hide main menu in desktop
 * [ ] Write tests
+* [ ] Change from Gatsby to Next
