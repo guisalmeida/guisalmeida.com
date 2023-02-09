@@ -31,7 +31,7 @@ const Author = ({ fullText }) => {
                     <li>Bundle tools (Webpack / Gulp)</li>
                     <li>Testing (Cypress / Mocha / Jest)</li>
                     <li>Git / Github / Gitlab</li>
-                    <li>REST APIs</li>
+                    <li>REST APIs (Postman / Insomnia)</li>
                     <li>Database (PostgreSQL / GraphQL)</li>
                     <li>Docker</li>
                     <li>Agile Methodologies (Scrum / Kanban)</li>
