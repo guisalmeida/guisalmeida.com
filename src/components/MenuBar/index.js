@@ -42,7 +42,7 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
             <S.MenuBarGroup>
                 <S.MenuBarLink
                     to='/'
-                    title='Voltar para home'
+                    title='Back to home'
                 >
                     <S.MenuBarItem>
                         <Home />
@@ -51,7 +51,7 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
 
                 <S.MenuBarLink
                     to='/search/'
-                    title='Pesquisar'
+                    title='Search'
                 >
                     <S.MenuBarItem>
                         <Search />
