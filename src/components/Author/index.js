@@ -8,7 +8,7 @@ const Author = ({ fullText }) => {
         <Base.MainContent>
             {fullText && 
             <h1>About</h1> || <h1>Hello!</h1>}
-            <p>I'm a Software Engineer focusing on Front End Development, graduated with a Bachelor's of Computer Science (2022), and +4 years of experience in software development.
+            <p>I'm a Software Engineer focusing on Web Development, graduated with a Bachelor's of Computer Science (2022), and +4 years of experience in software development.
             I worked on several projects, primarily in web development and mainly using Javascript, nodeJS, and Python. Responsible for creating very understandable and functional code. </p>
             <p>I'm passionate about learning new technologies and challenging jobs, sharing knowledge, and teamwork.</p>
             <p>Outside of work, I have a passion for skateboarding, and also I like cooking vegetarian recipes and spending time with my wife and dogs.</p>
