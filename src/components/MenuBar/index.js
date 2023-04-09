@@ -70,7 +70,7 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
 
             <S.MenuBarGroup>
                 <S.MenuBarItem
-                    title='Change visualizaation grid'
+                    title='Change visualization grid'
                     onClick={() => {
                         window.__setPreferredDisplay(isListMode ? 'grid' : 'list')
                     }}
