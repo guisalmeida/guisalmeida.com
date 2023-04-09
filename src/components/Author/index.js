@@ -17,7 +17,7 @@ const Author = ({ fullText }) => {
                 <h2>Skills</h2>
                 <p>As long as I started my career, I worked as a designer for about 6 years before becoming a developer, then I also have extensive knowledge of some design patterns and tools. I have Experience in Web Development, Software Development, Graphic Design, Computer Science, and Agile Methodologies.</p>
 
-                <p>I have worked with and studied different technologies, and below are some that I feel comfortable to work:</p>
+                <p>I have been working with and studying different technologies, and below are some that I feel comfortable to work:</p>
 
                 <ul>
                     <li>Javascript (Typescript / ES6+ / NodeJS / Jquery)</li>
