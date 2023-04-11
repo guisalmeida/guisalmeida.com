@@ -1,10 +1,10 @@
 ---
-title: My SGDB in nodeJS
+title: My DBMS in nodeJS
 description: DBGen is a simple DBMS (Data Base Management System), that runs through a terminal, made in nodeJS to study the practices of SQL commands, database operation and ES6 javascript concepts.
 date: 2021-06-12 11:40:16
 thumbnailImage: ../../static/assets/img/dbgen_2.png
 category: project
-tags: ['#javascript', '#node', '#terminal', '#cli', '#sgdb']
+tags: ['#javascript', '#node', '#terminal', '#CLI', '#DBMS']
 ---
 ___
 ## Index
