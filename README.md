@@ -1,13 +1,13 @@
 
 <p align="center">
-  <a href="https://www.guisalmeida.com">
+  <a href="https://www.guisalmeida.com" target="_blank">
     <img alt="Logo" src="src/images/gui-icon.png" width="60" />
   </a>
 </p>
 <h1 align="center">
   <code>guisalmeida.com</code>
   <p align="center">
-    <a href="https://app.netlify.com/sites/guisalmeida/deploys">
+    <a href="https://app.netlify.com/sites/guisalmeida/deploys" target="_blank">
       <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/d5853d6a-fa00-41f5-8bd2-00a57982577e/deploy-status" />
     </a>
   </p>

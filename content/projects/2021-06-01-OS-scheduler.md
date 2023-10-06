@@ -9,12 +9,18 @@ tags: ['#python', '#pandas', '#numpy', '#matplotlib']
 ___
 This project aims to create a gantt chart to simulate the scaling processes of the operating system, using algorithms such as FIFO, SJB and Priority. These algorithms order the processes and calculate the waiting time and the total time that each one obtained. Consequentely, it is possible to calculate the average waiting time that each process obtained and verify which algorithm obtained the best performance.
 
+<p>
+    Source code:  
+    <a href="https://github.com/guisalmeida/OS-Scheduler" target="_blank">
+        https://github.com/guisalmeida/OS-Scheduler
+    </a>
+</p>
+
 ### 🏆 Challenge
 - Write an application, to simulate process scheduling policies in **Priority, FIFO and Shortest Job First** algorithms.
 
 - Simulate a process queue where who is using the CPU, still using until finishing the process (Single core).
 
-**Source code:** https://github.com/guisalmeida/OS-Scheduler   
  
 ### 🗃️ Mock Data
 |Process|Priority|Duration(ms)|Size(kb)|

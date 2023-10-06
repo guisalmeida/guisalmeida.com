@@ -10,9 +10,18 @@ ___
 
 Imagiflix is a fictional site inspired by Netflix, which is being created to study the practices of HTML5, CSS3, JS, Jquery, Sass, Ajax and other knowledge.  
 
-**Source code:** https://github.com/guisalmeida/imagiflix
+<p>
+    Source code:  
+    <a href="https://github.com/guisalmeida/imagiflix" target="_blank">
+        https://github.com/guisalmeida/imagiflix
+    </a>
+    <br>
+    Demo:
+    <a href="https://imagiflix.netlify.app/" target="_blank">
+        https://imagiflix.netlify.app/
+    </a>
+</p>
 
-**Demo:** https://imagiflix.netlify.app/ 
  
 ### **Layout**  
 ![Home Layout](../../static/assets/img/imagiflix.png)

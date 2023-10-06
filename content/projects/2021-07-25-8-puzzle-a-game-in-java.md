@@ -17,7 +17,12 @@ exclude: Index
 This is a project made for a college assignment in the subject of **Object-Oriented Programming**.
 The proposed challenge was to create the 8Puzzle (sliding tile game with eight pieces) in the **Java** language, applying the object-oriented methodologies to architect the software in an organized and reusable way. Also using technologies and libraries like **Junit**, **JDBC** and **Swing**. To create tests, serialization of the game state in a database and the graphical interface.
 
-**Source code:** https://github.com/GuiSAlmeida/8puzzle-java  
+<p>
+    Source code:  
+    <a href="https://github.com/GuiSAlmeida/8puzzle-java" target="_blank">
+        https://github.com/GuiSAlmeida/8puzzle-java
+    </a>
+</p>
 
 ### 1.1 Goals
 - Apply Object-Oriented concepts taught in class to build software, such as:
