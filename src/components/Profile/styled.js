@@ -3,13 +3,13 @@ import media from 'styled-media-query';
 import { Link } from "gatsby";
 
 export const ProfileContainer = Styled.section`
-  display: ${props => (props.isMobileHeader ? 'none' : 'flex')};
+  display: ${props => (props.$isMobileHeader ? 'none' : 'flex')};
   color: var(--texts);
   flex-direction: column;
 
   ${media.lessThan('medium')`
     align-items: flex-start;
-    display: ${props => (props.isMobileHeader ? 'flex' : 'none')};
+    display: ${props => (props.$isMobileHeader ? 'flex' : 'none')};
     background: var(--mediumBackground);
     border-bottom: 1px solid var(--borders);
     padding: 1rem;

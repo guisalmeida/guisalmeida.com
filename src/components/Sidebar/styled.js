@@ -23,7 +23,7 @@ export const SidebarContainer = styled.aside`
         height: 100vh;
         padding: 0;
         width: 100%;
-        transform: ${props => props.isMenuOpen ? 'translateX(0)' : 'translateX(-100vw)'};
+        transform: ${props => props.$isMenuOpen ? 'translateX(0)' : 'translateX(-100vw)'};
     `}
 `
 
