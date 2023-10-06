@@ -4,7 +4,7 @@ description: A ReactJS application for users engaging with movies by swiping to
   like or dislike. Users are able to see the movies they like/dislike and search
   for movies. Think about Tinder for movies.
 date: 2023-10-06 04:10:05
-thumbnailImage: https://raw.githubusercontent.com/guisalmeida/filmlover/master/src/assets/home-desktop.png
+thumbnailImage: ../../static/assets/img/home-desktop.png
 category: project
 tags:
   - React
@@ -51,10 +51,10 @@ https://filmlover.netlify.app/
 
 ### \*\*Home Layout\*\*
 
-!\[Home](https://raw.githubusercontent.com/guisalmeida/filmlover/master/src/assets/home-desktop.png)
+!\[Home](static/assets/img/home-desktop.png)
 
 \## 3 Conclusion
 
 This project helped me a lot to put into practice concepts of \*\*accessibility\*\*.
 
-So, what did you think of this project? Do you have any suggestions or criticism? Leave a reaction or a comment below. And thanks for visiting! 😉
+So, what did you think of this project? Do you have any suggestions or criticisms? Leave a reaction or a comment below. And thanks for visiting! 😉
