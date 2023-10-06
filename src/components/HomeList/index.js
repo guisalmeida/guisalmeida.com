@@ -5,34 +5,32 @@ import PostItem from '../PostItem';
 import * as S from '../ListWrapper/styled';
 import { Subtitle, BlogLink } from './styled';
 
-const blogListQuery = graphql`
-  query {
-    allMarkdownRemark(
-      limit: 2,
-      sort: {fields: frontmatter___date, order: DESC},
-      filter: {frontmatter: {category: {eq: "blog"}}}
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            category
-            date(locale: "en-us", formatString: "MMMM DD[,] YYYY")
-            description
-            title
-            tags
-            thumbnailImage {
-              relativePath
-            }
-          }
-          timeToRead
+const blogListQuery = graphql`{
+  allMarkdownRemark(
+    limit: 2
+    sort: {frontmatter: {date: DESC}}
+    filter: {frontmatter: {category: {eq: "blog"}}}
+  ) {
+    edges {
+      node {
+        fields {
+          slug
         }
+        frontmatter {
+          category
+          date(locale: "en-us", formatString: "MMMM DD[,] YYYY")
+          description
+          title
+          tags
+          thumbnailImage {
+            relativePath
+          }
+        }
+        timeToRead
       }
     }
   }
-`
+}`
 
 const HomeList = () => {
   const allBlogList = useStaticQuery(blogListQuery)

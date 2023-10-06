@@ -309,7 +309,12 @@ Table format and fields recorded in the `db.json` file that works as our databas
 ---
 ## 8 Contribute
 Feel free to fork and test, fix bugs, implement more features like an update query.  
-**Source Code:** https://github.com/GuiSAlmeida/dbgen-cli
+<p>
+    Source code:  
+    <a href="https://github.com/GuiSAlmeida/dbgen-cli" target="_blank">
+        https://github.com/GuiSAlmeida/dbgen-cli
+    </a>
+</p>
 
 ---
 ## 9 Conclusion

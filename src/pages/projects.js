@@ -9,33 +9,31 @@ import * as Base from '../styles/base';
 
 
 const ProjectsPage = () => {
-    const { allMarkdownRemark: { edges: projects } } = useStaticQuery(graphql`
-        query projects {
-            allMarkdownRemark(
-                filter: {frontmatter: {category: {eq: "project"}}},
-                sort: {fields: frontmatter___date, order: DESC}
-            ) {
-                edges {
-                    node {
-                        frontmatter {
-                            title
-                            date(locale: "en-us", formatString: "MMMM DD[,] YYYY")
-                            description
-                            category
-                            tags
-                            thumbnailImage {
-                                relativePath
-                            }
-                        }
-                        fields {
-                            slug
-                        }
-                        timeToRead
-                    }
-                }
-            }
+    const { allMarkdownRemark: { edges: projects } } = useStaticQuery(graphql`query projects {
+  allMarkdownRemark(
+    filter: {frontmatter: {category: {eq: "project"}}}
+    sort: {frontmatter: {date: DESC}}
+  ) {
+    edges {
+      node {
+        frontmatter {
+          title
+          date(locale: "en-us", formatString: "MMMM DD[,] YYYY")
+          description
+          category
+          tags
+          thumbnailImage {
+            relativePath
+          }
         }
-    `)
+        fields {
+          slug
+        }
+        timeToRead
+      }
+    }
+  }
+}`)
 
     return (
         <Layout>

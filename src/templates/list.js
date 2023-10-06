@@ -75,34 +75,32 @@ const BlogList = props => {
     )
 }
 
-export const query = graphql`
-    query PostList($skip: Int!, $limit: Int!) {
-        allMarkdownRemark(
-            filter: {frontmatter: {category: {eq: "blog"}}}
-            sort: {fields: frontmatter___date, order: DESC}
-            limit: $limit
-            skip: $skip
-        ) {
-            edges {
-                node {
-                    fields {
-                        slug
-                    }
-                    frontmatter {
-                        category
-                        date(locale: "en-us", formatString: "MMMM DD[,] YYYY")
-                        description
-                        title
-                        tags
-                        thumbnailImage {
-                            relativePath
-                        }
-                    }
-                    timeToRead
-                }
-            }
+export const query = graphql`query PostList($skip: Int!, $limit: Int!) {
+  allMarkdownRemark(
+    filter: {frontmatter: {category: {eq: "blog"}}}
+    sort: {frontmatter: {date: DESC}}
+    limit: $limit
+    skip: $skip
+  ) {
+    edges {
+      node {
+        fields {
+          slug
         }
+        frontmatter {
+          category
+          date(locale: "en-us", formatString: "MMMM DD[,] YYYY")
+          description
+          title
+          tags
+          thumbnailImage {
+            relativePath
+          }
+        }
+        timeToRead
+      }
     }
-`
+  }
+}`
 
 export default BlogList;

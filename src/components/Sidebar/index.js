@@ -14,7 +14,7 @@ const Sidebar = ({
     isMenuOpen,
     setIsMenuOpen
 }) => (
-    <S.SidebarContainer isMenuOpen={isMenuOpen}>
+    <S.SidebarContainer $isMenuOpen={isMenuOpen}>
         <Profile
             title={title}
             position={position}

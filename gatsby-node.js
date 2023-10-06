@@ -25,43 +25,40 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = ({ graphql, actions }) => {
     const { createPage } = actions;
 
-    return graphql(`
-    {
-        allMarkdownRemark(
-            sort: {fields: frontmatter___date, order: DESC}
-        ) {
-            edges {
-                node {
-                    fields {
-                        slug
-                    }
-                    frontmatter {
-                        category
-                        date(locale: "en-us", formatString: "MMMM DD[,] YYYY")
-                        description
-                        tags
-                    }
-                    timeToRead
-                }
-                next {
-                    frontmatter {
-                        title
-                    }
-                    fields {
-                        slug
-                    }
-                }
-                previous {
-                    fields {
-                        slug
-                    }
-                    frontmatter {
-                        title
-                    }
-                }
-            }
+    return graphql(`{
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+    edges {
+      node {
+        fields {
+          slug
         }
-    }`).then(result => {
+        frontmatter {
+          category
+          date(locale: "en-us", formatString: "MMMM DD[,] YYYY")
+          description
+          tags
+        }
+        timeToRead
+      }
+      next {
+        frontmatter {
+          title
+        }
+        fields {
+          slug
+        }
+      }
+      previous {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+        }
+      }
+    }
+  }
+}`).then(result => {
         if (result.errors) throw result.errors
 
         // Create blog posts pages
@@ -110,5 +107,5 @@ exports.createPages = ({ graphql, actions }) => {
                 }
             })
         });
-    })
+    });
 };

@@ -1,23 +1,17 @@
 
 <p align="center">
-  <a href="https://www.guisalmeida.com">
-    <img alt="Logo" src="src/images/gui-icon.png" width="60" style="box-shadow: 0 2px 5px rgba(0,0,0,0.5); border-radius: 5px;" />
+  <a href="https://www.guisalmeida.com" target="_blank">
+    <img alt="Logo" src="src/images/gui-icon.png" width="60" />
   </a>
 </p>
 <h1 align="center">
   <code>guisalmeida.com</code>
   <p align="center">
-    <a href="https://app.netlify.com/sites/guisalmeida/deploys">
+    <a href="https://app.netlify.com/sites/guisalmeida/deploys" target="_blank">
       <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/d5853d6a-fa00-41f5-8bd2-00a57982577e/deploy-status" />
     </a>
   </p>
 </h1>
-
-<p align="center">
-  <a href="https://www.guisalmeida.com">
-    <img alt="Logo" src="static/assets/img/thumb-guisa.png" width="960" style="box-shadow: 0 2px 5px rgba(0,0,0,0.5); border-radius: 5px;" />
-  </a>
-</p>
 
 ## Start
 ```
@@ -52,7 +46,7 @@ yarn start # or npm run start
 * [x] Change scrollbar color
 * [x] Make page 404
 * [x] Add tags in posts
-* [x] Update to Gatsby 3
-* [ ] New feature to hide main menu in desktop
+* [x] Update to Gatsby V3
+* [x] Update to Gatsby V5
 * [ ] Write tests
 * [ ] Change from Gatsby to Next

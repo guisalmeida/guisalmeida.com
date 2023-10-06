@@ -9,9 +9,17 @@ tags: ['#javascript', '#react', '#redux', '#sass', '#atomic-design']
 ___
 Fashionista is a fictional women's fashion e-commerce made as the final challenge of a React course.
 
-**Source code:** https://github.com/GuiSAlmeida/aceleradev-fashionista  
-
-**Demo:** https://fashionista-shop.netlify.app/  
+<p>
+    Source code:  
+    <a href="https://github.com/GuiSAlmeida/aceleradev-fashionista" target="_blank">
+        https://github.com/GuiSAlmeida/aceleradev-fashionista
+    </a>
+    <br>
+    Demo:
+    <a href="https://fashionista-shop.netlify.app/" target="_blank">
+        https://fashionista-shop.netlify.app/
+    </a>
+</p>
  
 ### **Home Layout**  
 ![Home](../../static/assets/img/fashionista-layout1.png)
