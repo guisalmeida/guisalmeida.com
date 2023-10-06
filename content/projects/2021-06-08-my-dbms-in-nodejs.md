@@ -319,4 +319,4 @@ Feel free to fork and test, fix bugs, implement more features like an update que
 ---
 ## 9 Conclusion
 This project helped me a lot to put into practice new ES6+ javascript concepts, as well as to exercise the logic of how a database works.
-So, what did you think of this project? Do you have any suggestions or criticism? Leave a reaction or a comment below. And thanks for visiting! 😉
+So, what did you think of this project? Do you have any suggestions or criticisms? Leave a reaction or a comment below. And thanks for visiting! 😉

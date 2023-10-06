@@ -253,4 +253,4 @@ npm install nome-do-pacote
 
 ## 7 Conclusion
 Really NPM is an incredible tool that helps us a lot to manage and scale our projects in an organized way, with that we are more able to keep the project updated with changes, whether they are corrections or improvements.  
-What did you think of this post? Do you have any suggestions or criticism? Leave a reaction or a comment below. And thanks for visiting! 😉
+What did you think of this post? Do you have any suggestions or criticisms? Leave a reaction or a comment below. And thanks for visiting! 😉

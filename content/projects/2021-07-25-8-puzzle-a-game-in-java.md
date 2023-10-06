@@ -883,4 +883,4 @@ http://www.dsc.ufcg.edu.br/~jacques/cursos/map/html/arqu/mvc/mvc.htm
 ---
 ## 9 Conclusion
 This project helped me a lot to put into practice concepts of **Object Orientation**, as well as to exercise the logic of how **software architecture** works in a project using MVC and some **Design Patterns**.
-So, what did you think of this project? Do you have any suggestions or criticism? Leave a reaction or a comment below. And thanks for visiting! 😉
+So, what did you think of this project? Do you have any suggestions or criticisms? Leave a reaction or a comment below. And thanks for visiting! 😉

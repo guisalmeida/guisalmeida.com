@@ -309,4 +309,4 @@ getUsername("JoAo_123@outlook.com.br")
 ---
 ## 4 Conclusion
 Regex are very useful in the day to day of a developer, an incredible tool that helps when it comes to validations, searches, etc.
-What did you think of this post? Do you have any suggestions or criticism? Leave a reaction or a comment below. And thanks for visiting! 😉
+What did you think of this post? Do you have any suggestions or criticisms? Leave a reaction or a comment below. And thanks for visiting! 😉
