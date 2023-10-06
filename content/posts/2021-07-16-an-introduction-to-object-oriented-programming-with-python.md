@@ -642,4 +642,4 @@ class LogMixin:
 ## 7 Conclusion
 Because it is a dynamically typed language and is not completely object-oriented, using this paradigm in Python, as we can see, has many differences compared to languages like Java for example. However, I hope this post has helped you to start using this paradigm and take advantage of it.
 
-What did you think of this post? Do you have any suggestions or criticism? Leave a reaction or a comment below. And thanks for visiting! 😉
+What did you think of this post? Do you have any suggestions or criticisms? Leave a reaction or a comment below. And thanks for visiting! 😉

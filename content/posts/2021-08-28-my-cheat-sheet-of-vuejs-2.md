@@ -1356,4 +1356,4 @@ const store = new Vuex.Store({
 
 ---
 ## 14 Conclusion
-What did you think of this post? Do you have any suggestions or criticism? Leave a reaction or a comment below. And thanks for visiting! 😉
+What did you think of this post? Do you have any suggestions or criticisms? Leave a reaction or a comment below. And thanks for visiting! 😉

@@ -356,4 +356,4 @@ Feel free to fork and test, fix bugs, implement more features, etc.
 ---
 ## 7 Conclusion
 Many things change from the normal way we are used to developing for the web when it comes to emails, I hope I have helped you to understand these differences.  
-What did you think of this post? Do you have any suggestions or criticism? Leave a reaction or a comment below. And thanks for visiting! 😉
+What did you think of this post? Do you have any suggestions or criticisms? Leave a reaction or a comment below. And thanks for visiting! 😉
