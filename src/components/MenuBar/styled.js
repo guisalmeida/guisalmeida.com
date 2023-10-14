@@ -73,9 +73,12 @@ export const MenuBarItem = styled.span`
   width: 3.75rem;
   transition: ${transitions.ALL};
 
-  &:hover {
-    color: var(--highlight);
+  @media (hover: hover){
+    &:hover {
+      color: var(--highlight);
+    }
   }
+
 
   &.display {
       ${media.lessThan("medium")`
@@ -84,9 +87,11 @@ export const MenuBarItem = styled.span`
   }
   
   ${media.greaterThan("medium")`
+    @media (hover: hover){
       &:hover {
           color: var(--highlight);
       }
+    }
   `}
 
   ${media.lessThan("medium")`

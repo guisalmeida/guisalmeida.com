@@ -32,8 +32,10 @@ export const ProfileLink = Styled(Link)`
         width: 100%;
     `}
 
-    &:hover {
-        color: var(--highlight);
+    @media (hover: hover){
+        &:hover {
+            color: var(--highlight);
+        }
     }
 `;
 

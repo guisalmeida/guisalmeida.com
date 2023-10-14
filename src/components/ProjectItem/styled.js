@@ -7,12 +7,16 @@ export const ProjectItemLink = styled(Link)`
   color: var(--texts);
   display: flex;
   text-decoration: none;
+
   body#grid & {
     background-color: var(--background);
     height: 100%;
   }
-  &:hover {
-    color: var(--postColor);
+
+  @media (hover: hover){
+    &:hover {
+      color: var(--postColor);
+    }
   }
 `
 
@@ -23,11 +27,13 @@ export const ProjectItemWrapper = styled.section`
   padding: 2rem 5rem;
   width: 100%;
   transition: ${transitions.ALL};
-  // background: var(--mediumBackground);
 
-  &:hover {
-    background-color: var(--mediumBackground);
+  @media (hover: hover){
+    &:hover {
+      background-color: var(--mediumBackground);
+    }
   }
+
   
   body#grid & {
     border: none;

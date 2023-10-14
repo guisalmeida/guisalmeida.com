@@ -29,9 +29,14 @@ export const TagHolder = styled.span.attrs(props => ({
   border-radius: 4px;
   margin: 0 0 0.75rem;
 
-  &:hover,
   &:focus {
     opacity: 0.8;
+  }
+
+  @media (hover: hover){
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   &:not(:last-child) {

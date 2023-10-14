@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
 
     return (
         <S.LayoutWrapper>
-            <GlobalStyles />
+            <GlobalStyles $isMenuOpen={isMenuOpen}/>
             <Sidebar
                 site={site.siteMetadata}
                 setIsMenuOpen={setIsMenuOpen}

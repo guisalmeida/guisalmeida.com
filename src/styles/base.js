@@ -218,18 +218,23 @@ export const MainContent = styled.section`
     text-decoration: none;
     transition: opacity 0.5s;
     font-weight: 400;
+
     svg {
       color: var(--postColor);
       transition: ${transitions.ALL};
 
-      &:hover {
-        color: var(--highlight);
+      @media (hover: hover){
+        &:hover {
+          color: var(--highlight);
+        }
       }
     }
 
-    &:hover {
-      color: var(--highlight);
-      text-decoration: underline;
+    @media (hover: hover){
+      &:hover {
+        color: var(--highlight);
+        text-decoration: underline;
+      }
     }
   }
 
