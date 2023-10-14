@@ -31,9 +31,6 @@ const GlobalStyles = createGlobalStyle`
   footer, header, hgroup, menu, nav, section {
     display: block;
   }
-  body {
-    line-height: 1;
-  }
   ol, ul {
     list-style: none;
   }
@@ -56,6 +53,8 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1;
     font-size: 100%;
     font-family: 'Chakra Petch', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+    overflow: ${props => props.$isMenuOpen ? 'hidden' : 'auto'};
   }
   img {
     display: block;
