@@ -44,8 +44,8 @@ yarn start # or npm run start
 * [x] Add tags in posts
 * [x] Update to Gatsby V3
 * [x] Update to Gatsby V5
-* [ ] Remove hover effects mobile
-* [ ] Remove Scroll effect mobile menu
+* [x] Remove Scroll effect mobile menu
+* [x] Remove hover effects mobile
 * [ ] Update Search Page
 * [ ] Write tests
 * [ ] Typescript
