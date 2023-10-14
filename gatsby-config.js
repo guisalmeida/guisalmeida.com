@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: `Guilherme Almeida`,
     position: `Software Engineer`,
-    description: `Blog and portfolio with some projects about software development.`,
+    description: `Professional Software Development Blog and Portfolio.`,
     author: `@guisalmeida`,
     siteUrl: `https://guisalmeida.com`
   },

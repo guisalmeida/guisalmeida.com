@@ -3,55 +3,6 @@ import media from 'styled-media-query'
 
 import transitions from './transitions'
 
-export const PostHeader = styled.header`
-  color: var(--postColor);
-  margin: auto;
-  padding: 5rem 5rem 0;
-
-  ${media.lessThan('medium')`
-    padding: 3rem 0 0;
-    max-width: 100%;
-  `}
-`
-
-export const PostTitle = styled.h1`
-  font-size: 4rem;
-  font-weight: 700;
-  padding: 0 1.6rem;
-  margin: 1rem auto;
-
-  ${media.lessThan('medium')`
-    font-size: 2.8rem;
-    line-height: 1.1;
-    padding: 0 1rem;
-  `}
-`
-
-export const PostDescription = styled.h2`
-  font-size: 2rem;
-  font-weight: 200;
-  padding: 0 1.6rem;
-  text-align: justify;
-
-  ${media.lessThan('medium')`
-    font-size: 1.6rem;
-    line-height: 1.3;
-    padding: 0 1rem;
-  `}
-`
-
-export const PostDate = styled.p`
-  font-size: 1.1rem;
-  font-weight: 100;
-  padding: 0 1.6rem;
-  color: var(--highlight);
-  margin-bottom: 1rem;
-
-  ${media.lessThan('medium')`
-    padding: 0 1rem;
-  `}
-`
-
 export const PostItemDate = styled.time`
   font-size: 0.9rem;
   margin-bottom: 1rem;
@@ -87,7 +38,7 @@ export const MainContent = styled.section`
     font-weight: 300;
     line-height: 1.7;
     letter-spacing: 0.069rem;
-    padding: 0 1.6rem;
+    padding: 0;
     text-align: justify;
 
     ${media.lessThan('medium')`
@@ -97,7 +48,7 @@ export const MainContent = styled.section`
   }
 
   p {
-    margin: 0 auto 1.6rem;
+    margin: 1rem 0;
     color: var(--texts);
   }
 
@@ -106,7 +57,7 @@ export const MainContent = styled.section`
   h3,
   h4,
   h5 {
-    margin: 0 auto 1rem;
+    margin: 2rem 0 1rem;
     color: var(--postColor);
   }
 
@@ -118,7 +69,7 @@ export const MainContent = styled.section`
   ol {
     list-style: disc;
     padding-left: 2.5rem;
-    margin: 0 auto 1.6rem;
+    margin: 1rem 0;
     color: var(--texts);
   }
 
@@ -160,10 +111,14 @@ export const MainContent = styled.section`
   blockquote {
     color: var(--postColor);
     border-left: 0.3rem solid var(--highlight);
-    padding: 0;
-    margin: 1.6rem;
+    padding: 0 1rem;
+    margin: 1rem 0;
     background: var(--borders);
     font-style: italic;
+
+    ${media.lessThan('medium')`
+      margin: 1rem;
+    `}
 
     & pre {
       font-style: initial;
@@ -247,10 +202,10 @@ export const MainContent = styled.section`
   }
 
   .gatsby-highlight {
-    padding: 0 1.6rem 1.6rem;
+    margin: 1rem 0;
 
     ${media.lessThan('medium')`
-      padding: 0;
+      margin: 1rem;
     `}
   }
 

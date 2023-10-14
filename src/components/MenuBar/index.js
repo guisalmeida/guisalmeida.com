@@ -62,7 +62,7 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
 
             <S.MenuBarGroupMobile>
                 <S.MenuBarGroup>
-                    <S.MenuBarItem title="Abrir Menu" onClick={openMenu}>
+                    <S.MenuBarItem title="Open Menu" onClick={openMenu}>
                         <Menu />
                     </S.MenuBarItem>
                 </S.MenuBarGroup>
@@ -70,7 +70,7 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
 
             <S.MenuBarGroup>
                 <S.MenuBarItem
-                    title='Change visualization grid'
+                    title={`Change visualization to ${isListMode ? 'grid' : 'list'}`}
                     onClick={() => {
                         window.__setPreferredDisplay(isListMode ? 'grid' : 'list')
                     }}
@@ -90,7 +90,7 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
                 </S.MenuBarItem>
 
                 <S.MenuBarItem
-                    title='Ir para o topo'
+                    title='Go to the top'
                     onClick={() => {
                         window.scroll({ top: 0, behavior: 'smooth' })
                     }}

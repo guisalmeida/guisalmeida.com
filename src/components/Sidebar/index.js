@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import Profile from '../Profile'
 import Social from '../Social'
 import Menu from '../Menu'
-import TextCredit from '../TextCredit'
 
 import * as S from './styled'
 
@@ -24,7 +23,6 @@ const Sidebar = ({
         <S.SidebarLinksContainer>
             <Menu setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
             <Social />
-            <TextCredit />
         </S.SidebarLinksContainer>
     </S.SidebarContainer>
 

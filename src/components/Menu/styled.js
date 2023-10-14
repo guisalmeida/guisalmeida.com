@@ -11,7 +11,7 @@ export const MenuWrapper = styled.nav`
   
   ${media.lessThan('medium')`
     margin: auto;
-    top: calc(50% - 41px);
+    top: calc(50% - 3rem);
   `}
 `
 

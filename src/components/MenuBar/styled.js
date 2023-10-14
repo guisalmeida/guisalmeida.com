@@ -22,11 +22,11 @@ export const MenuBarWrapper = styled.aside`
     border-left: none;
     bottom: 0;
     flex-direction: row;
-    height: auto;
+    height: 3rem;
     padding: 0;
     position: fixed;
     width: 100%;
-    z-index: 2;
+    z-index: 9;
   `}
 `
 

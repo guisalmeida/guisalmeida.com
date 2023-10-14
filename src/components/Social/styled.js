@@ -4,12 +4,17 @@ import media from 'styled-media-query'
 import transitions from '../../styles/transitions'
 
 export const SocialWrapper = styled.nav`
-    margin: 2rem auto;
+    margin: 0 auto;
     width: 100%;
     ${media.lessThan('medium')`
         order: 2;
         margin: 0 0 1rem;
     `}
+
+    p {
+        font-size: 1rem;
+        margin: 0 0 1rem;
+    }
 `
 
 export const SocialList = styled.ul`

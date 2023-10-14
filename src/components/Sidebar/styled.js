@@ -19,6 +19,7 @@ export const SidebarContainer = styled.aside`
 
     ${media.lessThan('medium')`
         align-items: flex-start;
+        justify-content: center;
         border: 0;
         height: 100vh;
         padding: 0;
@@ -29,7 +30,7 @@ export const SidebarContainer = styled.aside`
 
 export const SidebarLinksContainer = styled.section`
     width: 100%;
-    height: calc(100% - 70px);
+    height: calc(100vh - 6rem);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

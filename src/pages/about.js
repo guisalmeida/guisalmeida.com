@@ -3,7 +3,9 @@ import React from 'react';
 import Layout from "../components/Layout";
 import SEO from "../components/seo";
 import Author from "../components/Author";
-import Avatar from "../components/Avatar";
+import { StaticImage } from 'gatsby-plugin-image'
+
+import { PostImage } from '../components/Post/styled'
 
 const AboutPage = () => (
     <Layout>
@@ -11,7 +13,7 @@ const AboutPage = () => (
             title="About"
             description="Learn a little more about the developer behind this site."
         />
-        <Avatar />
+        <StaticImage src="../images/salt-graphic-design-mh2.jpg" alt="desktop image" />
         <Author fullText={true} />
     </Layout >
 );

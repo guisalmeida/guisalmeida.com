@@ -30,23 +30,21 @@ yarn start # or npm run start
 - [ReactJS](https://reactjs.org/);
 - [Gatsby V3](https://www.gatsbyjs.org/);
 - [GraphQL](https://graphql.org/);
-- [Styled Components](https://styled-components.com/);
-- [Styled Icons](https://styled-icons.js.org/);
-- [Styled Media Query](https://github.com/morajabi/styled-media-query);
+- [Algolia](https://www.algolia.com/);
+- [Netlify CMS](https://www.netlifycms.org/);
 - [PrismJS](https://prismjs.com/);
 - [Disqus](https://disqus.com/);
-- [Algolia](https://www.algolia.com/);
-- [Google Fonts](https://fonts.google.com/);
-- [Markdown](https://daringfireball.net/projects/markdown/);
-- [Netlify CMS](https://www.netlifycms.org/);
+- [Styled Components](https://styled-components.com/);
 
 
-## ⚙️ TODO
+## ⚙️ To Do / Change Log
 * [x] Change color theme
 * [x] Change scrollbar color
-* [x] Make page 404
+* [x] Create page 404
 * [x] Add tags in posts
 * [x] Update to Gatsby V3
 * [x] Update to Gatsby V5
+* [ ] Update Search Page
 * [ ] Write tests
+* [ ] Typescript
 * [ ] Change from Gatsby to Next
