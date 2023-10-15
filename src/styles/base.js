@@ -19,7 +19,7 @@ export const MainContent = styled.section`
   border-bottom: 1px solid var(--mediumBackground);
 
   ${media.lessThan('medium')`
-    padding: 2rem 0;
+    padding: 0;
     max-width: 100%;
   `}
 
