@@ -44,8 +44,11 @@ export const BlogLink = styled(Link)`
         max-width: 100%;
     `}
 
-    &:hover {
-        color: var(--highlight);
-        text-decoration: underline;
+    @media (hover: hover){
+        &:hover {
+            color: var(--highlight);
+            text-decoration: underline;
+        }
     }
+
 `

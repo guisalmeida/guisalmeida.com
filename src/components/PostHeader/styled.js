@@ -15,7 +15,7 @@ export const PostHeader = styled.header`
 `
 
 export const PostImage = styled(Img).attrs({
-    alt: 'Imagem de introdução',
+    alt: 'Introduction image',
     'aria-hidden': 'true'
   })`
     display: block;

@@ -1,18 +1,18 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 import media from 'styled-media-query'
 
 export const AvatarWrapper = styled.div`
-    .gatsby-image-wrapper {
-      display: block;
-      height: 50vh;
-      object-fit: cover;
-      object-position: 50% 0;
-      width: 100%;
-  
-      ${media.lessThan("medium")`
-          height: 30vh;
-      `}
-    }
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    margin: 0 auto;
+    object-fit: cover;
+    overflow: hidden;
+
+    ${media.lessThan("medium")`
+        height: 2rem;
+        width: 2rem;
+        margin: 0 1rem 0 0;
+        padding: 0;
+    `}
 `;
-
-

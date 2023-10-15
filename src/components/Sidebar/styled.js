@@ -15,21 +15,23 @@ export const SidebarContainer = styled.aside`
     text-align: center;
     width: 20rem;
     transition: ${transitions.ALL};
-    z-index: 1;
+    z-index: 4;
 
     ${media.lessThan('medium')`
         align-items: flex-start;
+        justify-content: center;
         border: 0;
         height: 100vh;
         padding: 0;
         width: 100%;
+        touch-action: none;
         transform: ${props => props.$isMenuOpen ? 'translateX(0)' : 'translateX(-100vw)'};
     `}
 `
 
 export const SidebarLinksContainer = styled.section`
     width: 100%;
-    height: calc(100% - 70px);
+    height: calc(100vh - 8rem);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

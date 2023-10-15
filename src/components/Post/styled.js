@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import transitions from '../../styles/transitions'
 import { GatsbyImage as Img } from 'gatsby-plugin-image'
 
 export const PostImage = styled(Img).attrs({

@@ -7,6 +7,7 @@ import * as S from './styled';
 
 const Social = () => (
     <S.SocialWrapper>
+        <p>Keep in touch</p>
         <S.SocialList>
             {links.map((link, index) => {
                 const Icon = Icons[link.label];

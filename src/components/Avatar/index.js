@@ -5,7 +5,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 const Avatar = () => {
     return (
         <S.AvatarWrapper>
-            <StaticImage src="../../images/salt-graphic-design-mh2.jpg" alt="desktop image" />
+            <StaticImage src="../../images/profile.jpeg" alt="Profile image" />
         </S.AvatarWrapper>
     ) 
 };

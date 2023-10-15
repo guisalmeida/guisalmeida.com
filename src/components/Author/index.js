@@ -6,40 +6,43 @@ import * as Base from '../../styles/base';
 const Author = ({ fullText }) => {
     return (
         <Base.MainContent>
-            {fullText && 
-            <h1>About</h1> || <h1>Hello!</h1>}
-            <p>I'm a Software Engineer focusing on Web Development, graduated with a Bachelor's of Computer Science with 4+ years of experience in software development.
-            I worked on several projects, primarily in web development and mainly using Javascript, nodeJS, and Python. Responsible for creating very understandable and functional code. </p>
-            <p>I'm passionate about learning new technologies and challenging jobs, sharing knowledge, and teamwork.</p>
-            <p>Outside of work, I have a passion for skateboarding, and also I like cooking vegetarian recipes and spending time with my wife and dogs.</p>
+            {fullText && <h1>About</h1> || <h1>Hello!</h1>}
+            <p>Welcome to my dedicated space for sharing insights and showcasing a selection of my software development projects. Here, you'll find a collection of articles and a portfolio that provides a glimpse into my journey in the world of software development.</p>
+            <p>I'm a dedicated Software Engineer with a Bachelor's degree in Computer Science and over 4 years of hands-on experience in software development. My journey began in the creative field, having spent approximately 6 years as a designer before making the leap into development.
+            </p>
+            {/* <p>My expertise lies primarily in web development, where I have successfully executed various projects using technologies such as Javascript, React.js, Vue.js, NodeJS, and Python. Consistently delivering code that is not only functional but also clean and easily readable. </p> */}
+            
             {fullText && 
             <>
+                <p>My passion for continual growth is evident in my eagerness to embrace new technologies and take on challenging tasks. I am equally enthusiastic about sharing my expertise and thrive when working collaboratively as part of a team.
+                Beyond my professional interests, I have a love for skateboarding and enjoy experimenting with vegetarian recipes. In my free time, I cherish moments spent with my wife and our beloved dogs.</p>
                 <h2>Skills</h2>
-                <p>As long as I started my career, I worked as a designer for about 6 years before becoming a developer, then I also have extensive knowledge of some design patterns and tools. I have Experience in Web Development, Software Development, Graphic Design, Computer Science, and Agile Methodologies.</p>
+                <p>Over the course of my career, I've had the privilege of contributing to various companies, initially as a designer and evolving into a developer over time. This diverse journey has provided me with a holistic understanding of different design patterns and tools. My expertise extends across Web Development, Software Development, Graphic Design, Data Structures and Algorithms, and Agile Methodologies.</p>
 
-                <p>I have been working with and studying different technologies, and below are some that I feel comfortable to work:</p>
+                <p>I've immersed myself in exploring and mastering various technologies, and I'm comfortable working with some listed the following:</p>
 
                 <ul>
-                    <li>Javascript (Typescript / ES6+ / NodeJS / Jquery)</li>
-                    <li>Python (Flask / Pytest)</li>
-                    <li>Java</li>
-                    <li>Frameworks (ReactJS / VueJS)</li>
-                    <li>HTML5 (SEO / Accessibility)</li>
-                    <li>CSS3 (Sass / Styled Components)</li>
-                    <li>Design (Figma / Adobe XD / Adobe Photoshop / Adobe Illustrator)</li>
-                    <li>Responsive Design (Mobile First)</li>
-                    <li>Bundle tools (Webpack / Gulp)</li>
-                    <li>Testing (Cypress / Mocha / Jest)</li>
-                    <li>Git / Github / Gitlab</li>
-                    <li>REST APIs (Postman / Insomnia)</li>
-                    <li>Database (PostgreSQL / GraphQL)</li>
-                    <li>Docker</li>
-                    <li>Agile Methodologies (Scrum / Kanban)</li>
+                    <li><strong>Javascript:</strong> ES6+, Node.js, Typescript;</li>
+                    <li><strong>Python:</strong> Flask, Pytest;</li>
+                    <li><strong>Java</strong>;</li>
+                    <li><strong>Frameworks:</strong> React.js, Vue.js;</li>
+                    <li><strong>HTML5:</strong> SEO, Accessibility;</li>
+                    <li><strong>CSS3:</strong> Sass, Styled Components;</li>
+                    <li><strong>Design:</strong> Figma, Adobe XD, Adobe Photoshop, Adobe Illustrator;</li>
+                    <li><strong>Responsive Design:</strong> Mobile First;</li>
+                    <li><strong>Testing:</strong> TDD, Cypress, Mocha, Jest;</li>
+                    <li><strong>Version Control:</strong>Git, Github, Gitlab;</li>
+                    <li><strong>REST APIs</strong>;</li>
+                    <li><strong>Database:</strong> PostgreSQL, GraphQL;</li>
+                    <li><strong>Containerization:</strong> Docker;</li>
+                    <li><strong>Agile Methodologies:</strong> Scrum, Kanban.</li>
                 </ul>
+
+                <p>I am well-equipped to contribute effectively to projects, bringing a blend of technical proficiency and creative insight. My adaptability and dedication to staying abreast of industry trends make me an asset in dynamic and collaborative work environments.</p>
 
                 <h2>Keep in touch</h2>
                 <p>
-                    You can contact me through my social media (icons on the left) or by e-mail <a href="mailto:guisalmeida.dev@gmail.com" target="_blank" rel="noreferrer">guisalmeida.dev@gmail.com</a>.
+                Feel free to reach out to me through my social media platforms (icons on the left) or drop me an email at <a href="mailto:guisalmeida.dev@gmail.com" target="_blank" rel="noreferrer">guisalmeida.dev@gmail.com</a>. I look forward to connecting with you!
                 </p>
             </>}
         </Base.MainContent>

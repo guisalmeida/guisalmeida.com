@@ -22,11 +22,11 @@ export const MenuBarWrapper = styled.aside`
     border-left: none;
     bottom: 0;
     flex-direction: row;
-    height: auto;
+    height: 4rem;
     padding: 0;
     position: fixed;
     width: 100%;
-    z-index: 2;
+    z-index: 9;
   `}
 `
 
@@ -73,9 +73,12 @@ export const MenuBarItem = styled.span`
   width: 3.75rem;
   transition: ${transitions.ALL};
 
-  &:hover {
-    color: var(--highlight);
+  @media (hover: hover){
+    &:hover {
+      color: var(--highlight);
+    }
   }
+
 
   &.display {
       ${media.lessThan("medium")`
@@ -84,9 +87,11 @@ export const MenuBarItem = styled.span`
   }
   
   ${media.greaterThan("medium")`
+    @media (hover: hover){
       &:hover {
           color: var(--highlight);
       }
+    }
   `}
 
   ${media.lessThan("medium")`
