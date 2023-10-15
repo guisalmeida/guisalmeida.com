@@ -31,7 +31,7 @@ export const SidebarContainer = styled.aside`
 
 export const SidebarLinksContainer = styled.section`
     width: 100%;
-    height: calc(100vh - 6rem);
+    height: calc(100vh - 8rem);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

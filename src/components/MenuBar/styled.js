@@ -22,7 +22,7 @@ export const MenuBarWrapper = styled.aside`
     border-left: none;
     bottom: 0;
     flex-direction: row;
-    height: 3rem;
+    height: 4rem;
     padding: 0;
     position: fixed;
     width: 100%;

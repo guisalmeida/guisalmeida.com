@@ -24,6 +24,6 @@ export const LayoutMain = Styled.main`
     }
 
     ${media.lessThan("medium")`
-        padding: 3rem 0;
+        padding: 4rem 0;
     `}
 `;
