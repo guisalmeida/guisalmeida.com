@@ -15,7 +15,7 @@ export const SidebarContainer = styled.aside`
     text-align: center;
     width: 20rem;
     transition: ${transitions.ALL};
-    z-index: 1;
+    z-index: 4;
 
     ${media.lessThan('medium')`
         align-items: flex-start;
