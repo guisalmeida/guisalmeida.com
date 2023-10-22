@@ -14,6 +14,7 @@ export const SocialWrapper = styled.nav`
     p {
         font-size: 1rem;
         margin: 0 0 1rem;
+        color: var(--postColor)
     }
 `
 
