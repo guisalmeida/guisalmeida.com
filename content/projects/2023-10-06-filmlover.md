@@ -6,10 +6,10 @@ date: 2023-10-06 04:10:05
 thumbnailImage: ../../static/assets/img/filmlover-home-desktop.png
 category: project
 tags: 
-  - 'react'
-  - 'redux'
-  - 'toolkit'
-  - 'tmdb'
+- 'react'
+- 'redux'
+- 'toolkit'
+- 'tmdb'
 ---
 - - -
 

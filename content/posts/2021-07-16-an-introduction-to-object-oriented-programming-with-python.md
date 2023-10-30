@@ -5,8 +5,8 @@ date: 2021-08-07 06:48:04
 thumbnailImage: ../../static/assets/img/heranca-python.png
 category: blog
 tags: 
-    - python
-    - OOP
+- python
+- OOP
 ---
 ___
 

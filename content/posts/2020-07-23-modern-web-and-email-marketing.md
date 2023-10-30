@@ -5,8 +5,8 @@ date: 2020-07-23 06:49:07
 thumbnailImage: ../../static/assets/img/thumb-mail.png
 category: blog
 tags: 
-    - html
-    - email
+- html
+- email
 ---
 
 ___

@@ -5,10 +5,10 @@ date: 2021-07-05 12:16:14
 thumbnailImage: ../../static/assets/img/npmjs-private-package.png
 category: blog
 tags: 
-  - npm
-  - node
-  - javascript
-  - semver
+- npm
+- node
+- javascript
+- semver
 ---
 ___
 

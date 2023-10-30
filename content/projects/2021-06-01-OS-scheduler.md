@@ -5,10 +5,10 @@ date: 2021-06-01 05:14:30
 thumbnailImage: ../../static/assets/img/scheduler-fifo.png
 category: project
 tags: 
-    - python
-    - pandas
-    - numpy
-    - matplotlib
+- python
+- pandas
+- numpy
+- matplotlib
 ---
 ___
 This project aims to create a gantt chart to simulate the scaling processes of the operating system, using algorithms such as FIFO, SJB and Priority. These algorithms order the processes and calculate the waiting time and the total time that each one obtained. Consequentely, it is possible to calculate the average waiting time that each process obtained and verify which algorithm obtained the best performance.

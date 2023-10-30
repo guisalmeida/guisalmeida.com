@@ -4,13 +4,13 @@ description: This is a sliding tile game created with Java to practice Object-Or
 date: 2021-07-25 10:36:00
 thumbnailImage: ../../static/assets/img/8puzzle.png
 category: project
-tags: 
-	- java
-	- OOP
-	- design-patterns
-	- TDD
-	- MVC
-	- game
+tags:
+- java
+- OOP
+- design-patterns
+- TDD
+- MVC
+- game
 ---
 ___
 ## Index

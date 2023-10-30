@@ -5,11 +5,11 @@ date: 2021-06-12 11:40:16
 thumbnailImage: ../../static/assets/img/dbgen_2.png
 category: project
 tags: 
-    - javascript
-    - node
-    - terminal
-    - CLI
-    - DBMS
+- javascript
+- node
+- terminal
+- CLI
+- DBMS
 ---
 ___
 ## Index

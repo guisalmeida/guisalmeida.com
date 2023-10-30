@@ -5,10 +5,10 @@ date: 2019-03-31 05:14:30
 thumbnailImage: ../../static/assets/img/thumb-imagiflix.png
 category: project
 tags: 
-    - javascript
-    - jquery
-    - restAPI
-    - TMDB
+- javascript
+- jquery
+- restAPI
+- TMDB
 ---
 ___
 

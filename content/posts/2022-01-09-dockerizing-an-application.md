@@ -5,8 +5,8 @@ date: 2022-01-08 10:04:43
 thumbnailImage: ../../static/assets/img/docker.png
 category: blog
 tags: 
-    - docker
-    - python
+- docker
+- python
 ---
 ___
 

@@ -5,8 +5,8 @@ date: 2020-06-28 03:19:24
 thumbnailImage: ../../static/assets/img/thumb-hello.png
 category: blog
 tags: 
-    - carrer
-    - study
+- carrer
+- study
 ---
 ___
 
