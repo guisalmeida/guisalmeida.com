@@ -4,7 +4,11 @@ description: This post summarizes some of my studies on the VueJS 2 framework, w
 date: 2021-08-30 08:35:05
 thumbnailImage: ../../static/assets/img/vue-js-programming-1589827.jpg
 category: blog
-tags: ['#vue', '#vue-router', '#vuex', '#cheat-sheet']
+tags:
+    - vue
+    - vue-router 
+    - vuex 
+    - cheat-sheet
 ---
 ___
 ## Index

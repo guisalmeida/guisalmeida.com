@@ -4,7 +4,10 @@ description: Taking advantage of the subject of the last post, today I bring the
 date: 2021-04-21 04:24:54
 thumbnailImage: ../../static/assets/img/regex_thumb.jpg
 category: blog
-tags: ['#regex', '#javascript', '#email']
+tags: 
+    - regex
+    - javascript
+    - email
 ---
 
 ___

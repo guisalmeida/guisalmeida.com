@@ -4,7 +4,9 @@ description: After leaving float aside and learning the wonderful flexbox, creat
 date: 2020-07-23 06:49:07
 thumbnailImage: ../../static/assets/img/thumb-mail.png
 category: blog
-tags: ['#html', '#email']
+tags: 
+    - html
+    - email
 ---
 
 ___

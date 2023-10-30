@@ -1,29 +1,22 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+import React from "react";
+import PropTypes from "prop-types";
 
-import * as S from './styled'
+import * as S from "./styled";
 
-const Tags = ({ tags=[], isLink }) => {
-  return (
-    <S.Tags>
-      {tags.map((tag, i) => (
-        <S.TagHolder key={i} color={tag}>
-          {isLink ? (
-            <Link to={"/search/"}>
-              <S.TagItem>{tag}</S.TagItem>
-            </Link>
-          ) : (<S.TagItem>{tag}</S.TagItem>)
-          }
-        </S.TagHolder>
-      ))}
-    </S.Tags>
-  )
-}
+const Tags = ({ tags = [] }) => {
+	return (
+		<S.Tags>
+			{tags.map((tag, i) => (
+				<S.TagHolder key={i} color={tag}>
+					<S.TagItem>{tag}</S.TagItem>
+				</S.TagHolder>
+			))}
+		</S.Tags>
+	);
+};
 
 Tags.propTypes = {
-  tags: PropTypes.node.isRequired,
-  isLink: PropTypes.bool
-}
+	tags: PropTypes.node.isRequired,
+};
 
-export default Tags
+export default Tags;

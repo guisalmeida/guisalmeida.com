@@ -4,7 +4,10 @@ description: This post summarizes with some examples what I learned studying Cyp
 date: 2021-07-11 08:13:50
 thumbnailImage: ../../static/assets/img/cypress-cover.png
 category: blog
-tags: ['#cypress', '#javascript', '#cheat-sheet']
+tags: 
+    - cypress
+    - javascript
+    - cheat-sheet
 ---
 ___
 

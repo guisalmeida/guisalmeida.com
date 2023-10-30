@@ -27,7 +27,7 @@ const ProjectItem = ({
                     </Base.PostItemDate>}
                 <S.ProjectItemDescription>{description}</S.ProjectItemDescription>
                 {tags && (
-                    <Tags tags={tags} isLink={false} />
+                    <Tags tags={tags} />
                 )}
             </S.ProjectItemInfo>
             

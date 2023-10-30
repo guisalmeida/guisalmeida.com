@@ -29,7 +29,7 @@ const PostItem = ({
                     </Base.PostItemDate>}
                 <S.PostItemDescription>{description}</S.PostItemDescription>
                 {tags && (
-                    <Tags tags={tags} isLink={false} />
+                    <Tags tags={tags} />
                 )}
             </S.PostItemInfo>
         </S.PostItemWrapper>

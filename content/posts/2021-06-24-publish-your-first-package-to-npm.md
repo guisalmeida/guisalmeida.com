@@ -4,7 +4,11 @@ description: This post, in addition to showing how to publish a package, also in
 date: 2021-07-05 12:16:14
 thumbnailImage: ../../static/assets/img/npmjs-private-package.png
 category: blog
-tags: ['#npm', '#node', '#javascript', '#semver']
+tags: 
+  - npm
+  - node
+  - javascript
+  - semver
 ---
 ___
 

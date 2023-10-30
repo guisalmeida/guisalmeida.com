@@ -17,7 +17,7 @@ const PostHeader = ({
         }
         <S.PostTitle>{title}</S.PostTitle>
         <S.PostDescription>{description}</S.PostDescription>
-        <Tags tags={tags} isLink={false} />
+        <Tags tags={tags} />
     </S.PostHeader>
 )
 

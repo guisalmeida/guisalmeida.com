@@ -4,7 +4,9 @@ description: A brief introduction to the Object Oriented paradigm with Python, w
 date: 2021-08-07 06:48:04
 thumbnailImage: ../../static/assets/img/heranca-python.png
 category: blog
-tags: ['#python', '#OOP']
+tags: 
+    - python
+    - OOP
 ---
 ___
 

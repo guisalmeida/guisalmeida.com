@@ -4,7 +4,12 @@ description: DBGen is a simple DBMS (Data Base Management System), that runs thr
 date: 2021-06-12 11:40:16
 thumbnailImage: ../../static/assets/img/dbgen_2.png
 category: project
-tags: ['#javascript', '#node', '#terminal', '#CLI', '#DBMS']
+tags: 
+    - javascript
+    - node
+    - terminal
+    - CLI
+    - DBMS
 ---
 ___
 ## Index

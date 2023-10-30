@@ -5,7 +5,9 @@ description: This post summarizes in methods and examples what I learned
 date: 2021-06-09 10:34:29
 thumbnailImage: ../../static/assets/img/jsssss.jpg
 category: blog
-tags: ['#javascript', '#cheat-sheet']
+tags: 
+ - javascript
+ - cheat-sheet
 ---
 
 ___

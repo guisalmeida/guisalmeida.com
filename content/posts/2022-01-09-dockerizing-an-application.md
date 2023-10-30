@@ -4,7 +4,9 @@ description: In this post, I provide a brief introduction to Docker, and some co
 date: 2022-01-08 10:04:43
 thumbnailImage: ../../static/assets/img/docker.png
 category: blog
-tags: ['#docker', '#python']
+tags: 
+    - docker
+    - python
 ---
 ___
 

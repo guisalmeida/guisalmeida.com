@@ -4,7 +4,11 @@ description: Imagiflix is a fictional site inspired by Netflix.
 date: 2019-03-31 05:14:30
 thumbnailImage: ../../static/assets/img/thumb-imagiflix.png
 category: project
-tags: ['#javascript', '#jquery', '#restAPI', '#TMDB']
+tags: 
+    - javascript
+    - jquery
+    - restAPI
+    - TMDB
 ---
 ___
 

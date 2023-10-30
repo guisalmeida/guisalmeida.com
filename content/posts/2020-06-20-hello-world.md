@@ -4,7 +4,9 @@ description: Starting my personal blog, here I intend to share what I've been le
 date: 2020-06-28 03:19:24
 thumbnailImage: ../../static/assets/img/thumb-hello.png
 category: blog
-tags: ['#carrer', '#study']
+tags: 
+    - carrer
+    - study
 ---
 ___
 

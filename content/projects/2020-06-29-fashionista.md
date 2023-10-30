@@ -4,7 +4,12 @@ description: SPA site of an e-commerce store that consumes its own products API 
 date: 2020-06-29 05:14:30
 thumbnailImage: ../../static/assets/img/thumb-fashionista.png
 category: project
-tags: ['#javascript', '#react', '#redux', '#sass', '#atomic-design']
+tags: 
+    - javascript
+    - react
+    - redux
+    - sass
+    - atomic-design
 ---
 ___
 Fashionista is a fictional women's fashion e-commerce made as the final challenge of a React course.

@@ -53,7 +53,7 @@ export const TagHolder = styled.span.attrs(props => ({
     will-change: color;
   }
   
-  &[color="#javascript"] {
+  &[color="javascript"] {
     background: yellow;
     > a,
     > span {
@@ -61,7 +61,7 @@ export const TagHolder = styled.span.attrs(props => ({
     }
   }
 
-  &[color="#vue"] {
+  &[color="vue"] {
     background: #4fc08d;
     > a,
     > span {
@@ -69,7 +69,7 @@ export const TagHolder = styled.span.attrs(props => ({
     }
   }
 
-  &[color="#react"] {
+  &[color="react"] {
     background: #20232a;
     > a,
     > span {
@@ -77,7 +77,7 @@ export const TagHolder = styled.span.attrs(props => ({
     }
   }
 
-  &[color="#node"] {
+  &[color="node"] {
     background: #90c53f;
     > a,
     > span {
@@ -85,7 +85,7 @@ export const TagHolder = styled.span.attrs(props => ({
     }
   }
 
-  &[color="#npm"] {
+  &[color="npm"] {
     background: #CC3838;
     > a,
     > span {
@@ -93,7 +93,7 @@ export const TagHolder = styled.span.attrs(props => ({
     }
   }
 
-  &[color="#python"] {
+  &[color="python"] {
     background: #143653;
     > a,
     > span {
@@ -101,7 +101,7 @@ export const TagHolder = styled.span.attrs(props => ({
     }
   }
 
-  &[color="#html"] {
+  &[color="html"] {
     background: #ed5321;
     > a,
     > span {
@@ -109,7 +109,7 @@ export const TagHolder = styled.span.attrs(props => ({
     }
   }
 
-  &[color="#css"] {
+  &[color="css"] {
     background: #3577BF;
     > a,
     > span {
@@ -117,7 +117,7 @@ export const TagHolder = styled.span.attrs(props => ({
     }
   }
 
-  &[color="#sass"] {
+  &[color="sass"] {
     background: #CF649A;
     > a,
     > span {
@@ -125,7 +125,7 @@ export const TagHolder = styled.span.attrs(props => ({
     }
   }
 
-  &[color="#redux"] {
+  &[color="redux"] {
     background: #764abc;
     > a,
     > span {
@@ -133,7 +133,7 @@ export const TagHolder = styled.span.attrs(props => ({
     }
   }
 
-  &[color="#jquery"] {
+  &[color="jquery"] {
     background: #2E69AE;
     > a,
     > span {
@@ -141,7 +141,7 @@ export const TagHolder = styled.span.attrs(props => ({
     }
   }
 
-  &[color="#terminal"] {
+  &[color="terminal"] {
     background: #000;
     > a,
     > span {
@@ -149,7 +149,7 @@ export const TagHolder = styled.span.attrs(props => ({
     }
   }
 
-  &[color="#bootstrap"] {
+  &[color="bootstrap"] {
     background: #563d7c;
     > a,
     > span {
@@ -157,7 +157,7 @@ export const TagHolder = styled.span.attrs(props => ({
     }
   }
 
-  &[color="#java"] {
+  &[color="java"] {
     background: #971800;
     > a,
     > span {
@@ -165,7 +165,7 @@ export const TagHolder = styled.span.attrs(props => ({
     }
   }
 
-  &[color="#php"] {
+  &[color="php"] {
     background: #8993C1;
     > a,
     > span {
