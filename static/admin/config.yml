@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: GuiSAlmeida/guisalmeida.com
+  repo: guisalmeida/guisalmeida.com
   branch: master
   site_domain: https://guisalmeida.com/
 
