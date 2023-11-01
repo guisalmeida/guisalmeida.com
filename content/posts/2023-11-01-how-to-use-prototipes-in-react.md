@@ -1,5 +1,5 @@
 ---
-title: How to use prototipes in React
+title: How to use PropTypes in React
 description: PropTypes are a way to specify the type and shape of data that a
   React component should receive as props.
 date: 2021-11-01 03:41:00
