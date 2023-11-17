@@ -1,8 +1,10 @@
 backend:
   name: git-gateway
-  repo: guisalmeida/guisalmeida.com
   branch: master
+  repo: guisalmeida/guisalmeida.com
   site_domain: https://guisalmeida.com/
+  base_url: https://guisalmeida.com/
+  auth_endpoint: api/auth/
 
 # This line should *not* be indented
 publish_mode: editorial_workflow

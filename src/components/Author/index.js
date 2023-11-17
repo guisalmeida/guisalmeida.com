@@ -26,6 +26,7 @@ const Author = ({ fullText }) => {
                     <li><strong>Python:</strong> Flask, Pytest;</li>
                     <li><strong>Java</strong>;</li>
                     <li><strong>Frameworks:</strong> React.js, Vue.js;</li>
+                    <li><strong>State Management:</strong> Redux, Apollo Client (Graphql);</li>
                     <li><strong>HTML5:</strong> SEO, Accessibility;</li>
                     <li><strong>CSS3:</strong> Sass, Styled Components;</li>
                     <li><strong>Design:</strong> Figma, Adobe XD, Adobe Photoshop, Adobe Illustrator;</li>
