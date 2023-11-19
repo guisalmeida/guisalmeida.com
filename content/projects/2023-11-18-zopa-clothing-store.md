@@ -9,6 +9,7 @@ category: project
 tags:
   - react
   - redux
+  - saga
   - typescript
   - firebase
   - stripe
