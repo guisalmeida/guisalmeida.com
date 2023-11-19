@@ -2141,15 +2141,15 @@ Upon encountering a _**yield**_, function execution is paused until the **`next(
 ```js
 //example:
 function* forever() {
-let value = 1;
-while (true) {
-console.log(value++);
-yield; // pause and exit the loop...
-}
+    let value = 1;
+    while (true) {
+        console.log(value++);
+        yield; // pause and exit the loop...
+    }
 }
 
 function today() {
-console.log("Crossed to today");
+    console.log("Crossed to today");
 }
 
 const foreverGenerator = forever();
@@ -2162,14 +2162,14 @@ Through **`yield`** it is possible to return values similarly to return in the *
 ```js
 // example:
 function* forever() {
-let value = 1;
-while (true) {
-yield value++;
-}
+    let value = 1;
+    while (true) {
+        yield value++;
+    }
 }
 
 function today() {
-console.log("Crossed to today");
+    console.log("Crossed to today");
 }
 
 const foreverGenerator = forever();
@@ -2190,11 +2190,11 @@ In addition, it is also possible to send a value into the generator through the 
 ```js
 // example:
 function* forever() {
-let value = 1;
-while (true) {
-         let reset = yield value++; // YIELD receives value passed by the parameter in the next invocation
-         if (reset) value = 1; // when the yield value passed to the RESET variable returns true, it will assign value 1
-}
+    let value = 1;
+    while (true) {
+        let reset = yield value++; // YIELD receives value passed by the parameter in the next invocation
+        if (reset) value = 1; // when the yield value passed to the RESET variable returns true, it will assign value 1
+    }
 }
 const foreverGenerator = forever();
 console.log(foreverGenerator.next());
@@ -2212,14 +2212,14 @@ Generators use the **`next()`** method to iterate over the available values duri
 ```js
 //example:
 function* forever() {
-let value = 1;
-while (true) {
-console.log(value++);
-}
+    let value = 1;
+    while (true) {
+        console.log(value++);
+    }
 }
 
 function today() {
-console.log("Crossed to today");
+    console.log("Crossed to today");
 }
 
 const foreverGenerator = forever();
@@ -2249,11 +2249,11 @@ The return method closes the generator and can return a specific value.
 ```js
 //example:
 function* forever() {
-let value = 1;
-while (true) {
-         let reset = yield value++;
-         if (reset) value = 1;
-}
+    let value = 1;
+    while (true) {
+        let reset = yield value++;
+        if (reset) value = 1;
+    }
 }
 const foreverGenerator = forever();
 console.log(foreverGenerator.next());
@@ -2266,11 +2266,11 @@ return can also receive a specific value per parameter.
 ```js
 // example:
 function* forever() {
-let value = 1;
-while (true) {
-         let reset = yield value++;
-         if (reset) value = 1;
-}
+    let value = 1;
+    while (true) {
+        let reset = yield value++;
+        if (reset) value = 1;
+    }
 }
 
 const foreverGenerator = forever();

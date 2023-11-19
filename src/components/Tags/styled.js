@@ -172,6 +172,14 @@ export const TagHolder = styled.span.attrs(props => ({
       color: #222;
     }
   }
+
+  &[color="typescript"] {
+    background: #3178c6;
+    > a,
+    > span {
+      color: #ffffff;
+    }
+  }
 `
 
 export const TagItem = styled.span`
