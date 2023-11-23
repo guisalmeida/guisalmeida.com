@@ -6,10 +6,10 @@ date: 2023-10-06 04:10:05
 thumbnailImage: ../../static/assets/img/filmlover-home-desktop.png
 category: project
 tags: 
+- typescript
 - react
-- redux
-- toolkit
-- tmdb
+- context-api
+- tmdb-api
 ---
 - - -
 
@@ -27,7 +27,7 @@ exclude: Index
 
 **FilmLover** is a ReactJS application for users engaging with movies by swiping to like or dislike. Users are able to see the movies they like/dislike and search for movies. Think about Tinder for movies.
 
-Implemented the project architecture using Vite, React, Redux Toolkit, React Router, Styled Components, and Axios.  
+Implemented the project architecture using Vite, React, Context API, React Router, Styled Components, and Axios.  
 Used React Persist lib to save in the local storage movies that the user likes or dislikes.
 Used the API themoviedb.org to show movies.
 
@@ -69,7 +69,5 @@ List the movies and implement swipe for like/dislike for each result.
 
 
 ## Conclusion
-
-This project helped me a lot to put into practice concepts of **state management** using Redux Toolkit.
 
 So, what did you think of this project? Do you have any suggestions or criticisms? Leave a reaction or a comment below. And thanks for visiting! 😉
