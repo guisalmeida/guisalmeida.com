@@ -23,15 +23,15 @@ const Author = ({ fullText }) => {
 
                 <ul>
                     <li><strong>Javascript:</strong> ES6+, Node.js, Typescript;</li>
-                    <li><strong>Python:</strong> Flask, Pytest;</li>
+                    <li><strong>Python:</strong> Flask;</li>
                     <li><strong>Java</strong>;</li>
                     <li><strong>Frameworks:</strong> React.js, Vue.js;</li>
-                    <li><strong>State Management:</strong> Redux, Apollo Client (Graphql);</li>
+                    <li><strong>State Management:</strong> Context API, Redux, Apollo Client (Graphql);</li>
                     <li><strong>HTML5:</strong> SEO, Accessibility;</li>
                     <li><strong>CSS3:</strong> Sass, Styled Components;</li>
-                    <li><strong>Design:</strong> Figma, Adobe XD, Adobe Photoshop, Adobe Illustrator;</li>
+                    <li><strong>Design UX/UI:</strong> Figma, Adobe XD, Adobe Photoshop, Adobe Illustrator;</li>
                     <li><strong>Responsive Design:</strong> Mobile First;</li>
-                    <li><strong>Testing:</strong> TDD, Cypress, Mocha, Jest;</li>
+                    <li><strong>Automation Testing:</strong> TDD, Cypress, Mocha, Jest, Pytest;</li>
                     <li><strong>Version Control:</strong>Git, Github, Gitlab;</li>
                     <li><strong>REST APIs</strong>;</li>
                     <li><strong>Database:</strong> PostgreSQL, GraphQL;</li>
