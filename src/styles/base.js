@@ -69,7 +69,7 @@ export const MainContent = styled.section`
   ol {
     list-style: disc;
     padding-left: 2.5rem;
-    margin: 1rem 0;
+    margin: 0;
     color: var(--texts);
   }
 
