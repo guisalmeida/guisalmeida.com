@@ -27,17 +27,23 @@ exclude: Index
 
 ## 1 Intro
 
-Zopa Clothing is a friend's brand, and I embarked on this project to delve into advanced concepts in React and Typescript in the Frontend as well as a Backend and CI/CD with Node.js with Typescript, Express.js, MongoDB and some AWS services like Beanstalk, Codepipeline, S3, among others.  
+Zopa Clothing is a friend's brand, and I embarked on this project to delve into advanced concepts in React and Typescript in the frontend as well as a Backend and CI/CD with Node.js with Typescript, Express.js, MongoDB and some AWS services like Beanstalk, Codepipeline, S3, among others.  
 
 Here are the key links:
 
 <p>
-    Source code:  
+    Source code:  <br>
     <a href="https://github.com/guisalmeida/zopa-store" target="_blank">
         https://github.com/guisalmeida/zopa-store
     </a>
     <br>
+    <a href="https://github.com/guisalmeida/zopa-store" target="_blank">
+        https://github.com/guisalmeida/zopa-store-api
+    </a>
+    <br>
+    <br>
     Demo:
+    <br>
     <a href="https://zopa-clothing.netlify.app/" target="_blank">
         https://zopa-clothing.netlify.app/
     </a>
@@ -233,7 +239,7 @@ The chart was made using the [Recharts](https://recharts.org/) library.
 
 ![Dashboard](static/assets/img/dashboard1.png)  
 
-Also the lists of products and users were made with [MUI data grid](https://mui.com/x/react-data-grid/).  
+Also, the lists of products and users were made with [MUI data grid](https://mui.com/x/react-data-grid/).  
 ![Dashboard](static/assets/img/dashboard2.png)
 
 
