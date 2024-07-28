@@ -1,7 +1,7 @@
 ---
 title: Learning regex in practice
 description: Taking advantage of the subject of the last post, today I bring the content of a presentation I made at my company about regular expressions. A brief introduction to regex using email validation to exemplify past concepts.
-date: 2021-04-21 04:24:54
+date: 2021-04-09 04:24:54
 thumbnailImage: ../../static/assets/img/regex_thumb.jpg
 category: blog
 tags: 

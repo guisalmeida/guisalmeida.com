@@ -1,7 +1,7 @@
 ---
 title: Hello World
 description: Starting my personal blog, here I intend to share what I've been learning about web development, computer science and others technology stuff.
-date: 2020-06-28 03:19:24
+date: 2020-06-20 03:19:24
 thumbnailImage: ../../static/assets/img/thumb-hello.png
 category: blog
 tags: 
