@@ -187,6 +187,10 @@ export const MainContent = styled.section`
     opacity: 1 !important;
   }
 
+  .gatsby-resp-image-wrapper {
+    margin-left: 0 !important;
+  }
+
   .gatsby-resp-image-image {
     box-shadow: none !important;
     transition: opacity 0.2s;

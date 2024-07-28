@@ -1,7 +1,7 @@
 ---
 title: Publish your first package to NPM
 description: This post, in addition to showing how to publish a package, also introduces important concepts such as versioning, compatibility and dependency management.
-date: 2021-07-05 12:16:14
+date: 2021-06-24 12:16:14
 thumbnailImage: ../../static/assets/img/npmjs-private-package.png
 category: blog
 tags: 
