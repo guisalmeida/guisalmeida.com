@@ -18,7 +18,7 @@ exclude: Index
 ```
 ---
 
-> This post is the second part of a series of two posts about accessibility, you can read the first one here: [guisalmeida.com/accessibility-guidelines](/accessibility-guidelines/). 
+> This post is the second part of a series of two posts about accessibility, you can read the first one here: [An Introduction to accessibility guidelines](/accessibility-guidelines/). 
 
 ## 1 Intro  
 A social issue is always an attraction to stimulate technological developments and offer new tools to support communities in general. In the current context, the web has become almost indispensable in everyday life, somehow facilitating people's lives.
@@ -36,15 +36,16 @@ This way, the developer can easily correct problems and improve the application'
 
 This section will cover the concepts required for the Cypress and Axe-Core libraries, each of which plays a fundamental role in the work. The first is widely used for integration testing and the second has several pre-established accessibility tests, as shown below.  
 
-### 2.1 Cypress
+### 2.1 Cypress & Cypress-axe
 
 This tool is intended to facilitate the work of automating web application tests. With Cypress, it is possible to test an interface that runs in the browser, largely due to the approach adopted by the tool to automate tests. Its first version was released in 2015, but its official launch was only made in 2017.
 
 Cypress runs on Node (which is a JavaScript code interpreter), for this reason, the test codes or test cases must also be written in JavaScript, and it is not possible to write tests in other programming languages ​​to integrate with the library. Just by installing Cypress, it is already possible to write the tests, debug them and execute them, thus providing a complete test automation environment.
 
+Cypress-axe is a lib created to implement the Axe-core engine on Cypress.
+
 
 ### 2.2 Axe-core  
-*(https://github.com/dequelabs/axe-core)*  
 An accessibility testing engine for websites and other HTML-based user interfaces. It is designed to integrate into an existing testing environment so that you can automate accessibility testing alongside regular functional testing. It is built to reflect how web development works. It is compatible with most browsers, tools, and testing environments currently used in development environments.
 
 Axe-core performs accessibility validations according to different types of rules, and you can choose from versions (WCAG 2.0, 2.1, 2.2) at levels A and AA, as well as several best practices that help identify common accessibility practices. With it, accessibility testing can be performed as part of unit testing, integration testing, and browser testing, for example.
@@ -54,13 +55,14 @@ Axe-core performs accessibility validations according to different types of rule
 ## 3 POC (proof of concept)
 
 Let's start using [Vite](https://vitejs.dev/) to create and bundle our new project to serve as a POC (proof of concept).  
-> Make sure yo have node 18+ and NPM already installed.
+
+> Make sure you have Node 18+ and NPM already installed.
 
 ```sh
 npm create vite@latest
 ```
 
-Then following the prompts we will have some questions like the project name, framework e etc, and finally load the packages. For this example, I'm using React. After creating you can go to the project and install the dependencies.
+Then following the prompts we will have some questions like the project name, framework e etc, and finally load the packages. For this example, I'm using React. After creating you can go to the project install the dependencies and run locally.
 
 ```sh
 cd project-name
@@ -72,7 +74,12 @@ npm run dev
 > All of these steps are in the Cypress docs you can refer at: https://docs.cypress.io/guides/getting-started/opening-the-app  
 
 Now we have our project up and running, we start to set up our test environment.
-Let's install the dependencies we need for the test:
+Let's install the dependencies we need for the test.
+```sh
+npm install --save-dev axe-core cypress cypress-axe
+```
+
+
 After that, we need to set up Cypress to begin our tests, to do that we need to run:
 ```sh
 npx cypress open
@@ -99,7 +106,7 @@ Next, a screen is shown with the files needed to run the tests that the library 
 
 ![Cypress config](../../static/assets/img/cypress-config2.png)
 
-Then just click on the continue button and select a browser to start testing. The chosen browser is then opened where it is possible to create test cases already in this interface as shown in the next figure or they can be created manually inside the cypress/e2e folder inside the project. As the parser will be responsible for running the tests, there is no need to create tests at this time, so this interface can be closed.
+Then just click on the continue button and select a browser to start testing. The chosen browser is then opened where it is possible to create test cases already in this interface as shown in the next figure or they can be created manually inside the `cypress/e2e` folder within the project. As the parser will be responsible for running the tests, there is no need to create tests at this time, so this interface can be closed.
 
 ![Cypress config](../../static/assets/img/cypress-config3.png)
 
@@ -140,7 +147,7 @@ export default defineConfig({
 
 ```
 
-Now let's finally go to our test file which we created in the beginning when we opened and configurated Cypress, in my case is `/cypress/e2e/a11y.cy.js` if you leave it as Cypress default it should be `/cypress/e2e/spec.cy.js`. There we will configure it as follows:
+Now let's finally go to our test file which we created in the beginning when we opened and configured Cypress, If you leave it as Cypress default it should be `/cypress/e2e/spec.cy.js`. There, we will configure it as follows:
 
 ```js
 /// <reference types="cypress" />
@@ -184,7 +191,7 @@ Now we can simply run the open command and check the results:
 ```sh
 npm run cy:open
 ```
-Running the accessibility tests the library will check if our interface has any issue related to the accessibility guidelines. As we can see it throws an error about color contrast, which you can now about in the W3C docs: https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html.  
+Running the accessibility tests the library will check if our interface has any issue related to the accessibility guidelines. As we can see it throws an error about color contrast, which you can know more about in the W3C docs: https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html.  
 
 ![Test results](../../static/assets/img/test-results.png)  
 

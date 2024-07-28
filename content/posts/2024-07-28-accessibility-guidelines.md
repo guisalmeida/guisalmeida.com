@@ -16,7 +16,7 @@ ___
 exclude: Index
 ```
 ---
-> This post is the first part of a series of two posts about accessibility, you can read the second one here: [guisalmeida.com/accessibility-guidelines](/implement-accessibility-tests/). 
+> This post is the first part of a series of two posts about accessibility, you can read the second one here: [Implementing automated accessibility tests in your project](/implement-accessibility-tests/). 
 
 ## 1 Intro  
 
@@ -39,9 +39,9 @@ The international organization [W3C](https://www.w3.org/) launched an initiative
 In 1999, the first version of the guidelines, WCAG 1.0, was released as an official W3C document. These guidelines have since been used by governments and companies as a standard for developing accessible web projects. The document presents three main levels characterized by the use of the letter “A” only as a symbol, such as the use of stars to characterize the quality of a product:
 
 ### 2.1 Level A
-this is the minimum level, where the most significant accessibility barriers are found. Complying only with the level A criteria does not guarantee a highly accessible website; 
+This is the minimum level, where the most significant accessibility barriers are found. Complying only with the level A criteria does not guarantee a highly accessible website; 
 ### 2.2 Level AA
-this is the recommended level, complying with all the Level AA success criteria guarantees a highly accessible website, that is, it will be accessible to most users, under most circumstances and using most technologies; 
+This is the recommended level, complying with all the Level AA success criteria guarantees a highly accessible website, that is, it will be accessible to most users, under most circumstances and using most technologies; 
 ### 2.3 Level AAA
 The triple A conformance level is quite meticulous, that is, it aims to ensure an optimized level of accessibility. Most of the success criteria for level AAA refer to very specific situations, usually aiming to refine the success criteria for level AA. Maintaining compliance with certain success criteria for level AAA can be a costly process and, at times, difficult to implement. Therefore, many websites do not have content that applies to the success criteria for level AAA.
 
@@ -86,7 +86,7 @@ Content must be robust enough to be interpreted concisely by a variety of user a
 ## 4 Latest Updates
 By the date of this post, the most current version as of this writing is WCAG 2.2, which was published in October 2023. It extends version 2.1, and content that conforms to this version also conforms to previous versions. By following WCAG 2.2 guidelines, developers will make content more accessible to a wide range of people with disabilities, including accommodations for blindness and low vision, deafness and hearing loss, limited movement, speech impairments, photosensitivity, and other combinations of these, and some accommodation for learning disabilities and cognitive limitations.
 
-This new version contains the 4 principles, 13 guidelines and 78 success criteria. The conformance levels remain the same: A, AA and AAA. Therefore, 17 success criteria and a new guideline have been added to the **Operable principle**: 
+This new version contains the 4 principles, 13 guidelines and 86 success criteria. The conformance levels remain the same: A, AA and AAA. Therefore, 17 success criteria and a new guideline have been added to the **Operable principle**: 
 - Make it easier for users to operate functionality through inputs other than the keyboard.
 
 The success criteria are categorized into conformance levels. Sites must meet:
