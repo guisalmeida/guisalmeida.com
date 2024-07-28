@@ -18,7 +18,7 @@ exclude: Index
 ```
 ---
 
-> This post is the second part of a series of two posts about accessibility, you can read the second one here: [guisalmeida.com/accessibility-guidelines](/accessibility-guidelines/). 
+> This post is the second part of a series of two posts about accessibility, you can read the first one here: [guisalmeida.com/accessibility-guidelines](/accessibility-guidelines/). 
 
 ## 1 Intro  
 A social issue is always an attraction to stimulate technological developments and offer new tools to support communities in general. In the current context, the web has become almost indispensable in everyday life, somehow facilitating people's lives.
