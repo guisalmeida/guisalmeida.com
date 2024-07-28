@@ -16,10 +16,12 @@ ___
 exclude: Index
 ```
 ---
+> This post is the first part of a series of two posts about accessibility, you can read the second one here: [guisalmeida.com/accessibility-guidelines](/implement-accessibility-tests/). 
 
 ## 1 Intro  
 
-This research was extracted from my thesis for my graduation in computer science, where the topic addressed was the lack of accessibility tests in software projects and how this can be improved and implemented. 
+This research was extracted from my thesis for my graduation in computer science, where the topic addressed was the lack of accessibility tests in software projects and how this can be improved and implemented.
+
 
 ### 1.1 Accessibility a social issue  
 
