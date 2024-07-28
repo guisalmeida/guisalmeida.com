@@ -212,6 +212,6 @@ Finally after our adjustments on text color, the results are good and our site i
 
 ---
 ## 5 Conclusion
-Docker has become a powerful tool for development because it brings several advantages as we can see in this post. The ease of having your application running on different systems can save you a few hours trying to install libs on different systems. Undoubtedly knowledge that every developer needs to have in their toolbox.
+Tests are the best way to ensure the quality of our software, but we also need to ensure access for everyone. And with automated accessibility tests, we can ensure this in a more agile and painless way.
 
 What did you think of this post? Do you have any questions, suggestions or criticisms? Leave a reaction or a comment below. Thanks for visiting! 😉
