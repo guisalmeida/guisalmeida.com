@@ -7,7 +7,8 @@ module.exports = {
     position: `Software Engineer`,
     description: `Blog and Portfolio.`,
     author: `@guisalmeida`,
-    siteUrl: `https://guisalmeida.com`
+    siteUrl: `https://guisalmeida.com`,
+    image: `/assets/img/thumb_home2.jpg`
   },
   plugins: [
     `gatsby-plugin-styled-components`,

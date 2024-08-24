@@ -19,19 +19,16 @@ const Author = ({ fullText }) => {
 			)}
 
 			<p>
-				I'm a dedicated Software Engineer with a Bachelor's degree in Computer
-				Science and over 4 years of hands-on experience in software development.
-				My journey began in the creative field, having spent approximately 6
-				years as a designer before making the leap into development.
+				I'm a Software engineer with more than 5 years of practical experience in software development. I have a bachelor's degree in Computer Science. My expertise extends across Web and Software Development, Data Structures and Algorithms, Agile Methodologies and a strong background in design (graphic design, visual identity, and UI/UX).
+			</p>
+			<p>
+				Interested in professional growth and willing to embrace new technologies and take on challenging tasks. I am also enthusiastic about sharing knowledge and working collaboratively as a team.
 			</p>
 
 			{fullText && (
 				<>
 					<p>
-						My passion for continual growth is evident in my eagerness to
-						embrace new technologies and take on challenging tasks. I am equally
-						enthusiastic about sharing my expertise and thrive when working
-						collaboratively as part of a team. Beyond my professional interests,
+						Beyond my professional interests,
 						I have a love for skateboarding and enjoy experimenting with
 						vegetarian recipes. In my free time, I cherish moments spent with my
 						wife and our beloved dogs.
@@ -41,10 +38,7 @@ const Author = ({ fullText }) => {
 						Over the course of my career, I've had the privilege of contributing
 						to various companies, initially as a designer and evolving into a
 						developer over time. This diverse journey has provided me with a
-						holistic understanding of different design patterns and tools. My
-						expertise extends across Web Development, Software Development,
-						Graphic Design, Data Structures and Algorithms, and Agile
-						Methodologies.
+						holistic understanding of different design patterns and tools.
 					</p>
 
 					<p>
@@ -101,8 +95,7 @@ const Author = ({ fullText }) => {
 
 					<h2>Keep in touch</h2>
 					<p>
-						Feel free to reach out to me through my social media platforms
-						(icons on the left) or drop me an email at{" "}
+						Feel free to reach out to me through my social media or drop me an email at{" "}
 						<a
 							href="mailto:guisalmeida.dev@gmail.com"
 							target="_blank"
