@@ -1,7 +1,7 @@
 ---
 title: "TIL #1 - Differences between using the V-Model on Vue 2 and 3"
 description: Today I learned the differences between using the v-model on Vue 2 and 3.
-date: 2024-09-19 09:51:12
+date: 2024-09-19 19:01:12
 thumbnailImage: ../../static/assets/img/vue-js-programming-1589827.jpg
 category: blog
 tags:
