@@ -25,52 +25,72 @@ exclude: Index
 ## 1 Directives
 They are properties passed inside the **html** tags, they work as follows:
 ```html
-<tag v-directive:argument.modifier="'value'" />
+<template>
+    <tag v-directive:argument.modifier="value" />
+</template>
 ```
 
 **v-bind**
 Used before properties to access values within the Vue instance and bind to the tag's attribute.
 ```html
-<a v-bind:href="link">Google</a>
+<template>
+    <a v-bind:href="link">Google</a>
+</template>
 ```
 **v-once**
 Used to access values within the Vue instance a **one time**, if the value is updated it will not change.
 ```html
-<p v-once>{{ title }}</p>
+<template>
+    <p v-once>{{ title }}</p>
+</template>
 ```
 
 **v-text**
 Used to insert text into a tag.
 ```html
-<p v-text="'Using the v-text directive'"></p>
+<template>
+    <p v-text="Using the v-text directive"></p>
+</template>
 ```
 
 **v-html**
 Used to display Html code, if passed in double curly braces interpret data as **plain text**.
 ```html
-linkHtml = '<a href="http://google.com">Google</a>'
-<p v-html="linkHtml"></p>
+<template>
+    <p v-html="linkHtml"></p>
+</template>
+
+<script>
+    const linkHtml = "<a href='http://google.com'>Google</a>"
+</script>
 ```  
 
 **ref**
 Creates a reference to a DOM element.
 ```html
-<h1 ref="aulaRef">{{aula}}</h1>
+<template>
+    <h1 ref="aulaRef">{{aula}}</h1>
+</template>
+
 <script>
-this.$refs.aulaRef.style.color = "red"
+    this.$refs.aulaRef.style.color = "red"
 </script>
 ```
 
 **v-model**
 Links the view and the synchronized template, **two-way data binding**.
 ```html
-<input type="text" v-model="title">
+<template>
+    <input type="text" v-model="title">
+</template>
 ```
 
 **v-on**
 Used to listen for the event.
 ```html
-<button v-on:click="sum">+1</button>
+<template>
+    <button v-on:click="sum">+1</button>
+</template>
 ```
 
 ### 1.1 Modifiers
@@ -81,17 +101,23 @@ Modifiers must be passed together with the `v-model` directive to handle input d
 **lazy**
 Applies typed value only after focus leaves input field.
 ```html
-<input type="text" v-model.lazy="user.email">
+<template>
+    <input type="text" v-model.lazy="user.email">
+</template>
 ```
 **to trim**
 Removes space at the beginning and end of the value entered in the input field.
 ```html
-<input type="text" v-model.trim="user.email">
+<template>
+    <input type="text" v-model.trim="user.email">
+</template>
 ```
 **number**
 Returns the value typed in the input field as a numerical value and not a string as it is by default.
 ```html
-<input type="number" v-model.number="user.age">
+<template>
+    <input type="number" v-model.number="user.age">
+</template>
 ```
 
 #### 1.1.2 Event Modifiers
@@ -101,26 +127,32 @@ Modifiers must be passed along with the `v-on` directive to control event behavi
 Used directly in the directive, to stop the controlled event.
 
 ```html
-<p v-on:mousemove="showCoordinates">
-      Mouse: {{ x }} and {{ y }}.
-      <span v-on:mousemove.stop>Stop here</span>
-</p>
+<template>
+    <p v-on:mousemove="showCoordinates">
+        Mouse: {{ x }} and {{ y }}.
+        <span v-on:mousemove.stop>Stop here</span>
+    </p>
+</template>
 ```
 
 **prevent (PreventDefault)**
 Used directly in the directive, to prevent the browser default behavior.
 ```html
-<a v-on:click.prevent href="http://guisalmeida.com">Site access</a>
+<template>
+    <a v-on:click.prevent href="http://guisalmeida.com">Site access</a>
+</template>
 ```
 **key (keys)**
 Used to emit a specific event.
 ```html
-<input v-on:keyup="displayAlert" type="text">
-<!-- Call function every time a key is pressed -->
-<input v-on:keyup.enter="displayAlert" type="text">
-<!-- Call function only when pressed -->
-<input v-on:keyup.enter.alt="displayAlert" type="text">
-<!-- Call function only when enter+alt was pressed -->
+<template>
+    <input v-on:keyup="displayAlert" type="text">
+    <!-- Call function every time a key is pressed -->
+    <input v-on:keyup.enter="displayAlert" type="text">
+    <!-- Call function only when pressed -->
+    <input v-on:keyup.enter.alt="displayAlert" type="text">
+    <!-- Call function only when enter+alt was pressed -->
+</template>
 ```  
 
 ### 1.2 Conditionals
@@ -129,36 +161,41 @@ Used to create conditional logic in the html template.
 
 > Delete element from DOM.
 ```html
-<p v-if="logged in">Logged in User: {{ name }}</p>
-<p v-else-if="anonymous">Anonymous User</p>
-<p v-else>No User Logged In</p>
+<template>
+    <p v-if="logged in">Logged in User: {{ name }}</p>
+    <p v-else-if="anonymous">Anonymous User</p>
+    <p v-else>No User Logged In</p>
+</template>
 ```
 **v-show**
 Used to show or hide elements in HTML template.
 
 > Does not delete DOM element, applies display: none.
 ```html
-<footer v-show="logged">Developed for you</footer>
+<template>
+    <footer v-show="logged">Developed for you</footer>
+</template>
 ```
 
 ### 1.3 Lists
 **v-for**
 Creates a repeating for loop on the element.
 
-> Delete element from DOM.
 ```html
-<!-- Loop with array -->
-<ul>
-     <li v-for="(color, index) in colors">
-         {{ color }} is at index {{ index }}
-     </li>
-</ul>
-<!-- Loop with objects -->
-<ul>
-     <li v-for="person in persons">
-         <div v-for="(value, key, index) in person">{{index}}) {{ key }} = {{ value }}</div>
-     </li>
-</ul>
+<template>
+    <!-- Loop with array -->
+    <ul>
+         <li v-for="(color, index) in colors">
+             {{ color }} is at index {{ index }}
+         </li>
+    </ul>
+    <!-- Loop with objects -->
+    <ul>
+         <li v-for="person in persons">
+             <div v-for="(value, key, index) in person">{{index}}) {{ key }} = {{ value }}</div>
+         </li>
+    </ul>
+</template>
 ```
 
 ### 1.4 Custom directives
@@ -191,8 +228,8 @@ Vue.directive('highlight', {
 In the component:
 ```html
 <template>
-     <p v-highlight:background.delay="'lightgreen'">Using custom directive</p>
-     <p v-highlight.delay="'yellow'">Using custom directive</p>
+     <p v-highlight:background.delay="lightgreen">Using custom directive</p>
+     <p v-highlight.delay="yellow">Using custom directive</p>
 </template>
 ```
 
@@ -226,7 +263,9 @@ Functions of each component.
 > the event is passed automatically. If we need to pass a parameter
 > and the event, we must use the `$event` keyword.
 ```html
-<button v-on:click="sum(5, $event)">+1</button>
+<template>
+    <button v-on:click="sum(5, $event)">+1</button>
+</template>
 ```
 ---
 ## 3 Computed
@@ -241,17 +280,17 @@ Expressions within templates are very convenient, but they are intended for simp
 </template>
 
 <script>
-     export default {
-         date() {
-             return {
-                 message: 'Hello Vue'
-             }
-         },
-         computed: {
-             reversedMessage: function () {
-                 return this.message.split('').reverse().join('')
-             }
-         }
+    export default {
+        data() {
+            return {
+                message: 'Hello Vue'
+            }
+        },
+        computed: {
+            reversedMessage: function () {
+                return this.message.split('').reverse().join('')
+            }
+        }
      }
 </script>
 ```
@@ -262,25 +301,29 @@ Asynchronous functions that keep track of property changes.
 
 > Must have the same name as the property to be changed.
 
-```js
-watch: {
-     property(<newvalue>, <oldvalue>) {
-         // do something
-     }
-},
+```html
+<script>
+    watch: {
+        property(<newvalue>, <oldvalue>) {
+            // do something
+        }
+    }
+</script>
 ```
 
 To monitor the **internal state** of each of the elements of the property being monitored, you must change the method with the name of the property to an object with an attribute called `deep: true` and the method that must be executed is passed in the `handler` attribute.
 
-```js
-watch: {
-     property: {
-       deep: true,
-       handler() {
-         // do something
-       }
-     }
-   },
+```html
+<script>
+    watch: {
+        property: {
+            deep: true,
+            handler() {
+                // do something
+            }
+        }
+    }
+</script>
 ```
 
 ---
@@ -363,18 +406,22 @@ Several elements can be named to be identified in the component.
 
 ```html
 <!-- Passing data inside the component -->
-<Component>
-     <h1 slot="author">{{ citations[index].author }}</h1>
-     <p slot="text">{{ quotes[index].text }}</p>
-     <h6 slot="source">{{ quotes[index].source }}</h6>
-</Component>
+<template>
+    <Component>
+         <h1 slot="author">{{ citations[index].author }}</h1>
+         <p slot="text">{{ quotes[index].text }}</p>
+         <h6 slot="source">{{ quotes[index].source }}</h6>
+    </Component>
+</template>
 
 <!-- Receiving data into the component -->
-<div class="citation">
-     <slot name="author"/>
-     <slot name="text"/>
-     <slot name="source"/>
-</div>
+ <template>
+    <div class="citation">
+        <slot name="author"/>
+        <slot name="text"/>
+        <slot name="source"/>
+    </div>
+</template>
 ```
 
 **keep alive**
@@ -383,9 +430,11 @@ Prevents that when reloading the page or replacing the component, it is not dest
 > `activated(), deactivated()`  
 
 ```html
-<keep-alive>
-    <component :is="component"/>
-</keep-alive>
+<template>
+    <keep-alive>
+        <component :is="component"/>
+    </keep-alive>
+</template>
 
 ```
 ---
@@ -395,29 +444,29 @@ Methods that can be created within the `filters` attribute where deal with a giv
 **Example local filter:**
 ```html
 <template>
-<div id="app">
-<p>{{ cpf | cpfFormat }}</p>
-         <input type="text" :value="cpf | cpfFormat">
-</div>
+    <div id="app">
+        <p>{{ cpf | cpfFormat }}</p>
+        <input type="text" :value="cpf | cpfFormat">
+    </div>
 </template>
 
 <script>
-export default {
-filters: {
-cpfFormat(value){
-const arr = value.split('')
-arr.splice(3, 0, '.')
-arr.splice(7, 0, '.')
-arr.splice(11, 0, '-')
-return arr.join('')
-}
-},
-date() {
-return {
-CPF: '01234567891'
-}
-}
-}
+    export default {
+        data() {
+            return {
+                CPF: '01234567891'
+            }
+        },
+        filters: {
+            cpfFormat(value){
+                const arr = value.split('')
+                arr.splice(3, 0, '.')
+                arr.splice(7, 0, '.')
+                arr.splice(11, 0, '-')
+                return arr.join('')
+            }
+        }
+    }
 </script>
 ```
 
@@ -425,26 +474,26 @@ CPF: '01234567891'
 In the `main.js` file:
 ```js
 Vue.filter('invert', (value) => {
-return value.split('').reverse().join('')
+    return value.split('').reverse().join('')
 })
 ```
 In the component:
 
 ```html
 <template>
-<div id="app">
-<p>{{ cpf | reverse }}</p>
-         <input type="text" :value="cpf | invert">
-</div>
+    <div id="app">
+        <p>{{ cpf | reverse }}</p>
+        <input type="text" :value="cpf | invert">
+    </div>
 </template>
 
 <script>
 export default {
-date() {
-return {
-CPF: '01234567891'
-}
-}
+    data() {
+        return {
+            CPF: '01234567891'
+        }
+    }
 }
 </script>
 ```
@@ -452,12 +501,13 @@ CPF: '01234567891'
 > Filters can be chained receiving the value returned from the previous filter:
 > ```html
 > <template>
-> <div id="app">
-> <p>{{ cpf | reverse | cpfFormat }}</p>
-> <input type="text" :value="cpf | reverse | cpfFormat">
-> </div>
+>   <div id="app">
+>       <p>{{ cpf | reverse | cpfFormat }}</p>
+>       <input type="text" :value="cpf | reverse | cpfFormat">
+>   </div>
 > </template>
 > ```
+
 
 ---
 ## 8 mixins
@@ -484,12 +534,10 @@ The component will receive everything declared in the mixin and mix it with its 
 `component.vue`
 ```html
 <script>
-import fruitsMixin fro__setPreferredDisplaym '@/fruitsMixin'
+import fruitsMixin from '@/fruitsMixin'
 
 export default {
-     mixins: [
-         fruitsMixin
-     ]
+    mixins: [ fruitsMixin ]
 }
 <script/>
 ```
@@ -497,9 +545,9 @@ export default {
 **Global mixing**
 ```js
 vue.mixin({
-     created() {
-         console.log('Created GLOBAL mixin')
-     }
+    created() {
+        console.log('Created GLOBAL mixin')
+    }
 })
 ```
 
@@ -550,27 +598,28 @@ You can also specify a custom transition class by providing the following attrib
 - leave-to-class (2.1.8+)
 
 ```html
-<transition
-     enter-active-class="animated bounce"
-     leave-active-class="animated shake"
->
-       <element/>
-</transition>
+<template>
+    <transition enter-active-class="animated bounce" leave-active-class="animated shake">
+        <element/>
+    </transition>
+</template>
 ```
 
 #### 9.1.2 Dynamic Transitions
 It is possible to pass a name to the `transition` element via binding and also has element changes within the transition via `v-if`. For this, it is necessary that each element has a unique key (key) and the `mode` directive must also be passed in the transition so that one element does not overlap the other.
 
 ```html
-<transition :name="animation" mode="out-in">
-     <b-alert variant="info" show v-if="display" key="info">{{ msg }}</b-alert>
-     <b-alert variant="warning" show v-else key="warning">{{ msg }}</b-alert>
-</transition>
-
-<!-- Can also be used with dynamic components -->
-<transition name="animation" mode="out-in">
-     <component :is="componentSelected"></component>
-</transition>
+<template>
+    <transition :name="animation" mode="out-in">
+         <b-alert variant="info" show v-if="display" key="info">{{ msg }}</b-alert>
+         <b-alert variant="warning" show v-else key="warning">{{ msg }}</b-alert>
+    </transition>
+    
+    <!-- Can also be used with dynamic components -->
+    <transition name="animation" mode="out-in">
+         <component :is="componentSelected"></component>
+    </transition>
+</template>
 ```
 
 ### 9.2 Transition with JS Hooks
@@ -596,41 +645,41 @@ It is possible to pass a name to the `transition` element via binding and also h
 </template>
 
 <script>
-     export default {
-     date() {
-         return {
-             display2: true,
-         };
-     },
-     methods: {
-         beforeEnter(el) {
-             console.log('beforeEnter');
-         },
-         enter(el, done) {
-             console.log('enter');
-             done()
-         },
-         afterEnter(el) {
-             console.log('afterEnter');
-         },
-         enterCancelled() {
-             console.log('enterCancelled');
-         },
-         beforeLeave(el) {
-             console.log('beforeLeave');
-         },
-         leave(el, done) {
-             console.log('leave');
-             done()
-         },
-         afterLeave(el) {
-             console.log('afterLeave');
-         },
-         leaveCancelled() {
-             console.log('leaveCancelled');
-         }
-     }
-};
+    export default {
+        data() {
+            return {
+                display2: true,
+            };
+        },
+        methods: {
+            beforeEnter(el) {
+                console.log('beforeEnter');
+            },
+            enter(el, done) {
+                console.log('enter');
+                done()
+            },
+            afterEnter(el) {
+                console.log('afterEnter');
+            },
+            enterCancelled() {
+                console.log('enterCancelled');
+            },
+            beforeLeave(el) {
+                console.log('beforeLeave');
+            },
+            leave(el, done) {
+                console.log('leave');
+                done()
+            },
+            afterLeave(el) {
+                console.log('afterLeave');
+            },
+            leaveCancelled() {
+                console.log('leaveCancelled');
+            }
+        }
+    };
 </script>
 ```
 ---
@@ -651,12 +700,12 @@ import Component from './components/component'
 Vue.use(Router)
 
 export default new Router({
-     routes: [
-         {
-             path: '/',
-             component: component
-         }
-     ]
+    routes: [
+        {
+            path: '/',
+            component: component
+        }
+    ]
 })
 ```
 
@@ -685,13 +734,13 @@ In request: `localhost:8080/pagina`
 
 ```js
 export default new Router({
-     mode: 'history',
-     routes: [
-         {
-             path: '/',
-             component: Component
-         }
-     ]
+    mode: 'history',
+    routes: [
+        {
+            path: '/',
+            component: Component
+        }
+    ]
 })
 ```
 
@@ -704,12 +753,12 @@ It is also possible to pass prop to when the route is active and apply a class,
 and also use `exact` to match exactly with the passed path.
 ```html
 <template>
-     <router-link
-         to="/"
-         tag="div"
-         active-class="active"
-         exact
-     >Link</router-link>
+    <router-link
+        to="/"
+        tag="div"
+        active-class="active"
+        exact
+    >Link</router-link>
 </template>
 ```
 
@@ -717,7 +766,7 @@ and also use `exact` to match exactly with the passed path.
 The result of the current route will render the **component** corresponding to **route**.
 ```html
 <template>
-     <router-view />
+    <router-view />
 </template>
 ```
 
@@ -750,11 +799,11 @@ export default {
 In addition to `props`, it is also possible to access route data via the **component** via `this.$route.params`.
 ```js
 export default {
-     date() {
-         return {
-             id: this.$route.params.id
-         }
-     }
+    data() {
+        return {
+            id: this.$route.params.id
+        }
+    }
 }
 ```
 
@@ -765,18 +814,18 @@ To render nested components, we need to use the `children` option in the `VueRou
 
 ```js
 export default new Router({
-     mode: 'history',
-     routes: [
-         {
-             path: '/users',
-             component: Users,
-             children: [
-                 { path: '', component: UserList }, // path = '/users'
-                 { path: ':id', component: UserDetail, props: true }, // path = '/users/:id'
-                 { path: ':id/edit', component: UserEdit, props: true }, // path = '/users/:id/edit'
-             ]
-         }
-     ]
+    mode: 'history',
+    routes: [
+        {
+            path: '/users',
+            component: Users,
+            children: [
+                { path: '', component: UserList },                      // path = '/users'
+                { path: ':id', component: UserDetail, props: true },    // path = '/users/:id'
+                { path: ':id/edit', component: UserEdit, props: true }, // path = '/users/:id/edit'
+            ]
+        }
+    ]
 })
 ```
 
@@ -785,38 +834,38 @@ Routes can be named making it easier to identify and understand the code.
 
 ```js
 export default new Router({
-     mode: 'history',
-     routes: [
-         {
-             path: '/',
-             name: 'home',
-             component: Home
-         }
-     ]
+    mode: 'history',
+    routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: Home
+        }
+    ]
 })
 ```
 In the component, we have more than one way to call the route.
 > The router instance is globally accessible via `this.$router`.
 ```html
 <template>
-     <div class="App">
-         <!-- To call the route by name passed inside an object -->
-         <router-link to="{ name: 'home' }">Back</router-link>
+    <div class="App">
+        <!-- To call the route by name passed inside an object -->
+        <router-link to="{ name: 'home' }">Back</router-link>
 
-         <!-- The route can also be loaded by a method -->
-         <button v-on:click="toHome">Back</button>
-     </div>
+        <!-- The route can also be loaded by a method -->
+        <button v-on:click="toHome">Back</button>
+    </div>
 </template>
 
 <script>
 export default {
-     methods: {
-         toHome() {
-             // this.$router.push('/')
-             // this.$router.push({ path: '/' })
-             this.$router.push({ name: 'home' })
-         }
-     }
+    methods: {
+        toHome() {
+            // this.$router.push('/')
+            // this.$router.push({ path: '/' })
+            this.$router.push({ name: 'home' })
+        }
+    }
 }
 </script>
 ```
@@ -825,26 +874,25 @@ export default {
 In the `VueRouter` **constructor** configuration we pass the components that should be rendered when loading the route.
 ```js
 export default new Router({
-     mode: 'history',
-     routes: [{
-         path: '/',
-         name: 'home',
-         components: {
-             default: Home,
-             menu: menu
-         }
-     }
+    mode: 'history',
+    routes: [{
+        path: '/',
+        name: 'home',
+        components: {
+            default: Home,
+            menu: menu
+        }
+    }
 }
 ```
 In the template that will use the route component, more than one `router-view` can be passed to render more than one component according to the route. They are differentiated according to the name passed in the **Router**.
 ```html
 <template>
-<div id="app">
-         <!-- The router-view that is not passed the "name" attribute
-         renders the component passed by default on the Router. -->
-<router-view />
-<router-view name="menu"/>
-</div>
+    <div id="app">
+        <!-- The router-view that is not passed the "name" attribute renders the component passed by default on the Router. -->
+        <router-view />
+        <router-view name="menu"/>
+    </div>
 </template>
 ```
 
@@ -853,13 +901,13 @@ To redirect a route we pass the `redirect` option and in its value the path that
 > To get anything that is typed and does not match our routes we pass a `*` (asterisk).
 ```js
 export default new Router({
-     mode: 'history',
-     routes: [
-         {
-             path: '*',
-             redirect: '/notfound'
-         }
-     ]
+    mode: 'history',
+    routes: [
+        {
+            path: '*',
+            redirect: '/notfound'
+        }
+    ]
 }
 ```
 
@@ -868,21 +916,21 @@ When using client-side routing, we may want to scroll up when navigating to a ne
 
 ```js
 export default new Router({
-     mode: 'history',
-     scrollBehavior(to, from, savedPosition) {
-         if(savedPosition) {
-             return savedPosition
-         } else if (to.hash) {
-             return { selector: to.hash, behavior: 'smooth' }
-         } else {
-             return { x: 0, y: 0, behavior: 'smooth' }
-         }
-     },
-     routes: [{
-         path: '/',
-         name: 'home',
-         component: Home
-     }]
+    mode: 'history',
+    scrollBehavior(to, from, savedPosition) {
+        if(savedPosition) {
+            return savedPosition
+        } else if (to.hash) {
+            return { selector: to.hash, behavior: 'smooth' }
+        } else {
+            return { x: 0, y: 0, behavior: 'smooth' }
+        }
+    },
+    routes: [{
+        path: '/',
+        name: 'home',
+        component: Home
+    }]
 }
 ```
 
@@ -901,52 +949,51 @@ Intercepting routes globally, the callback passed in `beforeEach` will be run be
   *
   */
 router.beforeEach((to, from, next) => {
-     console.log('Run before all routes are called');
-     next();
+    console.log('Run before all routes are called');
+    next();
 })
 ```
 Intercepting directly on a route.
 
 ```js
 const router = new Router({
-     mode: 'history',
-     routes: [{
-         path: '/',
-         name: 'home',
-         component: Home,
-         beforeEnter: (to, from, next) => {
-             console.log('before local route');
-             next();
-         }
-     }
+    mode: 'history',
+    routes: [{
+        path: '/',
+        name: 'home',
+        component: Home,
+        beforeEnter: (to, from, next) => {
+            console.log('before local route');
+            next();
+        }
+    }
 }
 ```
 Intercepting in the component that will be called by the route.
 
 ```js
 export default {
-     beforeRouteEnter(to, from, next) {
-         console.log('Called before component route');
-         next();
-     }
-   }
+    beforeRouteEnter(to, from, next) {
+        console.log('Called before component route');
+        next();
+    }
 }
 ```
 
 It is also possible to intercept before leaving the route.
 ```js
 export default {
-     beforeRouteLeave(to, from, next) {
-         if (this.confirm) {
-             next()
-         } else {
-             if(confirm('Exit route?')) {
-                 next()
-             } else {
-                 next(false)
-             }
-         }
-   }
+    beforeRouteLeave(to, from, next) {
+        if (this.confirm) {
+            next()
+        } else {
+            if(confirm('Exit route?')) {
+                next()
+            } else {
+                next(false)
+            }
+        }
+    }
 }
 ```
 
@@ -985,10 +1032,10 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-     state: {
-         name: 'gui',
-         surname: 'Almeida'
-     }
+    state: {
+        name: 'gui',
+        surname: 'Almeida'
+    }
 })
 ```
 
@@ -999,24 +1046,24 @@ import App from './App.vue'
 import store from './store/store'
 
 new Vue({
-     store, // store: store
-     render: h => h(App),
+    store, // store: store
+    render: h => h(App),
 }).$mount('#app')
 ```
 
 Accessing `state` in components
 ```html
 <template>
-     <p>{{ name }}</p>
+    <p>{{ name }}</p>
 </template>
 
 <script>
 export default {
-     computed: {
-         Name() {
-             return this.$store.state.name
-         }
-     }
+    computed: {
+        Name() {
+            return this.$store.state.name
+        }
+    }
 }
 </script>
 ```
@@ -1027,15 +1074,15 @@ Functions that return information (data) from the state.
 Creating getters:
 ```js
 export default new Vuex.Store({
-     state: {
-         name: 'gui',
-         surname: 'Almeida'
-     }
-     getters: {
-         fullname(state){
-             `${state.firstname} ${state.lastname}`
-         }
-     }
+    state: {
+        name: 'gui',
+        surname: 'Almeida'
+    }
+    getters: {
+        fullname(state){
+            `${state.firstname} ${state.lastname}`
+        }
+    }
 })
 ```
 
@@ -1043,11 +1090,11 @@ A getter method can receive the `getters` of the entire application as a second 
 
 ```js
 export default new Vuex.Store({
-     getters: {
-         getAnotherModuleData(state, getters){
-             return getters.anotherModuleGetter
-         }
-     }
+    getters: {
+        getAnotherModuleData(state, getters){
+            return getters.anotherModuleGetter
+        }
+    }
 })
 ```
 
@@ -1061,14 +1108,14 @@ Accessing getters in the component via `this.$store.getters` or the `mapGetters`
 import { mapGetters } from 'vuex'
 
 export default {
-     computed: {
-         full name() {
-             return this.$store.getters.fullName
-         },
-         ...mapGetters({
-             'full name'
-         })
-     }
+    computed: {
+        full name() {
+            return this.$store.getters.fullName
+        },
+        ...mapGetters({
+            'full name'
+        })
+    }
 }
 </script>
 ```
@@ -1081,21 +1128,21 @@ through `mutations` that have the purpose of changing the store directly and the
 Creating mutations:
 ```js
 export default new Vuex.Store({
-     state: {
-         name: 'gui',
-         surname: 'Almeida',
-         hobbies: []
-     }
-     getters: {
-         fullname(state){
-             `${state.firstname} ${state.lastname}`
-         }
-     },
-     mutations: {
-         addHobby(state, payload) {
-             state.hobbys.push(payload)
-         }
-     }
+    state: {
+        name: 'gui',
+        surname: 'Almeida',
+        hobbies: []
+    }
+    getters: {
+        fullname(state){
+            `${state.firstname} ${state.lastname}`
+        }
+    },
+    mutations: {
+        addHobby(state, payload) {
+            state.hobbys.push(payload)
+        }
+    }
 })
 ```
 
@@ -1136,27 +1183,28 @@ Creates a function in `methods` with the same name as the mutation created in th
 Accessing mutations in the component via the `mapMutations` method:
 ```html
 <template>
-     <p>{{ fullName }}</p>
-     <p>Like:</p>
-     <input type="number" v-model="hobby">
-     <button @click="addHobby">Add!</button>
+    <p>{{ fullName }}</p>
+    <p>Like:</p>
+    <input type="number" v-model="hobby">
+    <button @click="addHobby">Add!</button>
 
-     <ul>
-         <li v-for="hobby in hobbys">{{hobby}}</li>
-     </ul>
+    <ul>
+        <li v-for="hobby in hobbys">{{hobby}}</li>
+    </ul>
 </template>
+
 <script>
 import { mapMutations } from 'vuex'
 
 export default {
-     methods: {
-         ...mapMutations(['addHobby'])
-     },
-     computed: {
-         hobbies() {
-             return this.$store.state.hobbys
-         }
-     }
+    methods: {
+        ...mapMutations(['addHobby'])
+    },
+    computed: {
+        hobbies() {
+            return this.$store.state.hobbys
+        }
+    }
 }
 </script>
 ```
@@ -1170,28 +1218,28 @@ Method to trigger the actions.
 ```js
 // in the store
 export default new Vuex.Store({
-     state: {
-         products: []
-     },
-     mutations: {
-         addProduct(state, payload) {
-             state.products.push(payload)
-         }
-     },
-     actions: {
-         addProductAction(context, payload) {
-             context.commit('addProduct', payload)
-         }
-     }
+    state: {
+        products: []
+    },
+    mutations: {
+        addProduct(state, payload) {
+            state.products.push(payload)
+        }
+    },
+    actions: {
+        addProductAction(context, payload) {
+            context.commit('addProduct', payload)
+        }
+    }
 })
 
 // in the component
 export default {
-     methods: {
-         add() {
-             this.$store.dispatch('addProductAction', product)
-         }
-     }
+    methods: {
+        add() {
+            this.$store.dispatch('addProductAction', product)
+        }
+    }
 }
 ```
 
@@ -1201,31 +1249,31 @@ Create a function in `methods` with the same name as the action created in the s
 ```js
 // in the store
 export default new Vuex.Store({
-     state: {
-         products: []
-     },
-     mutations: {
-         addProduct(state, payload) {
-             state.products.push(payload)
-         }
-     },
-     actions: {
-         addProductAction(context, payload) {
-             context.commit('addProduct', payload)
-         }
-     }
+    state: {
+        products: []
+    },
+    mutations: {
+        addProduct(state, payload) {
+            state.products.push(payload)
+        }
+    },
+    actions: {
+        addProductAction(context, payload) {
+            context.commit('addProduct', payload)
+        }
+    }
 })
 
 // in the component
 import { mapActions } from 'vuex'
 
 export default {
-     methods: {
-         ...mapActions(['addProductAction']),
-         add() {
-             this.addProductAction(product)
-         }
-     }
+    methods: {
+        ...mapActions(['addProductAction']),
+        add() {
+            this.addProductAction(product)
+        }
+    }
 }
 ```
 
@@ -1248,10 +1296,10 @@ const moduleB = {
 }
 
 const store = new Vuex.Store({
-   modules: {
-     a: moduleA,
-     b: moduleB
-   }
+    modules: {
+        a: moduleA,
+        b: moduleB
+    }
 })
 
 this.$store.state.a // -> `moduloA`'s state
@@ -1265,43 +1313,43 @@ When the module is registered, all getters, actions, and mutations will be autom
 
 ```js
 const store = new Vuex.Store({
-   modules: {
-     account: {
-       namespaced: true,
+    modules: {
+        account: {
+            namespaced: true,
 
-       // module assets
-       state: { ... }, // module state is already nested and not affected by the namespace option
-       getters: {
-         isAdmin() { ... } // -> getters['account/isAdmin']
-       },
-       actions: {
-         login() { ... } // -> dispatch('account/login')
-       },
-       mutations: {
-         login() { ... } // -> commit('account/login')
-       },
+            // module assets
+            state: { ... }, // module state is already nested and not affected by the namespace option
+            getters: {
+                isAdmin() { ... } // -> getters['account/isAdmin']
+            },
+            actions: {
+                login() { ... } // -> dispatch('account/login')
+            },
+            mutations: {
+                login() { ... } // -> commit('account/login')
+            },
 
-       // nested modules
-       modules: {
-         // inherits namespace from the parent module
-         myPage: {
-           state: { ... },
-           getters: {
-             profile() { ... } // -> getters['account/profile']
-           }
-         },
+            // nested modules
+            modules: {
+                // inherits namespace from the parent module
+                myPage: {
+                    state: { ... },
+                    getters: {
+                        profile() { ... } // -> getters['account/profile']
+                    }
+                },
 
-         // further nest the namespace
-         posts: {
-           namespaced: true,
-           state: { ... },
-           getters: {
-             popular() { ... } // -> getters['account/posts/popular']
-           }
-         }
-       }
-     }
-   }
+                // further nest the namespace
+                posts: {
+                    namespaced: true,
+                    state: { ... },
+                    getters: {
+                        popular() { ... } // -> getters['account/posts/popular']
+                    }
+                }
+            }
+        }
+    }
 })
 ```
 
@@ -1316,51 +1364,10 @@ const store = new Vuex.Store({
 ---
 ## 13 References
 
-[Official Documentation - Introduction](https://vuejs.org/v2/guide/)
-
-[Official Documentation - Template Syntax](https://vuejs.org/v2/guide/syntax.html)
-
-[Official Documentation - Event Handling](https://vuejs.org/v2/guide/events.html)
-
-[Official Documentation - Computed Data & Observers](https://vuejs.org/v2/guide/computed.html)
-
-[Official Documentation - Class and Style Interlinks](https://vuejs.org/v2/guide/class-and-style.html)
-
-[Official Documentation - Conditional Rendering](https://vuejs.org/v2/guide/conditional.html)
-
-[Official Documentation - List Rendering](https://vuejs.org/v2/guide/list.html)
-
-[Official Documentation - Vue Instance](https://vuejs.org/v2/guide/instance.html)
-
-[Official documentation - `.vue` file](https://vuejs.org/v2/guide/single-file-components.html)
-
-[Official documentation - `render()` method](https://vuejs.org/v2/guide/render-function.html)
-
-[Official documentation - Components](https://vuejs.org/v2/guide/components.html)
-
-[Official Documentation - Components Registration](https://vuejs.org/v2/guide/components-registration.html)
-
-[Official Documentation - Props](https://vuejs.org/v2/guide/components.html#Passando-Dados-aos-Filhos-com-Props)
-
-[Official Documentation - Custom Events](https://vuejs.org/v2/guide/components.html#Enviando-Mensagens-ao-Father-with-Eventos)
-
-[Official Documentation - Slots](https://vuejs.org/v2/guide/components.html#Distribuicao-de-Conteudo-com-Slots)
-
-[Official Documentation - Dynamic Components](https://vuejs.org/v2/guide/components.html#Dynamic-Components)
-
-[Official Documentation - Forms](https://vuejs.org/v2/guide/forms.html)
-
-[Official Documentation - Custom Directives](https://vuejs.org/v2/guide/custom-directive.html)
-
-[Official Documentation - Filters](https://vuejs.org/v2/guide/filters.html)
-
-[Official Documentation - Mixins](https://vuejs.org/v2/guide/mixins.html)
-
-[Vue Developer Tools](https://github.com/vuejs/vue-devtools)
-
-[Vuex documentation](https://vuex.vuejs.org/guide/)
-
-[Vue CLI](https://cli.vuejs.org/)
+- Official Documentation Vue2: https://vuejs.org/v2/guide/
+- Vue Developer Tools: https://github.com/vuejs/vue-devtools
+- Vuex documentation: https://vuex.vuejs.org/guide/
+- Vue CLI: https://cli.vuejs.org/
 
 ---
 ## 14 Conclusion

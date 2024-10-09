@@ -19,7 +19,7 @@ const Author = ({ fullText }) => {
 			)}
 
 			<p>
-				I'm a Software engineer with more than 5 years of practical experience in software development. I have a bachelor's degree in Computer Science. My expertise extends across Web and Software Development, Data Structures and Algorithms, Agile Methodologies and a strong background in design (graphic design, visual identity, and UI/UX).
+				I'm a Software Developer with more than 5 years of practical experience in software development. I have a bachelor's degree in Computer Science. My expertise extends across Web and Software Development, Data Structures and Algorithms, Agile Methodologies and a strong background in design (graphic design, visual identity, and UI/UX).
 			</p>
 			<p>
 				Interested in professional growth and willing to embrace new technologies and take on challenging tasks. I am also enthusiastic about sharing knowledge and working collaboratively as a team.
@@ -55,12 +55,10 @@ const Author = ({ fullText }) => {
 							<strong>Frameworks:</strong> React.js, Vue.js;
 						</li>
 						<li>
-							<strong>Web Development:</strong> HTML5, CSS3, SEO, Accessibility,
-							Sass, Styled Components, Bootstrap;
+							<strong>Web Development:</strong> HTML5, CSS3, SEO, Accessibility, Sass, Styled Components, Tailwind;
 						</li>
 						<li>
-							<strong>Automation testing:</strong> Cypress, Mocha, Jest,
-							Istanbul;
+							<strong>Automation testing:</strong> Cypress, Jest, Pytest, Junit;
 						</li>
 						<li>
 							<strong>State Management:</strong> Context API, Redux, Vuex, Apollo Client (Graphql);
@@ -69,14 +67,13 @@ const Author = ({ fullText }) => {
 							<strong>Control Versioning:</strong> Git, Github;
 						</li>
 						<li>
-							<strong>Rest APIs:</strong> Node.js, Express.js, Python, Flask;
+							<strong>APIs:</strong> Node.js, Express.js, Python, Flask, Graphql;
 						</li>
 						<li>
 							<strong>Databases:</strong> PostgreSQL, MongoDB;
 						</li>
 						<li>
-							<strong>Design UX/UI:</strong> Figma, Responsive Design, Adobe
-							Photoshop;
+							<strong>Design UX/UI:</strong> Figma, Responsive Design, Adobe Photoshop;
 						</li>
 						<li>
 							<strong>Infrastructure:</strong> Docker, Github Actions, AWS;
