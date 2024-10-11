@@ -1109,11 +1109,11 @@ import { mapGetters } from 'vuex'
 
 export default {
     computed: {
-        full name() {
+        fullName() {
             return this.$store.getters.fullName
         },
         ...mapGetters({
-            'full name'
+            'fullName'
         })
     }
 }
@@ -1135,7 +1135,7 @@ export default new Vuex.Store({
     }
     getters: {
         fullname(state){
-            `${state.firstname} ${state.lastname}`
+            `${state.firstName} ${state.lastName}`
         }
     },
     mutations: {
