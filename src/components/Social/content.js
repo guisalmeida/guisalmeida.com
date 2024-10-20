@@ -14,6 +14,10 @@ const links = [
     {
         label: 'Behance',
         url: 'https://www.behance.net/guisalmeida'
+    },
+    {
+        label: 'Email',
+        url: 'mailto:hello@guisalmeida.com'
     }
 ];
 

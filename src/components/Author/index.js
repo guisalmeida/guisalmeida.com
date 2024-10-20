@@ -94,11 +94,11 @@ const Author = ({ fullText }) => {
 					<p>
 						Feel free to reach out to me through my social media or drop me an email at{" "}
 						<a
-							href="mailto:guisalmeida.dev@gmail.com"
+							href="mailto:hello@guisalmeida.com"
 							target="_blank"
 							rel="noreferrer"
 						>
-							guisalmeida.dev@gmail.com
+							hello@guisalmeida.com
 						</a>
 						. I look forward to connecting with you!
 					</p>
