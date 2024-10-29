@@ -46,17 +46,3 @@ yarn start # or npm run start
 - [Disqus](https://disqus.com/);
 - [Styled Components](https://styled-components.com/);
 
-
-## ⚙️ To Do / Change Log
-* [x] Change color theme
-* [x] Change scrollbar color
-* [x] Create page 404
-* [x] Add tags in posts
-* [x] Update to Gatsby V3
-* [x] Update to Gatsby V5
-* [x] Remove Scroll effect mobile menu
-* [x] Remove hover effects on mobile
-* [ ] Update Search Page
-* [ ] Toggle desktop menu
-* [ ] Write tests
-* [ ] Typescript
