@@ -38,7 +38,7 @@ yarn start # or npm run start
 
 ## 🚀 Technologies
 - [ReactJS](https://reactjs.org/);
-- [Gatsby V3](https://www.gatsbyjs.org/);
+- [Gatsby](https://www.gatsbyjs.org/);
 - [GraphQL](https://graphql.org/);
 - [Algolia](https://www.algolia.com/);
 - [Netlify CMS](https://www.netlifycms.org/);
