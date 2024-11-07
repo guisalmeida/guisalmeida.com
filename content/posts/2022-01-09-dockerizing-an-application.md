@@ -50,7 +50,7 @@ We can create an image or use an already created image, which can be found in th
 ![Docker Hub](../../static/assets/img/dockerhub.png)
 
 #### 2.1.1 Useful commands for images
-```
+```sh
 # Create an image from a local project:
 docker build -t <name>[:tag] . # The point would be the path to the project where the build will fetch the Dockerfile to build the image
 
@@ -77,7 +77,7 @@ docker rmi <image>
 Image instance running as a process. Configured as needed and made to be destroyed once finished.
 
 #### 2.2.1 Useful commands for containers
-```
+```sh
 # List locally available containers:
 docker container ls -a
 
@@ -106,7 +106,7 @@ Volumes are the preferred mechanism for persisting data generated and used by Do
 We need to configure the volumes to map data out of our containers.
 They can be configured together with the **command to create the container** passing the flag **-v** and the source and destination paths. This configuration will be saved in that specific container.
 > Another container can be created from the same image with a different volume configuration.
-```
+```sh
 docker container run -v $(pwd):/workspace ...
 ```
 
@@ -122,7 +122,7 @@ To dockerize an application, we just need to have Docker installed and create a 
 The Dockerfile is a text document that contains all the commands a user can call from the command line to build an image. Using the `docker build` command, users can create an automated build that executes several command-line instructions in succession.  
 
 In the application folder, we create the `Dockerfile` with some details described in the comments:
-```
+```Dockerfile
 # The FROM command says which image will serve as a reference for your application.
 # Let's assume that our application is in python,
 # then the FROM would look like this for example:
@@ -157,12 +157,12 @@ CMD python main.py
 ### 3.3 Build the image
 Now that we have the Dockerfile configured, we just need to create the image that will have our application files, as if it were a compressed file.
 Inside the folder where you saved the dockerfile, run the command:
-```
+```sh
 docker build -t app-python:latest .
 ```
 After that, the image will be registered on your machine.
 This can be queried with:
-```
+```sh
 docker images
 
 # The following details will be shown:
@@ -173,7 +173,7 @@ app-python latest e42a1a90b7fe 10 seconds ago 931MB
 ### 3.4 Uploading container (running your application)
 Now, we need to create the image instance (container) by passing some important settings the first time with the command:
 
-```
+```sh
 docker run -v $(pwd)/static:/static -p 5000:5000 -d app-python:latest
 
 # This command tells the software to run the image you created previously,
@@ -193,14 +193,75 @@ docker run -v $(pwd)/static:/static -p 5000:5000 -d app-python:latest
 Ready! With everything working, we can now test our Python APP at http://localhost:5000 in the same way as we would if it were running locally outside of a container.
 
 After configuring the container, to upload it again, we just run the start command.
-```
+```sh
 docker container start app-python
 ```
 
-## 4 Publishing your app image to the docker registry
+After all these commands are learned, depending on your project you can have also other parts that need to run in another container and you will need to run all these commands for each image you want to create and run as a container. It can become repetitive and unproductive, to improve that we can leverage other file configuration that allow us to set many commands in a structured way, the Docker compose file.  
+
+## 4 Docker Compose
+Compose simplifies the control of your entire application stack, making it easy to manage services, networks, and volumes in a single, comprehensible YAML configuration file. Then, with a single command, you create and start all the services from your configuration file.  
+
+### 4.1 Creating the file
+In the root of your project you can create a file `docker-compose.yml`, there you will set your container workflow.  
+Let's set our compose file to do the same as we did on the step 3.4 when we were running `docker run -v $(pwd)/static:/static -p 5000:5000 -d app-python:latest`.
+
+The file will be like this:
+```yml
+services: # Defines the services (containers) to be run
+  app: # Name of the first service
+    image: app-python # Specifies the image to use for the container
+    volumes: # Mounts a volume
+      - ./static:/static
+    ports:
+      - "5000:5000" # Maps port 5000 in the container to port 5000 on the host machine
+
+  # Here we can have many others services that will run separetely as containers.
+  # Check the docs to know more: https://docs.docker.com/compose/gettingstarted/
+```
+
+And after set up the file, the command to create images and run your services (containers) will be way more straightforward:
+```sh
+docker-compose up
+```
+Apart from helping us to up and run multiple containers from our project, it also simplifies the data that we need to pass on each command when using the docker CLI. This way all the data like port number, environment variables etc, can be already set up in this file. Let's check the main commands to use with docker compose.
+
+### 4.2 Commands
+**Start all services**: This command reads the `docker-compose.yml` file and starts up the defined containers.
+
+```sh
+docker-compose up -d
+```
+The `-d` flag runs everything in detached mode (background).
+
+**View running services**:
+```sh
+docker-compose ps
+```
+
+**View logs**: Shows logs for each container, making it easy to debug.
+```sh
+docker-compose logs -f
+```
+
+**Stop all services**:
+This stops and removes all containers, networks, and volumes defined in the `docker-compose.yml` file.
+```sh
+docker-compose down
+```
+
+**Rebuild images** (useful if you make changes to a Dockerfile):
+```sh
+docker-compose up --build -d
+```
+
+With `docker-compose`, you can quickly set up, test, and tear down a multi-container environment in a consistent way, making development and testing much simpler.
+
+
+## 5 Publishing your app image to the docker registry
 To upload an image we need to be registered with [Docker Hub](hub.docker.com).
 After registering, we can log in locally through the terminal with the command:  
-```
+```sh
 docker login
 ```
 
@@ -208,18 +269,18 @@ An important step that must be done when you are going to save your images in th
 Let's repeat the command that we created the image of our app now with our username created in the docker hub.
 Example:
 > ⚠️ The **username** must be the same configured there in the docker hub.
-```
+```sh
 docker build -t <username>/app-python:latest .
 ```
 
 Once logged in, you can push your local image to your remote registry account.
-```
+```sh
 docker push <username>/app-python:latest
 ```
 
 ---
 
-## 5 References
+## 6 References
 - https://docs.docker.com/get-docker/
 - https://www.redhat.com/en/topics/containers/whats-a-linux-container
 - https://dockerlabs.collabnix.com/beginners/docker/docker-vs-container.html
@@ -227,7 +288,7 @@ docker push <username>/app-python:latest
 
 
 ---
-## 6 Conclusion
+## 7 Conclusion
 Docker has become a powerful tool for development because it brings several advantages as we can see in this post. The ease of having your application running on different systems can save you a few hours trying to install libs on different systems. Undoubtedly knowledge that every developer needs to have in their toolbox.
 
 What did you think of this post? Do you have any questions, suggestions or criticisms? Leave a reaction or a comment below. Thanks for visiting! 😉
