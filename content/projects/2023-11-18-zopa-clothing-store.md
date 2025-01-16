@@ -1,6 +1,8 @@
 ---
 title: Zopa Clothing
-description: An e-commerce SPA store made with Typescript and React, manages state with Redux, consumes its products from a Node.js Rest API with MongoDB as a database, stores images on AWS S3 and payments with Stripe.
+description: An e-commerce SPA store made with Typescript and React, manages
+  state with Redux, consumes its products from a Node.js Rest API with MongoDB
+  as a database, stores images on AWS S3 and payments with Stripe.
 date: 2023-11-18 05:01:07
 thumbnailImage: ../../static/assets/img/screenshot-from-2023-11-18-17-03-52.png
 category: project
@@ -31,7 +33,12 @@ Zopa Clothing is a friend's brand, and I embarked on this project to delve into 
 
 Here are the key links:
 
-<p>
+<p>Site:
+    <br>
+    <a href="https://zopa-clothing.netlify.app/" target="_blank">
+        https://www.zopaclothing.shop/
+    </a>
+<br><br>
     Source code:  <br>
     <a href="https://github.com/guisalmeida/zopa-store" target="_blank">
         https://github.com/guisalmeida/zopa-store
@@ -39,13 +46,6 @@ Here are the key links:
     <br>
     <a href="https://github.com/guisalmeida/zopa-store" target="_blank">
         https://github.com/guisalmeida/zopa-store-api
-    </a>
-    <br>
-    <br>
-    Demo:
-    <br>
-    <a href="https://zopa-clothing.netlify.app/" target="_blank">
-        https://zopa-clothing.netlify.app/
     </a>
 </p>  
 
