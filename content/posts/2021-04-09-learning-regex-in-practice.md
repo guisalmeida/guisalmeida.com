@@ -306,6 +306,7 @@ getUsername("JoAo_123@outlook.com.br")
 ## 3 References
 - https://regexr.com/
 - https://aurelio.net/regex/guia/
+- https://extendsclass.com/regex-tester.html
 - https://developer.mozilla.org/en-us/docs/Web/JavaScript/Guide/Regular_Expressions
 
 
