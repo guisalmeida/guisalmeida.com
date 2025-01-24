@@ -1,16 +1,25 @@
 ---
 title: "Linting Guide: Organize Your Codebase with Ease"
-description: Keeping your codebase clean and organized is essential for
-  collaboration and maintainability. This guide will help you set up and use
-  tools like **EditorConfig**, **ESLint**, **Prettier**, **Husky**, and
-  **Lint-Staged** to streamline your development workflow.
+description: Keeping your codebase clean and organized is essential for collaboration and maintainability. This guide will help you set up and use tools like EditorConfig, ESLint, Prettier, Husky, and Lint-Staged to streamline your development workflow.
 date: 2025-01-24 06:02:03
-thumbnailImage: ../../static/assets/img/thumb_home.png
+thumbnailImage: ../../static/assets/img/linting.avif
 category: blog
 tags:
-  - ""
+  - eslint
+  - prettier
+  - editorconfig
+  - husky
 ---
-## Setting Up for VSCode Users
+
+## Index
+
+```toc
+exclude: Index
+```
+
+---
+
+## 1. Setting Up for VSCode Users
 
 For **VSCode** users, you can enable linting to run automatically when saving a file. Add a project-specific settings file:
 
@@ -23,21 +32,22 @@ For **VSCode** users, you can enable linting to run automatically when saving a 
 }
 ```
 
-### Required VSCode Extensions:
-- **ESLint**: [Install](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- **Prettier**: [Install](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+### 1.1 Required VSCode Extensions
+- **ESLint**: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+- **Prettier**: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 
 ---
 
-## EditorConfig
+## 2. EditorConfig
 
 **EditorConfig** helps enforce consistent coding styles across different editors and IDEs. It works seamlessly with version control systems.
 
-### Creating an `.editorconfig` File
-Add an `.editorconfig` file at the root of your project with the following configuration:
+### 2.1 Creating an `.editorconfig` File
+Add a `.editorconfig` file at the root of your project with your preferred configuration, for more examples check [editorconfig.org](https://editorconfig.org/).
+
+Example `.editorconfig`:  
 
 ```ini
-# editorconfig.org
 root = true
 
 [*]
@@ -51,11 +61,11 @@ insert_final_newline = true
 
 ---
 
-## Adding ESLint
+## 3. Adding ESLint
 
-**ESLint** is a tool for identifying and fixing problems in your JavaScript code.
+**ESLint** is a tool for identifying and fixing problems in your **JavaScript** code.
 
-### Installation
+### 3.1 Installation
 Run the following command:
 
 ```sh
@@ -64,9 +74,12 @@ npm init @eslint/config@latest
 
 Follow the prompts to configure ESLint for your project. For example:
 
-- **Use ESLint to check syntax and find problems**
-- **Use JavaScript modules (import/export)**
-- **Specify the frameworks and environments your code runs in**
+```sh
+- 'Use ESLint to check syntax and find problems'
+- 'Use JavaScript modules (import/export)'
+- 'Specify the frameworks and environments your code runs in'
+...
+```
 
 This will generate a configuration file, e.g., `eslint.config.js`:
 
@@ -86,11 +99,11 @@ export default [
 
 ---
 
-## Setting Up Prettier
+## 4. Setting Up Prettier
 
 **Prettier** is an opinionated code formatter.
 
-### Installation
+### 4.1 Installation
 
 ```sh
 npm install --save-dev --save-exact prettier
@@ -112,7 +125,7 @@ Example `.prettierrc.json`:
 }
 ```
 
-### Prettier Ignore
+### 4.2 Prettier Ignore
 
 Specify files to exclude from formatting in a `.prettierignore` file:
 
@@ -120,7 +133,7 @@ Specify files to exclude from formatting in a `.prettierignore` file:
 node --eval "fs.writeFileSync('.prettierignore','# Ignore artifacts:\nbuild\ncoverage\n')"
 ```
 
-Example:
+Example `.prettierignore`:
 ```
 !.storybook
 !.jest
@@ -129,7 +142,7 @@ coverage
 .next
 ```
 
-### Format All Files
+### 4.3 Format All Files
 
 Run Prettier to format all files in the project:
 
@@ -137,7 +150,7 @@ Run Prettier to format all files in the project:
 npx prettier . --write
 ```
 
-### Integrating ESLint and Prettier
+### 4.4 Integrating ESLint and Prettier
 Install the ESLint Prettier configuration:
 
 ```sh
@@ -156,17 +169,17 @@ Update your ESLint configuration to include Prettier:
 
 ---
 
-## Git Hooks with Husky and Lint-Staged
+## 5. Git Hooks with Husky and Lint-Staged
 
 Use **Husky** and **Lint-Staged** to ensure linting and formatting run before committing code.
 
-### Installation
+### 5.1 Installation
 
 ```sh
 npm install --save-dev husky lint-staged
 ```
 
-### Initialize Husky
+### 5.2 Initialize Husky
 
 Set up Husky:
 
@@ -176,7 +189,7 @@ npx husky init
 
 This creates a `.husky/pre-commit` file and updates your `package.json`.
 
-### Configure Lint-Staged
+### 5.3 Configure Lint-Staged
 
 Update `.husky/pre-commit` to run lint-staged:
 
@@ -184,17 +197,21 @@ Update `.husky/pre-commit` to run lint-staged:
 npx --no-install lint-staged
 ```
 
-Create a `.lintstagedrc.js` configuration file:
+Create a `.lintstagedrc.js` configuration file, this will tell Lint-staged what it should run before a commit.
 
 ```js
 module.exports = {
+  // Lint & Prettify TS and JS files
   '*.{js,jsx,ts,tsx}': (filenames) => [
     `prettier --write ${filenames.join(' ')}`,
-    `npm run lint --fix . ${filenames.join(' --file')}`
+    `npm run lint --fix . ${filenames.join(' --file')}`,
+    `npm test -- --findRelatedTests ${filenames.join(' ')}`
   ]
 };
 ```
 
 ---
 
-By following this guide, your project will benefit from consistent code quality, automated formatting, and seamless integration with your development tools. Happy coding!
+## 6. Conclusion
+By following this guide, your project will benefit from consistent code quality, automated formatting, and seamless integration with your development tools.  
+What did you think of this post? Do you have any questions, suggestions or criticisms? Leave a reaction or a comment below. Thanks for visiting! 😉
