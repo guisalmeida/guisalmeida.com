@@ -2,7 +2,7 @@
 title: "Linting Guide: Organize Your Codebase with Ease"
 description: Keeping your codebase clean and organized is essential for collaboration and maintainability. This guide will help you set up and use tools like EditorConfig, ESLint, Prettier, Husky, and Lint-Staged to streamline your development workflow.
 date: 2025-01-24 06:02:03
-thumbnailImage: ../../static/assets/img/linting.avif
+thumbnailImage: ../../static/assets/img/linting.png
 category: blog
 tags:
   - eslint
