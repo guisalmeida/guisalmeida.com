@@ -19,10 +19,10 @@ const Author = ({ fullText }) => {
 			)}
 
 			<p>
-				I'm a Full Stack Software Developer focused on Frontend with more than 5 years of practical experience in software development. I have a bachelor's degree in Computer Science. My expertise extends across Web and Software Development, Data Structures and Algorithms, Agile Methodologies and a strong background in Design (graphic design, visual identity, and UI/UX).
+			I'm a Frontend Engineer with a Bachelor's degree in Computer Science and more than 5 years of practical experience in software development. My expertise extends across Web and Software Development, Data Structures and Algorithms, Agile Methodologies and a strong background in Design (graphic design, visual identity, and UI/UX).
 			</p>
 			<p>
-				Interested in professional growth and willing to embrace new technologies and take on challenging tasks. I am also enthusiastic about sharing knowledge and working collaboratively as a team.
+				Interested in professional growth and willing to embrace new technologies. I am also enthusiastic about sharing knowledge and working collaboratively as a team.
 			</p>
 
 			{fullText && (
@@ -70,10 +70,10 @@ const Author = ({ fullText }) => {
 							<strong>APIs:</strong> Node.js, Express.js, Python, Flask, Graphql;
 						</li>
 						<li>
-							<strong>Databases:</strong> PostgreSQL, MongoDB;
+							<strong>Databases:</strong> Mysql, PostgreSQL, MongoDB;
 						</li>
 						<li>
-							<strong>Design UX/UI:</strong> Figma, Responsive Design, Adobe Photoshop;
+							<strong>Design UX/UI:</strong> Figma, Adobe Photoshop;
 						</li>
 						<li>
 							<strong>Infrastructure:</strong> Docker, Github Actions, AWS;
