@@ -13,7 +13,7 @@ export const SidebarContainer = styled.aside`
     position: fixed;
     padding: 2rem;
     text-align: center;
-    width: 20rem;
+    width: 18rem;
     transition: ${transitions.ALL};
     z-index: 4;
 
