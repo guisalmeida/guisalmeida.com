@@ -19,7 +19,7 @@ const Author = ({ fullText }) => {
 			)}
 
 			<p>
-			I'm a Frontend Engineer with a Bachelor's degree in Computer Science and more than 5 years of practical experience in software development. My expertise extends across Web and Software Development, Data Structures and Algorithms, Agile Methodologies and a strong background in Design (graphic design, visual identity, and UI/UX).
+				I'm a Frontend Engineer with a Bachelor's degree in Computer Science and more than 5 years of practical experience in software development. My expertise extends across Web and Software Development, Data Structures and Algorithms, Agile Methodologies and a strong background in Design (graphic design, visual identity, and UI/UX).
 			</p>
 			<p>
 				Interested in professional growth and willing to embrace new technologies. I am also enthusiastic about sharing knowledge and working collaboratively as a team.
@@ -73,7 +73,7 @@ const Author = ({ fullText }) => {
 							<strong>Databases:</strong> Mysql, PostgreSQL, MongoDB;
 						</li>
 						<li>
-							<strong>Design UX/UI:</strong> Figma, Adobe Photoshop;
+							<strong>Design UX/UI:</strong> Storybook, Figma, Adobe Photoshop, Adobe Illustrator;
 						</li>
 						<li>
 							<strong>Infrastructure:</strong> Docker, Github Actions, AWS;
