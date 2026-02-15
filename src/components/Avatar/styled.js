@@ -3,8 +3,8 @@ import media from 'styled-media-query'
 
 export const AvatarWrapper = styled.div`
     border-radius: 50%;
-    height: 4rem;
-    width: 4rem;
+    height: 8rem;
+    width: 8rem;
     margin: 0 auto;
     object-fit: cover;
     overflow: hidden;
