@@ -19,7 +19,7 @@ const Author = ({ fullText }) => {
 			)}
 
 			<p>
-				I'm a Frontend Engineer with a Bachelor's degree in Computer Science and more than 5 years of practical experience in software development. My expertise extends across Web and Software Development, Data Structures and Algorithms, Agile Methodologies and a strong background in Design (graphic design, visual identity, and UI/UX).
+				Full Stack Developer with more than 6 years of practical experience and a bachelor's degree in Computer Science. My expertise extends across Web and Software Development, Data Structures and Algorithms, Agile Methodologies, and a strong background in design (graphic design, visual identity, and UI/UX). 
 			</p>
 			<p>
 				Interested in professional growth and willing to embrace new technologies. I am also enthusiastic about sharing knowledge and working collaboratively as a team.
@@ -49,10 +49,10 @@ const Author = ({ fullText }) => {
 
 					<ul>
 						<li>
-							<strong>Languages:</strong> Javascript, Typescript, Python, Java, SQL;
+							<strong>Languages:</strong> Javascript, Typescript, Java, Python;
 						</li>
 						<li>
-							<strong>Frameworks:</strong> React.js, Vue.js;
+							<strong>Frameworks:</strong> Angular, React, Vue;
 						</li>
 						<li>
 							<strong>Web Development:</strong> HTML5, CSS3, SEO, Accessibility, Sass, Styled Components, Tailwind;
@@ -61,13 +61,13 @@ const Author = ({ fullText }) => {
 							<strong>Automation testing:</strong> Cypress, Jest, Pytest, Junit;
 						</li>
 						<li>
-							<strong>State Management:</strong> Context API, Redux, Vuex, Apollo Client (Graphql);
+							<strong>State Management:</strong> NgRx, Redux, Vuex;
 						</li>
 						<li>
 							<strong>Control Versioning:</strong> Git, Github;
 						</li>
 						<li>
-							<strong>APIs:</strong> Node.js, Express.js, Python, Flask, Graphql;
+							<strong>APIs:</strong> Node.js, Express.js, Python, Flask;
 						</li>
 						<li>
 							<strong>Databases:</strong> Mysql, PostgreSQL, MongoDB;

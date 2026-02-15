@@ -8,15 +8,15 @@ const Pagination = ({ isFirst, isLast, currentPage, numPages, prevPage, nextPage
     <S.PaginationWrapper>
         {!isFirst &&
             <Link to={prevPage}>
-                ← previous page
+                ← previous
             </Link>
         }
 
-        <p>Página {currentPage} de {numPages || 1}</p>
+        <p>Page {currentPage} of {numPages || 1}</p>
 
         {(!isLast && numPages > 1) &&
             <Link to={nextPage}>
-                next page →
+                next →
             </Link>
         }
     </S.PaginationWrapper>
