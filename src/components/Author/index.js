@@ -19,7 +19,7 @@ const Author = ({ fullText }) => {
 			)}
 
 			<p>
-				Full Stack Developer with more than 6 years of practical experience and a bachelor's degree in Computer Science. My expertise extends across Web and Software Development, Data Structures and Algorithms, Agile Methodologies, and a strong background in design (graphic design, visual identity, and UI/UX). 
+				I'm a Full Stack Developer with more than 6 years of practical experience and a bachelor's degree in Computer Science. My expertise extends across Web and Software Development, Data Structures and Algorithms, Agile Methodologies, and a strong background in design (graphic design, visual identity, and UI/UX). 
 			</p>
 			<p>
 				Interested in professional growth and willing to embrace new technologies. I am also enthusiastic about sharing knowledge and working collaboratively as a team.
