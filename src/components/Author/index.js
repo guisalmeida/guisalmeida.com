@@ -7,7 +7,7 @@ const Author = ({ fullText }) => {
 	return (
 		<>
 			<Base.MainContent>
-				{(fullText && <h1>About</h1>) || <h1>Hello!</h1>}
+				{(fullText && <h1>About</h1>) || <h1>👋 Hi, I'm Guilherme Almeida</h1>}
 			</Base.MainContent>
 
 			<Base.MainContent>
