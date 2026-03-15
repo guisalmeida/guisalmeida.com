@@ -58,10 +58,7 @@ This was one of the most challenging parts of this project, I managed to impleme
 #### 2.1.1 Asynchronous state with Sagas  
 Implementing Redux with Sagas for asynchronous state and side effect prevention was challenging but rewarding. Sagas ensures our state stays in sync with asynchronous requests.  
 
-The generator functions are used as the base of the saga functions, I wrote about them in my post about Javascript. Follow the link below:  
-<p>
-  <a href="https://www.guisalmeida.com/my-cheat-sheet-of-javascript/#8-generators" target="_blank">[Generators post link]</a>
-</p>
+The generator functions are used as the base of the saga functions.
 
 Here is an implementation of a saga function that fetches a list of products when the `FETCH_PRODUCTS_START` action is called.
 

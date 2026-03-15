@@ -10,7 +10,7 @@ tags:
 ---
 ___
 
-Hi! I'm Guilherme, if you want to know more about me you can see [here](https://guisalmeida.com/about), you must be new here, so I decided to write my first post talking a little about my motivations for having a blog.
+Hi! I'm Guilherme, if you want to know more about me you can see [here](/about), you must be new here, so I decided to write my first post talking a little about my motivations for having a blog.
 
 I still consider myself a beginner as a developer, until 2018 my professional career was always as a designer working on projects such as book layout, visual communication, agency marketing and freelance creation of stationery and visual identity.
 

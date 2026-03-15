@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Layout from "../components/Layout"
 import ProjectItem from "../components/ProjectItem"
 import SEO from "../components/seo"
 
 import * as S from '../components/ListWrapper/styled'
-import * as Base from '../styles/base';
+import * as Base from '../styles/base'
 
 
 const ProjectsPage = () => {
@@ -46,22 +46,22 @@ const ProjectsPage = () => {
             </Base.MainContent>
 
             <S.ListWrapper>
-                {projects.map(({ 
-                    node: { 
-                        fields: { 
-                            slug 
-                        }, 
-                        frontmatter: { 
+                {projects.map(({
+                    node: {
+                        fields: {
+                            slug
+                        },
+                        frontmatter: {
                             title,
                             date,
-                            description, 
-                            tags, 
+                            description,
+                            tags,
                             thumbnailImage: {
                                 relativePath
-                            } 
+                            }
                         },
                         timeToRead
-                    } 
+                    }
                 }, index) => (
                     <ProjectItem
                         key={index}
@@ -75,7 +75,7 @@ const ProjectsPage = () => {
                     />
                 ))}
             </S.ListWrapper>
-            
+
         </Layout>
     )
 };
