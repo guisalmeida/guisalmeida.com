@@ -12,7 +12,7 @@ const AboutPage = () => (
             description="Learn a little more about the developer behind this site."
         />
         
-        <StaticImage src="../images/salt-graphic-design-mh2.jpg" alt="desktop image" />
+        <StaticImage src="../images/guidev.jpg" alt="desktop image" />
 
         <Author fullText={true} />
     </Layout >

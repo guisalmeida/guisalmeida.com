@@ -19,7 +19,7 @@ const Author = ({ fullText }) => {
 			)}
 
 			<p>
-				I'm a Full Stack Developer with more than 6 years of practical experience and a bachelor's degree in Computer Science. My expertise extends across Web and Software Development, Data Structures and Algorithms, Agile Methodologies, and a strong background in design (graphic design, visual identity, and UI/UX). 
+				I'm a Software Developer with more than 7 years of practical experience and a bachelor's degree in Computer Science. My expertise extends across Web and Software Development, Data Structures and Algorithms, Agile Methodologies, and a strong background in design (graphic design, visual identity, and UI/UX). 
 			</p>
 			<p>
 				Interested in professional growth and willing to embrace new technologies. I am also enthusiastic about sharing knowledge and working collaboratively as a team.
@@ -28,20 +28,19 @@ const Author = ({ fullText }) => {
 			{fullText && (
 				<>
 					<p>
-						Beyond my professional interests,
-						I have a love for skateboarding and enjoy experimenting with
-						vegetarian recipes. In my free time, I cherish moments spent with my
-						wife and our beloved dogs.
+						Beyond my professional interests, I cherish moments spent with my family,
+						my wife, my daughter and our beloved dogs.
+						I have a love for skateboarding, also like to run and enjoy cooking
+						vegetarian recipes.  
 					</p>
 					<h2>Skills</h2>
 					<p>
-						Over the course of my career, I've had the privilege of contributing
-						to various companies, initially as a designer and evolving into a
-						developer over time. This diverse journey has provided me with a
-						holistic understanding of different design patterns and tools.
+						Over the course of my career, I've already had the privilege of contributing
+						to various companies and projects. This diverse journey has provided me with a
+						holistic understanding of the software development.
 					</p>
 
-					<p>
+					{/* <p>
 						I've immersed myself in exploring and mastering various
 						technologies, and I'm comfortable working with some listed the
 						following:
@@ -81,12 +80,12 @@ const Author = ({ fullText }) => {
 						<li>
 							<strong>Agile Methodologies:</strong> Scrum, Kanban.
 						</li>
-					</ul>
+					</ul> */}
 
 					<p>
 						I am well-equipped to contribute effectively to projects, bringing a
 						blend of technical proficiency and creative insight. My adaptability
-						and dedication to staying abreast of industry trends make me an
+						and dedication to staying up-to-date with industry trends make me an
 						asset in dynamic and collaborative work environments.
 					</p>
 

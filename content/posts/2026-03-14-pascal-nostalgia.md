@@ -5,7 +5,7 @@ date: 2026-03-14 09:10:03
 thumbnailImage: ../../static/assets/img/matrix-data-structure.jpeg
 category: blog
 tags:
-  - carrer
+  - career
   - data structures
   - algorithms
   - pascal
@@ -40,7 +40,7 @@ So, after that first spark, I honestly didn’t know what to do next. There were
 
 ## Life moved on  
 
-To support myself, I took regular jobs and decided to explore another side of my creativity in graphic design. For seven years, I dove into the world of design, creating logos, branding, storefront facades, installations, just about everything a designer can do. I even started my own company and built lasting relationships with clients. It was a wonderful chapter, full of growth and learning.
+To support myself, I took regular jobs and decided to explore another side of my creativity in graphic design. For seven years, I dove into the world of design, creating logos, branding, storefront facades, installations, just about everything a designer can do. I even started my own company and made some good clients along the way. It was a great time, full of growth and learning, but I didn't feel that was what I wanted to do for the rest of my profissional career.
 
 Some of my work still lives on in my [Behance portfolio](https://www.behance.net/guisalmeida) even if I don’t update it anymore.  
 
