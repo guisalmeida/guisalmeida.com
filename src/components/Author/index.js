@@ -44,47 +44,9 @@ const Author = ({ fullText }) => {
 							holistic understanding of the software development.
 						</p>
 
-						{/* <p>
-						I've immersed myself in exploring and mastering various
-						technologies, and I'm comfortable working with some listed the
-						following:
-					</p>
-
-					<ul>
-						<li>
-							<strong>Languages:</strong> Javascript, Typescript, Java, Python;
-						</li>
-						<li>
-							<strong>Frameworks:</strong> Angular, React, Vue;
-						</li>
-						<li>
-							<strong>Web Development:</strong> HTML5, CSS3, SEO, Accessibility, Sass, Styled Components, Tailwind;
-						</li>
-						<li>
-							<strong>Automation testing:</strong> Cypress, Jest, Pytest, Junit;
-						</li>
-						<li>
-							<strong>State Management:</strong> NgRx, Redux, Vuex;
-						</li>
-						<li>
-							<strong>Control Versioning:</strong> Git, Github;
-						</li>
-						<li>
-							<strong>APIs:</strong> Node.js, Express.js, Python, Flask;
-						</li>
-						<li>
-							<strong>Databases:</strong> Mysql, PostgreSQL, MongoDB;
-						</li>
-						<li>
-							<strong>Design UX/UI:</strong> Storybook, Figma, Adobe Photoshop, Adobe Illustrator;
-						</li>
-						<li>
-							<strong>Infrastructure:</strong> Docker, Github Actions, AWS;
-						</li>
-						<li>
-							<strong>Agile Methodologies:</strong> Scrum, Kanban.
-						</li>
-					</ul> */}
+						<p>
+							Experienced in the <strong>JavaScript/TypeScript</strong> ecosystem. Proven experience building scalable applications using <strong>Angular, React, Vue, Node.js (Express), Python (Flask), Java, PostgreSQL, MongoDB, Docker, AWS, and CI/CD pipelines with GitHub Actions</strong>.
+						</p>
 
 						<p>
 							I am well-equipped to contribute effectively to projects, bringing a
